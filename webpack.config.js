@@ -76,5 +76,10 @@ module.exports = {
     host: 'localhost',
     port: 8080,
     hot: true
+  },
+  performance: {
+    hints: process.env.NODE_ENV === 'production' ? "warning" : false
   }
 }
+
+
