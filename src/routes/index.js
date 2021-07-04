@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './Home'
 import Jp from './Jp'
-import About from './About'
+
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -13,10 +13,6 @@ export default createRouter({
     {
       path: '/jp',
       component: Jp
-    },
-    {
-      path: '/about',
-      component: About
     }
   ],
 })
