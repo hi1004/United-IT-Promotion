@@ -4,6 +4,7 @@ import Jp from './Jp'
 
 
 export default createRouter({
+  
   history: createWebHashHistory(),
   routes: [
     {

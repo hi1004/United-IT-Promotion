@@ -1,0 +1,7 @@
+$a : red;
+h1 {
+  color: $a;
+  span {
+    font-size: 100px;
+  }
+}

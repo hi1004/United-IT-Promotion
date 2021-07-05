@@ -20,7 +20,8 @@ body {
   line-height: 1.4;
   color: $light;
   background-color: $dark;
+  height: 5000px;
+  a {
+    text-decoration: none;
+  }  
 }
-a {
-  text-decoration: none;
-}  
