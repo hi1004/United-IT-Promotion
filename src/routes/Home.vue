@@ -25,7 +25,6 @@
   @import '~/scss/common.scss';
   .box {
     height: 300px;
-    width: 1000px;
     background-color: gray;
   }
   

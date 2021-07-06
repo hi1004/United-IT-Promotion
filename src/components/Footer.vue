@@ -10,7 +10,7 @@
         class="copyright"
         href="https://github.com/hi1004/United-IT-Promotion.git"
         target="_blank">
-        COPYRIGHT {{ new Date().getFullYear() }}. J-BIT UNITED IT. All rights reserved.
+        COPYRIGHT {{ new Date().getFullYear() }}. J-BIT UNITED IT. ALL RIGHTS RESERVED.
       </a>
     </div>
   </footer>
@@ -29,15 +29,18 @@ export default {
 <style lang="scss" scoped>
 @import '~/scss/main';
   footer {
-    padding: 30px 0;
+    padding: 50px 0;
     text-align: center;
     opacity: .8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     line-height: 1.8;
-    .copyright{
-      display: inline-block;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .copyright{
+        display: inline-block;
+      }
     }
   }
 </style>
