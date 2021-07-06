@@ -12,10 +12,9 @@
 @import "~/scss/main";
 .logo {
   img {
-    display: block;
+    display: inline-block;
+    width: 135px;
   }
-  &:hover {
-     filter: drop-shadow(3px 13px 18px $primary) invert(10%);
-  }
+
 }
 </style>

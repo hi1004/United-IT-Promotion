@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './Home'
-import Jp from './Jp'
+import Ja from './Ja'
 
 
 export default createRouter({
@@ -12,8 +12,8 @@ export default createRouter({
       component: Home
     },
     {
-      path: '/jp',
-      component: Jp
+      path: '/ja',
+      component: Ja
     }
   ],
 })

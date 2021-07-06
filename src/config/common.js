@@ -4,7 +4,7 @@ import scrollTo from 'gsap/ScrollToPlugin'
 gsap.registerPlugin(scrollTo); 
 
 export default function() {
-  // to-top 
+// to-top 
 const toTopEl = document.querySelector('#to-top');
 
 window.addEventListener('scroll', _.throttle(() => {

@@ -32,7 +32,7 @@ export default {
         },
         {
           name: 'JP',
-          href: '/jp'
+          href: '/ja'
         }
       ]
     }
@@ -46,6 +46,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content:space-between;
+    font-family: 'Oswald', sans-serif;
     .logo {
       margin-right: 40px;
     }
