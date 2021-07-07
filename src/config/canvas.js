@@ -9,7 +9,7 @@ export default function () {
       x: undefined,
       y: undefined,
     };
-    const maxRadius = 40;
+    const maxRadius = 20;
     // const minRadius = 2;
 
     const colorArray = ['#fdc000', '#BAE2CF', '#133543', '#9CC0CD', '#F08586'];
@@ -73,8 +73,8 @@ export default function () {
     function init() {
       circleArray = [];
       for (let i = 0; i < 100; i++) {
-        let x = Math.random() * (innerWidth - radius * 2) + radius;
-        let y = Math.random() * (innerHeight - radius * 2) + radius;
+        let x = Math.random() * (canvas.width - radius * 2) + radius;
+        let y = Math.random() * (canvas.height - radius * 2) + radius;
         let dx = Math.random() - 0.5;
         let dy = Math.random() - 0.5;
         let radius = Math.random() * 3 + 1;

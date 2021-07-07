@@ -15,8 +15,10 @@ import draw from '~/config/canvas'
 
 <style lang="scss" scoped>
 #canvas {
-  position: relative;
+  position: fixed;
   left: 50%;
   transform: translateX(-50%);
+  z-index: -1;
+  opacity: .9;
 }
 </style>

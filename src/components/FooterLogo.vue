@@ -23,11 +23,9 @@
   div {
     display: flex;
   }
-  .bufs-logo {
-    margin-right: 10px;
-  }
   .japanese-logo {
     height: 40px;
+     margin-right: 10px;
   }
 
   .bufs-logo,
@@ -42,7 +40,7 @@
     div {
       flex-direction: column;
     }
-    .bufs-logo {
+   .japanese-logo {
       margin-right: 0px;
     }
   }

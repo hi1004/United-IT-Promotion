@@ -5,9 +5,11 @@
         Home
         <span>hello</span>
       </h1>
-      <h2>창공을 누비다!</h2>
       
-      <div class="box"></div>
+      
+      <div class="box">
+        <h2>창공을 누비다!</h2>
+      </div>
     </div>
   </section>
 
@@ -28,10 +30,16 @@ export default {
 
 <style lang="scss" scoped>
   @import '~/scss/common.scss';
+  section {
+    // margin-top: 150px;
+    padding-top: 150px;
+ 
+  }
   .box {
     height: 300px;
-    background-color: gray;
+    // background-color: gray;
     margin: 0 auto;
+    position: relative;
   }
   h2 {
     position: absolute;
@@ -39,12 +47,6 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     
-  }
-  @media all and (max-width:375px) {
-    body {
-     overflow: hidden;
-      
-    }
   }
   
 </style>
