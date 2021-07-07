@@ -9,9 +9,7 @@
   </section>
 </template>
 
-<script>
 
-</script>
 
 <style lang="scss" scoped>
 @import '~/scss/common.scss';

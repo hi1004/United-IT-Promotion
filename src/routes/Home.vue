@@ -6,9 +6,11 @@
         <span>hello</span>
       </h1>
       <h2>창공을 누비다!</h2>
+      
       <div class="box"></div>
     </div>
   </section>
+
 
   <!-- VIDEO -->
   <section class="video">
@@ -16,16 +18,26 @@
 </template>
 
 <script>
-  export default {
-    mounted() {},
-  };
+
+export default {
+  
+}
 </script>
+
+
 
 <style lang="scss" scoped>
   @import '~/scss/common.scss';
   .box {
     height: 300px;
     background-color: gray;
+  }
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
   }
   
 </style>
