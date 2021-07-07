@@ -1,13 +1,5 @@
 <template>
   <div>
-    <!-- 부산외국어대학교 -->
-    <a
-      href="https://www.bufs.ac.kr/html/00_main/default.aspx"
-      target="_blank"><img
-        src="~/assets/university_logo.jpg"
-        class="bufs-logo"
-        alt="Busan University of Foreign Studies" />
-    </a>
     <!-- 일본어융합학부 -->
     <a
       href="https://krsna.bufs.ac.kr/krsna/"
@@ -15,6 +7,14 @@
         src="~/assets/japanese_logo.jpg"
         class="japanese-logo"
         alt="Convergenece of Japanese Studies" />
+    </a>
+    <!-- 부산외국어대학교 -->
+    <a
+      href="https://www.bufs.ac.kr/html/00_main/default.aspx"
+      target="_blank"><img
+        src="~/assets/university_logo.jpg"
+        class="bufs-logo"
+        alt="Busan University of Foreign Studies" />
     </a>
   </div>
 </template>

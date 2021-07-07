@@ -31,6 +31,7 @@ export default {
   .box {
     height: 300px;
     background-color: gray;
+    margin: 0 auto;
   }
   h2 {
     position: absolute;
@@ -38,6 +39,12 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     
+  }
+  @media all and (max-width:375px) {
+    body {
+     overflow: hidden;
+      
+    }
   }
   
 </style>
