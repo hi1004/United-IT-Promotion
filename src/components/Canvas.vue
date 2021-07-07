@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import draw from '~/config/canvers'
+import draw from '~/config/canvas'
   export default {
     mounted() {
       draw()

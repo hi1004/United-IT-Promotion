@@ -36,7 +36,6 @@ export default function () {
       this.radius = radius;
       this.minRadius = radius;
       this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
-
       this.draw = function () {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
