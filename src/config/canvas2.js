@@ -4,7 +4,6 @@ export default function () {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   let particlesArray = [];
-
   const mouse = {
     x: undefined,
     y: undefined,
@@ -26,7 +25,7 @@ export default function () {
     class Particle {
       constructor(x, y, color,size) {
         (this.x = x + canvas.width / 2 - png.width * 2),
-        (this.y = y + canvas.height / 2 - png.height * -5.5),
+        (this.y = y + canvas.height / 2 - png.height * 1.5),
         (this.color = color),
         (this.size = size),
         (this.baseX = x + canvas.width / 2 - png.width * 2),
@@ -84,6 +83,7 @@ export default function () {
                               ${data.data[y * 4 * data.width + (x * 4) + 1]},
                               ${data.data[y * 4 * data.width + (x * 4) + 2]})`;
             particlesArray.push(new Particle(positionX * 4, positionY * 4, color, 2));
+           
           }
         }
       }
@@ -115,6 +115,7 @@ export default function () {
     window.addEventListener('resize', () => {
       canvas.width = innerWidth;
       canvas.height = innerHeight;
+      
       visual()
       
       init();
