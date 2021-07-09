@@ -1,8 +1,8 @@
 <template>
   <!-- <canvas
     id="canvas">
-  </canvas> -->
-  <canvas id="canvas1"> </canvas>
+  </canvas>  -->
+  <canvas id="canvas1"> </canvas> 
   <canvas id="canvas2"></canvas>
 </template>
 
@@ -12,21 +12,10 @@
   import canvas2 from '~/config/canvas2';
   export default {
     mounted() {
-      // canvas()
+      //  canvas()
       particles();
       canvas2();
 
-
-      window.addEventListener('resize', () => {
-      //  var width = window.innerWidth;
-  
-
-        // if (width > 1060) {
-        //   !canvas2();
-        // } else {
-        //  particles();
-        // }
-      });
 
     },
   };
@@ -38,10 +27,13 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  #canvas{ 
+    z-index: -1;
+  }
   #canvas1 {
     z-index: 1;
   }
   #canvas2 {
-    z-index: 0;
+    z-index: -1;
   }
 </style>
