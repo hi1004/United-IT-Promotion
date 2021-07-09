@@ -26,6 +26,7 @@
   .japanese-logo {
     height: 40px;
      margin-right: 10px;
+     width: 183px;
   }
 
   .bufs-logo,
