@@ -25,5 +25,7 @@ export default {
     right: 30px;
     display: none;
     cursor: pointer;
+    z-index: 99;
+    cursor: pointer;
   }
 </style>

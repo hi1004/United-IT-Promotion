@@ -32,7 +32,7 @@ export default function () {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = 'rgb(138, 201, 253)';
+        ctx.fillStyle = 'rgba(138, 201, 253,0.5';
         ctx.fill();
       }
 
@@ -78,7 +78,7 @@ export default function () {
         let y = (Math.random() * ((innerHeight - size * 2 ) -(size *2)) + size *2)
         let directionX = (Math.random())-0.5;
         let directionY = (Math.random())-0.5;
-        let color = 'rgb(138, 201, 253)'
+        let color = 'rgba(138, 201, 253, 0.8)'
 
         particlesArray.push(new Particle(x,y,directionX,directionY,size,color))
 

@@ -26,9 +26,6 @@
 </script>
 
 <style lang="scss" scoped>
-  #scene {
-    //\ position: fixed;
-  }
   canvas {
     position: absolute;
     left: 50%;
@@ -37,13 +34,10 @@
   }
   #canvas {
     position: fixed;
+    z-index: 1;
   }
   #canvas2 {
     z-index: -1;
   }
-  @media all and (max-width: 1060px) {
-    #scene {
-     position: fixed;
-  }
-  }
+ 
 </style>
