@@ -33,7 +33,7 @@
 <style lang="scss" scoped>
   @import '~/scss/main';
   footer {
-    padding: 50px 0;
+    padding: 100px 0;
     text-align: center;
     opacity: 0.8;
     line-height: 1.8;

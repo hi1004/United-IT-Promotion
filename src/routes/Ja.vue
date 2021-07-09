@@ -8,14 +8,9 @@
       
       
       <div class="box">
-        <h2>창공을 누비다!</h2>
+        <!-- <h2>창공을 누비다!</h2> -->
       </div>
     </div>
-  </section>
-
-
-  <!-- VIDEO -->
-  <section class="video">
   </section>
 </template>
 
@@ -31,10 +26,10 @@ export default {
 <style lang="scss" scoped>
   @import '~/scss/common.scss';
   section {
-    padding-top: 150px;
- 
+    padding-top: 80px;
   }
   .box {
+    
     height: 300px;
     // background-color: gray;
     position: relative;

@@ -12,12 +12,12 @@ export default function () {
     const maxRadius = 20;
     // const minRadius = 2;
 
-    const colorArray = ['#fdc000', '#BAE2CF', '#133543', '#9CC0CD', '#F08586'];
+    const colorArray = ['#fff'];
 
-    window.addEventListener('mousemove', (event) => {
-      mouse.x = event.x;
-      mouse.y = event.y;
-    });
+    // window.addEventListener('mousemove', (event) => {
+    //   mouse.x = event.x;
+    //   mouse.y = event.y;
+    // });
 
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
@@ -29,6 +29,8 @@ export default function () {
     const ctx = canvas.getContext('2d');
 
     function Circle(x, y, dx, dy, radius) {
+      // const opacityArray = [Math.random()];
+
       this.x = x;
       this.y = y;
       this.dx = dx;
@@ -36,10 +38,12 @@ export default function () {
       this.radius = radius;
       this.minRadius = radius;
       this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
+      // this.opacity = opacityArray[0];
       this.draw = function () {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         ctx.fillStyle = this.color;
+        ctx.globalAlpha = this.opacity;
         ctx.fill();
       };
       this.update = function () {
@@ -72,12 +76,13 @@ export default function () {
 
     function init() {
       circleArray = [];
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 50; i++) {
         let x = Math.random() * (canvas.width - radius * 2) + radius;
         let y = Math.random() * (canvas.height - radius * 2) + radius;
         let dx = Math.random() - 0.5;
         let dy = Math.random() - 0.5;
         let radius = Math.random() * 3 + 1;
+
         circleArray.push(new Circle(x, y, dx, dy, radius));
       }
     }
