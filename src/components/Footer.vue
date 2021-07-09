@@ -23,6 +23,7 @@
 
 <script>
   import FooterLogo from '~/components/FooterLogo';
+
   export default {
     components: {
       FooterLogo,
@@ -33,7 +34,6 @@
 <style lang="scss" scoped>
   @import '~/scss/main';
   footer {
-    padding: 150px 0;
     text-align: center;
     opacity: 0.8;
     line-height: 1.8;
@@ -51,5 +51,6 @@
         width: 90px;
       }
     }
+   
   }
 </style>

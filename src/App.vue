@@ -1,6 +1,6 @@
 <template>
-  <Canvas />
   <Header />
+  <Canvas />
   <RouterView />
   <Totop />
   <Footer />

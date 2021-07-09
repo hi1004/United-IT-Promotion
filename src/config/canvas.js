@@ -1,7 +1,7 @@
 export default function () {
   window.addEventListener('load', () => {
     const canvas = document.getElementById('canvas');
-    // canvas.style.backgroundColor = 'lightgray';
+
     canvas.width = document.documentElement.clientWidth;
     canvas.height = window.innerHeight;
 
@@ -9,7 +9,7 @@ export default function () {
       x: undefined,
       y: undefined,
     };
-    const maxRadius = 20;
+    const maxRadius = 10;
     // const minRadius = 2;
 
     const colorArray = ['#fff'];
@@ -29,7 +29,7 @@ export default function () {
     const ctx = canvas.getContext('2d');
 
     function Circle(x, y, dx, dy, radius) {
-      // const opacityArray = [Math.random()];
+      const opacityArray = [Math.random()];
 
       this.x = x;
       this.y = y;
@@ -38,7 +38,7 @@ export default function () {
       this.radius = radius;
       this.minRadius = radius;
       this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
-      // this.opacity = opacityArray[0];
+      this.opacity = opacityArray[0];
       this.draw = function () {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
@@ -76,7 +76,7 @@ export default function () {
 
     function init() {
       circleArray = [];
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 40; i++) {
         let x = Math.random() * (canvas.width - radius * 2) + radius;
         let y = Math.random() * (canvas.height - radius * 2) + radius;
         let dx = Math.random() - 0.5;

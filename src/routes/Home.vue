@@ -26,10 +26,10 @@ export default {
 <style lang="scss" scoped>
   @import '~/scss/common.scss';
   section {
-    padding-top: 80px;
+    margin-top: 150px;
   }
   .box {
-    height: 300px;
+
     // background-color: gray;
     margin: 0 auto;
     position: relative;
