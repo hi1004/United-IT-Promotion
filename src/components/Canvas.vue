@@ -1,5 +1,5 @@
 <template>
-  <!-- <canvas id="canvas"></canvas> -->
+  <canvas id="canvas"></canvas>
   <section
     id="scene"
     class="panel"
