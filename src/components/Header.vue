@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="container">
+    <div class="container main-tool-bar">
       <Logo />
       <div class="nav nav-pills">
         <div
@@ -50,11 +50,17 @@
       align-items: center;
       justify-content: space-between;
       font-family: 'Oswald', sans-serif;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
       z-index: 9;
+    }
+    .main-tool-bar {
+        transition: ease 0.4s;
+     &--scrolled {
+    height: 40px;
+  }
     }
   }
 </style>

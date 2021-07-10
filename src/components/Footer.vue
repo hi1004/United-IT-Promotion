@@ -38,6 +38,9 @@
     opacity: 0.8;
     line-height: 1.8;
     font-family: 'Oswald', sans-serif;
+    position: relative;
+    z-index: 1;
+    margin: 50px 0;
     .container {
       display: flex;
       flex-direction: column;
