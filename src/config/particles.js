@@ -27,7 +27,6 @@ export default function () {
         this.color = color;
       }
 
-  
 
       draw() {
         ctx.beginPath();
@@ -74,10 +73,10 @@ export default function () {
       let numberOfParticles = (canvas.height * canvas.width) / 15000;
       for( let i = 0; i < numberOfParticles; i++) {
         let size = (Math.random()*5) +1;
-        let x = (Math.random() * ((innerWidth - size * 2 ) -(size *2)) + size *2)
-        let y = (Math.random() * ((innerHeight - size * 2 ) -(size *2)) + size *2)
-        let directionX = (Math.random())-0.5;
-        let directionY = (Math.random())-0.5;
+        let x = (Math.random() * ((innerWidth - size * 3 ) -(size *3)) + size *3)
+        let y = (Math.random() * ((innerHeight - size * 3 ) -(size *3)) + size *3)
+        let directionX = (Math.random())-1;
+        let directionY = (Math.random())-1;
         let color = 'rgba(138, 201, 253, 0.8)'
 
         particlesArray.push(new Particle(x,y,directionX,directionY,size,color))
@@ -92,7 +91,7 @@ export default function () {
           let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))
           + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y))
           if(distance < (canvas.width/7) * (canvas.height/7)) {
-            opacityValue = 1 - (distance/20000);
+            opacityValue = 1 - (distance/15000);
             ctx.strokeStyle = `rgba(138,201,253,${opacityValue})`;
             ctx.lineWidth = 1;
             ctx.beginPath();

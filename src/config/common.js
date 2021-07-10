@@ -1,12 +1,17 @@
 import _ from 'lodash';
-import gsap from 'gsap';
+import { gsap } from "gsap";
 import scrollTo from 'gsap/ScrollToPlugin';
-import ScrollTrigger from 'gsap/ScrollTrigger'
 import $ from 'jquery';
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 const Parallax = require('parallax-js');
+
 gsap.registerPlugin(scrollTo);
 gsap.registerPlugin(ScrollTrigger);
+
+
+
+
 
 export default function () {
 
@@ -58,16 +63,14 @@ export default function () {
   });
   
 
-
+/* 화면 전환 */
   let sections = gsap.utils.toArray(".panel"),
     currentSection = sections[0];
 
 gsap.defaults({overwrite: 'auto', duration: 0.3});
 
-// stretch out the body height according to however many sections there are. 
 gsap.set("body", {height: (sections.length * 100) + "%"});
 
-// create a ScrollTrigger for each section
 sections.forEach((section, i) => {
   ScrollTrigger.create({
     // use dynamic scroll positions based on the window height (offset by half to make it feel natural)
@@ -94,8 +97,11 @@ ScrollTrigger.create({
 }).scroll(2);
 
 
-  
-  
+
+
+
+
+
   
 }
 
