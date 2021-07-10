@@ -3,10 +3,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
 
-gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin);
+
+gsap.registerPlugin(ScrollTrigger,  MotionPathPlugin);
 
 
 export default function() {
