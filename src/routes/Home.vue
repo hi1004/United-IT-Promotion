@@ -3,11 +3,11 @@
     <History />
   </div>
 
-  <section class="panel">
+  <!-- <section class="panel">
     <div class="box">
-      <!-- <h2>창공을 누비다!</h2> -->
+      <h2>창공을 누비다!</h2>
     </div>
-  </section>
+  </section> -->
 </template>
 
 <script>

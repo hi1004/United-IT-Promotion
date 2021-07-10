@@ -23,9 +23,7 @@
     mounted() {
       canvas();
       particles();
-      canvas2();
-      
-  
+      canvas2();      
     },
   };
 </script>
