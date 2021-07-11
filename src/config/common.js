@@ -2,16 +2,15 @@ import _ from 'lodash';
 import { gsap } from "gsap";
 import scrollTo from 'gsap/ScrollToPlugin';
 import $ from 'jquery';
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import ScrollMagic from 'scrollmagic'
+
+
 
 const Parallax = require('parallax-js');
 
 gsap.registerPlugin(scrollTo);
 gsap.registerPlugin(ScrollTrigger);
-
-
-
-
 
 export default function () {
 
@@ -61,6 +60,18 @@ export default function () {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
   });
+
+  
+/* SCROLL MAGIC */
+const spyEls = document.querySelectorAll('.scroll-spy');
+spyEls.forEach((spyEl) => {
+  new ScrollMagic.Scene({
+    triggerElement: spyEl,
+    triggerHook: 0.8,
+  })
+    .setClassToggle(spyEl, 'show')
+    .addTo(new ScrollMagic.Controller());
+});
   
 
 /* 화면 전환 */

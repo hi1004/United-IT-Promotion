@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 id="title">
+    <h1 class="title scroll-spy back-to-position to-top">
       History
     </h1>
     <!-- <div class="spacer s2"></div> -->
@@ -13,7 +13,12 @@
       viewBox="-40 10 400 200">
       <path
         id="word"
-        style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;"
+        style="
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-dasharray: 1009.23px;
+          stroke-dashoffset: 1009.23px;
+        "
         fill="none"
         stroke="#171818"
         stroke-width="5"
@@ -27,16 +32,26 @@
 			c-9.404-0.429-32.624-0.188-32.864,18.472c-0.231,17.912,21.001,21.405,40.882,11.951" />
       <path
         id="dot"
-        style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 44.2974px; stroke-dashoffset: 44.2974px;"
+        style="
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-dasharray: 44.2974px;
+          stroke-dashoffset: 44.2974px;
+        "
         fill="none"
         stroke="#171818"
         stroke-width="5"
         d="M247.003,38.567c-7.423,1.437-11.092,9.883-1.737,11.142c14.692,1.978,13.864-13.66,1.12-8.675" />
     </svg>
     <!-- <div class="spacer s2"></div> -->
+
+    
     <div
       v-for="(slogan, i) in slogans.years"
-      :class="[slogans.class.historyItem, slogan % 2 === 0 ? slogans.class.teamup : slogans.class.solo]"
+      :class="[
+        slogans.class.historyItem,
+        slogan % 2 === 0 ? slogans.class.teamup : slogans.class.solo,
+      ]"
       :key="slogan">
       <h1 class="year">
         {{ slogan }}
@@ -56,7 +71,7 @@
         slogans: {
           texts: [
             '시작의 날개를 펴다',
-            '꿈은 이루어진다', 
+            '꿈은 이루어진다',
             '더 높이 더 단단하게',
             '새로운 시작',
             '한계를 넘어서',
@@ -65,7 +80,7 @@
             '더 넥스트 스파르탄!',
             '나의 세상을 꿈꾸자!',
             '창공을 누비다!',
-            ],
+          ],
           years: (() => {
             const years = [];
             const thisYear = new Date().getFullYear();
@@ -74,7 +89,7 @@
             }
             return years;
           })(),
-          
+
           class: {
             historyItem: 'history-item',
             teamup: 'teamup',
@@ -90,11 +105,11 @@
 </script>
 
 <style lang="scss" scoped>
-.container {
-  position: relative;
-}
+  .container {
+    position: relative;
+  }
 
-  #title {
+  .title {
     font-size: 10vh;
     text-align: center;
   }

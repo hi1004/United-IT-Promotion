@@ -1,5 +1,3 @@
-
-
 import $ from 'jquery'
 import { TweenMax, TimelineMax, Linear } from "gsap"; // Also works with TweenLite and TimelineLite
 import  ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid server rendering problems
@@ -36,6 +34,10 @@ export default function() {
   }  
 
 
+
+
+
+
 /* svg */
   function pathPrepare ($el) {
 		var lineLength = $el[0].getTotalLength();
@@ -60,10 +62,12 @@ export default function() {
 		.add(TweenMax.to("path", 1, {stroke: "#fff", ease:Linear.easeNone}), 0);			// change color during the whole thing
 
 	// build scene
-  new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 200, tweenChanges: true})
+	new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 200, tweenChanges: true})
 					.setTween(tween)
 					.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
+
+          
         
 }
 
