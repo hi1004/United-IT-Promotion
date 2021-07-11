@@ -77,7 +77,7 @@ export default {
   opacity: 0;
   transition: 1s ease-in-out;
 
-  &.active{
+  &.active-effect{
     z-index: 1;
     opacity: 1;
   }

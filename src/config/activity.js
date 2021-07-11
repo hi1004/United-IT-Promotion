@@ -1,5 +1,5 @@
 export default function() {
-  const ACTIVE_CLASS = 'active'
+  const ACTIVE_CLASS = 'active-effect'
   const firstSlide = document.querySelector('.activity-item:first-child');
   const slider = document.querySelector('.activity-container');
 
