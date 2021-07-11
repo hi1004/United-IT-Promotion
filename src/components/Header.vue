@@ -44,6 +44,10 @@
 
 <style lang="scss" scoped>
   header {
+    height: 70px;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
     .container {
       height: 70px;
       display: flex;
@@ -54,13 +58,12 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 9;
     }
     .main-tool-bar {
-        transition: ease 0.4s;
-     &--scrolled {
-    height: 40px;
-  }
+      transition: ease 0.4s;
+      &--scrolled {
+        height: 40px;
+      }
     }
   }
 </style>

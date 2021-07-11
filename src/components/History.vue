@@ -1,5 +1,5 @@
 <template>
-  <div class="history-container">
+  <div class="container">
     <h1 id="title">
       History
     </h1> 

@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
+  <!-- HISTORY -->
+  <section class="history-container">
     <History />
+  </section>
+
+  <!-- ACTIVIY -->
+  <section class="activity-container">
     <Activiy />
-  </div>
-  <!-- <section class="panel">
-    <div class="box">
-      <h2>창공을 누비다!</h2>
-    </div>
-  </section> -->
+  </section>
 </template>
 
 <script>
@@ -38,10 +38,5 @@
     width: 100%;
     height: 100%;
     margin-top: 100px;
-  }
-  section:not(.first) {
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0.8);
   }
 </style>
