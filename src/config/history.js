@@ -1,44 +1,24 @@
-import { gsap } from "gsap";
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-
-
-
-
-
-gsap.registerPlugin(ScrollTrigger,  MotionPathPlugin);
-
-
 export default function() {
 
+  let historyItems = Array.from(document.querySelectorAll('.history-item'))
 
-  /* History */
-gsap.defaults({ease: "none"});
+  window.addEventListener('scroll', scanElements)
 
-gsap.set(".ball", {xPercent: -50, yPercent: -50})
+  function scanElements(){
+    historyItems.forEach(element =>{
+      if(isVisable(element)){
+        element.classList.add('active');
+      } else{
+        element.classList.remove('active')
+      }      
+    })
+  }
 
-var tl = gsap.timeline({
-  defaults: {
-    duration: 0.05, 
-    autoAlpha: 1, 
-    scale: 2, 
-    transformOrigin: 'center', 
-    ease: "elastic(2.5, 1)"
-  }})
-.to(".ball02, .text01", {}, 0.2) 
-.to(".ball03, .text02", {}, 0.33)
-.to(".ball04, .text03", {}, 0.46)
-
-gsap.timeline({defaults: {duration: 1},
-  scrollTrigger: {
-    trigger: "#svg",
-    scrub: true,
-    start: "top center",
-    end: "bottom center"
-  }})
-.to(".ball01", {duration: 0.01, autoAlpha: 1})
-.from(".theLine", {drawSVG: 0}, 0)
-.to(".ball01", {motionPath: {path: ".theLine", alignOrigin: [0.5, 0.5]}}, 0)
-.add(tl, 0);
-  
+  function isVisable(element){
+    const elementItem = element.getBoundingClientRect();
+    let distanceFromTop = -0.1 * window.innerHeight;
+    let distanceFromBottom = -0.9 * window.innerHeight;
+    return elementItem.top - window.innerHeight < distanceFromTop && elementItem.top - window.innerHeight > distanceFromBottom ? true : false;
+  }  
 }
+

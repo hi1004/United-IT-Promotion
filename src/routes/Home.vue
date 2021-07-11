@@ -1,24 +1,26 @@
 <template>
   <div class="container">
     <History />
+    <Activiy />
   </div>
-
-  <section class="panel">
+  <!-- <section class="panel">
     <div class="box">
-      <!-- <h2>창공을 누비다!</h2> -->
+      <h2>창공을 누비다!</h2>
     </div>
-  </section>
+  </section> -->
 </template>
 
 <script>
   import History from '~/components/History';
+  import Activiy from '~/components/Activity';
   import common from '~/config/common';
   export default {
     mounted() {
       common();
     },
     components : {
-      History
+      History,
+      Activiy
     }
   };
 </script>
