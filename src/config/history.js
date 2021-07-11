@@ -16,8 +16,9 @@ export default function() {
 
   function isVisable(element){
     const elementItem = element.getBoundingClientRect();
-    let distanceFromTop = -0.3 * window.innerHeight;
-    return elementItem.top - window.innerHeight < distanceFromTop ? true : false;
-  }
-  
+    let distanceFromTop = -0.1 * window.innerHeight;
+    let distanceFromBottom = -0.9 * window.innerHeight;
+    return elementItem.top - window.innerHeight < distanceFromTop && elementItem.top - window.innerHeight > distanceFromBottom ? true : false;
+  }  
 }
+

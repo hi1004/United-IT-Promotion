@@ -38,10 +38,10 @@
   }
   #canvas {
     position: fixed;
-    z-index: 1;
+    z-index: -1;
   }
   #canvas1 {
-    z-index: 1;
+    z-index: 0;
   }
   #canvas2 {
     z-index: -1;

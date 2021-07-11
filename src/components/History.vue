@@ -1,5 +1,8 @@
 <template>
   <div class="history-container">
+    <h1 id="title">
+      History
+    </h1> 
     <div class="history-item solo">
       <h1 class="year">
         2011
@@ -70,9 +73,15 @@ export default {
 
 
 <style lang="scss" scoped>
+
+#title{
+  font-size: 10vh;
+  text-align: center;
+}
+
 .history-container{
   display: flex;
-  margin: 0 auto;
+  margin: 20vh auto;
   justify-content: center;
   flex-direction: column;
 }
@@ -80,20 +89,27 @@ export default {
   width: 30vw;
   opacity: 0;
   transition: 1s ease-out; 
-  margin: 15vh auto;     
+  margin: 15vh auto;    
+  
+  &.solo{
+    text-align: right;
+  }
+
+  &.teamup{
+    text-align: left;
+  }
 
   &.active{
     opacity: 1;
-    transition: 0.8s ease-in;
+    transition: 0.8s ease-in;      
+
     &.solo{
-      transform: translateX(-20vw);
-      text-align: right;
-    }
+      transform: translateX(-20vw);          
+      }
+    
     &.teamup{
-      transform: translateX(20vw);
-      text-align: left;
+      transform: translateX(20vw);      
     }
   }
 }
-
 </style>
