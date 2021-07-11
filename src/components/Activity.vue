@@ -1,5 +1,5 @@
 <template>
-  <div class="activity-container">  
+  <div class="activity-container container">  
     <h1 id="title">
       Activity
     </h1>  
