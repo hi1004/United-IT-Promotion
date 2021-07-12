@@ -13,10 +13,18 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 export default function() {
   
   let historyItems = Array.from(document.querySelectorAll('.history-item'))
+  let historyTitleTexts = Array.from(document.querySelectorAll('#title-history>text'))
 
   window.addEventListener('scroll', scanElements)
 
   function scanElements(){
+		historyTitleTexts.forEach(element =>{
+			if(isVisable(element, 0, 1)){
+				element.classList.add('title-effect');
+			} else{
+				element.classList.remove('title-effect')
+			}
+		})
     historyItems.forEach(element =>{
       if(isVisable(element)){
         element.classList.add('active');
@@ -26,10 +34,10 @@ export default function() {
     })
   }
 
-  function isVisable(element){
+  function isVisable(element, top=0.1, bottom=0.9){
     const elementItem = element.getBoundingClientRect();
-    let distanceFromTop = -0.1 * window.innerHeight;
-    let distanceFromBottom = -0.9 * window.innerHeight;
+    let distanceFromTop = -top * window.innerHeight;
+    let distanceFromBottom = -bottom * window.innerHeight;
     return elementItem.top - window.innerHeight < distanceFromTop && elementItem.top - window.innerHeight > distanceFromBottom ? true : false;
   }  
 
