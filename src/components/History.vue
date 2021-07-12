@@ -2,43 +2,41 @@
   <div class="container"> 
     <svg      
       id="title-history"
-      style="width:60vw;height:30vw;"
+      style="width:40vw;height:10vw;"
       preserveAspectRatio="none">
       <text        
         x="0"
-        y="50%">H</text>
+        y="100%">H</text>
       <text
         x="14%"
-        y="50%">I</text>
+        y="100%">I</text>
       <text
-        x="26%"
-        y="50%">S</text>
+        x="26.5%"
+        y="100%">S</text>
       <text
         x="40%"
-        y="50%">T</text>
+        y="100%">T</text>
       <text
-        x="53%"
-        y="50%">O</text>
+        x="54%"
+        y="100%">O</text>
       <text
         x="68%"
-        y="50%">R</text>
+        y="100%">R</text>
       <text
         x="82%"
-        y="50%">Y</text></svg>
-
-    <div
-      v-for="(slogan, i) in slogans.years"
-      :class="[
-        slogans.class.historyItem,
-        slogan % 2 === 0 ? slogans.class.teamup : slogans.class.solo,
-      ]"
-      :key="slogan">
-      <h1 class="year">
-        {{ slogan }}
-      </h1>
-      <h5 class="description">
-        {{ slogans.texts[i] }}
-      </h5>
+        y="100%">Y</text></svg>
+    <div class="history-container">
+      <div
+        v-for="(slogan) in slogans.years"
+        :class="[
+          slogans.class.historyItem,
+          slogans.class.year
+        ]"
+        :key="slogan">
+        <h1 class="year">
+          {{ slogan }}
+        </h1>
+      </div>
     </div>
   </div>
 </template>
@@ -72,8 +70,7 @@
 
           class: {
             historyItem: 'history-item',
-            teamup: 'teamup',
-            solo: 'solo',
+            year: 'year'
           },
         },
       };
@@ -85,21 +82,21 @@
 </script>
 
 <style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@500&display=swap');  
+  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap'); 
   .container {
     position: relative;
   }
 
   #title-history{
     display: block;
-    margin: auto;
+    margin: 30vh auto;
       text{
         opacity: 0;
       }
       text.title-effect{
         opacity: 1;
-        font-family: 'Tourney', cursive;
-        font-size: 15vw; fill:transparent;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 10vw; fill:transparent;
         stroke-dasharray: 150px;
         animation: stroke 1s linear;
         animation-fill-mode: forwards;
@@ -121,35 +118,32 @@
   }
 
   .history-container {
-    display: flex;
-    margin: 20vh auto;
+    display: flex;    
     justify-content: center;
     flex-direction: column;
   }
   .history-item {
     opacity: 0;
     transition: 1s ease-out;
-    margin: 15vw auto;
+    margin: 20vh 0;
 
-    &.solo {
-      text-align: right;
+    h1{
+      font-family: 'Source Code Pro', monospace;
+      font-size: 5vw;
     }
 
-    &.teamup {
+    &.year {
       text-align: left;
     }
 
-    &.active {
+    &.year-effect {
       opacity: 1;
-      transition: 0.8s ease-in;
-
-      &.solo {
-        transform: translateX(-20vw);
-      }
-
-      &.teamup {
-        transform: translateX(20vw);
-      }
+      transition: 0.5s ease-in;
+      transform: translateX(3vw);
+    }
+    &.year-focus {      
+      transition: 0.5s ease-in;
+      transform: translateX(20vw) scale(1.3);
     }
   }
 </style>

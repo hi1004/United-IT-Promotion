@@ -67,15 +67,9 @@
     height: 100%;
     // background-color: purple;
     text-align: center;
-    position: absolute;
-    z-index: 0;
-    opacity: 0;
+    opacity: 1;
     transition: 1s ease-in-out;
-
-    &.active-effect {
-      z-index: 1;
-      opacity: 1;
-    }
+    
     .img {
       width: 100%;
       height: 40%;

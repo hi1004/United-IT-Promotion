@@ -18,30 +18,34 @@ export default function() {
   window.addEventListener('scroll', scanElements)
 
   function scanElements(){
-		historyTitleTexts.forEach(element =>{
-			if(isVisable(element, 0, 1)){
-				element.classList.add('title-effect');
-			} else{
-				element.classList.remove('title-effect')
-			}
-		})
-    historyItems.forEach(element =>{
-      if(isVisable(element)){
-        element.classList.add('active');
-      } else{
-        element.classList.remove('active')
-      }      
-    })
+	historyTitleTexts.forEach(element =>{
+		if(isVisable(element, 0, 1)){
+			element.classList.add('title-effect');
+		} else{
+			element.classList.remove('title-effect')
+		}		
+	})
+	historyItems.forEach(element =>{
+		if(isVisable(element)){
+			element.classList.add('year-effect');
+		} else{
+			element.classList.remove('year-effect')
+		}
+
+	if(isVisable(element, 0.4, 0.6)){
+			element.classList.add('year-focus');
+		} else{
+			element.classList.remove('year-focus')
+		}            
+	})
   }
 
-  function isVisable(element, top=0.1, bottom=0.9){
+  function isVisable(element, top=0.1, bottom=0.8){
     const elementItem = element.getBoundingClientRect();
     let distanceFromTop = -top * window.innerHeight;
     let distanceFromBottom = -bottom * window.innerHeight;
-    return elementItem.top - window.innerHeight < distanceFromTop && elementItem.top - window.innerHeight > distanceFromBottom ? true : false;
+    return elementItem.top - window.innerHeight < distanceFromTop && elementItem.bottom - window.innerHeight > distanceFromBottom ? true : false;
   }  
-
-
 
 
 
