@@ -35,14 +35,9 @@
         <h1 class="year">
           {{ year }}
         </h1>
-        <svg
-          class="slogan"
-          style="width:50vw;height:20vw;"
-          preserveAspectRatio="none">
-          <text        
-            x="0"
-            y="100%">{{ slogans.texts[i] }}</text>      
-        </svg>
+        <h1 class="slogan">
+          {{ slogans.texts[i] }}  
+        </h1>
       </div>
     </div>
   </div>
@@ -110,14 +105,12 @@
         animation-fill-mode: forwards;
       }
   }
-
   @keyframes stroke1 {
     0% { stroke:#FFFFFF; stroke-width: 3px; stroke-dashoffset: 326px; }
     70% { fill: transparent; }
     98% { stroke:#FFFFFF; stroke-width: 3px; }
     100% { fill: #FFFFFF; stroke-dashoffset: 0px; }
   }
-
   #title-history text:nth-child(1) { animation-delay: 0s; }
   #title-history text:nth-child(2) { animation-delay: 0.1s; }
   #title-history text:nth-child(3) { animation-delay: 0.2s; }
@@ -146,11 +139,12 @@
     }
 
     .slogan {
-      right: 0;
+      right: 10vw;
       top: 40vh;
       position: fixed;
       font-size: 5vw; 
       font-family: 'Source Code Pro', monospace;
+      z-index: 0;
       opacity: 0;
     }
 
@@ -158,7 +152,7 @@
       .year{
         opacity: 0.5;
         transition: 0.5s ease-in;
-        transform: translateX(-5vw);
+        transform: translateX(0vw);
       }
       
     }
@@ -167,22 +161,13 @@
         opacity: 1;
         color: #fdc000;
         transition: 0.5s ease-in;
-        transform: translateX(10vw) scale(1.3);
+        transform: translateX(15vw) scale(1.3);
       }           
-      .slogan {        
+      .slogan {  
         transition: 1s ease-out;
-        opacity: 1;
-        fill: transparent;
-        stroke-dasharray: 50px;
-        animation: stroke2 1s linear;
-        animation-fill-mode: forwards;
+        z-index: 1;
+        opacity: 1;        
       }
     }
-    @keyframes stroke2 {
-    0% { stroke:#FFFFFF; stroke-width: 1px; stroke-dashoffset: 100px; }
-    70% { fill: transparent; }
-    98% { stroke:#FFFFFF; stroke-width: 1px; }
-    100% { fill: #FFFFFF; stroke-dashoffset: 0px; }
-  }
   }
 </style>

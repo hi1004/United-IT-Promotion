@@ -1,24 +1,33 @@
 export default function() {
 
-  const ACTIVE_CLASS = 'showIt'
-  const firstSlide = document.querySelector('.activity-item:first-child');
-  const slider = document.querySelector('.activity-container');
+  let activityItems = Array.from(document.querySelectorAll('.activity-item'))
+  let activityTitleTexts = Array.from(document.querySelectorAll('#title-activity>text'))
 
-  function slide(){
-    const currentSlide = document.querySelector(`.${ACTIVE_CLASS}`);
-    if (currentSlide) {
-      currentSlide.classList.remove(ACTIVE_CLASS)
-      const nextSlide = currentSlide.nextElementSibling;
-      if(nextSlide){
-        nextSlide.classList.add(ACTIVE_CLASS);
+  window.addEventListener('scroll', scanElements)
+  
+  function scanElements(){
+    activityTitleTexts.forEach(element =>{
+      if(isVisable(element, 0, 1)){
+        element.classList.add('title-effect');
       } else{
-        firstSlide.classList.add(ACTIVE_CLASS);
-      }
-    } else {
-      firstSlide.classList.add(ACTIVE_CLASS);
-    }
+        element.classList.remove('title-effect')
+      }		
+    })
+
+    activityItems.forEach(element =>{
+      if(isVisable(element, 1, 1)){
+        element.classList.add('slide-effect');
+      } else{
+        element.classList.remove('slide-effect')
+      }		
+    })
   }
-  slide()
-  slider.addEventListener('click', slide)
+
+  function isVisable(element, top=0.1, bottom=0.8){
+    const elementItem = element.getBoundingClientRect();
+    let distanceFromTop = -top * window.innerHeight;
+    let distanceFromBottom = -bottom * window.innerHeight;
+    return elementItem.top - window.innerHeight < distanceFromTop && elementItem.bottom - window.innerHeight > distanceFromBottom ? true : false;
+  }
 
 }

@@ -1,8 +1,33 @@
 <template>
   <div class="container">
-    <h1 id="title">
-      Activity
-    </h1>
+    <svg      
+      id="title-activity"
+      style="width:50vw;height:10vw;"
+      preserveAspectRatio="none">
+      <text        
+        x="0"
+        y="100%">A</text>
+      <text
+        x="12.5%"
+        y="100%">C</text>
+      <text
+        x="25%"
+        y="100%">T</text>
+      <text
+        x="37%"
+        y="100%">I</text>
+      <text
+        x="49%"
+        y="100%">V</text>
+      <text
+        x="61.5%"
+        y="100%">I</text>
+      <text
+        x="74%"
+        y="100%">T</text>
+      <text
+        x="86.5%"
+        y="100%">Y</text></svg>
     <div class="activity-slider">
       <div class="activity-item">
         <div class="img">
@@ -42,38 +67,72 @@
 </script>
 
 <style lang="scss" scoped>
-  #title {
-    transform: translateY(10vh);
-    text-align: center;
-    font-size: 10vh;
+  .container{
+    margin: 20vh auto;
   }
+  // #title {
+  //   transform: translateY(10vh);
+  //   text-align: center;
+  //   font-size: 10vh;
+  //   margin-bottom: 10vh;
+  // }
+
+  #title-activity{
+    display: block;
+    margin: 30vh auto;
+      text{
+        opacity: 0;
+      }
+      text.title-effect{
+        opacity: 1;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 10vw; fill:transparent;
+        stroke-dasharray: 150px;
+        animation: stroke1 1s linear;
+        animation-fill-mode: forwards;
+      }
+  }
+  @keyframes stroke1 {
+    0% { stroke:#FFFFFF; stroke-width: 3px; stroke-dashoffset: 326px; }
+    70% { fill: transparent; }
+    98% { stroke:#FFFFFF; stroke-width: 3px; }
+    100% { fill: #FFFFFF; stroke-dashoffset: 0px; }
+  }
+  #title-activity text:nth-child(1) { animation-delay: 0s; }
+  #title-activity text:nth-child(2) { animation-delay: 0.1s; }
+  #title-activity text:nth-child(3) { animation-delay: 0.2s; }
+  #title-activity text:nth-child(4) { animation-delay: 0.3s; }
+  #title-activity text:nth-child(5) { animation-delay: 0.4s; }
+  #title-activity text:nth-child(6) { animation-delay: 0.5s; }
+  #title-activity text:nth-child(7) { animation-delay: 0.6s;}
+  #title-activity text:nth-child(8) { animation-delay: 0.7s;}
+
   .activity-slider {
-    display: flex;
-    position: relative;
     margin: 20vh auto;
     width: 60vw;
-    height: 40vw;
-    // background-color: gray;
+    height: auto;
+    // background-color: lightgray;
     justify-content: center;
     flex-direction: column;
   }
 
   .activity-item {
-    background-color: rgba(128, 128, 128, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    opacity: 1;
-    transition: 1s ease-in-out;
+    background-color: rgba(64, 64, 64, .5); 
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+    width: 60vw;
+    height: 100vh;
+    text-align: center;    
     
-    .img {
-      width: 50%;
-      height: 50%;
-      margin: 10% 0;
+    .img {      
+      width: 30vw;
+      height: 30vw;
+      margin: auto;
+      position: fixed;
+      top: 30vh;
+      left: 35vw;
+      opacity: 0;
     }
     img {
       width: 100%;
@@ -81,7 +140,40 @@
     }
 
     .description {
-       height: 40%;
+      width: 60vw; 
+      height: 24vh;
+      position: fixed;
+      top: 65vh;
+      left: 20vw;
+      opacity: 0;
+      h1{
+        font-size: 4vw;
+      }
+      h3{
+        font-size: 2vw;
+      }
+    }
+
+    &.slide-effect{
+      .img{
+        transition: .5s;
+        transition-timing-function: cubic-bezier(0.155, -0.045, 0.395, 2.000);
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1.2);
+      }
+      .description{
+        transition: .5s;        
+        opacity: 1;
+        z-index: 1;
+        h1{
+          transition-delay: .5s;
+        }
+        h3{
+          transition-delay: 1s;
+        }
+      }
+      
     }
   }
 </style>
