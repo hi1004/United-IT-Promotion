@@ -132,7 +132,7 @@
     .year {      
       opacity: 0;      
       transform: translateX(-10vw);
-      transition: 1s ease-out;
+      transition: .5s ease-in-out;
       font-family: 'Source Code Pro', monospace;
       font-size: 8vw;
       text-align: left;
