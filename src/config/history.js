@@ -22,7 +22,7 @@ export default function() {
 			element.classList.remove('year-effect')
 		}
 
-	if(isVisable(element, 0.4, 0.6)){
+	if(isVisable(element, 0.45, 0.55)){
 			element.classList.add('year-focus');
 		} else{
 			element.classList.remove('year-focus')

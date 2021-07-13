@@ -1,7 +1,8 @@
 export default function() {
 
-  let activityItems = Array.from(document.querySelectorAll('.activity-item'))
-  let activityTitleTexts = Array.from(document.querySelectorAll('#title-activity>text'))
+  const activityItems = Array.from(document.querySelectorAll('.activity-item'))
+  const activityTitleTexts = Array.from(document.querySelectorAll('#title-activity>text'))  
+
 
   window.addEventListener('scroll', scanElements)
   
