@@ -59,29 +59,28 @@
   }
 
   .activity-item {
+    background-color: rgba(128, 128, 128, .5);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    // background-color: purple;
     text-align: center;
     opacity: 1;
     transition: 1s ease-in-out;
     
     .img {
-      width: 100%;
-      height: 40%;
+      width: 50%;
+      height: 50%;
       margin: 10% 0;
     }
     img {
-      width: auto;
+      width: 100%;
       height: 100%;
     }
 
     .description {
-      // width: 100%;
        height: 40%;
     }
   }

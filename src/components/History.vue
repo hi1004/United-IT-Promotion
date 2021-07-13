@@ -27,15 +27,22 @@
         y="100%">Y</text></svg>
     <div class="history-container">
       <div
-        v-for="(slogan) in slogans.years"
+        v-for="(year, i) in slogans.years"
         :class="[
-          slogans.class.historyItem,
-          slogans.class.year
+          slogans.class.historyItem
         ]"
-        :key="slogan">
+        :key="year">
         <h1 class="year">
-          {{ slogan }}
+          {{ year }}
         </h1>
+        <svg
+          class="slogan"
+          style="width:50vw;height:20vw;"
+          preserveAspectRatio="none">
+          <text        
+            x="0"
+            y="100%">{{ slogans.texts[i] }}</text>      
+        </svg>
       </div>
     </div>
   </div>
@@ -50,7 +57,7 @@
           texts: [
             '시작의 날개를 펴다',
             '꿈은 이루어진다',
-            '더 높이 더 단단하게',
+            '더 높이 \n더 단단하게',
             '새로운 시작',
             '한계를 넘어서',
             '원년의 에너지로',
@@ -70,7 +77,8 @@
 
           class: {
             historyItem: 'history-item',
-            year: 'year'
+            year: 'year',
+            slogan: 'slogan'
           },
         },
       };
@@ -98,10 +106,18 @@
         font-family: 'Source Code Pro', monospace;
         font-size: 10vw; fill:transparent;
         stroke-dasharray: 150px;
-        animation: stroke 1s linear;
+        animation: stroke1 1s linear;
         animation-fill-mode: forwards;
       }
   }
+
+  @keyframes stroke1 {
+    0% { stroke:#FFFFFF; stroke-width: 3px; stroke-dashoffset: 326px; }
+    70% { fill: transparent; }
+    98% { stroke:#FFFFFF; stroke-width: 3px; }
+    100% { fill: #FFFFFF; stroke-dashoffset: 0px; }
+  }
+
   #title-history text:nth-child(1) { animation-delay: 0s; }
   #title-history text:nth-child(2) { animation-delay: 0.1s; }
   #title-history text:nth-child(3) { animation-delay: 0.2s; }
@@ -110,12 +126,7 @@
   #title-history text:nth-child(6) { animation-delay: 0.5s; }
   #title-history text:nth-child(7) { animation-delay: 0.6s;}
 
-  @keyframes stroke {
-    0% { stroke:#FFFFFF; stroke-width: 3px; stroke-dashoffset: 326px; }
-    70% { fill: transparent; }
-    98% { stroke:#FFFFFF; stroke-width: 3px; }
-    100% { fill: #FFFFFF; stroke-dashoffset: 0px; }
-  }
+  
 
   .history-container {
     display: flex;    
@@ -123,27 +134,55 @@
     flex-direction: column;
   }
   .history-item {
-    opacity: 0;
-    transition: 1s ease-out;
     margin: 20vh 0;
-
-    h1{
+    
+    .year {      
+      opacity: 0;      
+      transform: translateX(-10vw);
+      transition: 1s ease-out;
       font-family: 'Source Code Pro', monospace;
-      font-size: 5vw;
-    }
-
-    &.year {
+      font-size: 8vw;
       text-align: left;
     }
 
+    .slogan {
+      right: 0;
+      top: 40vh;
+      position: fixed;
+      font-size: 5vw; 
+      font-family: 'Source Code Pro', monospace;
+      opacity: 0;
+    }
+
     &.year-effect {
-      opacity: 1;
-      transition: 0.5s ease-in;
-      transform: translateX(3vw);
+      .year{
+        opacity: 0.5;
+        transition: 0.5s ease-in;
+        transform: translateX(-5vw);
+      }
+      
     }
-    &.year-focus {      
-      transition: 0.5s ease-in;
-      transform: translateX(20vw) scale(1.3);
+    &.year-focus {
+      .year{
+        opacity: 1;
+        color: #fdc000;
+        transition: 0.5s ease-in;
+        transform: translateX(10vw) scale(1.3);
+      }           
+      .slogan {        
+        transition: 1s ease-out;
+        opacity: 1;
+        fill: transparent;
+        stroke-dasharray: 50px;
+        animation: stroke2 1s linear;
+        animation-fill-mode: forwards;
+      }
     }
+    @keyframes stroke2 {
+    0% { stroke:#FFFFFF; stroke-width: 1px; stroke-dashoffset: 100px; }
+    70% { fill: transparent; }
+    98% { stroke:#FFFFFF; stroke-width: 1px; }
+    100% { fill: #FFFFFF; stroke-dashoffset: 0px; }
+  }
   }
 </style>
