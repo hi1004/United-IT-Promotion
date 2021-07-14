@@ -2,11 +2,11 @@
 import _ from 'lodash';
 import { gsap } from "gsap";
 import scrollTo from 'gsap/ScrollToPlugin';
-import $ from 'jquery';
+// import $ from 'jquery';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollMagic from 'scrollmagic';
 
-const Parallax = require('parallax-js');
+// const Parallax = require('parallax-js');
 gsap.registerPlugin(scrollTo);
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,10 +14,10 @@ export default function () {
 
 
   
-  const loadEl = document.querySelector('#load');
-  window.addEventListener('load', () => {
-    loadEl.fadeOut()
-  })
+  // const loadEl = document.querySelector('#load');
+  // window.addEventListener('load', () => {
+  //   loadEl.fadeOut()
+  // })
 
  /* TO-TOP */
   const toTopEl = document.querySelector('#to-top');
@@ -45,12 +45,12 @@ export default function () {
 
   
   /* PARALLAX */
-  $(function () {
-    new Parallax($('#scene')[0]);
-  });
+  // $(function () {
+  //   new Parallax($('#scene')[0]);
+  // });
 
 
-  /* GSAP SCROLL */
+  /* Header */
 
   const showAnim = gsap.from('.main-tool-bar', { 
     yPercent: -100,
