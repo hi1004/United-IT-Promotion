@@ -43,9 +43,6 @@ export default function () {
 	}
 
 	spreadRandom();
-	spreadRandom();
-	spreadRandom();
-	spreadReset();
 
 	window.addEventListener('resize', function(){
 		resize();
