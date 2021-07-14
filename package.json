@@ -48,6 +48,7 @@
     "parallax-js": "^3.1.0",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
+    "smooth-scrollbar": "^8.6.2",
     "vue": "^3.0.7",
     "vue-router": "^4.0.10"
   }

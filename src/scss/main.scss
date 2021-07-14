@@ -16,15 +16,33 @@ $container-max-widths: (
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 body {
-  font-family: "Roboto", sans-serif;
   line-height: 1.4;
   color: $light;
   background-color: #171818;
   font-family: 'Roboto','Oswald', sans-serif;
   overflow-x: hidden;
-
+  height: 100vh;
   position: relative;
   z-index: 1;
+  #load {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.8;
+    background: white;
+    z-index: 99;
+    text-align: center;
+}
+
+#load > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+}
   a {
     text-decoration: none;
   }  
