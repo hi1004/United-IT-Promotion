@@ -90,7 +90,7 @@
         font-family: 'Source Code Pro', monospace;
         font-size: 10vw; fill:transparent;
         stroke-dasharray: 150px;
-        animation: stroke1 1s linear;
+        animation: stroke1 .5s linear;
         animation-fill-mode: forwards;
       }
   }
@@ -113,18 +113,17 @@
     margin: 20vh auto;
     width: 60vw;
     height: auto;
-    // background-color: lightgray;
     justify-content: center;
     flex-direction: column;
   }
 
   .activity-item {
-    background-color: rgba(64, 64, 64, .1); 
+    // background-color: rgba(64, 64, 64, .1); 
     display: block;
     margin: 0 auto;
     margin-bottom: 10vh;
     width: 60vw;
-    height: 100vh;
+    height: 80vh;
     text-align: center;    
    
   .img {      

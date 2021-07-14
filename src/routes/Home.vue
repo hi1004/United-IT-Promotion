@@ -1,7 +1,7 @@
 <template>
   <!-- HISTORY -->
   <section class="history-container">
-    <History />
+    <!-- <History /> -->
   </section>
 
   <!-- ACTIVIY -->

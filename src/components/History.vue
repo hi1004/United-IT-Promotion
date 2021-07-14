@@ -3,6 +3,7 @@
     <svg      
       id="title-history"
       style="width:40vw;height:10vw;"
+      class="scroll-spy back-to-position to-top"
       preserveAspectRatio="none">
       <text        
         x="0"
@@ -52,7 +53,7 @@
           texts: [
             '시작의 날개를 펴다',
             '꿈은 이루어진다',
-            '더 높이 \n더 단단하게',
+            '더 높이 더 단단하게',
             '새로운 시작',
             '한계를 넘어서',
             '원년의 에너지로',

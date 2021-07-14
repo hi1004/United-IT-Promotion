@@ -1,37 +1,60 @@
-export default function () {
+import { TweenMax, Power4, Back } from 'gsap';
 
+export default function () {
 	let windowWidth, windowHeight;
 	windowHeight = window.innerHeight;
 	windowWidth = window.innerWidth;
 
+	let logoMainWidth = 0
+	let logoSubWidth = 0
+
+	const _DURATION = 1
+
 	const introStage = document.querySelector('.intro-stage')
 	const logoAb = document.querySelectorAll(".ab");	
+	const logoMain = document.querySelectorAll(".main");
+	const logoSub = document.querySelectorAll(".sub");
+	const blackBg = document.querySelector(".black");
 
 	function spreadReset(){
-		logoAb.forEach(function(item, i){
-			TweenMax.to(item, 1, {
-					top : windowHeight / 2 - 50,
-					left : windowWidth / 2 + 60 - 200,
-					rotationX : 0, 
-					rotationY : 0, 
-					rotationZ : 0,
-					ease : Power4.easeInOut, 
-					delay : i * .15
+		logoMainWidth = windowWidth*0.15;
+		logoSubWidth = windowWidth*0.05;
+		logoMain.forEach(function(item, i){
+			TweenMax.to(item, _DURATION, {
+				top : windowHeight*0.6 - item.offsetHeight*0.6,
+				left : logoMainWidth*i + windowWidth*0.19,
+				rotationX : 0, 
+				rotationY : 0, 
+				rotationZ : 0,
+				ease : Back.easeInOut, 
+				delay : i * .15
 			})
-	})
+		})
+		logoSub.forEach(function(item, i){
+			TweenMax.to(item, _DURATION, {
+				top : windowHeight*0.6 + item.offsetHeight*0.6,
+				left : logoSubWidth*i + windowWidth*0.30,
+				rotationX : 0, 
+				rotationY : 0, 
+				rotationZ : 0,
+				ease : Back.easeInOut, 
+				delay : i * .10
+			})
+		})
 	}
 
 	function spreadRandom(){
-		logoAb.forEach(function(item, i){
-			TweenMax.to(item, 1, {
-				top : Math.random() * (windowHeight - 300) + 100,
-				left : Math.random() * (windowWidth - 300) + 100, 
+		logoAb.forEach(function(item){
+			// TweenMax.set(item, {autoAlpha : 0})
+			TweenMax.to(item, _DURATION, {
+				top : Math.random() * (windowHeight - 200) + 100,
+				left : Math.random() * (windowWidth - 200) + 100, 
 				rotationX : "random(-60,60)", //Math.random()*30 
 				rotationY : "random(-60,60)", 
 				rotationZ : "random(-90,90)",
-				//scale : Math.random() * .6 + .6,
+				autoAlpha : 1,
 				ease : Power4.easeInOut, 
-				delay : "random(0,.5)"
+				// delay : "random(0,.3)"
 				})
 		})
 	}
@@ -39,16 +62,29 @@ export default function () {
 	function resize(){
 		windowHeight = window.innerHeight;
 		windowWidth = window.innerWidth;
-		spreadRandom();
+		spreadReset();
 	}
 
-	spreadRandom();
-
+	function spreadSet1(){
+		spreadRandom();
+		setTimeout(spreadReset, _DURATION*1000);
+	}
+	function spreadSet2(){
+		spreadRandom();
+		setTimeout(spreadRandom, _DURATION*1000);
+		setTimeout(spreadRandom, _DURATION*2000);
+		setTimeout(spreadReset, _DURATION*3000);
+	}
+	
 	window.addEventListener('resize', function(){
 		resize();
 	});
-
-	introStage.addEventListener('click', spreadReset)
+	
+	introStage.addEventListener('click', spreadSet1)
+	spreadSet2();
+	setTimeout(() => {blackBg.classList.add("hidden-black")}, _DURATION*4000)
+	
+	
 
 
 }

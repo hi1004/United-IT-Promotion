@@ -1,5 +1,6 @@
 <template>
   <div class="intro-stage">
+    <div class="black"></div>
     <div class="ab main">
       <img
         src="../assets/Intro/m_J.png"
@@ -56,6 +57,8 @@
         alt="s_D" />
     </div>
     <div class="ab sub">
+    </div>
+    <div class="ab sub">
       <img
         src="../assets/Intro/s_I.png"
         alt="s_I" />
@@ -82,21 +85,36 @@
   .intro-stage{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 100vh;    
     z-index: 10;
+
+    .black{
+      position: fixed;
+      width: 100vw;
+      height: 110vh;
+      background-color: black;
+      transition: 1s;
+      &.hidden-black{
+        opacity: 0;
+      }
+    }    
 
     .ab{
       position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       &.main{
-        height: 10vw;        
-        width: 10vw;
+        width: 15vw;
+        height: 15vw;
       }
       &.sub{
-        width: 3vw;
-        height: 3vw;
+        width: 5vw;
+        height: 5vw;
       }
       img{
-        width: auto;
+        display: block;
+        margin: 0 auto;
         height: 100%;
       }
     }

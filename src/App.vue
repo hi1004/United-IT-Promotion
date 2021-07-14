@@ -12,6 +12,7 @@
 import Header from '~/components/Header'
 import Totop from '~/components/Totop'
 import Footer from '~/components/Footer'
+// import Canvas from '~/components/Canvas'
 import Canvas_copy from '~/components/Canvas_copy'
 import Intro from '~/components/Intro'
 export default {
@@ -21,7 +22,8 @@ export default {
     Intro,
     Totop,
     Footer,
-  }
+  },
+
 }
 </script>
 
