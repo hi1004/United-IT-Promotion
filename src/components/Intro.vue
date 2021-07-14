@@ -80,9 +80,13 @@
 
 <style lang="scss" scoped>
   .intro-stage{
+    position: relative;
     width: 100vw;
     height: 100vh;
+    z-index: 10;
+
     .ab{
+      position: absolute;
       &.main{
         height: 10vw;        
         width: 10vw;
