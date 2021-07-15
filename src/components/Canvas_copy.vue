@@ -26,7 +26,7 @@
 
 <style lang="scss" scoped>
   canvas {
-    width: 100vw;
+    width: 90vw;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
