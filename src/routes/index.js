@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './Home'
 import Ja from './Ja'
+import Java from './Java'
 
 
 export default createRouter({
@@ -14,6 +15,10 @@ export default createRouter({
     {
       path: '/ja',
       component: Ja
+    },
+    {
+      path: '/java',
+      component: Java
     }
   ],
 })

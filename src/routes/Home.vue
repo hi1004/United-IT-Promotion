@@ -1,9 +1,5 @@
 <template>
-  <!-- HISTORY -->
-  <section class="history-container">
-    <!-- <History /> -->
-  </section>
-
+  <AboutUs />
   <!-- ACTIVIY -->
   <section class="activity-container">
     <Activiy />
@@ -14,13 +10,15 @@
   // import History from '~/components/History';
   import Activiy from '~/components/Activity';
   import common from '~/config/common';
+  import AboutUs from '~/components/AboutUs';
   export default {
     mounted() {
       common();
     },
     components : {
       // History,
-      Activiy
+      Activiy,
+      AboutUs
     }
   };
 </script>
