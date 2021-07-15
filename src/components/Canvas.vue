@@ -5,7 +5,7 @@
     class="panel"
     data-parallax="scroll">
     <canvas
-      id="canvas1"
+      id="particles"
       data-depth="0.5"> </canvas>
 
     <canvas
@@ -39,9 +39,6 @@
   #canvas {
     position: fixed;
     z-index: -1;
-  }
-  #canvas1 {
-    z-index: 0;
   }
   #canvas2 {
     z-index: -1;

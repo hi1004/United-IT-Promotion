@@ -1,5 +1,7 @@
 <template>
-  <div class="intro-stage">
+  <div
+    class="intro-stage"
+    data-depth="1">
     <div class="black"></div>
     <div class="ab main">
       <img
@@ -82,28 +84,33 @@
 </script>
 
 <style lang="scss" scoped>
+ 
   .intro-stage{
     position: relative;
     width: 100vw;
     height: 100vh;    
-    z-index: 10;
-
+    z-index: -1;
     .black{
       position: fixed;
       width: 100vw;
-      height: 110vh;
+      height: 100vh;
       background-color: black;
       transition: 1s;
+      z-index: 100;
       &.hidden-black{
         opacity: 0;
+        z-index: 0;
       }
-    }    
+    }  
+
+    
 
     .ab{
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      z-index: 100;
       &.main{
         width: 15vw;
         height: 15vw;

@@ -1,8 +1,11 @@
 <template>
+  <Loading />
   <Header />
-  <Canvas_copy />  
-  <Intro />
+  <Canvas_copy />
+  <!-- <Canvas />   -->
+  <!-- <Intro /> -->
   <RouterView />
+  <AboutUs />
   <Totop />
   <Footer />
 </template>
@@ -14,12 +17,17 @@ import Totop from '~/components/Totop'
 import Footer from '~/components/Footer'
 // import Canvas from '~/components/Canvas'
 import Canvas_copy from '~/components/Canvas_copy'
-import Intro from '~/components/Intro'
+// import Intro from '~/components/Intro'
+import AboutUs from '~/components/AboutUs'
+import Loading from '~/components/Loading'
 export default {
   components: {
+    Loading,
     Header,
     Canvas_copy,
-    Intro,
+    // Canvas,
+    // Intro,
+    AboutUs,
     Totop,
     Footer,
   },

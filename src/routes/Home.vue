@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import History from '~/components/History';
+  // import History from '~/components/History';
   import Activiy from '~/components/Activity';
   import common from '~/config/common';
   export default {
@@ -19,7 +19,7 @@
       common();
     },
     components : {
-      History,
+      // History,
       Activiy
     }
   };

@@ -1,8 +1,7 @@
-
 import _ from 'lodash';
-import { gsap } from "gsap";
+import { gsap } from 'gsap';
 import scrollTo from 'gsap/ScrollToPlugin';
-// import $ from 'jquery';
+import $ from 'jquery';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollMagic from 'scrollmagic';
 
@@ -11,15 +10,15 @@ gsap.registerPlugin(scrollTo);
 gsap.registerPlugin(ScrollTrigger);
 
 export default function () {
-
-
-  
-  // const loadEl = document.querySelector('#load');
+  $(window).on('load', function () {
+    $('#load').hide();
+  });
+  // const loadEl = document.getElementById('load');
   // window.addEventListener('load', () => {
-  //   loadEl.fadeOut()
-  // })
+  //   loadEl.hide()
+  // });
 
- /* TO-TOP */
+  /* TO-TOP */
   const toTopEl = document.querySelector('#to-top');
   window.addEventListener(
     'scroll',
@@ -43,43 +42,48 @@ export default function () {
     });
   });
 
-  
-  /* PARALLAX */
+  // /* PARALLAX */
   // $(function () {
   //   new Parallax($('#scene')[0]);
   // });
 
-
   /* Header */
 
-  const showAnim = gsap.from('.main-tool-bar', { 
-    yPercent: -100,
-    paused: true,
-    duration: 0.2
-  }).progress(1);
-  
+  const showAnim = gsap
+    .from('.main-tool-bar', {
+      yPercent: -100,
+      paused: true,
+      duration: 0.2,
+    })
+    .progress(1);
+
   ScrollTrigger.create({
-    start: "top top",
+    start: 'top top',
     end: 99999,
     onUpdate: (self) => {
-      self.direction === -1 ? showAnim.play() : showAnim.reverse()
-    }
+      self.direction === -1 ? showAnim.play() : showAnim.reverse();
+    },
   });
 
-  
-/* SCROLL MAGIC */
-const spyEls = document.querySelectorAll('.scroll-spy');
-spyEls.forEach((spyEl) => {
-  new ScrollMagic.Scene({
-    triggerElement: spyEl,
-    triggerHook: 0.8,
-  })
-    .setClassToggle(spyEl, 'show')
-    .addTo(new ScrollMagic.Controller());
-});
-  
-  
-}
+  /* SCROLL MAGIC */
+  const spyEls = document.querySelectorAll('.scroll-spy');
+  spyEls.forEach((spyEl) => {
+    new ScrollMagic.Scene({
+      triggerElement: spyEl,
+      triggerHook: 0.8,
+    })
+      .setClassToggle(spyEl, 'show')
+      .addTo(new ScrollMagic.Controller());
+  });
 
+  window.onload = function () {
+    const toolBar = document.querySelector('.main-tool-bar');
+    setTimeout(() => {
+      toolBar.classList.add('show-tool-bar');
+    }, 4000);
 
-
+    gsap.to(window, 0, {
+      scrollTo: 0,
+    });
+  };
+} /* end */

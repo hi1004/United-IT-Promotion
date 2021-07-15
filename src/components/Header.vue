@@ -48,6 +48,7 @@
     position: fixed;
     z-index: 99;
     width: 100%;
+
     .container {
       height: 70px;
       display: flex;
@@ -61,8 +62,13 @@
     }
     .main-tool-bar {
       transition: ease 0.4s;
+      opacity: 0;
       &--scrolled {
         height: 40px;
+        
+      }
+      &.show-tool-bar {
+        opacity: 1;
       }
     }
   }

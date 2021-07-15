@@ -1,5 +1,5 @@
 export default function () {
-  const canvas = document.getElementById('canvas1');
+  const canvas = document.getElementById('particles');
   const ctx = canvas.getContext('2d');
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -70,7 +70,7 @@ export default function () {
 
     function init() {
       particlesArray = [];
-      let numberOfParticles = (canvas.height * canvas.width) / 15000;
+      let numberOfParticles = (canvas.height * canvas.width) / 20000;
       for( let i = 0; i < numberOfParticles; i++) {
         let size = (Math.random()*5) +1;
         let x = (Math.random() * ((innerWidth - size * 3 ) -(size *3)) + size *3)
