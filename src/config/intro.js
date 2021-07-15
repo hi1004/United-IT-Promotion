@@ -45,8 +45,22 @@ export default function () {
 
 	function spreadRandom(){
 		logoAb.forEach(function(item){
-			// TweenMax.set(item, {autoAlpha : 0})
 			TweenMax.to(item, _DURATION, {
+				top : Math.random() * (windowHeight - 200) + 100,
+				left : Math.random() * (windowWidth - 200) + 100, 
+				rotationX : "random(-60,60)", //Math.random()*30 
+				rotationY : "random(-60,60)", 
+				rotationZ : "random(-90,90)",
+				ease : Power4.easeInOut, 
+				// delay : "random(0,.3)"
+				})
+		})
+	}
+
+	function spreadStart(){
+		logoAb.forEach(function(item, i){
+			TweenMax.set(item, {autoAlpha : 0})
+			TweenMax.to(item, _DURATION*2, {
 				top : Math.random() * (windowHeight - 200) + 100,
 				left : Math.random() * (windowWidth - 200) + 100, 
 				rotationX : "random(-60,60)", //Math.random()*30 
@@ -54,7 +68,7 @@ export default function () {
 				rotationZ : "random(-90,90)",
 				autoAlpha : 1,
 				ease : Power4.easeInOut, 
-				// delay : "random(0,.3)"
+				delay : i*.14
 				})
 		})
 	}
@@ -70,9 +84,7 @@ export default function () {
 		setTimeout(spreadReset, _DURATION*1000);
 	}
 	function spreadSet2(){
-		spreadRandom();
-		setTimeout(spreadRandom, _DURATION*1000);
-		setTimeout(spreadRandom, _DURATION*2000);
+		spreadStart();
 		setTimeout(spreadReset, _DURATION*3000);
 	}
 	
@@ -82,7 +94,7 @@ export default function () {
 	
 	introStage.addEventListener('click', spreadSet1)
 	spreadSet2();
-	setTimeout(() => {blackBg.classList.add("hidden-black")}, _DURATION*4000)
+	setTimeout(() => {blackBg.classList.add("hidden-black")}, _DURATION*5000)
 	
 	
 
