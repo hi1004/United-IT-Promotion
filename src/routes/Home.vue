@@ -26,7 +26,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '~/scss/common.scss';
   section.int {
     margin-top: 150px;
   }

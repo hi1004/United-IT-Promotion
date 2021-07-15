@@ -10,13 +10,19 @@ gsap.registerPlugin(scrollTo);
 gsap.registerPlugin(ScrollTrigger);
 
 export default function () {
+
+  /* SCROLL DISABLE */
+  const bodyEl = document.querySelector('body');
+  setTimeout(function () {
+    bodyEl.style.overflowY = "visible"
+    bodyEl.style.position = "relative"
+  }, 4500)
+
+
+
   $(window).on('load', function () {
     $('#load').hide();
   });
-  // const loadEl = document.getElementById('load');
-  // window.addEventListener('load', () => {
-  //   loadEl.hide()
-  // });
 
   /* TO-TOP */
   const toTopEl = document.querySelector('#to-top');

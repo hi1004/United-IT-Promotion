@@ -8,7 +8,7 @@ export default function () {
 	let logoMainWidth = 0
 	let logoSubWidth = 0
 
-	const _DURATION = 1
+	const _DURATION = 1;
 
 	const introStage = document.querySelector('.intro-stage')
 	const logoAb = document.querySelectorAll(".ab");	
@@ -20,8 +20,8 @@ export default function () {
 		logoMainWidth = windowWidth*0.15;
 		logoSubWidth = windowWidth*0.05;
 		logoMain.forEach(function(item, i){
-			TweenMax.to(item, _DURATION, {
-				top : windowHeight*0.6 - item.offsetHeight*0.6,
+			TweenMax.to(item,Math.random() *2 +1 , {
+				top : windowHeight*0.5 - item.offsetHeight*0.5,
 				left : logoMainWidth*i + windowWidth*0.19,
 				rotationX : 0, 
 				rotationY : 0, 
@@ -32,7 +32,7 @@ export default function () {
 		})
 		logoSub.forEach(function(item, i){
 			TweenMax.to(item, _DURATION, {
-				top : windowHeight*0.6 + item.offsetHeight*0.6,
+				top : windowHeight*0.55 + item.offsetHeight*0.55,
 				left : logoSubWidth*i + windowWidth*0.30,
 				rotationX : 0, 
 				rotationY : 0, 
@@ -42,10 +42,10 @@ export default function () {
 			})
 		})
 	}
-
+	
 	function spreadRandom(){
 		logoAb.forEach(function(item){
-			TweenMax.to(item, _DURATION, {
+			TweenMax.to(item,  _DURATION, {
 				top : Math.random() * (windowHeight - 200) + 100,
 				left : Math.random() * (windowWidth - 200) + 100, 
 				rotationX : "random(-60,60)", //Math.random()*30 
@@ -60,7 +60,7 @@ export default function () {
 	function spreadStart(){
 		logoAb.forEach(function(item, i){
 			TweenMax.set(item, {autoAlpha : 0})
-			TweenMax.to(item, _DURATION*2, {
+			TweenMax.to(item, Math.random() + 2, {
 				top : Math.random() * (windowHeight - 200) + 100,
 				left : Math.random() * (windowWidth - 200) + 100, 
 				rotationX : "random(-60,60)", //Math.random()*30 
@@ -94,7 +94,7 @@ export default function () {
 	
 	introStage.addEventListener('click', spreadSet1)
 	spreadSet2();
-	setTimeout(() => {blackBg.classList.add("hidden-black")}, _DURATION*5000)
+	setTimeout(() => {blackBg.classList.add("hidden-black")}, _DURATION*4000)
 	
 	
 

@@ -1,6 +1,6 @@
 <template>
   <canvas id="canvas"></canvas>
-  <section>
+  <section class="intro-section">
     <canvas
       id="particles"
       data-depth="0.5"> </canvas>
@@ -25,8 +25,14 @@
 </script>
 
 <style lang="scss" scoped>
+
+  .intro-section {
+    width: 100%;
+    height: 100vh;
+    
+  }
   canvas {
-    width: 90vw;
+    width: 100vw;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

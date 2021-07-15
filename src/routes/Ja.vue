@@ -24,7 +24,6 @@ export default {
 
 
 <style lang="scss" scoped>
-  @import '~/scss/common.scss';
   section {
     padding-top: 150px;
   }

@@ -102,9 +102,6 @@
         z-index: 0;
       }
     }  
-
-    
-
     .ab{
       position: absolute;
       top: 50%;
