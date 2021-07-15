@@ -1,8 +1,6 @@
 <template>
   <canvas id="canvas"></canvas>
-  <section
-    id="scene"
-    data-parallax="scroll">
+  <section>
     <canvas
       id="particles"
       data-depth="0.5"> </canvas>
@@ -28,6 +26,7 @@
 
 <style lang="scss" scoped>
   canvas {
+    width: 100%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -37,5 +36,8 @@
   #canvas {
     position: fixed;
     z-index: -1;
-  } 
+  }
+  #particles {
+    position: fixed;
+  }
 </style>
