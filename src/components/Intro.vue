@@ -59,8 +59,6 @@
         alt="s_D" />
     </div>
     <div class="ab sub">
-    </div>
-    <div class="ab sub">
       <img
         src="../assets/Intro/s_I.png"
         alt="s_I" />

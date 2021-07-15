@@ -1,33 +1,5 @@
 <template>
-  <div class="container">
-    <svg      
-      id="title-activity"
-      style="width:50vw;height:10vw;"
-      preserveAspectRatio="none">
-      <text        
-        x="0"
-        y="100%">A</text>
-      <text
-        x="12.5%"
-        y="100%">C</text>
-      <text
-        x="25%"
-        y="100%">T</text>
-      <text
-        x="37%"
-        y="100%">I</text>
-      <text
-        x="49%"
-        y="100%">V</text>
-      <text
-        x="61.5%"
-        y="100%">I</text>
-      <text
-        x="74%"
-        y="100%">T</text>
-      <text
-        x="86.5%"
-        y="100%">Y</text></svg>
+  <div class="container">    
     <div class="activity-slider">
       <div class="activity-item">
         <div class="img">
@@ -78,36 +50,7 @@
   //   font-size: 10vh;
   //   margin-bottom: 10vh;
   // }
-
-  #title-activity{
-    display: block;
-    margin: 30vh auto;
-      text{
-        opacity: 0;
-      }
-      text.title-effect{
-        opacity: 1;
-        font-family: 'Source Code Pro', monospace;
-        font-size: 10vw; fill:transparent;
-        stroke-dasharray: 150px;
-        animation: stroke1 .5s linear;
-        animation-fill-mode: forwards;
-      }
-  }
-  @keyframes stroke1 {
-    0% { stroke:#FFFFFF; stroke-width: 3px; stroke-dashoffset: 326px; }
-    70% { fill: transparent; }
-    98% { stroke:#FFFFFF; stroke-width: 3px; }
-    100% { fill: #FFFFFF; stroke-dashoffset: 0px; }
-  }
-  #title-activity text:nth-child(1) { animation-delay: 0s; }
-  #title-activity text:nth-child(2) { animation-delay: 0.1s; }
-  #title-activity text:nth-child(3) { animation-delay: 0.2s; }
-  #title-activity text:nth-child(4) { animation-delay: 0.3s; }
-  #title-activity text:nth-child(5) { animation-delay: 0.4s; }
-  #title-activity text:nth-child(6) { animation-delay: 0.5s; }
-  #title-activity text:nth-child(7) { animation-delay: 0.6s;}
-  #title-activity text:nth-child(8) { animation-delay: 0.7s;}
+  
 
   .activity-slider {
     margin: 20vh auto;
@@ -125,59 +68,62 @@
     width: 60vw;
     height: 80vh;
     text-align: center;    
+    pointer-events : none;
    
-  .img {      
-    width: 30vw;
-    height: 30vw;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: .5s ease-out;
-    left: 15%;
-    opacity: 0;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .description {
-    width: 60vw; 
-    height: auto;
-    position: fixed;
-    top: 50%;
-    transition: .5s ease-out;
-    transform: translateY(-50%);
-    right: 0;
-    opacity: 0;
-    h1{
-      font-size: 4vw;
-    }
-    h3{
-      font-size: 2vw;
-    }
-  }    
-  &.slide-effect{
-    .img{
-      transition: .5s;
-      transition-timing-function: cubic-bezier(0.155, -0.045, 0.395, 2.000);
-      opacity: 1;
-      z-index: 1;     
-      transform: translateY(-50%) scale(1.2);
-    }
-    .description{
-      transition: .5s; 
-      transition-delay: .5s;       
-      opacity: 1;
-      z-index: 1;
+    .img {      
+      width: 30vw;
+      height: 30vw;
+      position: fixed;
+      top: 50%;
       transform: translateY(-50%);
+      transition: .5s ease-out;
+      left: 15%;
+      opacity: 0;
+      z-index: 0;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .description {
+      width: 60vw; 
+      height: auto;
+      position: fixed;
+      top: 50%;
+      transition: .5s ease-out;
+      transform: translateY(-50%);
+      right: 0;
+      opacity: 0;
+      z-index: 0;
       h1{
-        transition-delay: .5s;
+        font-size: 4vw;
       }
       h3{
-        transition-delay: 1s;
+        font-size: 2vw;
       }
-    }
+    }    
+    &.slide-effect{
+      .img{
+        transition: .5s;
+        transition-timing-function: cubic-bezier(0.155, -0.045, 0.395, 2.000);
+        opacity: 1;
+        z-index: 1;     
+        transform: translateY(-50%) scale(1.2);
+      }
+      .description{
+        transition: .5s; 
+        transition-delay: .5s;       
+        opacity: 1;
+        z-index: 1;
+        transform: translateY(-50%);
+        h1{
+          transition-delay: .5s;
+        }
+        h3{
+          transition-delay: 1s;
+        }
+      }
   }   
   @media screen and (max-width: 768px){
     .img {      
