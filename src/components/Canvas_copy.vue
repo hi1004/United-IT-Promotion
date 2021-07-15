@@ -26,7 +26,7 @@
 
 <style lang="scss" scoped>
   canvas {
-    width: 100%;
+    width: 100vw;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -37,7 +37,5 @@
     position: fixed;
     z-index: -1;
   }
-  #particles {
-    position: fixed;
-  }
+ 
 </style>
