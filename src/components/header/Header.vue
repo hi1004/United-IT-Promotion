@@ -55,6 +55,7 @@
 
 <style lang="scss" scoped>
   header {
+    overflow: hidden;
     .container {
       height: 70px;
       display: flex;
@@ -66,7 +67,6 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-     
       z-index:99;
     }
     .main-tool-bar {

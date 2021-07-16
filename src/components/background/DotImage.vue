@@ -7,7 +7,6 @@
     <canvas
       id="particles"
       data-depth="0.5"> </canvas>
-
     <canvas
       id="dotImage"
       data-depth="0.6"></canvas>
@@ -29,16 +28,6 @@
 <style lang="scss" scoped>
 #star {
   position: fixed;
-  z-index: 9999;
+  z-index: 99;
 }
-
-  #canvas {
-    position: fixed;
-    z-index: -1;
-  }
-  #canvas2 {
-    z-index: -1;
-
-  }
- 
 </style>
