@@ -24,8 +24,8 @@
   import dotImage from '~/config/background/dotImage';
   import particles from '~/config/background/particles';
   import about from '~/config/routes/about';
-  import $ from 'jquery';
-  const Parallax = require('parallax-js');
+  // import $ from 'jquery';
+  // const Parallax = require('parallax-js');
   export default {
     mounted() {
       common();
@@ -33,9 +33,9 @@
       particles();
       about();
       /* PARALLAX */
-      $(function () {
-        new Parallax($('#scene')[0]);
-      });
+      // $(function () {
+      //   new Parallax($('#scene')[0]);
+      // });
     },
   };
 </script>
