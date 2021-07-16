@@ -6,9 +6,6 @@ export default function () {
 	let windowHeight = window.innerHeight;
 
 	const _DURATION = 1;
-
-	// const introStage = document.querySelector('.intro-stage')
-	
 	const logoAb = document.querySelectorAll(".ab");	
 	const logoMain = document.querySelectorAll(".main");
 	const logoSub = document.querySelectorAll(".sub");
@@ -86,6 +83,7 @@ export default function () {
 		setTimeout(spreadReset, _DURATION*1000);
 		setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*3500);
 	}
+
 	function spreadSet2(){
 		spreadStart();
 		setTimeout(spreadReset, _DURATION*3000);

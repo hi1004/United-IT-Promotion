@@ -71,8 +71,7 @@
 </template>
 
 <script>
-  import intro from '~/config/intro.js';
-
+  import intro from '~/config/intro';
   export default {
     mounted() {
       intro(); 
@@ -87,6 +86,7 @@
     width: 100vw;
     height: 100vh;    
     z-index: -1;
+    }  
     .ab{
       position: absolute;
       top: 50%;
@@ -107,5 +107,5 @@
         height: 100%;
       }
     }
-  }
+  
 </style>
