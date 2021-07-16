@@ -1,45 +1,46 @@
 import { gsap, Power4, Back } from 'gsap';
 
 export default function () {
-	let windowWidth, windowHeight;
-	windowHeight = window.innerHeight;
-	windowWidth = window.innerWidth;
-
-	let logoMainWidth = 0
-	let logoSubWidth = 0
+	
+	let windowWidth = window.innerWidth;
+	let windowHeight = window.innerHeight;
 
 	const _DURATION = 1;
 
-	const introStage = document.querySelector('.intro-stage')
+	// const introStage = document.querySelector('.intro-stage')
 	const logoAb = document.querySelectorAll(".ab");	
 	const logoMain = document.querySelectorAll(".main");
 	const logoSub = document.querySelectorAll(".sub");
 	const blackBg = document.querySelector(".black");
 
 	function spreadReset(){
-		logoMainWidth = windowWidth*0.15;
-		logoSubWidth = windowWidth*0.05;
-		logoMain.forEach(function(item, i){
-			gsap.to(item,Math.random() *2 +1 , {
-				top : windowHeight*0.5 - item.offsetHeight*0.5,
-				left : logoMainWidth*i + windowWidth*0.19,
+		let mainWidths = [0.115, 0.125, 0.10, 0.10, 0];
+		let mainX = 0		
+		let subWidths = [0.05, 0.035, 0.03, 0.04, 0.045, 0.05, 0.03, 0];
+		let subX = 0		
+		logoMain.forEach(function(item, i){				
+			gsap.to(item, _DURATION*2 , {
+				top : (windowHeight-windowWidth*0.08)/2,
+				left : windowWidth*(0.27+mainX),
 				rotationX : 0, 
 				rotationY : 0, 
 				rotationZ : 0,
 				ease : Back.easeInOut, 
 				delay : i * .15
-			})
+			})			
+			mainX += mainWidths[i];
 		})
 		logoSub.forEach(function(item, i){
 			gsap.to(item, _DURATION, {
-				top : windowHeight*0.55 + item.offsetHeight*0.55,
-				left : logoSubWidth*i + windowWidth*0.30,
+				top : (windowHeight + windowWidth*0.14)/2,
+				left : windowWidth*(0.35+subX),
 				rotationX : 0, 
 				rotationY : 0, 
 				rotationZ : 0,
 				ease : Back.easeInOut, 
 				delay : i * .10
 			})
+			subX += subWidths[i];
 		})
 	}
 	
@@ -74,8 +75,8 @@ export default function () {
 	}
 
 	function resize(){
-		windowHeight = window.innerHeight;
-		windowWidth = window.innerWidth;
+		windowWidth = windowWidth = window.innerWidth;
+		windowHeight = windowHeight = window.innerHeight;
 		spreadReset();
 	}
 
@@ -90,13 +91,11 @@ export default function () {
 	
 	window.addEventListener('resize', function(){
 		resize();
-	});
+	});	
 	
-	introStage.addEventListener('click', spreadSet1)
+	
 	spreadSet2();
-	setTimeout(() => {blackBg.classList.add("hidden-black")}, _DURATION*4000)
-	
-	
-
+	setTimeout(() => blackBg.classList.add("hidden-black"), _DURATION*4000);
+	setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*4000);	
 
 }

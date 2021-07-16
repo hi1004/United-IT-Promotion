@@ -10,8 +10,8 @@
 
 <script>
   import canvas from '~/config/canvas';
-    import particles from '~/config/particles';
-    import Intro from '~/components/Intro'
+  import particles from '~/config/particles';
+  import Intro from '~/components/Intro'
 
   export default {
     mounted() {

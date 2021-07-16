@@ -1,8 +1,10 @@
+
 export default function () {
   window.addEventListener('load', () => {
+
     const canvas = document.getElementById('canvas');
 
-    canvas.width = document.documentElement.clientWidth;
+    canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const mouse = {
