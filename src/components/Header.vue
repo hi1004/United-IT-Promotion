@@ -29,11 +29,11 @@
       return {
         navigations: [
           {
-            name: '한국어',
+            name: 'KO',
             href: '/',
           },
           {
-            name: '日本語',
+            name: 'JA',
             href: '/jp',
           },
           {
@@ -46,8 +46,6 @@
     mounted() {
       const navEls = document.querySelectorAll('.nav-link');
       const navEl_Last = navEls[navEls.length - 1]
-      console.log(navEl_Last)
-      // console.log(navEls)
         navEl_Last.addEventListener('click', ()=>{
           window.location.reload();
         })
@@ -66,7 +64,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-family: 'Noto Sans JP','Noto Sans KR',sans-serif;
+      font-family: 'Oswald',sans-serif;
+      font-weight:900;
       position: fixed;
       top: 0;
       left: 50%;
