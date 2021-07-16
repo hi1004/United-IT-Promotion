@@ -56,8 +56,10 @@
 <style lang="scss" scoped>
   header {
     height: 70px;
-    position: relative;
+    position: absolute;
     z-index: 99;
+    top: 0;
+    left: 0;
     width: 100%;
     .container {
       height: 70px;
