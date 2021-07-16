@@ -4,7 +4,7 @@ export default function() {
   /* SCROLL DISABLE */
   const bodyEl = document.querySelector('body');
   const canvases = document.querySelectorAll('.bg-canvas');
-  bodyEl.style.backgroundColor = '#000';
+  // bodyEl.style.backgroundColor = '#000';
   setTimeout(function () {
     bodyEl.style.overflowY = 'visible';
     bodyEl.style.position = 'relative';

@@ -85,9 +85,9 @@
     }
     .nav-item:last-child {
       a {
-         color: #fff;
+         color: rgb(75, 170, 207);
         &.active {
-          background-color: rgb(22, 105, 138);
+          background-color: rgb(75, 170, 207);
           color: #fff;
         }
       }
