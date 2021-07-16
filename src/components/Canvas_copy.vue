@@ -1,8 +1,11 @@
 <template>
-  <canvas id="canvas"></canvas>
+  <canvas
+    id="canvas"
+    class="bg-canvas"></canvas>
   <section class="intro-section">
     <canvas
       id="particles"
+      class="bg-canvas"
       data-depth="0.5"> </canvas>
     <Intro />
   </section>
@@ -38,6 +41,8 @@
     transform: translateX(-50%);
     top: 0;
     z-index: -1;
+    opacity: 0;
+
   }
   #canvas {
     position: fixed;

@@ -92,9 +92,8 @@
       position: fixed;
       width: 100vw;
       height: 100vh;
-      background-color: #000;
       transition: 1s;
-      z-index: 9;
+      // z-index: 9;
       &.hidden-black{
         opacity: 0;
         z-index: 0;

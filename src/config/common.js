@@ -10,14 +10,20 @@ gsap.registerPlugin(scrollTo);
 gsap.registerPlugin(ScrollTrigger);
 
 export default function () {
-
+  
   /* SCROLL DISABLE */
   const bodyEl = document.querySelector('body');
+  const canvases = document.querySelectorAll('.bg-canvas');
   setTimeout(function () {
-    bodyEl.style.overflowY = "visible"
-    bodyEl.style.position = "relative"
-  }, 4500)
-
+    bodyEl.style.overflowY = 'visible';
+    bodyEl.style.position = 'relative';
+    bodyEl.style.backgroundColor = '#171818';
+    canvases.forEach(function (canvas) {
+      gsap.to(canvas, 1, {
+        opacity: 1,
+      });
+    });
+  }, 4500);
 
   /* LOADING */
   $(window).on('load', function () {
