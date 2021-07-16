@@ -58,8 +58,6 @@
     height: 70px;
     position: absolute;
     z-index: 99;
-    top: 0;
-    left: 0;
     width: 100%;
     .container {
       height: 70px;

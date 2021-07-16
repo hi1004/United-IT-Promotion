@@ -1,5 +1,5 @@
 <template>
-  <canvas id="canvas"></canvas>
+  <canvas id="star"></canvas>
   <section
     id="scene"
     class="panel"
@@ -9,31 +9,29 @@
       data-depth="0.5"> </canvas>
 
     <canvas
-      id="canvas2"
+      id="dotImage"
       data-depth="0.6"></canvas>
   </section>
 </template>
 
 <script>
-  // import canvas from '~/config/canvas';
+  import stars from '~/config/stars';
   import dotImage from '~/config/background/dotImage';
 
   export default {
     mounted() {
-      // canvas();
+      stars();
       dotImage();      
     },
   };
 </script>
 
 <style lang="scss" scoped>
-  canvas {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-    z-index: -1;
-  }
+#star {
+  position: fixed;
+  z-index: 9999;
+}
+
   #canvas {
     position: fixed;
     z-index: -1;

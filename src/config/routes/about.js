@@ -13,5 +13,6 @@ export default function() {
     bodyEl.style.overflowY = 'visible';
     bodyEl.style.position = 'relative';
     starEl.style.opacity = 1
+    starEl.style.display = 'block'
   };
 }
