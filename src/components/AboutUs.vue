@@ -20,7 +20,7 @@
         keywords: [
           {
             name: 'JAVA',
-            href: '#/java',
+            href: '/java',
           },
         ],
       };
