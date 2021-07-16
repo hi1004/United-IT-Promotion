@@ -5,7 +5,7 @@ export default function () {
   canvas.height = window.innerHeight;
   let particlesArray = [];
 
-  window.addEventListener('load', () => {
+  // window.addEventListener('load', () => {
     const mouse = {
       x: undefined,
       y: undefined,
@@ -130,5 +130,5 @@ export default function () {
  
     init();
     animate();
-  });
+  // });
 }

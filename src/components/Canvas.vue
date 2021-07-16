@@ -16,14 +16,12 @@
 
 <script>
   import canvas from '~/config/canvas';
-  import particles from '~/config/particles';
-  import canvas2 from '~/config/canvas2';
+  import dotImage from '~/config/dotImage';
 
   export default {
     mounted() {
       canvas();
-      particles();
-      canvas2();      
+      dotImage();      
     },
   };
 </script>

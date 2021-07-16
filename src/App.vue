@@ -1,31 +1,26 @@
 <template>
   <Loading />
+  <Background />
   <Header />
-  <Canvas_copy />
-  <!-- <Canvas />   -->
-  <!-- <Intro /> -->
   <RouterView />
-  <!-- <AboutUs /> -->
   <Totop />
   <Footer />
 </template>
 
 <script>
 
+import Loading from '~/components/Loading'
+import Background from '~/components/Background'
 import Header from '~/components/Header'
 import Totop from '~/components/Totop'
 import Footer from '~/components/Footer'
-// import Canvas from '~/components/Canvas'
-import Canvas_copy from '~/components/Canvas_copy'
-// import Intro from '~/components/Intro'
-import Loading from '~/components/Loading'
+
+
 export default {
   components: {
     Loading,
     Header,
-    Canvas_copy,
-    // Canvas,
-    // Intro,
+    Background,
     Totop,
     Footer,
   },

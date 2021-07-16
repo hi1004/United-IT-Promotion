@@ -5,26 +5,11 @@ import $ from 'jquery';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollMagic from 'scrollmagic';
 
-// const Parallax = require('parallax-js');
 gsap.registerPlugin(scrollTo);
 gsap.registerPlugin(ScrollTrigger);
 
 export default function () {
   
-  /* SCROLL DISABLE */
-  const bodyEl = document.querySelector('body');
-  const canvases = document.querySelectorAll('.bg-canvas');
-  setTimeout(function () {
-    bodyEl.style.overflowY = 'visible';
-    bodyEl.style.position = 'relative';
-    bodyEl.style.backgroundColor = '#171818';
-    canvases.forEach(function (canvas) {
-      gsap.to(canvas, 1, {
-        opacity: 1,
-      });
-    });
-  }, 4500);
-
   /* LOADING */
   $(window).on('load', function () {
     $('#load').hide();
@@ -54,13 +39,7 @@ export default function () {
     });
   });
 
-  // /* PARALLAX */
-  // $(function () {
-  //   new Parallax($('#scene')[0]);
-  // });
-
-  /* Header */
-
+  /* NAV-BAR */
   const showAnim = gsap
     .from('.main-tool-bar', {
       yPercent: -100,
@@ -77,6 +56,8 @@ export default function () {
     },
   });
 
+
+
   /* SCROLL MAGIC */
   const spyEls = document.querySelectorAll('.scroll-spy');
   spyEls.forEach((spyEl) => {
@@ -87,15 +68,4 @@ export default function () {
       .setClassToggle(spyEl, 'show')
       .addTo(new ScrollMagic.Controller());
   });
-
-  window.onload = function () {
-    const toolBar = document.querySelector('.main-tool-bar');
-    setTimeout(() => {
-      toolBar.classList.add('show-tool-bar');
-    }, 4000);
-
-    gsap.to(window, 0, {
-      scrollTo: 0,
-    });
-  };
 } /* end */

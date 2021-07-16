@@ -2,7 +2,6 @@
   <div
     class="intro-stage"
     data-depth="1">
-    <div class="black"></div>
     <div class="ab main">
       <img
         src="../assets/Intro/m_J.png"
@@ -72,8 +71,7 @@
 </template>
 
 <script>
-  import intro from '~/config/intro.js';
-
+  import intro from '~/config/intro';
   export default {
     mounted() {
       intro(); 
@@ -88,16 +86,6 @@
     width: 100vw;
     height: 100vh;    
     z-index: -1;
-    .black{
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      transition: 1s;
-      // z-index: 9;
-      &.hidden-black{
-        opacity: 0;
-        z-index: 0;
-      }
     }  
     .ab{
       position: absolute;
@@ -119,5 +107,5 @@
         height: 100%;
       }
     }
-  }
+  
 </style>

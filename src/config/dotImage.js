@@ -1,5 +1,5 @@
 export default function () {
-  const canvas = document.querySelector('#canvas2');
+  const canvas = document.querySelector('#dotImage');
   // canvas.style.border = '1px solid green'
   const ctx = canvas.getContext('2d');
   canvas.width = window.innerWidth;
