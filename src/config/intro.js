@@ -8,10 +8,10 @@ export default function () {
 	const _DURATION = 1;
 
 	// const introStage = document.querySelector('.intro-stage')
+	
 	const logoAb = document.querySelectorAll(".ab");	
 	const logoMain = document.querySelectorAll(".main");
 	const logoSub = document.querySelectorAll(".sub");
-	const blackBg = document.querySelector(".black");
 
 	function spreadReset(){
 		let mainWidths = [0.115, 0.125, 0.10, 0.10, 0];
@@ -81,8 +81,10 @@ export default function () {
 	}
 
 	function spreadSet1(){
+		window.removeEventListener('click', spreadSet1);
 		spreadRandom();
 		setTimeout(spreadReset, _DURATION*1000);
+		setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*3500);
 	}
 	function spreadSet2(){
 		spreadStart();
@@ -95,7 +97,6 @@ export default function () {
 	
 	
 	spreadSet2();
-	setTimeout(() => blackBg.classList.add("hidden-black"), _DURATION*4000);
-	setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*4000);	
+	setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*5000);	
 
 }
