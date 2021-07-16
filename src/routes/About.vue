@@ -7,9 +7,9 @@
       id="particles"
       class="bg-canvas"
       data-depth="0.9"></canvas> -->
-    <canvas
+    <!-- <canvas
       id="dotImage"
-      data-depth="0.6"></canvas>
+      data-depth="0.6"></canvas> -->
   </section>
 
   <section class="about">
@@ -21,7 +21,7 @@
 
 <script>
   import common from '~/config/common';
-  import dotImage from '~/config/background/dotImage';
+  // import dotImage from '~/config/background/dotImage';
   // import particles from '~/config/background/particles';
   import about from '~/config/routes/about';
   import $ from 'jquery';
@@ -30,7 +30,7 @@
   export default {
     mounted() {
       common();
-      dotImage();
+      // dotImage();
       // particles();
       about();
       // /* PARALLAX */
