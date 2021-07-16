@@ -6,7 +6,6 @@
       class="nav-item">
       <RouterLink
         :to="keyword.href"
-        active-class="active"
         class="nav-link">
         {{ keyword.name }}
       </RouterLink>
@@ -21,7 +20,7 @@
         keywords: [
           {
             name: 'JAVA',
-            href: '/java',
+            href: '#/java',
           },
         ],
       };

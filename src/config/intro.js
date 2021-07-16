@@ -1,4 +1,4 @@
-import { TweenMax, Power4, Back } from 'gsap';
+import { gsap, Power4, Back } from 'gsap';
 
 export default function () {
 	let windowWidth, windowHeight;
@@ -20,7 +20,7 @@ export default function () {
 		logoMainWidth = windowWidth*0.15;
 		logoSubWidth = windowWidth*0.05;
 		logoMain.forEach(function(item, i){
-			TweenMax.to(item,Math.random() *2 +1 , {
+			gsap.to(item,Math.random() *2 +1 , {
 				top : windowHeight*0.5 - item.offsetHeight*0.5,
 				left : logoMainWidth*i + windowWidth*0.19,
 				rotationX : 0, 
@@ -31,7 +31,7 @@ export default function () {
 			})
 		})
 		logoSub.forEach(function(item, i){
-			TweenMax.to(item, _DURATION, {
+			gsap.to(item, _DURATION, {
 				top : windowHeight*0.55 + item.offsetHeight*0.55,
 				left : logoSubWidth*i + windowWidth*0.30,
 				rotationX : 0, 
@@ -45,7 +45,7 @@ export default function () {
 	
 	function spreadRandom(){
 		logoAb.forEach(function(item){
-			TweenMax.to(item,  _DURATION, {
+			gsap.to(item,  _DURATION, {
 				top : Math.random() * (windowHeight - 200) + 100,
 				left : Math.random() * (windowWidth - 200) + 100, 
 				rotationX : "random(-60,60)", //Math.random()*30 
@@ -59,8 +59,8 @@ export default function () {
 
 	function spreadStart(){
 		logoAb.forEach(function(item, i){
-			TweenMax.set(item, {autoAlpha : 0})
-			TweenMax.to(item, Math.random() + 2, {
+			gsap.set(item, {autoAlpha : 0})
+			gsap.to(item, Math.random() + 2, {
 				top : Math.random() * (windowHeight - 200) + 100,
 				left : Math.random() * (windowWidth - 200) + 100, 
 				rotationX : "random(-60,60)", //Math.random()*30 

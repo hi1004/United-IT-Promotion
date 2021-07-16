@@ -19,7 +19,7 @@ export default function () {
   }, 4500)
 
 
-
+  /* LOADING */
   $(window).on('load', function () {
     $('#load').hide();
   });

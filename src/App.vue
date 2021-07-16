@@ -5,7 +5,7 @@
   <!-- <Canvas />   -->
   <!-- <Intro /> -->
   <RouterView />
-  <AboutUs />
+  <!-- <AboutUs /> -->
   <Totop />
   <Footer />
 </template>
@@ -18,7 +18,6 @@ import Footer from '~/components/Footer'
 // import Canvas from '~/components/Canvas'
 import Canvas_copy from '~/components/Canvas_copy'
 // import Intro from '~/components/Intro'
-import AboutUs from '~/components/AboutUs'
 import Loading from '~/components/Loading'
 export default {
   components: {
@@ -27,7 +26,6 @@ export default {
     Canvas_copy,
     // Canvas,
     // Intro,
-    AboutUs,
     Totop,
     Footer,
   },
