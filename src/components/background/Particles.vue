@@ -1,13 +1,10 @@
 <template>
-  <section class="intro-section">
-    <Particles />
-    <canvas
-      id="particles"
-      class="bg-canvas"> </canvas>
-  </section>
+  <canvas
+    id="particles"
+    class="bg-canvas"> </canvas>
 </template>
 <script>
-  import particle from '~/config/particles';
+  import particle from '~/config/background/particles';
 
   export default {
     mounted() {

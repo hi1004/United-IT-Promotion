@@ -3,7 +3,7 @@
     to="/"
     class="logo">
     <img
-      src="~/assets/logo.png"
+      src="~/assets/logo/logo.png"
       alt="logo" />
   </RouterLink>
 </template>

@@ -4,7 +4,7 @@
       <div class="activity-item">
         <div class="img">
           <img
-            src="~/assets/activity_study.png"
+            src="~/assets/activity/activity_study.png"
             alt="activity_study"
             srcset="" />
         </div>
@@ -17,7 +17,7 @@
       <div class="activity-item">
         <div class="img">
           <img
-            src="~/assets/activity_tandem.png"
+            src="~/assets/activity/activity_tandem.png"
             alt="activity_study"
             srcset="" />
         </div>
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-  import activity from '~/config/activity';
+  import activity from '~/config/sections/activity';
   export default {
     mounted() {
       activity();

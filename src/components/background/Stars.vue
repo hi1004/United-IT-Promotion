@@ -5,10 +5,10 @@
 </template>
 
 <script>
-  import background from '~/config/background';
+  import stars from '~/config/background/stars';
   export default {
     mounted() {
-      background(); 
+      stars(); 
     },
    
   };

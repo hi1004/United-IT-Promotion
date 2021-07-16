@@ -3,7 +3,7 @@
     <div class="container">
       <!-- J-bit United IT -->
       <img
-        src="~/assets/footer_logo.png"
+        src="~/assets/logo/footer_logo.png"
         class="united-logo"
         alt="J-bit United IT" />
       <div class="info">
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import FooterLogo from '~/components/FooterLogo';
+  import FooterLogo from '~/components/footer/FooterLogo';
 
   export default {
     components: {
