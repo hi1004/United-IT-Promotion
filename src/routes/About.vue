@@ -40,6 +40,7 @@
   };
 </script>
 <style lang="scss" scoped>
+@import '~/scss/main';
   .panel {
     top: -70px;
     z-index: -2;

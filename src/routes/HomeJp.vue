@@ -24,4 +24,5 @@
 </script>
 
 <style lang="scss" scoped>
+@import '~/scss/main';
 </style>
