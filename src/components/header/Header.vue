@@ -55,8 +55,6 @@
 
 <style lang="scss" scoped>
   header {
-    position: absolute;
-    z-index: 99;
     .container {
       height: 70px;
       display: flex;
