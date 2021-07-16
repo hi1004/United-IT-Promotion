@@ -44,12 +44,32 @@
       };
     },
     mounted() {
-      // const navEls = document.querySelectorAll('.nav-link');
-      // const navEl_Last = navEls[navEls.length - 1]
-      //   navEl_Last.addEventListener('click', ()=>{
-      //     window.location.reload();
-      //   })
-    }
+      const bodyEl = document.querySelector('body');
+       
+      bodyEl.width = window.innerWidth;
+      console.log('전' + bodyEl.width)
+      window.addEventListener('resize', () => {
+        bodyEl.width = window.innerWidth;
+        init();
+         if (bodyEl.width >= 1021) {
+                    //  window.location.reload();
+         }
+
+            console.log(bodyEl.width)
+      });
+  
+      function init() {
+        if (bodyEl.width >= 1021) {
+          const navEls = document.querySelectorAll('.nav-link');
+          const navEl_Last = navEls[navEls.length - 1];
+          navEl_Last.addEventListener('click', () => {
+            window.location.reload();
+          });
+  
+        }
+      }
+      init();
+    },
   };
 </script>
 
@@ -61,13 +81,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-family: 'Oswald',sans-serif;
-      font-weight:900;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 900;
       position: fixed;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      z-index:99;
+      z-index: 99;
     }
     .main-tool-bar {
       transition: ease 0.4s;
@@ -81,14 +101,12 @@
     }
     .nav-item:last-child {
       a {
-         color: rgb(75, 170, 207);
+        color: rgb(75, 170, 207);
         &.active {
           background-color: rgb(75, 170, 207);
           color: #fff;
         }
       }
-   
-  
     }
   }
 </style>
