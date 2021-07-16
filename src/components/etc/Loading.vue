@@ -17,16 +17,14 @@
     opacity: 1;
     z-index: 9999;
     text-align: center;
-     background-color:transparent;
+    background-color:#000;
   }
   #load > img {
-  
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
+    z-index: 9999;
     background-color:transparent;
-   
   }
 </style>

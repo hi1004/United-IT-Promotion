@@ -17,7 +17,7 @@ export default function () {
 		let subWidths = [0.05, 0.035, 0.03, 0.04, 0.045, 0.05, 0.03, 0];
 		let subX = 0		
 		logoMain.forEach(function(item, i){				
-			gsap.to(item, _DURATION*2 , {
+			gsap.to(item, _DURATION , {
 				top : (windowHeight-windowWidth*0.08)/2,
 				left : windowWidth*(0.27+mainX),
 				rotationX : 0, 
@@ -59,7 +59,7 @@ export default function () {
 	function spreadStart(){
 		logoAb.forEach(function(item, i){
 			gsap.set(item, {autoAlpha : 0})
-			gsap.to(item, Math.random() + 2, {
+			gsap.to(item, Math.random(), {
 				top : Math.random() * (windowHeight - 200) + 100,
 				left : Math.random() * (windowWidth - 200) + 100, 
 				rotationX : "random(-60,60)", //Math.random()*30 
@@ -82,12 +82,12 @@ export default function () {
 		window.removeEventListener('click', spreadSet1);
 		spreadRandom();
 		setTimeout(spreadReset, _DURATION*1000);
-		setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*3500);
+		setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*2000);
 	}
 
 	function spreadSet2(){
 		spreadStart();
-		setTimeout(spreadReset, _DURATION*3000);
+		setTimeout(spreadReset, _DURATION*1000);
 	}
 
 	function disableClickEvent(){		
@@ -111,7 +111,7 @@ export default function () {
 	
 	
 	spreadSet2();
-	setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*5000);	
-	setTimeout(() => window.addEventListener('scroll',disableClickEvent). _DURATION*5000)
+	setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*4000);	
+	setTimeout(() => window.addEventListener('scroll',disableClickEvent), _DURATION*4000)
 
 }

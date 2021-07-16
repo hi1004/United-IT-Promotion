@@ -14,13 +14,13 @@ export default function() {
         opacity: 1,
       });
     });
-  }, 4500);
+  }, 2000);
 
   window.onload = function () {
     const toolBar = document.querySelector('.main-tool-bar');
     setTimeout(() => {
       toolBar.classList.add('show-tool-bar');
-    }, 4000);
+    }, 2000);
     
     gsap.to(window, 0, {
       scrollTo: 0,
