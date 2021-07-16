@@ -44,11 +44,11 @@
       };
     },
     mounted() {
-      const navEls = document.querySelectorAll('.nav-link');
-      const navEl_Last = navEls[navEls.length - 1]
-        navEl_Last.addEventListener('click', ()=>{
-          window.location.reload();
-        })
+      // const navEls = document.querySelectorAll('.nav-link');
+      // const navEl_Last = navEls[navEls.length - 1]
+      //   navEl_Last.addEventListener('click', ()=>{
+      //     window.location.reload();
+      //   })
     }
   };
 </script>

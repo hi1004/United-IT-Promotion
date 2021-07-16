@@ -3,26 +3,26 @@
     id="scene"
     class="panel"
     data-parallax="scroll">
-    <!-- <canvas
+    <canvas
       id="particles"
       class="bg-canvas"
-      data-depth="0.9"></canvas> -->
-    <!-- <canvas
+      data-depth="0.9"></canvas>
+    <canvas
       id="dotImage"
-      data-depth="0.6"></canvas> -->
+      data-depth="0.6"></canvas>
   </section>
 
-  <!-- <section class="about">
+  <section class="about">
     <div class="container">
       <h1>자기소개</h1>
     </div>
-  </section> -->
+  </section>
 </template>
 
 <script>
   import common from '~/config/common';
-  // import dotImage from '~/config/background/dotImage';
-  // import particles from '~/config/background/particles';
+  import dotImage from '~/config/background/dotImage';
+  import particles from '~/config/background/particles';
   import about from '~/config/routes/about';
   import $ from 'jquery';
 
@@ -30,8 +30,8 @@
   export default {
     mounted() {
       common();
-      // dotImage();
-      // particles();
+      dotImage();
+      particles();
       about();
       // /* PARALLAX */
        $(function () {
@@ -41,9 +41,6 @@
   };
 </script>
 <style lang="scss" scoped>
-  .panel {
-    
-  }
   #particles {
   position: absolute;
   top: 0;
