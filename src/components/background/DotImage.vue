@@ -15,12 +15,12 @@
 </template>
 
 <script>
-  import canvas from '~/config/canvas';
-  import dotImage from '~/config/dotImage';
+  // import canvas from '~/config/canvas';
+  import dotImage from '~/config/background/dotImage';
 
   export default {
     mounted() {
-      canvas();
+      // canvas();
       dotImage();      
     },
   };

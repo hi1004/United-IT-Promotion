@@ -1,6 +1,6 @@
 <template>
   <Loading />
-  <Background />
+  <Stars />
   <Header />
   <RouterView />
   <Totop />
@@ -9,18 +9,18 @@
 
 <script>
 
-import Loading from '~/components/Loading'
-import Background from '~/components/Background'
-import Header from '~/components/Header'
-import Totop from '~/components/Totop'
-import Footer from '~/components/Footer'
+import Loading from '~/components/etc/Loading'
+import Stars from '~/components/background/Stars'
+import Header from '~/components/header/Header'
+import Totop from '~/components/etc/Totop'
+import Footer from '~/components/footer/Footer'
 
 
 export default {
   components: {
     Loading,
     Header,
-    Background,
+    Stars,
     Totop,
     Footer,
   },

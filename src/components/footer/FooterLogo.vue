@@ -4,7 +4,7 @@
     <a
       href="https://krsna.bufs.ac.kr/krsna/"
       target="_blank"><img
-        src="~/assets/japanese_logo.jpg"
+        src="~/assets//logo/japanese_logo.jpg"
         class="japanese-logo"
         alt="Convergenece of Japanese Studies" />
     </a>
@@ -12,7 +12,7 @@
     <a
       href="https://www.bufs.ac.kr/html/00_main/default.aspx"
       target="_blank"><img
-        src="~/assets/university_logo.jpg"
+        src="~/assets//logo/university_logo.jpg"
         class="bufs-logo"
         alt="Busan University of Foreign Studies" />
     </a>

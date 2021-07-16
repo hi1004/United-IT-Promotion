@@ -21,9 +21,9 @@
 
 <script>
   import common from '~/config/common';
-  import dotImage from '~/config/dotImage';
-  import particles from '~/config/particles';
-  import about from '~/config/about';
+  import dotImage from '~/config/background/dotImage';
+  import particles from '~/config/background/particles';
+  import about from '~/config/routes/about';
   import $ from 'jquery';
   const Parallax = require('parallax-js');
   export default {

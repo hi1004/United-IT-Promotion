@@ -5,10 +5,10 @@
 </template>
 
 <script>
-  import Particles from '~/components/Particles'
-  import Intro from '~/components/Intro'
+  import Particles from '~/components/background/Particles'
+  import Intro from '~/components/sections/Intro'
   import common from '~/config/common';
-  import home from '~/config/home';
+  import home from '~/config/routes/home';
   export default {
     mounted() {
       common();

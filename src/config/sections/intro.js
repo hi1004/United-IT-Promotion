@@ -9,6 +9,7 @@ export default function () {
 	const logoAb = document.querySelectorAll(".ab");	
 	const logoMain = document.querySelectorAll(".main");
 	const logoSub = document.querySelectorAll(".sub");
+	const introStage = document.querySelector(".intro-stage");
 
 	function spreadReset(){
 		let mainWidths = [0.115, 0.125, 0.10, 0.10, 0];
@@ -88,6 +89,21 @@ export default function () {
 		spreadStart();
 		setTimeout(spreadReset, _DURATION*3000);
 	}
+
+	function disableClickEvent(){		
+		if(isUsable(introStage, 0, 0.5)){
+			window.addEventListener('click', spreadSet1);
+		} else{
+			window.removeEventListener('click', spreadSet1);
+		}		
+	}
+
+	function isUsable(element, top=0.1, bottom=0.8){
+		const elementItem = element.getBoundingClientRect();
+		let distanceFromTop = -top * window.innerHeight;
+		let distanceFromBottom = -bottom * window.innerHeight;
+		return elementItem.top - window.innerHeight < distanceFromTop && elementItem.bottom - window.innerHeight > distanceFromBottom ? true : false;
+	}
 	
 	window.addEventListener('resize', function(){
 		resize();
@@ -96,5 +112,6 @@ export default function () {
 	
 	spreadSet2();
 	setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*5000);	
+	setTimeout(() => window.addEventListener('scroll',disableClickEvent). _DURATION*5000)
 
 }
