@@ -12,11 +12,11 @@
       data-depth="0.6"></canvas> -->
   </section>
 
-  <section class="about">
+  <!-- <section class="about">
     <div class="container">
       <h1>자기소개</h1>
     </div>
-  </section>
+  </section> -->
 </template>
 
 <script>
@@ -42,8 +42,7 @@
 </script>
 <style lang="scss" scoped>
   .panel {
-    top: -70px;
-    z-index: -2;
+    
   }
   #particles {
   position: absolute;
