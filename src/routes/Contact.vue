@@ -23,6 +23,13 @@
           onclick="void addChannel();">
           <h5 class="sns__name">Kakao plus friend</h5>
         </a>
+        <a
+          id="channel-chat-button"
+          href="#"
+          class="btn btn-primary"
+          onclick="void chatChannel();">
+          <h5>kakao talk</h5>
+        </a>
       </div>
     </section>
   </div>
