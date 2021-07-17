@@ -1,22 +1,24 @@
 <template>
-  <section
-    id="scene"
-    class="panel"
-    data-parallax="scroll">
-    <canvas
-      id="particles"
-      class="bg-canvas"
-      data-depth="0.9"></canvas>
-    <canvas
-      id="dotImage"
-      data-depth="0.6"></canvas>
-  </section>
+  <div class="about-container">
+    <section
+      id="scene"
+      class="panel"
+      data-parallax="scroll">
+      <canvas
+        id="particles"
+        class="bg-canvas"
+        data-depth="0.9"></canvas>
+      <canvas
+        id="dotImage"
+        data-depth="0.6"></canvas>
+    </section>
 
-  <section class="about">
-    <div class="container">
-      <h1>자기소개</h1>
-    </div>
-  </section>
+    <section class="about">
+      <div class="container">
+        <h1>자기소개</h1>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -33,21 +35,34 @@
       dotImage();
       particles();
       about();
+      
       // /* PARALLAX */
-       $(function () {
-         new Parallax($('#scene')[0]);
-       });
+      $(function () {
+        new Parallax($('#scene')[0]);
+      });
+
+      /* RELOAD */
+      const bodyEl = document.querySelector('.about-container');
+      bodyEl.width = window.innerWidth;
+      window.addEventListener('resize', () => {
+        bodyEl.width = window.innerWidth;
+        if (bodyEl.width >= 1021) {
+          window.location.reload();
+        }
+      });
     },
   };
 </script>
 <style lang="scss" scoped>
+  .about {
+    margin-top: 70px;
+  }
   #particles {
-  position: absolute;
-  top: 0;
-  opacity: 1;
-  z-index:99;
-  width: 100%;
-  overflow: hidden;
-
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    z-index: 99;
+    width: 100%;
+    overflow: hidden;
   }
 </style>

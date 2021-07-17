@@ -45,19 +45,12 @@
     },
     mounted() {
       const bodyEl = document.querySelector('body');
-       
       bodyEl.width = window.innerWidth;
-      console.log('전' + bodyEl.width)
+
       window.addEventListener('resize', () => {
         bodyEl.width = window.innerWidth;
         init();
-         if (bodyEl.width >= 1021) {
-                    //  window.location.reload();
-         }
-
-            console.log(bodyEl.width)
       });
-  
       function init() {
         if (bodyEl.width >= 1021) {
           const navEls = document.querySelectorAll('.nav-link');
@@ -65,7 +58,6 @@
           navEl_Last.addEventListener('click', () => {
             window.location.reload();
           });
-  
         }
       }
       init();
@@ -75,7 +67,6 @@
 
 <style lang="scss" scoped>
   header {
-    overflow: hidden;
     .container {
       height: 70px;
       display: flex;
