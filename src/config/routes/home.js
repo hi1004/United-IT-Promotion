@@ -6,16 +6,16 @@ export default function() {
   const canvases = document.querySelectorAll('.bg-canvas');
   // bodyEl.style.backgroundColor = '#000';
   setTimeout(function () {
-    bodyEl.style.overflowY = 'visible';
+    // bodyEl.style.overflowY = 'visible';
     bodyEl.style.position = 'relative';
-    bodyEl.style.backgroundColor = '#171818';
+    // bodyEl.style.backgroundColor = '#171818';
     canvases.forEach(function (canvas) {
       gsap.to(canvas, 1, {
         opacity: 1,
         display: 'block'
       });
     });
-  }, 2000);
+  }, 3000);
 
   window.onload = function () {
     const toolBar = document.querySelector('.main-tool-bar');

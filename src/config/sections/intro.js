@@ -81,8 +81,8 @@ export default function () {
 	function spreadSet1(){
 		window.removeEventListener('click', spreadSet1);
 		spreadRandom();
-		setTimeout(spreadReset, _DURATION*1000);
-		setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*2000);
+		setTimeout(spreadReset, _DURATION*2000);
+		setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*3000);
 	}
 
 	function spreadSet2(){

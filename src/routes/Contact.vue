@@ -18,6 +18,7 @@
         <!-- CONTACT -->
         <a
           id="kakao-add-channel-button"
+          class="btn btn-primary"
           href="javascript:void(0)"
           onclick="void addChannel();">
           <h5 class="sns__name">Kakao plus friend</h5>
@@ -61,6 +62,18 @@
 <style lang="scss" scoped>
   .contact {
     margin-top: 70px;
+   
+ 
+    .container {
+       height: 10vw;
+          display:flex;
+    justify-content: center;
+       align-items: center;
+    }
+
+    #kakao-add-channel-button {
+    margin: 0 auto;
+  }
   }
   #particles {
     position: absolute;
@@ -70,10 +83,5 @@
     width: 100%;
     overflow: hidden;
   }
-  #kakao-add-channel-button {
-    // width: 100px;
-    // position: absolute;
-    z-index: 9999999999;
-    text-align: center;
-  }
+  
 </style>
