@@ -11,6 +11,8 @@ export default function () {
 	const logoSub = document.querySelectorAll(".sub");
 	const introStage = document.querySelector(".intro-stage");
 
+
+
 	function spreadReset(){
 		let mainWidths = [0.115, 0.125, 0.10, 0.10, 0];
 		let mainX = 0		

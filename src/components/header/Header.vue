@@ -29,11 +29,11 @@
       return {
         navigations: [
           {
-            name: 'KO',
+            name: 'KR',
             href: '/',
           },
           {
-            name: 'JA',
+            name: 'JP',
             href: '/jp',
           },
           {
