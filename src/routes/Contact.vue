@@ -25,7 +25,7 @@
         </a>
         <a
           id="channel-chat-button"
-          href="#"
+          href="javascript:void(0)"
           class="btn btn-primary"
           onclick="void chatChannel();">
           <h5>kakao talk</h5>
