@@ -1,5 +1,7 @@
 import { gsap } from 'gsap';
+
 export default function() {
+
 
   window.onload = function () {
     const bodyEl = document.querySelector('body')
@@ -13,5 +15,6 @@ export default function() {
     bodyEl.style.overflowY = 'visible';
     bodyEl.style.position = 'relative';
     starEl.style.opacity = 1
+    starEl.style.display = 'block'
   };
 }

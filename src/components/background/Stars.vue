@@ -1,6 +1,6 @@
 <template>
   <canvas
-    id="canvas"
+    id="star"
     class="bg-canvas"></canvas>
 </template>
 
@@ -8,28 +8,20 @@
   import stars from '~/config/background/stars';
   export default {
     mounted() {
-      stars(); 
+      stars();
     },
-   
   };
 </script>
 
 <style lang="scss" scoped>
-
-  
-  canvas {
+  #star {
     width: 100vw;
-    position: absolute;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     top: 0;
     z-index: -1;
     opacity: 0;
-
+    display: none;
   }
-  #canvas {
-    position: fixed;
-    z-index: -1;
-  }
- 
 </style>

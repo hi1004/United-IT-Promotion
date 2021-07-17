@@ -29,49 +29,56 @@
       return {
         navigations: [
           {
-            name: 'KO',
+            name: 'KR',
             href: '/',
           },
           {
-            name: 'JA',
+            name: 'JP',
             href: '/jp',
           },
           {
-            name: 'ABOUT',
-            href: '/about',
+            name: 'CONTACT',
+            href: '/contact',
           },
         ],
       };
     },
     mounted() {
-      const navEls = document.querySelectorAll('.nav-link');
-      const navEl_Last = navEls[navEls.length - 1]
-        navEl_Last.addEventListener('click', ()=>{
-          window.location.reload();
-        })
-    }
+      const bodyEl = document.querySelector('body');
+      bodyEl.width = window.innerWidth;
+
+      window.addEventListener('resize', () => {
+        bodyEl.width = window.innerWidth;
+        init();
+      });
+      function init() {
+        if (bodyEl.width >= 1021) {
+          const navEls = document.querySelectorAll('.nav-link');
+          const navEl_Last = navEls[navEls.length - 1];
+          navEl_Last.addEventListener('click', () => {
+            window.location.reload();
+          });
+        }
+      }
+      init();
+    },
   };
 </script>
 
 <style lang="scss" scoped>
   header {
-    height: 70px;
-    position: absolute;
-    z-index: 99;
-    top: 0;
-    left: 0;
-    width: 100%;
     .container {
       height: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-family: 'Oswald',sans-serif;
-      font-weight:900;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 900;
       position: fixed;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 99;
     }
     .main-tool-bar {
       transition: ease 0.4s;
@@ -85,14 +92,21 @@
     }
     .nav-item:last-child {
       a {
-         color: rgb(75, 170, 207);
+        color: rgb(75, 170, 207);
         &.active {
           background-color: rgb(75, 170, 207);
           color: #fff;
         }
       }
-   
-  
+    }
+    .nav-link {
+      transition: .5s ease-out;
+    }
+    @media all and (max-width: 400px) {
+      .nav-link {
+        padding: 0.5rem;
+        
+      }
     }
   }
 </style>

@@ -1,12 +1,16 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeKr from './HomeKr'
 import HomeJp from './HomeJp'
-import About from './About'
+import Contact from './Contact'
+import NotFound from './NotFound'
 
 
 export default createRouter({
   
   history: createWebHashHistory(),
+  scrollBehavior() {
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',
@@ -17,8 +21,12 @@ export default createRouter({
       component: HomeJp
     },
     {
-      path: '/about',
-      component: About
+      path: '/contact',
+      component: Contact
+    },
+    {
+      path: '/:notFound(.*)',
+      component: NotFound
     }
   ],
 })

@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 minimum-scale=1.0 user-scalable=no">
-  <title>J-bit United IT</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1.0 minimum-scale=1.0 user-scalable=no"
+    />
+    <title>J-bit United IT</title>
 
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="J-bit United IT" />
-  <meta property="og:title" content="J-bit United IT 홍보사이트" />
-  <meta property="og:description" content="창공을 누비다!" />
-  <meta property="og:image" content="./jbit_united_seo.jpg" />
-  <meta property="og:url" content="https://jbit-united-it.netlify.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="J-bit United IT" />
+    <meta property="og:title" content="J-bit United IT" />
+    <meta property="og:description" content="창공을 누비다!" />
+    <meta property="og:image" content="./jbit_united_seo.jpg" />
+    <meta property="og:url" content="https://jbit-united-it.netlify.app" />
 
-  <meta property="twitter:card" content="summary" />
-  <meta property="twitter:site" content="J-bit United IT" />
-  <meta property="twitter:title" content="J-bit United IT 홍보사이트" />
-  <meta property="twitter:description" content="창공을 누비다!" />
-  <meta property="twitter:image" content="./jbit_united_seo.jpg" />
-  <meta property="twitter:url" content="https://jbit-united-it.netlify.app" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="J-bit United IT" />
+    <meta property="twitter:title" content="J-bit United IT" />
+    <meta property="twitter:description" content="창공을 누비다!" />
+    <meta property="twitter:image" content="./jbit_united_seo.jpg" />
+    <meta property="twitter:url" content="https://jbit-united-it.netlify.app" />
 
-  <!-- RESET.CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <!-- RESET.CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
 
-  <!-- GOOGLE FONT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+JP&family=Noto+Sans+KR&family=Oswald&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+JP&family=Noto+Sans+KR&family=Oswald&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Material Icons -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- KAKAO -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  </head>
 
+  <body>
+    <div id="app"></div>
 
+    <script>
+      Kakao.init('a577b7e4146b900f4aff9101afcb34a5');
+      function chatChannel() {
+    Kakao.Channel.chat({
+      channelPublicId: '_pSris',
+    })
+  }
+    </script>
 
-</head>
-
-<body>
- 
-  <div id="app"></div> 
-</body>
-
-
+  </body>
 </html>

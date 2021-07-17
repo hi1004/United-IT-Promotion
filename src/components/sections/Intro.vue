@@ -1,80 +1,90 @@
 <template>
-  <div
-    class="intro-stage"
-    data-depth="1">
-    <div class="ab main">
-      <img
-        src="~/assets/Intro/m_J.png"
-        alt="m_J" />
+  <section
+    id="scene"
+    data-parallax="scroll">
+    <div
+      class="intro-stage"
+      data-depth="0.5">
+      <div class="ab main">
+        <img
+          src="~/assets/Intro/m_J.png"
+          alt="m_J" />
+      </div>
+      <div class="ab main">
+        <img
+          src="~/assets/Intro/m_hyphen.png"
+          alt="m_hyphen" />
+      </div>
+      <div class="ab main">
+        <img
+          src="~/assets/Intro/m_B.png"
+          alt="m_B" />
+      </div>
+      <div class="ab main">
+        <img
+          src="~/assets/Intro/m_I.png"
+          alt="m_I" />
+      </div>
+      <div class="ab main">
+        <img
+          src="~/assets/Intro/m_T.png"
+          alt="m_T" />
+      </div>
+      <div class="ab sub">
+        <img
+          src="~/assets/Intro/s_U.png"
+          alt="s_U" />
+      </div>
+      <div class="ab sub">
+        <img
+          src="~/assets/Intro/s_N.png"
+          alt="s_N" />
+      </div>
+      <div class="ab sub">
+        <img
+          src="~/assets/Intro/s_I.png"
+          alt="s_I" />
+      </div>
+      <div class="ab sub">
+        <img
+          src="~/assets/Intro/s_T.png"
+          alt="s_T" />
+      </div>
+      <div class="ab sub">
+        <img
+          src="~/assets/Intro/s_E.png"
+          alt="s_E" />
+      </div>
+      <div class="ab sub">
+        <img
+          src="~/assets/Intro/s_D.png"
+          alt="s_D" />
+      </div>
+      <div class="ab sub">
+        <img
+          src="~/assets/Intro/s_I.png"
+          alt="s_I" />
+      </div>
+      <div class="ab sub">
+        <img
+          src="~/assets/Intro/s_T.png"
+          alt="s_T" />
+      </div>
     </div>
-    <div class="ab main">
-      <img
-        src="~/assets/Intro/m_hyphen.png"
-        alt="m_hyphen" />
-    </div>
-    <div class="ab main">
-      <img
-        src="~/assets/Intro/m_B.png"
-        alt="m_B" />
-    </div>
-    <div class="ab main">
-      <img
-        src="~/assets/Intro/m_I.png"
-        alt="m_I" />
-    </div>
-    <div class="ab main">
-      <img
-        src="~/assets/Intro/m_T.png"
-        alt="m_T" />
-    </div>
-    <div class="ab sub">
-      <img
-        src="~/assets/Intro/s_U.png"
-        alt="s_U" />
-    </div>
-    <div class="ab sub">
-      <img
-        src="~/assets/Intro/s_N.png"
-        alt="s_N" />
-    </div>
-    <div class="ab sub">
-      <img
-        src="~/assets/Intro/s_I.png"
-        alt="s_I" />
-    </div>
-    <div class="ab sub">
-      <img
-        src="~/assets/Intro/s_T.png"
-        alt="s_T" />
-    </div>
-    <div class="ab sub">
-      <img
-        src="~/assets/Intro/s_E.png"
-        alt="s_E" />
-    </div>
-    <div class="ab sub">
-      <img
-        src="~/assets/Intro/s_D.png"
-        alt="s_D" />
-    </div>
-    <div class="ab sub">
-      <img
-        src="~/assets/Intro/s_I.png"
-        alt="s_I" />
-    </div>
-    <div class="ab sub">
-      <img
-        src="~/assets/Intro/s_T.png"
-        alt="s_T" />
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>
   import intro from '~/config/sections/intro';
+  import $ from 'jquery';
+
+  const Parallax = require('parallax-js');
   export default {
     mounted() {
       intro(); 
+      $(function () {
+        new Parallax($('#scene')[0]);
+      });
     },
   };
 </script>

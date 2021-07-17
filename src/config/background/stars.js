@@ -2,7 +2,7 @@
 export default function () {
   window.addEventListener('load', () => {
 
-    const canvas = document.getElementById('canvas');
+    const canvas = document.getElementById('star');
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;

@@ -68,4 +68,6 @@ export default function () {
       .setClassToggle(spyEl, 'show')
       .addTo(new ScrollMagic.Controller());
   });
+
+
 } /* end */
