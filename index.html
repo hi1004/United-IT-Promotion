@@ -30,14 +30,35 @@
 
   <!-- Material Icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+  <!-- KAKAO -->
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  
 
 
 </head>
 
 <body>
  
-  <div id="app"></div> 
+  <div id="app">
+  </div> 
+
+  <script>
+     // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+     Kakao.init('a577b7e4146b900f4aff9101afcb34a5');
+
+     // SDK 초기화 여부를 판단합니다.
+     console.log(Kakao.isInitialized());
+     Kakao.Channel.createAddChannelButton({
+     container: '#kakao-add-channel-button',
+     channelPublicId: '_pSris' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+   });
+   function addChannel() {
+    Kakao.Channel.addChannel({
+      channelPublicId: '_pSris',
+    })
+  }
+
+  </script>
 </body>
 
 

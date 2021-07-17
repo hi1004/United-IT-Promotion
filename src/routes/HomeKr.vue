@@ -2,6 +2,14 @@
   <Intro />
   <Particles /> 
   <!-- <Activiy /> -->
+  <a
+    id="kakao-add-channel-button"
+    href="#"
+    onclick="void addChannel();">
+    dddddddddddddd
+    <img
+      src="/tool/resource/static/img/button/channel/add/channel_add_small.png" />
+  </a>
 </template>
 
 <script>
@@ -15,6 +23,7 @@
     mounted() {
       common();
       home();
+   console.log(document.getElementById('kakao-add-channel-button'))
     },
     components : {
       Intro,
