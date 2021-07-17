@@ -37,8 +37,8 @@
             href: '/jp',
           },
           {
-            name: 'ABOUT',
-            href: '/about',
+            name: 'CONTACT',
+            href: '/contact',
           },
         ],
       };
@@ -97,6 +97,15 @@
           background-color: rgb(75, 170, 207);
           color: #fff;
         }
+      }
+    }
+    .nav-link {
+      transition: .5s ease-out;
+    }
+    @media all and (max-width: 400px) {
+      .nav-link {
+        padding: 0.5rem;
+        
       }
     }
   }

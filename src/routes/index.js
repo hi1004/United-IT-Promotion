@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeKr from './HomeKr'
 import HomeJp from './HomeJp'
-import About from './About'
+import Contact from './Contact'
 
 
 export default createRouter({
@@ -17,8 +17,8 @@ export default createRouter({
       component: HomeJp
     },
     {
-      path: '/about',
-      component: About
+      path: '/contact',
+      component: Contact
     }
   ],
 })

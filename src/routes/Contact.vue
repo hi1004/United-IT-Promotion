@@ -1,5 +1,5 @@
 <template>
-  <div class="about-container">
+  <div class="contact-container">
     <section
       id="scene"
       class="panel"
@@ -13,9 +13,15 @@
         data-depth="0.6"></canvas>
     </section>
 
-    <section class="about">
+    <section class="contact">
       <div class="container">
-        <h1>자기소개</h1>
+        <!-- CONTACT -->
+        <a
+          id="kakao-add-channel-button"
+          href="javascript:void(0)"
+          onclick="void addChannel();">
+          <h5 class="sns__name">Kakao plus friend</h5>
+        </a>
       </div>
     </section>
   </div>
@@ -35,14 +41,13 @@
       dotImage();
       particles();
       about();
-      
       // /* PARALLAX */
       $(function () {
         new Parallax($('#scene')[0]);
       });
 
       /* RELOAD */
-      const bodyEl = document.querySelector('.about-container');
+      const bodyEl = document.querySelector('.contact-container');
       bodyEl.width = window.innerWidth;
       window.addEventListener('resize', () => {
         bodyEl.width = window.innerWidth;
@@ -54,7 +59,7 @@
   };
 </script>
 <style lang="scss" scoped>
-  .about {
+  .contact {
     margin-top: 70px;
   }
   #particles {
@@ -64,5 +69,11 @@
     z-index: 99;
     width: 100%;
     overflow: hidden;
+  }
+  #kakao-add-channel-button {
+    // width: 100px;
+    // position: absolute;
+    z-index: 9999999999;
+    text-align: center;
   }
 </style>
