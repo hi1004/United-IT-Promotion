@@ -1,26 +1,26 @@
 import { gsap, Power4, Back } from 'gsap';
+import scrollTo from 'gsap/ScrollToPlugin';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(scrollTo);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function () {
 	
 	const contentContainer = document.querySelector('.content-container')
 	const keywordItems = document.querySelectorAll('.keyword')
-	
-	function isUsable(element, top=0.1, bottom=0.8){
-		const elementItem = element.getBoundingClientRect();
-		let distanceFromTop = -top * window.innerHeight;
-		let distanceFromBottom = -bottom * window.innerHeight;
-		return elementItem.top - window.innerHeight < distanceFromTop && elementItem.bottom - window.innerHeight > distanceFromBottom ? true : false;
-	}
 
-	function showContentItem() {
-		keywordItems.forEach(function(item){
-			gsap.set(item, {autoAlpha: 0})
-			gsap.to(item,  Math.random()*2.5 + 0.5, {
-				autoAlpha: 1,
-				ease : Power4.easeInOut, 
-				})
+
+	keywordItems.forEach(function(item, i){
+		gsap.to(item, {
+			left: i*window.innerHeight*0.5 + window.innerHeight*0.1,
 		})
-	}
-
-	contentContainer.addEventListener('click', showContentItem);
+		gsap.to(item, Math.random()*2.5 + 0.5, {
+			scrollTrigger: {
+				trigger: contentContainer
+			},autoAlpha: 1,			
+			ease : Back.easeInOut,
+			scale:1.5
+		})
+	})
 }
