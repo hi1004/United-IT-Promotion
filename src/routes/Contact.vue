@@ -206,6 +206,7 @@
         font-size: 3.6rem;
         font-weight: 700;
         line-height: 1.4;
+        text-align: center;
       }
       .contact__box {
         background: #2b2a2a;
@@ -219,7 +220,7 @@
           height: 45px;
           justify-content: space-between;
           align-items: center;
-          width: 20rem;
+          width: 16rem;
           z-index: 1;
           padding: 0 1rem;
           .svg-wrap {
@@ -231,7 +232,6 @@
               margin-left: 0.7rem;
             }
           }
-
           h6 {
             margin: 0;
             font-size: 0.9rem;
@@ -243,4 +243,16 @@
       }
     }
   }
+  @media all and (max-width: 768px) {
+    .contact__box {
+        background: #2b2a2a;
+        border-radius: 4.2rem;
+        padding: 2rem;
+        min-width: 35vw;
+        display: flex;
+        justify-content: center;
+      width: 100%;
+    }
+  }
+
 </style>

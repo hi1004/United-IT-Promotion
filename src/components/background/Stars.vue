@@ -15,7 +15,7 @@
 
 <style lang="scss" scoped>
   #star {
-    width: 100vw;
+    width: 100%;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -23,5 +23,6 @@
     z-index: 1;
     opacity: 0;
     display: none;
+    overflow: hidden;
   }
 </style>

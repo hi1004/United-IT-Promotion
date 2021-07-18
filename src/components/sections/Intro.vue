@@ -76,46 +76,49 @@
 
 <script>
   import intro from '~/config/sections/intro';
-    import $ from 'jquery';
+  import $ from 'jquery';
 
   const Parallax = require('parallax-js');
   export default {
     mounted() {
-      intro(); 
-         $(function () {
-         new Parallax($('#scene')[0]);
-       });
+      intro();
+      $(function () {
+        new Parallax($('#scene')[0]);
+      });
     },
   };
 </script>
 
 <style lang="scss" scoped>
- 
-  .intro-stage{
+  #scene {
+    overflow: hidden;
+  }
+
+  .intro-stage {
     position: relative;
-    width: 100vw;
-    height: 100vh;    
+    width: 100%;
+    height: 100vh;
     z-index: -1;
-    }  
-    .ab{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 100;
-      &.main{
-        width: 15vw;
-        height: 15vw;
-      }
-      &.sub{
-        width: 5vw;
-        height: 5vw;
-      }
-      img{
-        display: block;
-        margin: 0 auto;
-        height: 100%;
-      }
+    overflow: hidden;
+  }
+  .ab {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    &.main {
+      width: 15vw;
+      height: 15vw;
     }
-  
+    &.sub {
+      width: 5vw;
+      height: 5vw;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      height: 100%;
+    }
+  }
 </style>
