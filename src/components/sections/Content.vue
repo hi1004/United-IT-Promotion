@@ -1,10 +1,20 @@
 <template>
   <div class="content-container">
+    <div class="keyword-container">
+      <div
+        v-for="number in 5"
+        :key="number"
+        class="keyword">
+        <h1 class="keyword-word">
+          keyword{{ number }}
+        </h1>
+      </div>
+    </div>    
     <div
-      v-for="number in 3"
+      v-for="number in 5"
       :key="number"
-      class="keyword">
-      <h1 class="keyword-word">
+      class="content-box">
+      <h1 class="content-Title">
         keyword{{ number }}
       </h1>
     </div>
@@ -22,21 +32,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.content-container{
+	.keyword-container{
 		width: 100vw;
 		height: 100vh;
 		position: relative;
 		.keyword{
 			position: absolute;
-			width: 20vw;
-			height: 10vw;
+			width: auto;
+			height: auto;
 			opacity: 0;
-			&.keyword-word{
+			&:hover{
+				cursor: pointer;
+			}
+			.keyword-word{
+				user-select: none;
+				font-family: 'Oswald', sans-serif;
+				font-weight: bolder;
+				font-size: 1vw;
 				text-align: center;
 			}
-			&.focused-keyword{
-				transform: scale(1.1);
-			}
 		}
+	}
+	.content-box{
+		width: 100vw;
+		height: 80vh;
+		margin: 10vh auto;
+		background: rgba(64, 64, 64, 0.1);
 	}
 </style>
