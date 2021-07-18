@@ -30,6 +30,9 @@ body {
 .back-to-position {
   opacity: 0;
   transition: 1s;
+  &.show {
+    opacity: 1;
+  }
   &.to-right {
     transform: translateX(-150px);
   }
@@ -44,7 +47,7 @@ body {
   }
 }
 .show {
-  &.back-to-position {
+  .back-to-position {
     opacity: 1;
     transform: translate(0);
     &.delay-0 {
@@ -58,6 +61,9 @@ body {
     }
     &.delay-3 {
       transition-delay: 0.9s;
+    }
+    &.delay-4 {
+      transition-delay: 1.2s;
     }
   }
 }
