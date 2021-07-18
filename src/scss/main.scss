@@ -27,23 +27,40 @@ body {
   }
 }
 
-.back-to-position {
-  opacity: 0;
-  transition: 1s;
-  &.show {
-    opacity: 1;
+@media all and (min-width: 1200px) {
+  .back-to-position {
+    opacity: 0;
+    transition: 1s;
+    &.show {
+      opacity: 1;
+    }
+    &.to-right {
+      transform: translateX(-150px);
+    }
+    &.to-left {
+      transform: translateX(150px);
+    }
+    &.to-top {
+      transform: translateY(100px);
+    }
+    &.to-bottom {
+      transform: translateY(-100px);
+    }
   }
-  &.to-right {
-    transform: translateX(-150px);
-  }
-  &.to-left {
-    transform: translateX(150px);
-  }
-  &.to-top {
-    transform: translateY(100px);
-  }
-  &.to-bottom {
-    transform: translateY(-100px);
+}
+@media all and (max-width: 1199px) {
+  .back-to-position {
+    opacity: 0;
+    transition: 1s;
+    &.show {
+      opacity: 1;
+    }
+    &.to-right {
+      transform: translateY(100px);
+    }
+    &.to-left {
+      transform: translateY(100px);
+    }
   }
 }
 .show {
