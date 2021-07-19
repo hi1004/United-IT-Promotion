@@ -27,7 +27,7 @@
               언제든지 환영합니다.
             </h4>
           </div>
-          <div class="about-box scroll-spy back-to-position to-right delay-0 about__Chairman">
+          <div class="about-box back-to-position to-right delay-0 about__Chairman">
             <div class="introduce">
               <h1 class="back-to-position to-top delay-1">
                 회장

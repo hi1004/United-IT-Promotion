@@ -47,9 +47,6 @@ export default function () {
     .setTween(tween1)
     .setPin("#pin1")
     .addTo(controller)
-    .addIndicators({
-      name: '1',
-    });
 
 
     var wipeAnimation = new TimelineMax()
@@ -73,7 +70,7 @@ export default function () {
     })
     .setPin("#pinContainer")
     .setTween(wipeAnimation)
-    .addIndicators() 
+   
     .addTo(controller);
 
 
