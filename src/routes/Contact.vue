@@ -93,7 +93,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="contact section scroll-spy">
+    <section class="contact section">
       <div class="container">
         <div class="contact__box">
           <a
