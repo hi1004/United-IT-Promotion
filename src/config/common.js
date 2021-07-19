@@ -56,7 +56,7 @@ export default function () {
   });
 
 
-  const controller = new ScrollMagic.Controller();
+  // const controller = new ScrollMagic.Controller();
   /* SCROLL MAGIC */
   const spyEls = document.querySelectorAll('.scroll-spy');
   spyEls.forEach((spyEl) => {
@@ -65,7 +65,6 @@ export default function () {
       triggerHook: 0.8,
     })
       .setClassToggle(spyEl, 'show')
-      .addTo(controller);
   });
 
 
