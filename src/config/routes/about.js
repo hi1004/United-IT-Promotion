@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 
+
 export default function() {
 
 
@@ -17,4 +18,5 @@ export default function() {
     starEl.style.opacity = 1
     starEl.style.display = 'block'
   };
+
 }

@@ -2,7 +2,7 @@
   <div class="contact-container">
     <section
       id="scene"
-      class="panel"
+      class="panel section"
       data-parallax="scroll">
       <canvas
         id="particles"
@@ -16,7 +16,7 @@
     <!-- ABOUT -->
     <section class="about">
       <div class="container">
-        <div class="about__wrap scroll-spy">
+        <div class="about__wrap scroll-spy section">
           <div class="about__title__box first-text">
             <h1 class="about__title back-to-position to-left delay-0">
               궁금한 것이 있거나 <br />
@@ -53,7 +53,7 @@
           </div>
         </div>
 
-        <div class="about__wrap scroll-spy">
+        <div class="about__wrap scroll-spy section">
           <div class="about__title__box second-text">
             <h1 class="about__title back-to-position to-right delay-0">
               그리던 프로덕트를 만들 시간<br />
@@ -93,7 +93,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="contact">
+    <section class="contact section">
       <div class="container">
         <div class="contact__box">
           <a
@@ -242,11 +242,16 @@
           align-items: center;
           .about__title {
             font-size: 6vw;
-            font-weight: 700;
+            font-weight: 300;
             line-height: 1.4;
             text-align: center;
             transition: all 0.1;
             margin-bottom: 16px;
+            font-family: 'Black Han Sans', sans-serif;
+          }
+          h4 {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.3;
           }
         }
         .about-box {
@@ -255,6 +260,7 @@
           padding: 2rem;
           min-width: 35vw;
           margin: 1rem;
+          height: 100%;
           .introduce {
             h1 {
               font-size: 4vw;
@@ -301,13 +307,11 @@
       align-items: center;
       flex-direction: column;
       .contact__box {
-        background: #2b2a2a;
         border-radius: 4.2rem;
         padding: 2rem;
         min-width: 57vw;
         display: flex;
         justify-content: center;
-        opacity: 0.9;
         flex-direction: column;
         align-items: center;
         .contact-btn {
@@ -348,17 +352,31 @@
       font-size: 3.7vw;
     }
     .about__wrap {
-      &:first-child {
-        margin-top: 30vh;
+        &:last-child {
+          margin: 0 !important; 
+        }
+      .about__title__box {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
-    .introduce {
-      h1 {
-        font-size: 6vw;
+    .about-box {
+      height: 100%;
+      align-items: center;
+      .introduce {
+        h1 {
+          font-size: 6vw;
+        }
       }
     }
+
+  .contact {
+    height: 100vh;
+    display: flex;
+  }
     .contact__box {
-      background: #1e1d1d;
       border-radius: 4.2rem;
       padding: 2rem;
       min-width: 35vw;

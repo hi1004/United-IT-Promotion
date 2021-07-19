@@ -3,13 +3,12 @@ import { gsap } from 'gsap';
 import scrollTo from 'gsap/ScrollToPlugin';
 import $ from 'jquery';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import ScrollMagic from 'scrollmagic';
+const ScrollMagic = window.ScrollMagic;
 
 gsap.registerPlugin(scrollTo);
 gsap.registerPlugin(ScrollTrigger);
 
-export default function () {
-  
+export default function () {  
   /* LOADING */
   $(window).on('load', function () {
     $('#load').hide();
@@ -57,7 +56,7 @@ export default function () {
   });
 
 
-
+  const controller = new ScrollMagic.Controller();
   /* SCROLL MAGIC */
   const spyEls = document.querySelectorAll('.scroll-spy');
   spyEls.forEach((spyEl) => {
@@ -66,8 +65,13 @@ export default function () {
       triggerHook: 0.8,
     })
       .setClassToggle(spyEl, 'show')
-      .addTo(new ScrollMagic.Controller());
+      .addTo(controller);
   });
+
+
+
+ 
+
 
 
 } /* end */
