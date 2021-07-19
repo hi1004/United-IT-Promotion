@@ -14,9 +14,9 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="about">
+    <section class="about scroll-spy">
       <div class="container">
-        <div class="about__wrap scroll-spy section">
+        <div class="about__wrap section">
           <div class="about__title__box first-text">
             <h1 class="about__title back-to-position to-left delay-0">
               궁금한 것이 있거나 <br />
@@ -53,7 +53,7 @@
           </div>
         </div>
 
-        <div class="about__wrap scroll-spy section">
+        <div class="about__wrap section">
           <div class="about__title__box second-text">
             <h1 class="about__title back-to-position to-right delay-0">
               그리던 프로덕트를 만들 시간<br />
@@ -93,7 +93,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="contact section">
+    <section class="contact section scroll-spy">
       <div class="container">
         <div class="contact__box">
           <a
