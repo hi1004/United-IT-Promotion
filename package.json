@@ -19,6 +19,7 @@
     "@babel/core": "^7.13.10",
     "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
+    "@types/scrollmagic": "^2.0.2",
     "@vue/compiler-sfc": "^3.0.11",
     "autoprefixer": "^10.2.5",
     "babel-eslint": "^10.1.0",
@@ -41,7 +42,9 @@
     "webpack-dev-server": "^4.0.0-beta.0"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.0.0-beta3",
+    "fullpage.js": "^3.1.2",
     "gsap": "^3.7.0",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",
@@ -49,7 +52,10 @@
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
     "smooth-scrollbar": "^8.6.2",
+    "swiper": "^6.7.5",
     "vue": "^3.0.7",
+    "vue-fullpage": "^2.0.5",
+    "vue-plugin-load-script": "^1.3.2",
     "vue-router": "^4.0.10"
   }
 }
