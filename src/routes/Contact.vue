@@ -14,10 +14,10 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="about scroll-spy">
+    <section class="about">
       <div class="container">
         <div class="about__wrap section">
-          <div class="about__title__box first-text">
+          <div class="about__title__box first-text scroll-spy">
             <h1 class="about__title back-to-position to-left delay-0">
               궁금한 것이 있거나 <br />
               문의 사항이 있으신가요?
@@ -27,7 +27,7 @@
               언제든지 환영합니다.
             </h4>
           </div>
-          <div class="about-box back-to-position to-right delay-0 about__Chairman">
+          <div class="about-box back-to-position to-right delay-0 about__Chairman scroll-spy">
             <div class="introduce">
               <h1 class="back-to-position to-top delay-1">
                 회장
@@ -54,7 +54,7 @@
         </div>
 
         <div class="about__wrap section">
-          <div class="about__title__box second-text">
+          <div class="about__title__box second-text scroll-spy">
             <h1 class="about__title back-to-position to-right delay-0">
               그리던 프로덕트를 만들 시간<br />
               디자이너와 프로그래머가 만났을 때
@@ -64,7 +64,7 @@
               모임입니다.
             </h4>
           </div>
-          <div class="about-box back-to-position to-left delay-0 about__vice-chairman">
+          <div class="about-box back-to-position to-left delay-0 about__vice-chairman scroll-spy">
             <div class="introduce">
               <h1 class="back-to-position to-top delay-1">
                 부회장
@@ -309,9 +309,10 @@
       justify-content: center;
       align-items: center;
       .about__wrap {
-        &:last-child {
-          margin: 10rem 0;
-        }
+        display: flex;        
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         .about__title__box {
           display: flex;
           flex-direction: column;
@@ -334,7 +335,7 @@
           background-color: #1e1d1d;
           border-radius: 3.2rem;
           padding: 2rem;
-          min-width: 35vw;
+          width: 50vw;
           margin: 1rem;
           height: 100%;
           .introduce {
@@ -378,6 +379,7 @@
     justify-content: center;
     align-items: center;    
     height: 100vh;
+    margin-top: 20vh;
     .container2 {
       display: flex;
       width: 100%;
@@ -513,9 +515,6 @@
       font-size: 3.7vw;
     }
     .about__wrap {
-        &:last-child {
-          margin: 0 !important; 
-        }
       .about__title__box {
         height: 100vh;
         display: flex;

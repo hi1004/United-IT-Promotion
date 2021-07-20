@@ -62,7 +62,7 @@ export default function () {
   spyEls.forEach((spyEl) => {
     new ScrollMagic.Scene({
       triggerElement: spyEl,
-      triggerHook: 0.8,
+      triggerHook: 0.7,
     })
       .setClassToggle(spyEl, 'show')
       .addTo(controller)
