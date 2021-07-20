@@ -377,7 +377,7 @@
     display: flex;
     justify-content: center;
     align-items: center;    
-    height: 80vh;
+    height: 100vh;
     .container2 {
       display: flex;
       width: 100%;
@@ -387,27 +387,42 @@
       .contact__title{
         font-size: 8vw;
         font-family: 'Black Han Sans', sans-serif;
+        @media all and (min-width: 1200px){
+          font-size: 96px;
+        }
       }
       .contact__box2{
         display: flex;
         justify-content: center;
         flex-direction: row;
         .contact__btn{
-          color: white; 
+          width: 40vw;
+          height: 50vw;
+          color: white;     
+          background-color: #1e1d1d;
+          border-radius: 2rem;      
+          margin: 5vw 2.5vw;
+          @media all and (min-width: 1200px){
+            width: 480px;
+            height: 600px;
+          }
           &:hover{
+            transition: 0.5s;
+            transform: scale(1.05);
             cursor: pointer;
             opacity: 0.8;
-          }       
+            }       
+          &:active{
+            transition: 0s;
+            background-color: lightgray;
+          }
           .contact__item{
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            width: 40vw;
-            height: 50vw;
-            background-color: #1e1d1d;
-            border-radius: 2rem;
-            margin: 5vw 2.5vw;
+            flex-direction: column;              
             .contact__icon{
               width: 25vw;
               height: 25vw;
@@ -420,6 +435,19 @@
                 font-size: 3vw;
               }
             }
+            @media all and (min-width: 1200px){
+              .contact__icon{
+                width: 300px;
+                height: 300px;
+                margin-bottom: 12px;
+              }
+              h1{
+                font-size: 60px;
+                span{
+                  font-size: 36px;
+                }
+              }
+            }                   
           }
         }
       }
