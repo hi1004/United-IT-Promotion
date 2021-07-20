@@ -65,7 +65,8 @@ export default function () {
       triggerHook: 0.8,
     })
       .setClassToggle(spyEl, 'show')
-      .addTo(controller);
+      .addTo(controller)
+      // .addIndicators() 
   });
 
 
