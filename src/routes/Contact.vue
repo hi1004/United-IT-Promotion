@@ -335,12 +335,13 @@
           background-color: #1e1d1d;
           border-radius: 3.2rem;
           padding: 2rem;
-          width: 50vw;
+          width: 60vw;
+          min-width: 320px;
           margin: 1rem;
           height: 100%;
           .introduce {
             h1 {
-              font-size: 4vw;
+              font-size: calc(20px + 2vw);
               font-weight: 700;
             }
             .photo {
