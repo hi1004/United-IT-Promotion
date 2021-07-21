@@ -246,7 +246,7 @@
             font-size: 9vw;
             font-weight: 300;
             line-height: 1.4;
-            // text-align: center;
+            // text-align: center;  
             transition: all 0.1;
             margin-bottom: 16px;
             font-family: 'Black Han Sans', sans-serif;
