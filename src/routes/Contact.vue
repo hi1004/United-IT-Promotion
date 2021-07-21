@@ -228,7 +228,6 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    margin-top: 20vh;
     .container {
       display: flex;
       flex-wrap: wrap;
