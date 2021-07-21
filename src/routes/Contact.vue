@@ -329,6 +329,7 @@
           border-radius: 2rem;
           margin: 5vw 2.5vw;
           transition: all 0.5s;
+          box-shadow: 10px 10px 20px #000000b5;
           @media all and (min-width: 1200px) {
             width: 480px;
             height: 600px;
