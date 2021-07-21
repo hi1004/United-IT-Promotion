@@ -228,7 +228,6 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    margin-top: 20vh;
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -244,10 +243,10 @@
           flex-direction: column;
           align-items: center;
           .about__title {
-            font-size: 6vw;
+            font-size: 9vw;
             font-weight: 300;
             line-height: 1.4;
-            text-align: center;
+            // text-align: center;
             transition: all 0.1;
             margin-bottom: 16px;
             font-family: 'Black Han Sans', sans-serif;
@@ -330,6 +329,7 @@
           border-radius: 2rem;
           margin: 5vw 2.5vw;
           transition: all 0.5s;
+          box-shadow: 10px 10px 20px #000000b5;
           @media all and (min-width: 1200px) {
             width: 480px;
             height: 600px;
@@ -437,7 +437,7 @@
             text-align: left;
             .about__title {
               font-size: 3rem !important;
-              text-align: unset;
+              // text-align: unset;
             }
           }
         }
