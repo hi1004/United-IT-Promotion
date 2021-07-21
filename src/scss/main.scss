@@ -36,9 +36,11 @@ body {
     }
     &.to-right {
       transform: translateX(-150px);
+      text-align: left;
     }
     &.to-left {
       transform: translateX(150px);
+      text-align: right;
     }
     &.to-top {
       transform: translateY(100px);
