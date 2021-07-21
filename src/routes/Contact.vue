@@ -243,7 +243,7 @@
           flex-direction: column;
           align-items: center;
           .about__title {
-            font-size: 6vw;
+            font-size: 9vw;
             font-weight: 300;
             line-height: 1.4;
             text-align: center;
