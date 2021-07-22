@@ -1,13 +1,13 @@
 <template>
   <Particles />
   <Intro />
-  <Activity2 />
+  <Content />
 </template>
 
 <script>
   import Particles from '~/components/background/Particles';
   import Intro from '~/components/sections/Intro';
-  import Activity2 from '~/components/sections/Activity2'
+  import Content from '~/components/sections/Content'
   import common from '~/config/common';
   import home from '~/config/routes/home';
 
@@ -19,7 +19,7 @@
     components: {
       Intro,
       Particles,
-      Activity2
+      Content
     },
   };
 </script>
