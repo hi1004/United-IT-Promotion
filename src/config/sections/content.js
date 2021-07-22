@@ -13,12 +13,10 @@ export default function() {
         gsap.to(window, {
             scrollTrigger: {
                 trigger: section,
-                toggleActions: "restart none restart none",
-                markers: true,
+                toggleActions: "restart none restart none"
             },
             duration: 0,
-            scrollTo: section,
-
+            scrollTo: section
         })
     })
 }
