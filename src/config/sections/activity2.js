@@ -13,9 +13,9 @@ export default function() {
         gsap.to(window, {
             scrollTrigger: {
                 trigger: section,
-                toggleActions: "restart none none none",
+                toggleActions: "restart none restart none"
             },
-            duration: 0.1,
+            duration: 0,
             scrollTo: section
         })
     })
