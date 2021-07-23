@@ -1,5 +1,12 @@
 <template>
+  <!-- Font Asesome -->
   <section class="content__container">
+    <button class="content__section_btn btn_up">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    <button class="content__section_btn btn_down">
+      <i class="fas fa-chevron-down"></i>
+    </button>       
     <div class="content__section">
       <h1 class="content__title">
         About
@@ -42,6 +49,28 @@ import content from '~/config/sections/content';
 
 .content__container{
   opacity: 0.5;
+  .content__section_btn{
+    display: block;
+    left: 50vw;
+    transform: translateX(-50%);
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    font-size: 10vw;
+    font-stretch: ultra-expanded;
+    &.btn_hide{
+      display: none;
+    }
+    &.btn_up{
+      top: 5vh;
+    }
+    &.btn_down{
+      bottom: 5vh;      
+    }
+    i.fas{
+      color: white;
+    }
+  }
   .content__section{
     width: 100vw;
     height: 100vh; 

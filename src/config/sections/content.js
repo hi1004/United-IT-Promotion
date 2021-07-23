@@ -7,7 +7,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function() {
 
-    const contentSections = document.querySelectorAll('.content__section');    
+    const contentSections = document.querySelectorAll('.content__section');  
+
+    const sectionBtns = document.querySelectorAll('content__section_btn');
+    const sectionUpBtn = document.querySelector('btn_up')  
+    const sectionDownBtn = document.querySelector('btn_down')
     
     // contentSections.forEach((section)=>{
     //     gsap.to(window, {
