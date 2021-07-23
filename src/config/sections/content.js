@@ -9,14 +9,14 @@ export default function() {
 
     const contentSections = document.querySelectorAll('.content__section');    
     
-    contentSections.forEach((section)=>{
-        gsap.to(window, {
-            scrollTrigger: {
-                trigger: section,
-                toggleActions: "restart none restart none"
-            },
-            duration: 0,
-            scrollTo: section
-        })
-    })
+    // contentSections.forEach((section)=>{
+    //     gsap.to(window, {
+    //         scrollTrigger: {
+    //             trigger: section,
+    //             toggleActions: "restart none restart none"
+    //         },
+    //         duration: 0,
+    //         scrollTo: section
+    //     })
+    // })
 }

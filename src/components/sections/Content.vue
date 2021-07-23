@@ -76,21 +76,25 @@ import content from '~/config/sections/content';
       justify-content: space-evenly;
       flex-wrap: wrap;
       .activity__item{
-        border-radius: 2rem;
+        border-radius: 0.5rem;
+        margin: 3vh 0;
         width: 20vw;
-        height: 30vw;
-        background-color: rgba(128, 128, 128, 0.2);
-        box-shadow: 10px 10px 20px #000000b5;
+        height: 25vw;
+        background-color: rgba(64, 64, 64, 0.1);
+        box-shadow: 3vw 3vw 5vw #000000b5;
         transition: all 0.5s;  
         @media all and (max-width: 1199px){
-          margin: 2.5vw;
-          width: 40vw;
-          height: 30vh;          
+          margin: 2.5vw 0;
+          width: 35vw;
+          height: 30vw;
+          min-width: 210px;
+          min-height: 180px;       
         }
         @media all and (max-width: 479px){
-          margin: 2.5vw;
           width: 45vw;
-          height: 30vh;
+          height: 55vw;
+          min-width: 45px;
+          min-height: 55px;
         }
         &:hover {
           transform: scale(1.05);
