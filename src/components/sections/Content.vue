@@ -47,8 +47,16 @@ import content from '~/config/sections/content';
 
 <style lang="scss" scoped>
 
+@keyframes btn-effect{
+  from{
+    opacity: 0.1;    
+  }
+  to{
+    opacity: 0.3;
+  }
+}
+
 .content__container{
-  opacity: 0.5;
   .content__section_btn{
     display: block;
     left: 50vw;
@@ -58,17 +66,34 @@ import content from '~/config/sections/content';
     border: none;
     font-size: 10vw;
     font-stretch: ultra-expanded;
+    transition: 0.5s;
+    animation-name: btn-effect;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
     &.btn_hide{
       display: none;
     }
     &.btn_up{
-      top: 5vh;
+      top: 0;
     }
     &.btn_down{
-      bottom: 5vh;      
+      bottom: 0;      
     }
-    i.fas{
+    &:hover{
+      animation-play-state: paused;      
+      i.fas{
+        transform: scale(1.2);
+      }      
+    }
+    &:active{
+      opacity: 1;
+    }
+    i.fas{      
+      transition: 0.5s;
       color: white;
+      text-shadow: 0 0 1vw;
     }
   }
   .content__section{
