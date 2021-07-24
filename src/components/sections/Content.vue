@@ -1,10 +1,9 @@
 <template>
-  <!-- Font Asesome -->
   <section class="content__container">
-    <button class="content__section_btn btn_up">
+    <button class="content__section_btn btn_up btn_show">
       <i class="fas fa-chevron-up"></i>
     </button>
-    <button class="content__section_btn btn_down">
+    <button class="content__section_btn btn_down btn_show">
       <i class="fas fa-chevron-down"></i>
     </button>       
     <div class="content__section">
@@ -58,7 +57,7 @@ import content from '~/config/sections/content';
 
 .content__container{
   .content__section_btn{
-    display: block;
+    display: none;
     left: 50vw;
     transform: translateX(-50%);
     position: fixed;
@@ -72,8 +71,8 @@ import content from '~/config/sections/content';
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
-    &.btn_hide{
-      display: none;
+    &.btn_show{
+      display: block;
     }
     &.btn_up{
       top: 0;
