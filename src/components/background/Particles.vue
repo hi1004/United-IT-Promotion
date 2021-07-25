@@ -10,6 +10,14 @@
   export default {
     mounted() {
       particle();
+      const ScrollMagic = window.ScrollMagic;
+      const controller = new ScrollMagic.Controller();
+      new ScrollMagic.Scene({
+      triggerElement: '#pinContainer',
+      triggerHook: 0.5,
+    })
+      .setPin('#scene', { pushFollowers: true })
+      .addTo(controller);
     },
   };
 </script>

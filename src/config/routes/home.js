@@ -1,15 +1,16 @@
 // import $ from 'jquery';
 const ScrollMagic = window.ScrollMagic;
 const gsap = window.gsap;
-const TweenMax = window.TweenMax;
+// const TweenMax = window.TweenMax;
 const TimelineMax = window.TimelineMax;
-const Linear = window.Linear;
-
+// const Linear = window.Linear;
+const controller = new ScrollMagic.Controller();
 export default function () {
   /* SCROLL DISABLE */
   const bodyEl = document.querySelector('body');
   const canvases = document.querySelectorAll('.bg-canvas');
-  const controller = new ScrollMagic.Controller();
+ 
+ 
 
   setTimeout(function () {
     // bodyEl.style.overflowY = 'visible';
@@ -34,21 +35,7 @@ export default function () {
     });
   };
 
-  var tween = TweenMax.to('.text', 0.5, { scale: 4, ease: Linear.easeNone });
-
-  // build scene
-  new ScrollMagic.Scene({ triggerElement: '#animate', duration:'400', offset: -100 })
-    .setTween(tween)
-    .setPin('#animate')
-    .addIndicators({
-      name: 'resize',
-      colorStart: 'green',
-      colorTrigger: 'green',
-      colorEnd: 'green',
-    }) // add indicators (requires plugin)
-    .addTo(controller);
-
-
+ 
 
   const wipeAnimation = new TimelineMax()
     // animate to second
@@ -66,7 +53,7 @@ export default function () {
 
   new ScrollMagic.Scene({
     triggerElement: '#pinContainer',
-    triggerHook: 'onLeave',
+    triggerHook: 0,
     duration: '200%',
   })
     .setPin('#pinContainer')
@@ -78,4 +65,11 @@ export default function () {
       colorEnd: 'yellow',
     })
     .addTo(controller);
+
 }
+
+
+
+    
+  
+

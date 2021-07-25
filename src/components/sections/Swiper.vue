@@ -1,17 +1,20 @@
 <template>
-  <div
-    id="animate"
-    class="box1 blue">
-    <p class="text">
-      창공을 누비다!
-    </p>
-  </div>
+  <div class="blur"></div>
+ 
 
 
   <div id="pinContainer">
     <div id="slideContainer">
       <section class="panel one">
         <b>ONE</b>
+
+        <div
+          id="animate"
+          class="box1 blue">
+          <p class="text">
+            창공을 누비다!
+          </p>
+        </div>
       </section>
       <section class="panel two">
         <b>TWO</b>
@@ -51,6 +54,16 @@
 </script>
 
 <style lang="scss" scoped>
+.blur{
+      width: 120%;
+    margin-left: -10%;
+    height: 180px;
+    background-color: #030000;
+    position: absolute;
+    top: -100px;
+    filter: blur(40px);
+    z-index: 98;
+}
 .box1 {
   text-align: center;
 }
@@ -63,6 +76,11 @@
     margin-bottom: 10px;
     line-height: 140%;
   }
+  .blue {
+    position: relative;
+    z-index: 9999;
+    height: 500px;
+  }
   
   .icon {
     width: 140px;
@@ -73,7 +91,6 @@
     text-align: center;
     background-color: #999;
     border-radius: 100%;
-    
   }
 
 
