@@ -1,8 +1,10 @@
 <template>
   <Particles />
   <Intro />
-  <Swiper />
+  <div class="home-background">
+    <Swiper />
   <!-- <Activiy /> -->
+  </div>
 </template>
 
 <script>
@@ -29,4 +31,9 @@
 
 <style lang="scss" scoped>
   @import '~/scss/main';
+  .home-background {
+    position: relative;
+    z-index: 99;
+    background-color: black;
+  }
 </style>

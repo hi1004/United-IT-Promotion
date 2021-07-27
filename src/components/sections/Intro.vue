@@ -5,70 +5,72 @@
     <div
       class="intro-stage"
       data-depth="0.5">
-      <div class="ab main">
-        <img
-          src="~/assets/Intro/m_J.png"
-          alt="m_J" />
-      </div>
-      <div class="ab main">
-        <img
-          src="~/assets/Intro/m_hyphen.png"
-          alt="m_hyphen" />
-      </div>
-      <div class="ab main">
-        <img
-          src="~/assets/Intro/m_B.png"
-          alt="m_B" />
-      </div>
-      <div class="ab main">
-        <img
-          src="~/assets/Intro/m_I.png"
-          alt="m_I" />
-      </div>
-      <div class="ab main">
-        <img
-          src="~/assets/Intro/m_T.png"
-          alt="m_T" />
-      </div>
-      <div class="ab sub">
-        <img
-          src="~/assets/Intro/s_U.png"
-          alt="s_U" />
-      </div>
-      <div class="ab sub">
-        <img
-          src="~/assets/Intro/s_N.png"
-          alt="s_N" />
-      </div>
-      <div class="ab sub">
-        <img
-          src="~/assets/Intro/s_I.png"
-          alt="s_I" />
-      </div>
-      <div class="ab sub">
-        <img
-          src="~/assets/Intro/s_T.png"
-          alt="s_T" />
-      </div>
-      <div class="ab sub">
-        <img
-          src="~/assets/Intro/s_E.png"
-          alt="s_E" />
-      </div>
-      <div class="ab sub">
-        <img
-          src="~/assets/Intro/s_D.png"
-          alt="s_D" />
-      </div>
-      <div class="ab sub">
-        <img
-          src="~/assets/Intro/s_I.png"
-          alt="s_I" />
-      </div>
-      <div class="ab sub">
-        <img
-          src="~/assets/Intro/s_T.png"
-          alt="s_T" />
+      <div class="ab-wrap">
+        <div class="ab main">
+          <img
+            src="~/assets/Intro/m_J.png"
+            alt="m_J" />
+        </div>
+        <div class="ab main">
+          <img
+            src="~/assets/Intro/m_hyphen.png"
+            alt="m_hyphen" />
+        </div>
+        <div class="ab main">
+          <img
+            src="~/assets/Intro/m_B.png"
+            alt="m_B" />
+        </div>
+        <div class="ab main">
+          <img
+            src="~/assets/Intro/m_I.png"
+            alt="m_I" />
+        </div>
+        <div class="ab main">
+          <img
+            src="~/assets/Intro/m_T.png"
+            alt="m_T" />
+        </div>
+        <div class="ab sub">
+          <img
+            src="~/assets/Intro/s_U.png"
+            alt="s_U" />
+        </div>
+        <div class="ab sub">
+          <img
+            src="~/assets/Intro/s_N.png"
+            alt="s_N" />
+        </div>
+        <div class="ab sub">
+          <img
+            src="~/assets/Intro/s_I.png"
+            alt="s_I" />
+        </div>
+        <div class="ab sub">
+          <img
+            src="~/assets/Intro/s_T.png"
+            alt="s_T" />
+        </div>
+        <div class="ab sub">
+          <img
+            src="~/assets/Intro/s_E.png"
+            alt="s_E" />
+        </div>
+        <div class="ab sub">
+          <img
+            src="~/assets/Intro/s_D.png"
+            alt="s_D" />
+        </div>
+        <div class="ab sub">
+          <img
+            src="~/assets/Intro/s_I.png"
+            alt="s_I" />
+        </div>
+        <div class="ab sub">
+          <img
+            src="~/assets/Intro/s_T.png"
+            alt="s_T" />
+        </div>
       </div>
     </div>
   </section>
@@ -77,6 +79,7 @@
 <script>
   import intro from '~/config/sections/intro';
   import $ from 'jquery';
+  import { gsap } from 'gsap';
 
   const Parallax = require('parallax-js');
   export default {
@@ -85,6 +88,21 @@
       $(function () {
         new Parallax($('#scene')[0]);
       });
+
+      const ScrollMagic = window.ScrollMagic;
+      const controller = new ScrollMagic.Controller();
+      const tween1 = gsap.to('#scene', 1, {
+       scale: 0.9,
+     
+      });
+      new ScrollMagic.Scene({
+        triggerElement: '#scene',
+        triggerHook: 0,
+        duration: '20%',
+      })
+        .setPin('#scene', { pushFollowers: false })
+        .setTween(tween1)
+        .addTo(controller);
     },
   };
 </script>
@@ -92,6 +110,7 @@
 <style lang="scss" scoped>
   #scene {
     overflow: hidden;
+    z-index: -2;
   }
 
   .intro-stage {
@@ -106,7 +125,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
+    z-index: -1;
     &.main {
       width: 15vw;
       height: 15vw;

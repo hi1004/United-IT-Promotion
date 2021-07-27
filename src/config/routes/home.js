@@ -1,12 +1,16 @@
-import { gsap } from 'gsap';
-import { TimelineMax } from 'gsap/gsap-core';
+// import $ from 'jquery';
 const ScrollMagic = window.ScrollMagic;
-
+const gsap = window.gsap;
+// const TweenMax = window.TweenMax;
+const TimelineMax = window.TimelineMax;
+// const Linear = window.Linear;
+const controller = new ScrollMagic.Controller();
 export default function () {
   /* SCROLL DISABLE */
   const bodyEl = document.querySelector('body');
   const canvases = document.querySelectorAll('.bg-canvas');
-  // bodyEl.style.backgroundColor = '#000';
+ 
+ 
 
   setTimeout(function () {
     // bodyEl.style.overflowY = 'visible';
@@ -31,47 +35,41 @@ export default function () {
     });
   };
 
-  /* SCROLL MAGIC */
-  const controller = new ScrollMagic.Controller();
-  const tween1 = gsap.to('#animate1', 0.5, {
-    backgroundColor: '#333333',
-    scale: 2.5,
-    rotation: 660,
-    x: 130,
-  });
+ 
 
- new ScrollMagic.Scene({
-    triggerElement: '#trigger1',
-    duration: '100%',
-  })
-    .setTween(tween1)
-    .setPin("#pin1")
-    .addTo(controller)
-
-
-    var wipeAnimation = new TimelineMax()
+  const wipeAnimation = new TimelineMax()
     // animate to second
-    .to("#slideContainer", 1, {z: -180} )
-    .to("#slideContainer", 1, {x:"-25%"} )
-    .to("#slideContainer", 1, {z: 0} )
-    // animate to third
-    .to("#slideContainer", 1, {z: -180, delay: 0.6} )
-    .to("#slideContainer", 1, {x:"-50%"} )
-    .to("#slideContainer", 1, {z: 0} )
-    // animate to forth
-    .to("#slideContainer", 1, {z: -180, delay: 0.6} )
-    .to("#slideContainer", 1, {x:"-75%"} )
-    .to("#slideContainer", 1, {z: 0} )
-  
-     new ScrollMagic.Scene({
-          triggerElement: "#pinContainer",
-          triggerHook: "onLeave",
-          duration: "500%" //이 값이 클 수록 천천히 덮어씀
-    })
-    .setPin("#pinContainer")
+    .to('#slideContainer', 1, { z: -180 })
+    .to('#slideContainer', 1, { x: '-50%' })
+    .to('#slideContainer', 1, { z: 0 });
+  // // animate to third
+  // .to("#slideContainer", 1, {z: -180, delay: 0.6} )
+  // .to("#slideContainer", 1, {x:"-50%"} )
+  // .to("#slideContainer", 1, {z: 0} )
+  // // animate to forth
+  // .to("#slideContainer", 1, {z: -180, delay: 0.6} )
+  // .to("#slideContainer", 1, {x:"-75%"} )
+  // .to("#slideContainer", 1, {z: 0} )
+
+  new ScrollMagic.Scene({
+    triggerElement: '#pinContainer',
+    triggerHook: 0,
+    duration: '200%',
+  })
+    .setPin('#pinContainer')
     .setTween(wipeAnimation)
-   
+    .addIndicators({
+      name: 'slide',
+      colorStart: 'yellow',
+      colorTrigger: 'yellow',
+      colorEnd: 'yellow',
+    })
     .addTo(controller);
 
-
 }
+
+
+
+    
+  
+

@@ -1,29 +1,30 @@
 <template>
-  <div
-    class="trigger"
-    id="trigger1">
-    Trigger!
-  </div>
-  <div class="spacer"></div>
-  <div
-    id="animate1"
-    class="icon">
-    Hello
-  </div>
+  <div class="blur"></div>
+ 
+
+
   <div id="pinContainer">
     <div id="slideContainer">
       <section class="panel one">
         <b>ONE</b>
+
+        <div
+          id="animate"
+          class="box1 blue">
+          <p class="text">
+            창공을 누비다!
+          </p>
+        </div>
       </section>
       <section class="panel two">
         <b>TWO</b>
       </section>
-      <section class="panel three">
+      <!-- <section class="panel three">
         <b>THREE</b>
       </section>
       <section class="panel four">
         <b>FOUR</b>
-      </section>
+      </section> -->
     </div>
   </div>
 </template>
@@ -53,6 +54,19 @@
 </script>
 
 <style lang="scss" scoped>
+.blur{
+      width: 120%;
+    margin-left: -10%;
+    height: 180px;
+    background-color: #030000;
+    position: absolute;
+    top: -100px;
+    filter: blur(40px);
+    z-index: 98;
+}
+.box1 {
+  text-align: center;
+}
  .spacer {
     height: 150px;
   }
@@ -61,6 +75,11 @@
     font-size: 14px;
     margin-bottom: 10px;
     line-height: 140%;
+  }
+  .blue {
+    position: relative;
+    z-index: 9999;
+    height: 500px;
   }
   
   .icon {
@@ -72,7 +91,6 @@
     text-align: center;
     background-color: #999;
     border-radius: 100%;
-    
   }
 
 
@@ -91,34 +109,34 @@
 }
 
 #slideContainer {
-  width: 400%;// 100*4 slides
+  width: 200%;// 100*4 slides
   height: 100%;
 }
 
 .panel {
   float: left;
-  width: 25%; // 400/25 = 100%
+  width: 50%; // 200/25 = 100%
   height: 100vh;
   font-size: 60px;
   text-align: center;
   color: #fff;
 }
 
-.one {
-    background-color: #fe4365;
-}
+// .one {
+//     background-color: #fe4365;
+// }
 
-.two {
-    background-color: #fc9d9a;
-}
+// .two {
+//     background-color: #fc9d9a;
+// }
 
-.three {
-    background-color: #f9cdad;
-}
+// .three {
+//     background-color: #f9cdad;
+// }
 
-.four {
-    background-color: #c8c8a9;
-}
+// .four {
+//     background-color: #c8c8a9;
+// }
 
 
 </style>

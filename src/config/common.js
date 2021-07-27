@@ -8,7 +8,7 @@ const ScrollMagic = window.ScrollMagic;
 gsap.registerPlugin(scrollTo);
 gsap.registerPlugin(ScrollTrigger);
 
-export default function () {  
+export default function () {
   /* LOADING */
   $(window).on('load', function () {
     $('#load').hide();
@@ -55,7 +55,6 @@ export default function () {
     },
   });
 
-
   const controller = new ScrollMagic.Controller();
   /* SCROLL MAGIC */
   const spyEls = document.querySelectorAll('.scroll-spy');
@@ -65,14 +64,10 @@ export default function () {
       triggerHook: 0.7,
     })
       .setClassToggle(spyEl, 'show')
-      .addTo(controller)
-      // .addIndicators() 
+      .addTo(controller);
+    // .addIndicators()
   });
 
-
-
  
-
-
 
 } /* end */
