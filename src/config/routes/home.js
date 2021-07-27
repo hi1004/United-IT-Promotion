@@ -40,17 +40,29 @@ export default function () {
   const wipeAnimation = new TimelineMax()
     // animate to second
     .to('#slideContainer', 1, { z: -180 })
-    .to('#slideContainer', 1, { x: '-50%' })
-    .to('#slideContainer', 1, { z: 0 });
+    .to('#slideContainer', 1, { x: '-25%' })
+    .to('#slideContainer', 1, { z: 0 })
   // // animate to third
-  // .to("#slideContainer", 1, {z: -180, delay: 0.6} )
-  // .to("#slideContainer", 1, {x:"-50%"} )
-  // .to("#slideContainer", 1, {z: 0} )
+    .to("#slideContainer", 1, {z: -180, delay: 0.6} )
+  .to("#slideContainer", 1, {x:"-50%"} )
+  .to("#slideContainer", 1, {z: 0} )
   // // animate to forth
-  // .to("#slideContainer", 1, {z: -180, delay: 0.6} )
-  // .to("#slideContainer", 1, {x:"-75%"} )
-  // .to("#slideContainer", 1, {z: 0} )
+   .to("#slideContainer", 1, {z: -180, delay: 0.6} )
+   .to("#slideContainer", 1, {x:"-75%"} )
+   .to("#slideContainer", 1, {z: 0} )
 
+   const btnEl = document.querySelector('.btn')
+
+
+   function wipeAnimation2() {
+   btnEl.addEventListener('click',() => {
+    new TimelineMax()
+    .to("#slideContainer", 1, {z: 180, delay: 0} )
+    .to("#slideContainer", 1, {x:"0%"} )
+    .to("#slideContainer", 1, {z: 0} )
+   })
+  } 
+  wipeAnimation2()
   new ScrollMagic.Scene({
     triggerElement: '#pinContainer',
     triggerHook: 0,
@@ -58,14 +70,13 @@ export default function () {
   })
     .setPin('#pinContainer')
     .setTween(wipeAnimation)
-    .addIndicators({
-      name: 'slide',
-      colorStart: 'yellow',
-      colorTrigger: 'yellow',
-      colorEnd: 'yellow',
-    })
+    // .addIndicators({
+    //   name: 'slide',
+    //   colorStart: 'yellow',
+    //   colorTrigger: 'yellow',
+    //   colorEnd: 'yellow',
+    // })
     .addTo(controller);
-
 }
 
 
