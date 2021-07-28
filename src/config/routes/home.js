@@ -197,9 +197,6 @@ export default function () {
         .setClassToggle(executivesProfile, 'active')
         .addTo(controller);
     });
-    executivesImgs.forEach(function(executivesImg){
-          console.log(executivesImg.className)
-    })
   }
   profileScrollAnimate();
 
