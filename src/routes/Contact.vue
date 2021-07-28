@@ -265,7 +265,7 @@
           height: 100%;
           .introduce {
             h1 {
-              font-size: 4vw;
+              font-size: calc(20px + 2vw);
               font-weight: 700;
             }
             .photo {

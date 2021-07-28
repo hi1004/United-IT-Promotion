@@ -1,5 +1,18 @@
 <template>
-  <div id="cursor"></div>
+  <div id="cursor__wrap">
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+    <div class="cursor"></div>
+  </div>
   <Loading />
   <Stars />
   <Header />
@@ -31,23 +44,42 @@
 
 <style lang="scss">
   @import '~/scss/main';
-  #cursor {
-    position: fixed;
-    z-index: 10000;
-    background: #2696e8;
-    width: 20px;
-    height: 20px;
-    // border: 2px solid #fff;
-    // background-color: #fff;
-    box-sizing: border-box;
-    transition: 0.1s;
-    border-radius: 50%;
-    pointer-events: none;
-    display: block;
-    box-shadow: 0 0 20px #2696e8,
-                0 0 60px #2696e8,
-                0 0 100px #2696e8;
-    animation: colors 5s infinite;
+  #cursor__wrap{
+    .cursor {
+      opacity: 0.5;
+      position: fixed;
+      z-index: 10000;
+      background: white;
+      width: 10px;
+      height: 10px;
+      box-sizing: border-box;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      pointer-events: none;
+      display: block;
+      box-shadow: 0 0 10px #fdc000,
+                  0 0 15px #fdc000,
+                  0 0 20px #fdc000,
+                  0 0 25px #fdc000,
+                  0 0 30px #fdc000;
+      animation: colors 5s infinite;
+      &.hover{        
+        box-shadow: 0 0 10px #fdc000;
+        background: transparent;
+        animation-name: hover-effect;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+      }
+      &.click{
+        box-shadow: 0 0 10px #fdc000;
+        background: transparent;
+         animation-name: click-effect;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+      }
+    }
   }
 
   @keyframes colors {
@@ -59,15 +91,37 @@
     }
   }
 
-  #cursor::before {
-    content: '';
-    position: absolute;
-    background: #2696e8;
-    width: 50px;
-    height: 50px;
-    opacity: 0.2;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
+  @keyframes hover-effect {
+    0% {
+      filter: hue-rotate(0deg);
+      width: 20px;
+      height: 20px;
+    }
+    60% {      
+      filter: hue-rotate(360deg);
+      width: 50px;
+      height: 50px;
+    }
+    100% {
+      filter: hue-rotate(0deg);
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @keyframes click-effect {
+    from {
+      filter: hue-rotate(0deg);
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+    }
+    to{
+      filter: hue-rotate(360deg);
+      width: 100px;
+      height: 100px;
+      opacity: 0;
+    }
   }
 
 </style>

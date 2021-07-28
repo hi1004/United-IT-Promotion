@@ -1,42 +1,63 @@
 export default function(){
 
    /* CURSOR */
-   const cursor = document.getElementById('cursor');
-   let timeout;
-  //  let currentX = 0;
-  //  let currentY = 0;
-  //  let aimX = 0;
-  //  let aimY = 0;
-  //  let speed = 0.01;
+   const cursorWrap = document.querySelector('#cursor__wrap');
+   const cursors = cursorWrap.querySelectorAll('.cursor')
+   
+   let aimX = 0;
+   let aimY = 0;
+   
+   cursors.forEach((cursor, i)=>{
+    let currentX = 0;
+    let currentY = 0;
 
-   function mouseStopped() {
-     cursor.style.display = 'none';
-   }
-   clearTimeout(timeout);
-   timeout = setTimeout(mouseStopped, 1000)
+    let speed = 0.2 - i * 0.01
+
+    const animate = function() {
+      currentX += (aimX - currentX) * speed;
+      currentY += (aimY - currentY) * speed;
+
+      cursor.style.left = currentX + 'px';      
+      cursor.style.top = currentY + 'px';
+
+      requestAnimationFrame(animate);
+    }
+    animate();
+   })
 
    document.addEventListener('mousemove', function(e){
-     const x = e.clientX;
-     const y = e.clientY;
-     cursor.style.left = x + 'px';
-     cursor.style.top = y + 'px';
-     cursor.style.display = 'block';
+    aimX = e.clientX;
+    aimY = e.clientY;
+    cursorWrap.style.display = 'block';
    })
    document.addEventListener('mouseout', function(){
-     cursor.style.display = 'none';
+    cursorWrap.style.display = 'none';
    })
 
+   /* ANCHOR HOVER EFFECT */
+   const anchorEls = document.querySelectorAll('a');
 
+   anchorEls.forEach((anchor)=>{
+    anchor.addEventListener('mouseover', ()=>{
+      cursors.forEach((cursor)=>{
+        cursor.classList.add('hover')
+      })
+      console.log('들어왔다');  
+    })
+    anchor.addEventListener('mouseout', ()=>{
+      cursors.forEach((cursor)=>{
+        cursor.classList.remove('hover')
+      })
+      console.log('나감');
+    })
+   })
 
-
-   /* css */
-
-   const logoEl = document.querySelector('.logo')
-
-   logoEl.addEventListener('mouseover', function(){
-     cursor.style.width = '100px';
-     cursor.style.height = '100px';
-     cursor.style.cursor = 'none';
+   /* MOUSE CLICK EFFECT */
+   window.addEventListener('click', ()=>{
+     cursors.forEach((cursor)=>{
+       cursor.classList.add('click')
+       setTimeout(()=>{cursor.classList.remove('click')}, 500)
+     })
    })
 }
 // end
