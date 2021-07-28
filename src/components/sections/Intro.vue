@@ -85,24 +85,38 @@
   export default {
     mounted() {
       intro();
+
+      /* PARALLAX */
       $(function () {
         new Parallax($('#scene')[0]);
       });
 
-      const ScrollMagic = window.ScrollMagic;
-      const controller = new ScrollMagic.Controller();
-      const tween1 = gsap.to('#scene', 1, {
-       scale: 1,
-      });
-      new ScrollMagic.Scene({
-        triggerElement: '#scene',
-        triggerHook: 0,
-        duration: '20%',
-      })
-        .setPin('#scene', { pushFollowers: false })
-        .setTween(tween1)
-        .addIndicators()
-        .addTo(controller);
+      
+
+      /* LOGO MOVE */
+      function logoMove() {
+        const ScrollMagic = window.ScrollMagic;
+        const controller = new ScrollMagic.Controller();
+        const aboutSection = document.querySelector('#about');
+        const tween1 = gsap.to('#scene', 1, {
+          opacity: 0,
+        });
+        new ScrollMagic.Scene({
+          triggerElement: aboutSection,
+          triggerHook: 0.7,
+          duration: '50%',
+        })
+          .setPin('#scene', { pushFollowers: false })
+          .setTween(tween1)
+          //    .addIndicators({
+          //   name: 'logo-move',
+          //   colorStart: 'red',
+          //   colorTrigger: 'red',
+          //   colorEnd: 'red',
+          // })
+          .addTo(controller);
+      }
+      logoMove();
     },
   };
 </script>

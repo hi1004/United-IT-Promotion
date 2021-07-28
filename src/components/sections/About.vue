@@ -1,20 +1,24 @@
 <template>
   <section
     id="about"
-    class="about">
+    class="about__section">
     <div class="container">
       <!-- ABOUT-TITLE -->
       <div class="about__title">
-        ABOUT
+        <h1>ABOUT</h1>
       </div>
 
       <!-- VIDEO-BG -->
-      <div class="video-bg"></div>
-
+      <div class="video-wrap">
+        <div class="video-bg">
+        </div>
+      </div>
+      
       <!-- ABOUT-DESCRIPTION01 -->
       <div class="about__description description01">
         IT에 관심 있는 분들이나 일본취업을 희망하는 사람들의 모임
       </div>
+ 
 
       <!-- ABOUT-DESCRIPTION02 -->
       <div class="about__description description02">
@@ -34,19 +38,22 @@
 </script>
 
 <style lang="scss" scoped>
-  .about {
+  .about__section {
     position: relative;
-    background-color: #fff;
-    color: #000;
+    color: #fff;
     font-family: 'Black Han Sans', sans-serif;
-    padding: 2rem 0;
+    padding: 5rem 0;
     .container {
       .about__title {
-        font-size: 20vw;
+        h1 {
+          font-size: 20vw;
         text-align: center;
+        margin-top: 10rem;
+        }
+        
       }
       .video-bg {
-        height: 50vh;
+        height: 500px;
         background-color: gray;
       }
       .about__description {
@@ -55,9 +62,6 @@
         letter-spacing: -2px;
         line-height: 0.9;
         margin: 10rem 0;
-      }
-      .description01 {
-       
       }
       .description02 {
         span {

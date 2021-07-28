@@ -78,7 +78,7 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 99;
+      z-index: 9999;
     }
     .main-tool-bar {
       transition: ease 0.4s;
