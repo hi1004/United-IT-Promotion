@@ -178,7 +178,7 @@ export default function () {
   }
   executivesScrollAnimate();
   // const executivesImgWrap = document.querySelector('#executives .img-wrap');
-  const executivesImgs = executivesSection.querySelectorAll('.img');
+  // const executivesImgs = executivesSection.querySelectorAll('.img');
 
   function profileScrollAnimate() {
     executivesProfiles.forEach(function (executivesProfile) {

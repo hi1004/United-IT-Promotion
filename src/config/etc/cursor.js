@@ -42,13 +42,11 @@ export default function(){
       cursors.forEach((cursor)=>{
         cursor.classList.add('hover')
       })
-      console.log('들어왔다');  
     })
     anchor.addEventListener('mouseout', ()=>{
       cursors.forEach((cursor)=>{
         cursor.classList.remove('hover')
       })
-      console.log('나감');
     })
    })
 

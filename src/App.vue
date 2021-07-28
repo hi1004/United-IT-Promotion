@@ -21,6 +21,8 @@
   <Footer />
 </template>
 
+
+
 <script>
   import Loading from '~/components/etc/Loading';
   import Stars from '~/components/background/Stars';
