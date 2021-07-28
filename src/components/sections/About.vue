@@ -27,6 +27,7 @@
       </div>
 
       <div class="video-intro"></div>
+      <div class="spacer"></div>
     </div>
   </section>
 </template>
@@ -40,10 +41,11 @@
 <style lang="scss" scoped>
   .about__section {
     position: relative;
-    color: #fff;
     font-family: 'Black Han Sans', sans-serif;
-    padding: 5rem 0;
+    margin: 5rem 0;
+    color: #fff;
     .container {
+      position: relative;
       .about__title {
         h1 {
           font-size: 20vw;
@@ -53,7 +55,7 @@
         
       }
       .video-bg {
-        height: 500px;
+        height: 50vh;
         background-color: gray;
       }
       .about__description {
@@ -71,6 +73,13 @@
       .video-intro {
         height: 50vh;
         background-color: gray;
+      }
+      .spacer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height:10px;
       }
     }
   }

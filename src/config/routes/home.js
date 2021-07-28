@@ -31,13 +31,8 @@ export default function () {
     });
   };
 
-  
-
-
-
-
   // ---------------------------------------ABOUT----------------------------------------------
-  
+
   const aboutSection = document.querySelector('#about');
   const aboutTitle = document.querySelector('#about .about__title');
   const aboutTitleText = document.querySelector('#about .about__title h1');
@@ -46,10 +41,10 @@ export default function () {
   /* SCROLL MAGIC - CHANGE TO ABOUT */
   function changeToAbout() {
     const changeToAboutEvent = new TimelineMax()
-      .to(bodyEl, 1, {
+      .to(bodyEl, 2, {
         backgroundColor: '#f6f6f6',
       })
-      .to(aboutSection, 1, {
+      .to(aboutSection, 2, {
         color: '#000',
       });
 
@@ -111,11 +106,126 @@ export default function () {
   }
   aboutVideoAnimate();
 
+  // ---------------------------------------EXECUTIVES----------------------------------------------
 
+  const executivesSection = document.querySelector('#executives');
+  // const executivesRightBox = document.querySelector('#executives .right-box');
+  const executivesLeftBox = document.querySelector('#executives .left-box');
+  const aboutVideoIntro = document.querySelector('#about .video-intro');
+  const aboutSpacer = document.querySelector('#about .spacer');
+  const executivesProfiles = document.querySelectorAll('.profile');
 
+  // const executivesSpacer = document.querySelector('#executives .spacer');
 
-  // ---------------------------------------ACTIVITY---------------------------------------------- 
+  /* SCROLL MAGIC - CHANGE TO EXECUTIVES */
+  function changeToExecutives() {
+    const changeToExecutivesEvent = new TimelineMax().to(bodyEl, 1, {
+      backgroundColor: '#171818',
+      ease: 'power1.inOut',
+    });
+    new ScrollMagic.Scene({
+      triggerElement: aboutVideoIntro,
+      triggerHook: 0.2,
+      duration: '100%',
+    })
+      .setTween(changeToExecutivesEvent)
+      // .addIndicators({
+      //   name: 'bg-change',
+      //   colorStart: 'red',
+      //   colorTrigger: 'red',
+      //   colorEnd: 'red',
+      // })
+      .addTo(controller);
+  }
+  changeToExecutives();
 
+  /* SCROLL MAGIC - EXECUTIVES TEXT ANIMATE  */
+  function executivesTextAnimate() {
+    const changeToExecutivesEvent = new TimelineMax().to(executivesSection, 1, {
+      color: '#fff',
+    });
+    new ScrollMagic.Scene({
+      triggerElement: aboutSpacer,
+      triggerHook: 0.2,
+      duration: '100%',
+    })
+      .setTween(changeToExecutivesEvent)
+
+      .addTo(controller);
+  }
+  executivesTextAnimate();
+
+  /* SCROLL MAGIC - EXECUTIVES SCROLL ANIMATE */
+  function executivesScrollAnimate() {
+    const scrollToExecutivesEvent = new TimelineMax().to(executivesLeftBox, 1, {
+      position: 'fixed',
+      bottom: '35rem',
+    });
+    new ScrollMagic.Scene({
+      triggerElement: aboutSpacer,
+      triggerHook: 0.2,
+      duration: '100%',
+    })
+      .setPin(executivesSection)
+      .setTween(scrollToExecutivesEvent)
+      .addIndicators({
+        name: 'left-event',
+        colorStart: 'red',
+        colorTrigger: 'red',
+        colorEnd: 'red',
+      })
+      .addTo(controller);
+  }
+  executivesScrollAnimate();
+  // const executivesImgWrap = document.querySelector('#executives .img-wrap');
+  const executivesImgs = executivesSection.querySelectorAll('.img');
+
+  function profileScrollAnimate() {
+    executivesProfiles.forEach(function (executivesProfile) {
+      new ScrollMagic.Scene({
+        triggerElement: executivesProfile,
+        triggerHook: 0.3,
+        duration: '100%'
+      })
+        .addIndicators({
+          name: 'profile-event',
+          colorStart: 'blue',
+          colorTrigger: 'blue',
+          colorEnd: 'yellow',
+        })
+        .removeClassToggle()
+        .setClassToggle(executivesProfile, 'active')
+        .addTo(controller);
+    });
+    executivesImgs.forEach(function(executivesImg){
+          console.log(executivesImg.className)
+    })
+  }
+  profileScrollAnimate();
+
+  /* SCROLL MAGIC - EXECUTIVES SCROLL STOP ANIMATE */
+  function executivesScrollStopAnimate() {
+    const scrollToExecutivesEvent = new TimelineMax().to(executivesLeftBox, 1, {
+      left: '-100%',
+    });
+    new ScrollMagic.Scene({
+      triggerElement: '#pinContainer',
+      triggerHook: 1,
+      duration: '100%',
+    })
+      .setPin(executivesSection)
+      .addIndicators({
+        name: 'stop-event',
+        colorStart: 'red',
+        colorTrigger: 'red',
+        colorEnd: 'red',
+      })
+      .setTween(scrollToExecutivesEvent)
+      .addTo(controller);
+  }
+  executivesScrollStopAnimate();
+  // ---------------------------------------ACTIVITY----------------------------------------------
+  // const activitySection = document.querySelector('#slideContainer');
   /* SCROLL MAGIC - ACTIVITY SLIDE */
   function activitySlide() {
     const wipeAnimation = new TimelineMax()
@@ -142,9 +252,4 @@ export default function () {
       .addTo(controller);
   }
   activitySlide();
-
-
-
-
-
 } // end

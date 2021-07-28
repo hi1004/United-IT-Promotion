@@ -21,8 +21,6 @@ export default function(){
      cursor.style.left = x + 'px';
      cursor.style.top = y + 'px';
      cursor.style.display = 'block';
-     console.log(e);
-     console.log(cursor)
    })
    document.addEventListener('mouseout', function(){
      cursor.style.display = 'none';
