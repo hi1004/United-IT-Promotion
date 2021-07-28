@@ -46,6 +46,7 @@
   @import '~/scss/main';
   #cursor__wrap{
     .cursor {
+      opacity: 0.5;
       position: fixed;
       z-index: 10000;
       background: white;
@@ -56,11 +57,14 @@
       border-radius: 50%;
       pointer-events: none;
       display: block;
-      box-shadow: 0 0 10px white,
-                  0 0 15px white,
-                  0 0 20px white;
+      box-shadow: 0 0 10px #fdc000,
+                  0 0 15px #fdc000,
+                  0 0 20px #fdc000,
+                  0 0 25px #fdc000,
+                  0 0 30px #fdc000;
+      animation: colors 5s infinite;
       &.hover{        
-        box-shadow: 0 0 10px white;
+        box-shadow: 0 0 10px #fdc000;
         background: transparent;
         animation-name: hover-effect;
         animation-duration: 1.2s;
@@ -68,7 +72,7 @@
         animation-timing-function: ease-out;
       }
       &.click{
-        box-shadow: 0 0 10px white;
+        box-shadow: 0 0 10px #fdc000;
         background: transparent;
          animation-name: click-effect;
         animation-duration: .5s;
@@ -77,26 +81,29 @@
       }
     }
   }
-  
-  // @keyframes colors {
-  //   from {
-  //     filter: hue-rotate(0deg);
-  //   }
-  //   to {
-  //     filter: hue-rotate(360deg);
-  //   }
-  // }
+
+  @keyframes colors {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
 
   @keyframes hover-effect {
     0% {
+      filter: hue-rotate(0deg);
       width: 20px;
       height: 20px;
     }
-    60% {
-      width: 40px;
-      height: 40px;
+    60% {      
+      filter: hue-rotate(360deg);
+      width: 50px;
+      height: 50px;
     }
     100% {
+      filter: hue-rotate(0deg);
       width: 20px;
       height: 20px;
     }
@@ -104,13 +111,15 @@
 
   @keyframes click-effect {
     from {
+      filter: hue-rotate(0deg);
       width: 10px;
       height: 10px;
       opacity: 1;
     }
     to{
-      width: 70px;
-      height: 70px;
+      filter: hue-rotate(360deg);
+      width: 100px;
+      height: 100px;
       opacity: 0;
     }
   }
