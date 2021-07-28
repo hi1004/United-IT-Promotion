@@ -51,18 +51,10 @@ export default function () {
    .to("#slideContainer", 1, {x:"-75%"} )
    .to("#slideContainer", 1, {z: 0} )
 
-   const btnEl = document.querySelector('.btn')
+  //  const btnEl = document.querySelector('.btn')
 
 
-   function wipeAnimation2() {
-   btnEl.addEventListener('click',() => {
-    new TimelineMax()
-    .to("#slideContainer", 1, {z: 180, delay: 0} )
-    .to("#slideContainer", 1, {x:"0%"} )
-    .to("#slideContainer", 1, {z: 0} )
-   })
-  } 
-  wipeAnimation2()
+
   new ScrollMagic.Scene({
     triggerElement: '#pinContainer',
     triggerHook: 0,
@@ -70,12 +62,12 @@ export default function () {
   })
     .setPin('#pinContainer')
     .setTween(wipeAnimation)
-    // .addIndicators({
-    //   name: 'slide',
-    //   colorStart: 'yellow',
-    //   colorTrigger: 'yellow',
-    //   colorEnd: 'yellow',
-    // })
+    .addIndicators({
+      name: 'slide',
+      colorStart: 'yellow',
+      colorTrigger: 'yellow',
+      colorEnd: 'yellow',
+    })
     .addTo(controller);
 }
 

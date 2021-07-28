@@ -13,6 +13,10 @@ $container-max-widths: (
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
   width: 100%;
   line-height: 1.4;
@@ -21,9 +25,11 @@ body {
   font-family: 'Noto Sans KR', 'Black Han Sans', 'Noto Sans JP', 'Roboto', 'Oswald', sans-serif;
   overflow-x: hidden;
   position: fixed;
+  // cursor:block;
   top: 0;
   a {
     text-decoration: none;
+    cursor:none;
   }
 }
 

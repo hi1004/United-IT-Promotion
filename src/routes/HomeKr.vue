@@ -2,6 +2,7 @@
   <Particles />
   <Intro />
   <div class="home-background">
+    <About />
     <Swiper />
   <!-- <Activiy /> -->
   </div>
@@ -10,7 +11,7 @@
 <script>
   import Particles from '~/components/background/Particles';
   import Intro from '~/components/sections/Intro';
-  // import Activiy from '~/components/sections/Activity';
+  import About from '~/components/sections/About';
   import Swiper from '~/components/sections/Swiper';
   import common from '~/config/common';
   import home from '~/config/routes/home';
@@ -23,6 +24,7 @@
     components: {
       Intro,
       Particles,
+      About,
       Swiper,
       // Activiy,
     },
