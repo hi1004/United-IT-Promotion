@@ -1,11 +1,9 @@
 <template>
   <Particles />
   <Intro />
-  <div class="home-background">
-    <About />
-    <Swiper />
+  <About />
+  <Swiper />
   <!-- <Activiy /> -->
-  </div>
 </template>
 
 <script>
@@ -26,7 +24,6 @@
       Particles,
       About,
       Swiper,
-      // Activiy,
     },
   };
 </script>
@@ -36,6 +33,5 @@
   .home-background {
     position: relative;
     z-index: 99;
-    background-color: black;
   }
 </style>

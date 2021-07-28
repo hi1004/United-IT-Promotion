@@ -1,8 +1,4 @@
 <template>
-  <div class="blur"></div>
- 
-
-
   <div id="pinContainer">
     <div id="slideContainer">
       <section class="panel one">
@@ -54,16 +50,6 @@
 </script>
 
 <style lang="scss" scoped>
-.blur{
-      width: 120%;
-    margin-left: -10%;
-    height: 180px;
-    background-color: #030000;
-    position: absolute;
-    top: -100px;
-    filter: blur(40px);
-    z-index: 98;
-}
 .box1 {
   text-align: center;
 }
