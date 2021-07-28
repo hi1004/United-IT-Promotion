@@ -92,8 +92,7 @@
       const ScrollMagic = window.ScrollMagic;
       const controller = new ScrollMagic.Controller();
       const tween1 = gsap.to('#scene', 1, {
-       scale: 0.9,
-     
+       scale: 1,
       });
       new ScrollMagic.Scene({
         triggerElement: '#scene',
@@ -102,6 +101,7 @@
       })
         .setPin('#scene', { pushFollowers: false })
         .setTween(tween1)
+        .addIndicators()
         .addTo(controller);
     },
   };

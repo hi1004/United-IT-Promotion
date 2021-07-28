@@ -13,7 +13,7 @@
       const ScrollMagic = window.ScrollMagic;
       const controller = new ScrollMagic.Controller();
       new ScrollMagic.Scene({
-      triggerElement: '#pinContainer',
+      triggerElement: '#about',
       triggerHook: 0.5,
     })
       .setPin('#scene', { pushFollowers: true })
@@ -32,5 +32,6 @@
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
+    
   }
 </style>

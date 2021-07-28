@@ -19,12 +19,12 @@
       <section class="panel two">
         <b>TWO</b>
       </section>
-      <!-- <section class="panel three">
+      <section class="panel three">
         <b>THREE</b>
       </section>
       <section class="panel four">
-        <b>FOUR</b>
-      </section> -->
+        <b class="btn">FOUR</b>
+      </section> 
     </div>
   </div>
 </template>
@@ -109,13 +109,13 @@
 }
 
 #slideContainer {
-  width: 200%;// 100*4 slides
+  width: 400%;// 100*4 slides
   height: 100%;
 }
 
 .panel {
   float: left;
-  width: 50%; // 200/25 = 100%
+  width: 25%;// 200/25 = 100%
   height: 100vh;
   font-size: 60px;
   text-align: center;
@@ -130,13 +130,13 @@
 //     background-color: #fc9d9a;
 // }
 
-// .three {
-//     background-color: #f9cdad;
-// }
+.three {
+    background-color: #f9cdad;
+}
 
-// .four {
-//     background-color: #c8c8a9;
-// }
+.four {
+    background-color: #c8c8a9;
+}
 
 
 </style>
