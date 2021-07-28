@@ -1,7 +1,7 @@
 import _ from 'lodash';
+import $ from 'jquery';
 import { gsap } from 'gsap';
 import scrollTo from 'gsap/ScrollToPlugin';
-import $ from 'jquery';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 const ScrollMagic = window.ScrollMagic;
 
