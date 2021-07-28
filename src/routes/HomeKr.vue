@@ -2,6 +2,7 @@
   <Particles />
   <Intro />
   <About />
+  <Executives />
   <Swiper />
   <!-- <Activiy /> -->
 </template>
@@ -10,9 +11,11 @@
   import Particles from '~/components/background/Particles';
   import Intro from '~/components/sections/Intro';
   import About from '~/components/sections/About';
+   import Executives from '~/components/sections/Executives';
   import Swiper from '~/components/sections/Swiper';
   import common from '~/config/common';
   import home from '~/config/routes/home';
+ 
  
   export default {
     mounted() {
@@ -23,6 +26,7 @@
       Intro,
       Particles,
       About,
+      Executives,
       Swiper,
     },
   };

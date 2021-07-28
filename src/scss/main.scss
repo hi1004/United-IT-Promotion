@@ -13,10 +13,7 @@ $container-max-widths: (
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
-*{
-  margin: 0;
-  padding: 0;
-}
+
 body {
   width: 100%;
   line-height: 1.4;
@@ -28,6 +25,13 @@ body {
   top: 0;
   a {
     text-decoration: none;
+  }
+  img {
+    display: block;
+    border: 0;
+  }
+  .container {
+    padding: 0;
   }
 }
 
