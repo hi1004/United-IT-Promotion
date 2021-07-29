@@ -4,6 +4,9 @@ export default function(){
    const cursorWrap = document.querySelector('#cursor__wrap');
    const cursors = cursorWrap.querySelectorAll('.cursor')
    
+   
+
+   /* CURSOR MOVE AND TRAIL EFFECT */
    let aimX = 0;
    let aimY = 0;
    
@@ -24,15 +27,21 @@ export default function(){
     }
     animate();
    })
+  
+  let timer
 
-   document.addEventListener('mousemove', function(e){
+  document.addEventListener('mousemove', function(e){
     aimX = e.clientX;
     aimY = e.clientY;
+    cursorWrap.classList.remove('cursor_hidden')
     cursorWrap.style.display = 'block';
-   })
-   document.addEventListener('mouseout', function(){
+    clearTimeout(timer);
+    timer = setTimeout(()=>{cursorWrap.classList.add('cursor_hidden');},300);
+  })
+  document.addEventListener('mouseout', function(){
     cursorWrap.style.display = 'none';
-   })
+  })
+  
 
    /* ANCHOR HOVER EFFECT */
    const anchorEls = document.querySelectorAll('a');

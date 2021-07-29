@@ -1,17 +1,10 @@
 <template>
   <div id="cursor__wrap">
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
+    <div
+      v-for="n in 10"
+      :key="n"
+      class="cursor">
+    </div>
   </div>
   <Loading />
   <Stars />
@@ -44,7 +37,12 @@
 
 <style lang="scss">
   @import '~/scss/main';
-  #cursor__wrap{
+  #cursor__wrap{    
+    display: none;
+    &.cursor_hidden{
+      transition: 0.5s;
+      opacity: 0;
+    }
     .cursor {
       opacity: 0.5;
       position: fixed;
@@ -56,7 +54,6 @@
       transform: translate(-50%, -50%);
       border-radius: 50%;
       pointer-events: none;
-      display: block;
       box-shadow: 0 0 10px #fdc000,
                   0 0 15px #fdc000,
                   0 0 20px #fdc000,
