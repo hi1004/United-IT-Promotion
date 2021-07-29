@@ -87,35 +87,35 @@
           class="layer zIndexUnder"
           data-depth="-0.5">
           <img
-            src="~/assets/intro/layer1.png"
+            src="~/assets/Intro/layer1.png"
             alt="layer1" />
         </div>
         <div
           class="layer zIndexUnder"
           data-depth="0.75">
           <img
-            src="~/assets/intro/layer2.png"
+            src="~/assets/Intro/layer2.png"
             alt="layer2" />
         </div>
         <div
           class="layer zIndexUnder"
           data-depth="1">
           <img
-            src="~/assets/intro/layer3.png"
+            src="~/assets/Intro/layer3.png"
             alt="layer3" />
         </div>
         <div
           class="layer"
           data-depth="-0.25">
           <img
-            src="~/assets/intro/layer4.png"
+            src="~/assets/Intro/layer4.png"
             alt="layer4" />
         </div>
         <div
           class="layer"
           data-depth="0.625">
           <img
-            src="~/assets/intro/layer5.png"
+            src="~/assets/Intro/layer5.png"
             alt="layer5" />
         </div>
       </div>
