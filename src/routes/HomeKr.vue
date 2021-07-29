@@ -4,7 +4,6 @@
   <About />
   <Executives />
   <Swiper />
-  <!-- <Activiy /> -->
 </template>
 
 <script>

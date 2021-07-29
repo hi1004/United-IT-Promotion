@@ -28,15 +28,15 @@ export default function(){
     animate();
    })
   
-  let timer
+  // let timer
 
   document.addEventListener('mousemove', function(e){
     aimX = e.clientX;
     aimY = e.clientY;
     cursorWrap.classList.remove('cursor_hidden')
     cursorWrap.style.display = 'block';
-    clearTimeout(timer);
-    timer = setTimeout(()=>{cursorWrap.classList.add('cursor_hidden');},300);
+    // clearTimeout(timer);
+    // timer = setTimeout(()=>{cursorWrap.classList.add('cursor_hidden');},300);
   })
   document.addEventListener('mouseout', function(){
     cursorWrap.style.display = 'none';

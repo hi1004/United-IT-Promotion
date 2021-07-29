@@ -1,25 +1,30 @@
 <template>
-  <div id="pinContainer">
-    <div id="slideContainer">
-      <section class="panel one">
-        <b>ONE</b>
-
-        <div
-          id="animate"
-          class="box1 blue">
-          <p class="text">
-            창공을 누비다!
-          </p>
-        </div>
+  <div id="activity__container">
+    <div class="btn__wrap">
+      <button class="move_btn">
+        1
+      </button>        
+      <button class="move_btn">
+        2
+      </button>        
+      <button class="move_btn">
+        3
+      </button>
+    </div>
+    <h1 id="index_title">
+      Activities
+    </h1>   
+    <div id="slide__container">
+      <section class="slide index">             
       </section>
-      <section class="panel two">
-        <b>TWO</b>
+      <section class="slide first">
+        <b>FIRST</b>
       </section>
-      <section class="panel three">
-        <b>THREE</b>
+      <section class="slide second">
+        <b>SECOND</b>
       </section>
-      <section class="panel four">
-        <b class="btn">FOUR</b>
+      <section class="slide third">
+        <b>THIRD</b>
       </section> 
     </div>
   </div>
@@ -50,79 +55,69 @@
 </script>
 
 <style lang="scss" scoped>
-.box1 {
-  text-align: center;
-}
- .spacer {
-    height: 150px;
-  }
-  
-  .text {
-    font-size: 14px;
-    margin-bottom: 10px;
-    line-height: 140%;
-  }
-  .blue {
-    position: relative;
-    z-index: 9999;
-    height: 500px;
-  }
-  
-  .icon {
-    width: 140px;
-    height: 140px;
-    color: #fff;
-    font-size: 40px;
-    line-height: 140px;
-    text-align: center;
-    background-color: #999;
-    border-radius: 100%;
-  }
-
-
-.trigger {
-  width: 100%;
-  height: auto;
-  font-weight: bold;
-  font-size: 20px;
-  background-color: #bada77;
-}
- #pinContainer {
+ #activity__container {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  perspective: 1000;
+  .btn__wrap{
+    bottom: 5vh;
+    left: 40vw;
+    width: 20vw;
+    height: 10vw;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s;
+    &.btn_active{
+      opacity: 1;
+      z-index: 10000;
+    }
+    .move_btn{
+      width: 5vw;
+      height: 5vw;
+      border: none;
+      border-radius: 50%;
+      text-align: center;        
+      color: white;
+      background-color: black;
+    }  
+  }
+  #index_title{
+    position: absolute;
+    left: 1vw;
+    top: 1vh;
+    font-size: 20vw;
+    color: white;
+  }
 }
 
-#slideContainer {
+#slide__container {
   width: 400%;// 100*4 slides
   height: 100%;
+  .slide {
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 100vh;
+    font-size: 60px;
+    text-align: center;
+    color: #fff;    
+    &.index {
+      background-color: transparent;
+    }
+    &.first {
+      background-color: lightyellow;
+    }
+    &.second {
+      background-color: lightpink;
+    }
+    &.third {
+      background-color: lightcoral;
+    }
+  }
 }
-
-.panel {
-  float: left;
-  width: 25%;// 200/25 = 100%
-  height: 100vh;
-  font-size: 60px;
-  text-align: center;
-  color: #fff;
-}
-
-// .one {
-//     background-color: #fe4365;
-// }
-
-// .two {
-//     background-color: #fc9d9a;
-// }
-
-.three {
-    background-color: #f9cdad;
-}
-
-.four {
-    background-color: #c8c8a9;
-}
-
-
 </style>
