@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function () {
 	const aboutSection = document.querySelector('#about__section')
 	
-	let changedColor = '#000'
+
 
 	window.addEventListener('scroll', changeBgColor);
 

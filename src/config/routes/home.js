@@ -1,3 +1,5 @@
+// import { $ } from "jquery";
+
 const ScrollMagic = window.ScrollMagic;
 const gsap = window.gsap;
 const TimelineMax = window.TimelineMax;
@@ -114,6 +116,7 @@ export default function () {
   const aboutVideoIntro = document.querySelector('#about .video-intro');
   const aboutSpacer = document.querySelector('#about .spacer');
   const executivesProfiles = document.querySelectorAll('.profile');
+  const executivesImages = document.querySelectorAll('.img');
 
   // const executivesSpacer = document.querySelector('#executives .spacer');
 
@@ -129,12 +132,6 @@ export default function () {
       duration: '100%',
     })
       .setTween(changeToExecutivesEvent)
-      // .addIndicators({
-      //   name: 'bg-change',
-      //   colorStart: 'red',
-      //   colorTrigger: 'red',
-      //   colorEnd: 'red',
-      // })
       .addTo(controller);
   }
   changeToExecutives();
@@ -156,20 +153,24 @@ export default function () {
   executivesTextAnimate();
 
   /* SCROLL MAGIC - EXECUTIVES SCROLL ANIMATE */
+  const executivesTitle = document.querySelector('#executives .title');
   function executivesScrollAnimate() {
-    const scrollToExecutivesEvent = new TimelineMax().to(executivesLeftBox, 1, {
+    const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 1, {
       position: 'fixed',
-      bottom: '35rem',
+      bottom: '20rem',
+      fontSize: '4vw'
     });
+
     new ScrollMagic.Scene({
       triggerElement: aboutSpacer,
       triggerHook: 0.2,
       duration: '100%',
     })
+
       .setPin(executivesSection)
       .setTween(scrollToExecutivesEvent)
       .addIndicators({
-        name: 'left-event',
+        name: 'Title-event',
         colorStart: 'red',
         colorTrigger: 'red',
         colorEnd: 'red',
@@ -181,28 +182,53 @@ export default function () {
   // const executivesImgs = executivesSection.querySelectorAll('.img');
 
   function profileScrollAnimate() {
-    executivesProfiles.forEach(function (executivesProfile) {
+    executivesProfiles.forEach(function (executivesProfile, i) {
+      const scrollToExecutivesEvent = new TimelineMax().to(executivesImages[i], 1, {
+        y: 0,
+        opacity: 1,
+      });
+
       new ScrollMagic.Scene({
         triggerElement: executivesProfile,
-        triggerHook: 0.3,
-        duration: '100%'
+        triggerHook: 1,
+        duration: '120%',
       })
         .addIndicators({
-          name: 'profile-event',
+          name: 'img-event',
           colorStart: 'blue',
           colorTrigger: 'blue',
-          colorEnd: 'yellow',
+          colorEnd: 'blue',
         })
-        .removeClassToggle()
-        .setClassToggle(executivesProfile, 'active')
+        // .setClassToggle(executivesProfile, 'active')
+        .setTween(scrollToExecutivesEvent)
+        .on('end', function () {
+          executivesImages[i].style.opacity = 0;  
+        })
         .addTo(controller);
     });
   }
   profileScrollAnimate();
 
+  // const pin01 = document.querySelector('#pin1')
+  function executivesImagesAnimate() {
+    new ScrollMagic.Scene({
+      triggerElement: executivesLeftBox,
+      duration: '600%',
+    })
+      .setPin(executivesLeftBox)
+      .addIndicators({
+        name: 'pin-event',
+        colorStart: 'yellow',
+        colorEnd: 'yellow',
+      })
+
+      .addTo(controller);
+  }
+  executivesImagesAnimate();
+
   /* SCROLL MAGIC - EXECUTIVES SCROLL STOP ANIMATE */
   function executivesScrollStopAnimate() {
-    const scrollToExecutivesEvent = new TimelineMax().to(executivesLeftBox, 1, {
+    const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 1, {
       left: '-100%',
     });
     new ScrollMagic.Scene({
@@ -221,6 +247,7 @@ export default function () {
       .addTo(controller);
   }
   executivesScrollStopAnimate();
+
   // ---------------------------------------ACTIVITY----------------------------------------------
   // const activitySection = document.querySelector('#slideContainer');
   /* SCROLL MAGIC - ACTIVITY SLIDE */
