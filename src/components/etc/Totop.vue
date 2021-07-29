@@ -1,10 +1,10 @@
 <template>
-  <button
-    type="button"
+  <a
+   
     class="btn btn-outline-primary"
     id="to-top">
     Top
-  </button>
+  </a>
 </template>
 
 <script>

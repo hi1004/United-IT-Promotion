@@ -11,7 +11,7 @@ export default function(){
     let currentX = 0;
     let currentY = 0;
 
-    let speed = 0.2 - i * 0.01
+    let speed = 0.4 - i * 0.01
 
     const animate = function() {
       currentX += (aimX - currentX) * speed;

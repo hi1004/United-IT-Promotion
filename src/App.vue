@@ -1,17 +1,9 @@
 <template>
   <div id="cursor__wrap">
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
-    <div class="cursor"></div>
+    <div
+      v-for="cursor in cursors"
+      :key="cursor"
+      class="cursor"></div>
   </div>
   <Loading />
   <Stars />
@@ -20,8 +12,6 @@
   <Totop />
   <Footer />
 </template>
-
-
 
 <script>
   import Loading from '~/components/etc/Loading';
@@ -39,14 +29,20 @@
       Footer,
     },
     mounted() {
-      cursor()
+      cursor();
+    },
+    data() {
+      return  {
+        cursors : 10
+      }
     }
   };
 </script>
 
 <style lang="scss">
   @import '~/scss/main';
-  #cursor__wrap{
+  #cursor__wrap {
+    display: none;
     .cursor {
       opacity: 0.5;
       position: fixed;
@@ -59,13 +55,11 @@
       border-radius: 50%;
       pointer-events: none;
       display: block;
-      box-shadow: 0 0 10px #fdc000,
-                  0 0 15px #fdc000,
-                  0 0 20px #fdc000,
-                  0 0 25px #fdc000,
-                  0 0 30px #fdc000;
+      box-shadow: 0 0 10px #fdc000, 0 0 15px #fdc000, 0 0 20px #fdc000, 0 0 25px #fdc000,
+        0 0 30px #fdc000;
       animation: colors 5s infinite;
-      &.hover{        
+
+      &.hover {
         box-shadow: 0 0 10px #fdc000;
         background: transparent;
         animation-name: hover-effect;
@@ -73,11 +67,11 @@
         animation-iteration-count: infinite;
         animation-timing-function: ease-out;
       }
-      &.click{
+      &.click {
         box-shadow: 0 0 10px #fdc000;
         background: transparent;
-         animation-name: click-effect;
-        animation-duration: .5s;
+        animation-name: click-effect;
+        animation-duration: 0.5s;
         animation-iteration-count: 1;
         animation-timing-function: ease-out;
       }
@@ -99,7 +93,7 @@
       width: 20px;
       height: 20px;
     }
-    60% {      
+    60% {
       filter: hue-rotate(360deg);
       width: 50px;
       height: 50px;
@@ -118,12 +112,11 @@
       height: 10px;
       opacity: 1;
     }
-    to{
+    to {
       filter: hue-rotate(360deg);
       width: 100px;
       height: 100px;
       opacity: 0;
     }
   }
-
 </style>
