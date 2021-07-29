@@ -14,7 +14,7 @@ export default function(){
     let currentX = 0;
     let currentY = 0;
 
-    let speed = 0.2 - i * 0.01
+    let speed = 0.4 - i * 0.01
 
     const animate = function() {
       currentX += (aimX - currentX) * speed;
@@ -51,13 +51,11 @@ export default function(){
       cursors.forEach((cursor)=>{
         cursor.classList.add('hover')
       })
-      console.log('들어왔다');  
     })
     anchor.addEventListener('mouseout', ()=>{
       cursors.forEach((cursor)=>{
         cursor.classList.remove('hover')
       })
-      console.log('나감');
     })
    })
 

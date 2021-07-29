@@ -112,7 +112,7 @@ export default function () {
 	});	
 	
 	spreadSet2();
-	setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*3000);	
-	setTimeout(() => window.addEventListener('scroll',disableClickEvent), _DURATION*3000)
+	setTimeout(() => window.addEventListener('click', spreadSet1), _DURATION*3000);
+	setTimeout(() => window.addEventListener('scroll',disableClickEvent), _DURATION*3000)		
 
 }
