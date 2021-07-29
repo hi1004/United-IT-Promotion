@@ -134,10 +134,6 @@
       const scene = document.querySelector('#scene');
       new Parallax(scene)
 
-     
-
-      
-
       /* LOGO MOVE */
       function logoMove() {
         const ScrollMagic = window.ScrollMagic;
