@@ -169,15 +169,16 @@
         .contents {
           position: relative;
           width: 100%;
-       
           display: flex;
           justify-content: center;
    
           .title {
+            width:80%;
             font-family: 'Black Han Sans', sans-serif;
             font-size: 6vw;
             padding: 0;
-            // position: absolute;
+            position: absolute;
+            bottom: 10rem;
             text-align: center;
             z-index: 1;
             transition: all .3s;
