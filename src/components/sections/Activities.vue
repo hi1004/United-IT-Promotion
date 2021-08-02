@@ -1,14 +1,11 @@
 <template>
-  <div id="activity__container">
+  <div id="activities__container">
     <div class="btn__wrap">
       <button class="move_btn">
-        1
       </button>        
       <button class="move_btn">
-        2
       </button>        
       <button class="move_btn">
-        3
       </button>
     </div>
     <h1 id="index_title">
@@ -31,7 +28,6 @@
 </template>
 
 <script>
-  // import { Swiper, SwiperSlide } from 'swiper/vue';
   import 'swiper/swiper.scss';
   import 'swiper/components/pagination/pagination.min.css';
   import SwiperCore, { Mousewheel, Pagination } from 'swiper/core';
@@ -42,8 +38,6 @@
 
   export default {
     components: {
-      // Swiper,
-      // SwiperSlide,
     },
     data() {
       return {};
@@ -55,20 +49,20 @@
 </script>
 
 <style lang="scss" scoped>
- #activity__container {
+ #activities__container {
   width: 100%;
   height: 100vh;
   overflow: hidden;
   .btn__wrap{
     bottom: 5vh;
     left: 40vw;
-    width: 20vw;
-    height: 10vw;
+    width: 15vw;
+    height: 5vw;
     position: fixed;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-content: space-between;
+    justify-content: space-around;
+    align-content: center;
     z-index: -1;
     opacity: 0;
     transition: 0.5s;
@@ -77,20 +71,26 @@
       z-index: 10000;
     }
     .move_btn{
-      width: 5vw;
-      height: 5vw;
+      width: 3vw;
+      height: 3vw;
       border: none;
       border-radius: 50%;
-      text-align: center;        
-      color: white;
-      background-color: black;
+      text-align: center;
+      background-color: lightgray;
+      box-shadow: 0 0 20px 1px lightgray;
+      transition: 0.5s;
+      &.btn_clicked{
+        background-color: black;
+        box-shadow: 0 0 20px 1px black;
+      }
     }  
   }
   #index_title{
     position: absolute;
     left: 1vw;
     top: 1vh;
-    font-size: 20vw;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 15vw;
     color: white;
   }
 }

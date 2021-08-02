@@ -248,7 +248,7 @@ export default function () {
      y: '-100%'
     });
     new ScrollMagic.Scene({
-      triggerElement: '#activity__container',
+      triggerElement: '#activities__container',
       triggerHook: 1,
       duration: '100%',
     })
@@ -264,18 +264,26 @@ export default function () {
   }
   executivesScrollStopAnimate();
 
-  // ---------------------------------------ACTIVITY----------------------------------------------
-  const activityContainer = document.querySelector('#activity__container')
+  // ---------------------------------------Activities----------------------------------------------
+  const activitiesContainer = document.querySelector('#activities__container')
   const slideContainer = document.querySelector('#slide__container')
 
   const btnWrap = document.querySelector('.btn__wrap')
   const moveBtns = document.querySelectorAll('.move_btn')
 
-  const startYpos = activityContainer.offsetTop
+  let startYpos = activitiesContainer.offsetTop;
+
+  
+  
+  /* RESIZE HANDLING */
+  window.addEventListener('resize', ()=>{
+    console.log(startYpos)
+    btnFunction()
+  })
 
   /* SCROLL MAGIC - CHANGE TO EXECUTIVES */
-  function changeToAcitivities() {
-    const changeToAcitivitiesEvent = new TimelineMax()
+  function changeToActivities() {
+    const changeToActivitiesEvent = new TimelineMax()
     .to(bodyEl, 1, {
       backgroundColor: '#f6f6f6',
       ease: 'power1.inOut',
@@ -284,42 +292,42 @@ export default function () {
       color: '#000',
     })
     new ScrollMagic.Scene({
-      triggerElement: activityContainer,
+      triggerElement: activitiesContainer,
       triggerHook: 1,
       duration: '100%',
     })
-      .setTween(changeToAcitivitiesEvent)
+      .setTween(changeToActivitiesEvent)
       .addTo(controller);
   }
-  changeToAcitivities();
+  changeToActivities();
 
 
-  /* SCROLL MAGIC - ACTIVITY SLIDE */  
+  /* SCROLL MAGIC - Activities SLIDE */  
 
-  function activitySlide() {
+  function activitiesSlide() {
     const wipeAnimation = new TimelineMax()
       .to('#slide__container', 1, {x: '-25%' })
       .to('#slide__container', 1, { x: '-50%' })
       .to('#slide__container', 1, { x: '-75%' })
 
     new ScrollMagic.Scene({
-      triggerElement: '#activity__container',
+      triggerElement: '#activities__container',
       triggerHook: 0,
       duration: '300%',
     })
-      .setPin('#activity__container')
+      .setPin('#activities__container')
       .setTween(wipeAnimation)
       .addTo(controller);
   }
-  activitySlide();
+  activitiesSlide();
 
   function resizeTitle() {
     const titleResize = new TimelineMax()
       .to('#index_title', {
-        fontSize: '10vw'       
+        fontSize: '7vw'       
       })
     new ScrollMagic.Scene({
-      triggerElement: '#activity__container',
+      triggerElement: '#activities__container',
       triggerHook: 0,
       duration: '30%',
     })
@@ -329,17 +337,31 @@ export default function () {
   resizeTitle();
 
   /* SLIDE MOVE BUTTON */
-  moveBtns.forEach((btn, i)=>{
-    btn.addEventListener('click', ()=>{
-      gsap.to(window, .3,{
-        scrollTo: startYpos + slideContainer.offsetHeight*(i+1)
+  function resetBtnClicked() {
+    moveBtns.forEach((btn)=>{
+      btn.classList.remove('btn_clicked')
+    })
+  }
+
+  function btnFunction() {    
+    moveBtns.forEach((btn, i)=>{
+      btn.addEventListener('click', ()=>{
+        console.log(`현재 위치 : ${window.scrollY}`);
+        console.log(`슬라이드 시작점 위치 : ${startYpos}`);
+        console.log(`슬라이드 위치 : ${startYpos + slideContainer.offsetHeight*(i+1)}`);
+        resetBtnClicked()
+        btn.classList.add('btn_clicked')
+        gsap.to(window, .3,{
+          scrollTo: startYpos + slideContainer.offsetHeight*(i+1)        
+        })
       })
     })
-  })
+  }
+  btnFunction()
 
   function activeBtns() {
     new ScrollMagic.Scene({
-      triggerElement: '#activity__container',
+      triggerElement: '#activities__container',
       triggerHook: 0,
       duration: '305%',
     })
