@@ -166,7 +166,7 @@ export default function () {
       width: '100%',
       left: 'unset',
       bottom: '25rem',
-      fontSize: '4vw'
+      fontSize: '4vw',
     });
 
     new ScrollMagic.Scene({
@@ -182,34 +182,42 @@ export default function () {
         colorTrigger: 'red',
         colorEnd: 'red',
       })
-      .addTo(controller);
+      .addTo(controller)
   }
   executivesScrollAnimate();
   // const executivesImgWrap = document.querySelector('#executives .img-wrap');
   // const executivesImgs = executivesSection.querySelectorAll('.img');
+  const colorArry = ['#5b45ff','green','#FCA742','#F82DDE','#5b45ff','#463E43','#B0E7E4','#3C80FC','','#4EF480'];
 
   function profileScrollAnimate() {
     executivesProfiles.forEach(function (executivesProfile, i) {
-      const scrollToExecutivesEvent = new TimelineMax().to(executivesImages[i], 1, {
+      const scrollToExecutivesEvent = new TimelineMax()
+      .to(executivesTitle,.5,{
+        color: colorArry[i]
+      })
+      .fromTo(executivesImages[i], .7, {
         y: 0,
+        opacity: 0,
+      }, {
+        y: -20,
         opacity: 1,
-      });
-
+        yoyo: true
+      })
       new ScrollMagic.Scene({
         triggerElement: executivesProfile,
-        triggerHook: 0.9,
+        triggerHook: 1,
         duration: '130%',
       })
         .addIndicators({
           name: 'img-event',
-          colorStart: 'blue',
-          colorTrigger: 'blue',
-          colorEnd: 'blue',
+          colorStart: 'green',
+          colorTrigger: 'green',
+          colorEnd: 'green',
         })
         // .setClassToggle(executivesProfile, 'active')
         .setTween(scrollToExecutivesEvent)
         .on('end', function () {
-          executivesImages[i].style.opacity = 0;  
+          executivesImages[i].style.opacity = 0;
         })
         .addTo(controller);
     });
@@ -220,7 +228,7 @@ export default function () {
   function executivesImagesAnimate() {
     new ScrollMagic.Scene({
       triggerElement: executivesLeftBox,
-      duration: '600%',
+      duration: '1200%',
     })
       .setPin(executivesLeftBox)
       .addIndicators({
@@ -236,7 +244,8 @@ export default function () {
   /* SCROLL MAGIC - EXECUTIVES SCROLL STOP ANIMATE */
   function executivesScrollStopAnimate() {
     const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 1, {
-      left: '-100%',
+     opacity:0,
+     y: '-100%'
     });
     new ScrollMagic.Scene({
       triggerElement: '#activity__container',
