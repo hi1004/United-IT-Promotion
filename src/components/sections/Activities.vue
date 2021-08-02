@@ -15,13 +15,19 @@
       <section class="slide index">             
       </section>
       <section class="slide first">
-        <b>FIRST</b>
+        <h1 class="slide__title">
+          First
+        </h1>
       </section>
       <section class="slide second">
-        <b>SECOND</b>
+        <h1 class="slide__title">
+          Second
+        </h1>
       </section>
       <section class="slide third">
-        <b>THIRD</b>
+        <h1 class="slide__title">
+          Third
+        </h1>
       </section> 
     </div>
   </div>
@@ -55,8 +61,8 @@
   overflow: hidden;
   .btn__wrap{
     bottom: 5vh;
-    left: 40vw;
-    width: 15vw;
+    left: 45vw;
+    width: 10vw;
     height: 5vw;
     position: fixed;
     display: flex;
@@ -71,24 +77,24 @@
       z-index: 10000;
     }
     .move_btn{
-      width: 3vw;
-      height: 3vw;
+      width: 2vw;
+      height: 2vw;
       border: none;
       border-radius: 50%;
       text-align: center;
-      background-color: lightgray;
-      box-shadow: 0 0 20px 1px lightgray;
+      background-color: black;
+      box-shadow: 0 0 10px 1px black;
       transition: 0.5s;
       &.btn_clicked{
-        background-color: black;
-        box-shadow: 0 0 20px 1px black;
+        background-color: lightgray;
+        box-shadow: 0 0 20px 1px lightgray;
       }
     }  
   }
   #index_title{
     position: absolute;
-    left: 1vw;
-    top: 1vh;
+    left: 10vw;
+    top: 5vh;
     font-family: 'Black Han Sans', sans-serif;
     font-size: 15vw;
     color: white;
@@ -102,10 +108,15 @@
     position: relative;
     float: left;
     width: 25%;
-    height: 100vh;
-    font-size: 60px;
-    text-align: center;
-    color: #fff;    
+    height: 100vh;    
+    .slide__title {
+      position: absolute;
+      left: 10vw;
+      top: 5vh;
+      color: #000;
+      font-size: 10vw;
+      font-family: 'Black Han Sans', sans-serif;
+    }    
     &.index {
       background-color: transparent;
     }

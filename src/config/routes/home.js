@@ -71,6 +71,35 @@ export default function () {
   }
   changeToAbout();
 
+  /* SCROLL TRIGGER - ABOUT DESCRIPTION EFFECT */
+  function aboutDescriptionEffect() {
+    const aboutWords = document.querySelectorAll('.about__word')
+    const aboutWords02 = document.querySelectorAll('.about__word02')
+    const aboutScreamer = document.querySelector('.about__screamer')
+
+    ScrollTrigger.create({
+      trigger: '.description01',
+      start: 'top 80%',
+      onEnter: ()=>{
+        aboutWords.forEach((word, i)=>{
+          setTimeout(()=>{word.classList.add('word_show')}, 50*i)
+        })
+      }
+    })   
+    
+    ScrollTrigger.create({
+      trigger: '.description02',
+      start: 'top 80%',
+      onEnter: ()=>{
+        aboutWords02.forEach((word, i)=>{
+          setTimeout(()=>{word.classList.add('word_show')}, 100*i)
+        })        
+        setTimeout(()=>{aboutScreamer.classList.add('word_show')}, 350)
+      }
+    })
+  }
+  aboutDescriptionEffect()
+
   /* SCROLL MAGIC - ABOUT TITLE ANIMATE */
   function aboutTitleAnimate() {
     const changeSize = new TimelineMax().to(aboutTitleText, 1, {
