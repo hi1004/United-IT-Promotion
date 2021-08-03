@@ -379,6 +379,7 @@ export default function () {
   }
   activitiesSlide();
 
+  /* SLIDE INDEX TITLE RESIZING */
   function resizeTitle() {
     const titleResize = new TimelineMax()
       .to('#index_title', {
@@ -400,13 +401,30 @@ export default function () {
       btn.classList.remove('btn_clicked')
     })
   }
+  function setBtnClickedByScroll() {
+    if (startYpos + slideContainer.offsetHeight*0.5 <= window.scrollY && window.scrollY < startYpos + slideContainer.offsetHeight*1.5){
+      resetBtnClicked()
+      moveBtns[0].classList.add('btn_clicked')
+    } else if (startYpos + slideContainer.offsetHeight*1.5 <= window.scrollY && window.scrollY < startYpos + slideContainer.offsetHeight*2.5){
+      resetBtnClicked()
+      moveBtns[1].classList.add('btn_clicked')
+    } else if (startYpos + slideContainer.offsetHeight*2.5 <= window.scrollY && window.scrollY < startYpos + slideContainer.offsetHeight*4){
+      resetBtnClicked()
+      moveBtns[2].classList.add('btn_clicked')
+    } else {
+      resetBtnClicked()
+    }
+  }
+  
 
   function btnFunction() {    
     moveBtns.forEach((btn, i)=>{
       btn.addEventListener('click', ()=>{
-        console.log(`현재 위치 : ${window.scrollY}`);
-        console.log(`슬라이드 시작점 위치 : ${startYpos}`);
-        console.log(`슬라이드 위치 : ${startYpos + slideContainer.offsetHeight*(i+1)}`);
+        // console.log(`현재 위치 : ${window.scrollY}`);
+        // console.log(`슬라이드 시작점 위치 : ${startYpos}`);
+        // console.log(`슬라이드 위치 : ${startYpos + slideContainer.offsetHeight*(i+1)}`);
+        window.removeEventListener('scroll', setBtnClickedByScroll)
+        setTimeout(activeBtn, 1000)
         resetBtnClicked()
         btn.classList.add('btn_clicked')
         gsap.to(window, .3,{
@@ -427,5 +445,10 @@ export default function () {
       .addTo(controller);
   }
   activeBtns();
+
+  function activeBtn(){
+    window.addEventListener('scroll', setBtnClickedByScroll)    
+  }
+  activeBtn();
 
 } // end

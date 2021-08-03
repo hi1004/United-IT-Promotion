@@ -89,8 +89,8 @@
       box-shadow: 0 0 10px 1px black;
       transition: 0.5s;
       &.btn_clicked{
-        background-color: lightgray;
-        box-shadow: 0 0 20px 1px lightgray;
+        background-color: white;
+        box-shadow: 0 0 20px 1px white;
       }
     }  
   }
