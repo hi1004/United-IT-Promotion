@@ -18,16 +18,19 @@
         <h1 class="slide__title">
           First
         </h1>
+        <div class="slide__image_section"></div>
       </section>
       <section class="slide second">
         <h1 class="slide__title">
           Second
         </h1>
+        <div class="slide__image_section"></div>
       </section>
       <section class="slide third">
         <h1 class="slide__title">
           Third
         </h1>
+        <div class="slide__image_section"></div>
       </section> 
     </div>
   </div>
@@ -93,7 +96,7 @@
   }
   #index_title{
     position: absolute;
-    left: 10vw;
+    left: 7vw;
     top: 5vh;
     font-family: 'Black Han Sans', sans-serif;
     font-size: 15vw;
@@ -109,13 +112,23 @@
     float: left;
     width: 25%;
     height: 100vh;    
+    overflow: hidden;
     .slide__title {
       position: absolute;
-      left: 10vw;
+      left: 7vw;
       top: 5vh;
       color: #000;
       font-size: 10vw;
       font-family: 'Black Han Sans', sans-serif;
+    }
+    .slide__image_section{
+      width: 70%;
+      height: 150%;
+      background-color: lightgray;
+      position: absolute;
+      top: -5vh;
+      right: -20vw;
+      transform: rotate(10deg);
     }    
     &.index {
       background-color: transparent;
