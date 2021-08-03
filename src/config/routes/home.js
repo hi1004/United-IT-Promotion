@@ -77,25 +77,54 @@ export default function () {
     const aboutWords02 = document.querySelectorAll('.about__word02')
     const aboutScreamer = document.querySelector('.about__screamer')
 
+    function enterDesc(){
+      aboutWords.forEach((word, i)=>{
+        setTimeout(()=>{word.classList.add('word_show')}, 50*i)
+      })        
+    }
+    function enterBackDesc(){
+      aboutWords.forEach((word, i)=>{
+        setTimeout(()=>{word.classList.add('word_show')}, 100*(aboutWords.length-1-i))
+      })        
+    }
+    function leaveDesc(){
+      aboutWords.forEach((word)=>{
+        word.classList.remove('word_show')
+      })
+    }
     ScrollTrigger.create({
       trigger: '.description01',
-      start: 'top 80%',
-      onEnter: ()=>{
-        aboutWords.forEach((word, i)=>{
-          setTimeout(()=>{word.classList.add('word_show')}, 50*i)
-        })
-      }
+      onEnter: enterDesc,
+      onEnterBack: enterBackDesc,
+      onLeave: leaveDesc,
+      onLeaveBack: leaveDesc
     })   
-    
+
+
+    function enterDesc02(){
+      aboutWords02.forEach((word, i)=>{
+        setTimeout(()=>{word.classList.add('word_show')}, 100*i)
+      })        
+      setTimeout(()=>{aboutScreamer.classList.add('word_show')}, 350)
+    }
+    function enterBackDesc02(){
+      aboutWords02.forEach((word, i)=>{
+        setTimeout(()=>{word.classList.add('word_show')}, 100*(aboutWords02.length-1-i))
+      })        
+      setTimeout(()=>{aboutScreamer.classList.add('word_show')}, 350)
+    }
+    function leaveDesc02(){
+      aboutWords02.forEach((word)=>{
+        word.classList.remove('word_show')
+      })
+      aboutScreamer.classList.remove('word_show')
+    }
     ScrollTrigger.create({
       trigger: '.description02',
-      start: 'top 80%',
-      onEnter: ()=>{
-        aboutWords02.forEach((word, i)=>{
-          setTimeout(()=>{word.classList.add('word_show')}, 100*i)
-        })        
-        setTimeout(()=>{aboutScreamer.classList.add('word_show')}, 350)
-      }
+      onEnter: enterDesc02,
+      onEnterBack: enterBackDesc02,
+      onLeave: leaveDesc02,
+      onLeaveBack: leaveDesc02
     })
   }
   aboutDescriptionEffect()
