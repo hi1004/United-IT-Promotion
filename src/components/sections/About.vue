@@ -28,13 +28,26 @@
 
       <!-- ABOUT-DESCRIPTION01 -->
       <div class="about__description description01">
-        IT에 관심 있는 분들이나 일본취업을 희망하는 사람들의 모임
+        <span class="about__word">IT에&nbsp</span>
+        <span class="about__word">관심이&nbsp</span>
+        <span class="about__word">있거나</span>
+        <br />
+        <span class="about__word">일본&nbsp</span>
+        <span class="about__word">취업을&nbsp</span>
+        <span class="about__word">희망하는</span>
+        <br />
+        <span class="about__word">사람들의&nbsp</span>
+        <span class="about__word">모임</span>
       </div>
 
       <!-- ABOUT-DESCRIPTION02 -->
       <div class="about__description description02">
-        저희 동아리를 <br />
-        <span>소개</span>합니다
+        <span class="about__word02">저희</span>
+        <br />
+        <span class="about__word02">동아리를</span>
+        <br />
+        <span class="about__word02"><span class="word_em">소개</span>합니다</span>
+        <span class="about__screamer">!</span>
       </div>
    
       <div class="video-intro">
@@ -77,26 +90,62 @@
     color: #fff;
     .container {
       .about__title {
-        h1 {
+        h1{
           font-size: 20vw;
           text-align: center;
-          margin-top: 10rem;
-        }
+          margin-top: 10rem; 
+        }        
+      }
+      .video-bg {
+        height: 50vh;
+        background-color: gray;
       }
       .about__description {
         width: 90%;
-        font-size: 10vw;
+        font-size: 8vw;
+        font-stretch: 50%;
         letter-spacing: -2px;
         line-height: 0.9;
         margin: 10rem 0;
       }
-      .description01 {
-        margin-top: 100%;
+      .description01 {    
+        margin-top: 100%;  
+        .about__word {
+          display: inline-block;             
+          opacity: 0;     
+          transition: 0.3s; 
+          transform: translateY(20%);       
+          &.word_show{
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }        
       }
-      .description02 {
-        span.play-btn {
-          color: #fdc000;
+      .description02 {                
+        .about__word02 {
+          display: inline-block;             
+          opacity: 0;     
+          transition: 0.3s; 
+          transform: translateY(20%);       
+          &.word_show{
+            opacity: 1;
+            transform: translateY(0);
+          }
+          .word_em{
+            color: #fdc000;
+          }
         }
+        .about__screamer {
+          display: inline-block;             
+          opacity: 0; 
+          transition: 0.5s;
+          transform: translateY(20%) scaleY(0.9);
+          transition-timing-function: cubic-bezier(.1,-1,.6,3);          
+          &.word_show{
+            opacity: 1;
+            transform: translateY(0) scaleY(1);
+          }
+        }        
       }
       .video-wrap {
         width: 100%;

@@ -72,6 +72,64 @@ export default function () {
   }
   changeToAbout();
 
+  /* SCROLL TRIGGER - ABOUT DESCRIPTION EFFECT */
+  function aboutDescriptionEffect() {
+    const aboutWords = document.querySelectorAll('.about__word')
+    const aboutWords02 = document.querySelectorAll('.about__word02')
+    const aboutScreamer = document.querySelector('.about__screamer')
+
+    function enterDesc(){
+      aboutWords.forEach((word, i)=>{
+        setTimeout(()=>{word.classList.add('word_show')}, 50*i)
+      })        
+    }
+    function enterBackDesc(){
+      aboutWords.forEach((word, i)=>{
+        setTimeout(()=>{word.classList.add('word_show')}, 100*(aboutWords.length-1-i))
+      })        
+    }
+    function leaveDesc(){
+      aboutWords.forEach((word)=>{
+        word.classList.remove('word_show')
+      })
+    }
+    ScrollTrigger.create({
+      trigger: '.description01',
+      onEnter: enterDesc,
+      onEnterBack: enterBackDesc,
+      onLeave: leaveDesc,
+      onLeaveBack: leaveDesc
+    })   
+
+
+    function enterDesc02(){
+      aboutWords02.forEach((word, i)=>{
+        setTimeout(()=>{word.classList.add('word_show')}, 100*i)
+      })        
+      setTimeout(()=>{aboutScreamer.classList.add('word_show')}, 350)
+    }
+    function enterBackDesc02(){
+      aboutWords02.forEach((word, i)=>{
+        setTimeout(()=>{word.classList.add('word_show')}, 100*(aboutWords02.length-1-i))
+      })        
+      setTimeout(()=>{aboutScreamer.classList.add('word_show')}, 350)
+    }
+    function leaveDesc02(){
+      aboutWords02.forEach((word)=>{
+        word.classList.remove('word_show')
+      })
+      aboutScreamer.classList.remove('word_show')
+    }
+    ScrollTrigger.create({
+      trigger: '.description02',
+      onEnter: enterDesc02,
+      onEnterBack: enterBackDesc02,
+      onLeave: leaveDesc02,
+      onLeaveBack: leaveDesc02
+    })
+  }
+  aboutDescriptionEffect()
+
   /* SCROLL MAGIC - ABOUT TITLE ANIMATE */
   function aboutTitleAnimate() {
     const changeSize = new TimelineMax().to(aboutTitleText, 1, {
@@ -337,7 +395,7 @@ export default function () {
       y: '-100%',
     });
     new ScrollMagic.Scene({
-      triggerElement: '#activity__container',
+      triggerElement: '#activities__container',
       triggerHook: 1,
       duration: '100%',
     })
@@ -353,60 +411,71 @@ export default function () {
   }
   executivesScrollStopAnimate();
 
-  // ---------------------------------------ACTIVITY----------------------------------------------
-  const activityContainer = document.querySelector('#activity__container');
-  const slideContainer = document.querySelector('#slide__container');
+  // ---------------------------------------Activities----------------------------------------------
+  const activitiesContainer = document.querySelector('#activities__container')
+  const slideContainer = document.querySelector('#slide__container')
 
   const btnWrap = document.querySelector('.btn__wrap');
   const moveBtns = document.querySelectorAll('.move_btn');
 
-  const startYpos = activityContainer.offsetTop;
+  let startYpos = activitiesContainer.offsetTop;
+
+  
+  
+  /* RESIZE HANDLING */
+  window.addEventListener('resize', ()=>{
+    console.log(startYpos)
+    btnFunction()
+  })
 
   /* SCROLL MAGIC - CHANGE TO EXECUTIVES */
-  function changeToAcitivities() {
-    const changeToAcitivitiesEvent = new TimelineMax()
-      .to(bodyEl, 1, {
-        backgroundColor: '#f6f6f6',
-        ease: 'power1.inOut',
-      })
-      .to('#index_title', 2, {
-        color: '#000',
-      });
+  function changeToActivities() {
+    const changeToActivitiesEvent = new TimelineMax()
+    .to(bodyEl, 1, {
+      backgroundColor: '#f6f6f6',
+      ease: 'power1.inOut',
+    })
+    .to('#index_title', 2, {
+      color: '#000',
+    })
     new ScrollMagic.Scene({
-      triggerElement: activityContainer,
+      triggerElement: activitiesContainer,
       triggerHook: 1,
       duration: '100%',
     })
-      .setTween(changeToAcitivitiesEvent)
+      .setTween(changeToActivitiesEvent)
       .addTo(controller);
   }
-  changeToAcitivities();
+  changeToActivities();
 
-  /* SCROLL MAGIC - ACTIVITY SLIDE */
 
-  function activitySlide() {
+  /* SCROLL MAGIC - Activities SLIDE */  
+
+  function activitiesSlide() {
     const wipeAnimation = new TimelineMax()
       .to('#slide__container', 1, { x: '-25%' })
       .to('#slide__container', 1, { x: '-50%' })
       .to('#slide__container', 1, { x: '-75%' });
 
     new ScrollMagic.Scene({
-      triggerElement: '#activity__container',
+      triggerElement: '#activities__container',
       triggerHook: 0,
       duration: '300%',
     })
-      .setPin('#activity__container')
+      .setPin('#activities__container')
       .setTween(wipeAnimation)
       .addTo(controller);
   }
-  activitySlide();
+  activitiesSlide();
 
+  /* SLIDE INDEX TITLE RESIZING */
   function resizeTitle() {
-    const titleResize = new TimelineMax().to('#index_title', {
-      fontSize: '10vw',
-    });
+    const titleResize = new TimelineMax()
+      .to('#index_title', {
+        fontSize: '7vw'       
+      })
     new ScrollMagic.Scene({
-      triggerElement: '#activity__container',
+      triggerElement: '#activities__container',
       triggerHook: 0,
       duration: '30%',
     })
@@ -416,17 +485,48 @@ export default function () {
   resizeTitle();
 
   /* SLIDE MOVE BUTTON */
-  moveBtns.forEach((btn, i) => {
-    btn.addEventListener('click', () => {
-      gsap.to(window, 0.3, {
-        scrollTo: startYpos + slideContainer.offsetHeight * (i + 1),
-      });
-    });
-  });
+  function resetBtnClicked() {
+    moveBtns.forEach((btn)=>{
+      btn.classList.remove('btn_clicked')
+    })
+  }
+  function setBtnClickedByScroll() {
+    if (startYpos + slideContainer.offsetHeight*0.5 <= window.scrollY && window.scrollY < startYpos + slideContainer.offsetHeight*1.5){
+      resetBtnClicked()
+      moveBtns[0].classList.add('btn_clicked')
+    } else if (startYpos + slideContainer.offsetHeight*1.5 <= window.scrollY && window.scrollY < startYpos + slideContainer.offsetHeight*2.5){
+      resetBtnClicked()
+      moveBtns[1].classList.add('btn_clicked')
+    } else if (startYpos + slideContainer.offsetHeight*2.5 <= window.scrollY && window.scrollY < startYpos + slideContainer.offsetHeight*4){
+      resetBtnClicked()
+      moveBtns[2].classList.add('btn_clicked')
+    } else {
+      resetBtnClicked()
+    }
+  }
+  
+
+  function btnFunction() {    
+    moveBtns.forEach((btn, i)=>{
+      btn.addEventListener('click', ()=>{
+        // console.log(`현재 위치 : ${window.scrollY}`);
+        // console.log(`슬라이드 시작점 위치 : ${startYpos}`);
+        // console.log(`슬라이드 위치 : ${startYpos + slideContainer.offsetHeight*(i+1)}`);
+        window.removeEventListener('scroll', setBtnClickedByScroll)
+        setTimeout(activeBtn, 1000)
+        resetBtnClicked()
+        btn.classList.add('btn_clicked')
+        gsap.to(window, .3,{
+          scrollTo: startYpos + slideContainer.offsetHeight*(i+1)        
+        })
+      })
+    })
+  }
+  btnFunction()
 
   function activeBtns() {
     new ScrollMagic.Scene({
-      triggerElement: '#activity__container',
+      triggerElement: '#activities__container',
       triggerHook: 0,
       duration: '305%',
     })
@@ -434,4 +534,10 @@ export default function () {
       .addTo(controller);
   }
   activeBtns();
+
+  function activeBtn(){
+    window.addEventListener('scroll', setBtnClickedByScroll)    
+  }
+  activeBtn();
+
 } // end

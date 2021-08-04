@@ -3,17 +3,18 @@
   <Intro />
   <About />
   <Executives />
-  <Swiper />
+  <Activities />
 </template>
 
 <script>
   import Particles from '~/components/background/Particles';
   import Intro from '~/components/sections/Intro';
   import About from '~/components/sections/About';
-   import Executives from '~/components/sections/Executives';
-  import Swiper from '~/components/sections/Swiper';
+  import Executives from '~/components/sections/Executives';
+  import Activities from '../components/sections/Activities.vue';
   import common from '~/config/common';
   import home from '~/config/routes/home';
+
  
  
   export default {
@@ -26,7 +27,7 @@
       Particles,
       About,
       Executives,
-      Swiper,
+      Activities,
     },
   };
 </script>
