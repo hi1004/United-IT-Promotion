@@ -1,6 +1,7 @@
 <template>
   <Particles />
   <Intro />
+  <SidebarMenu />
   <About />
   <Executives />
   <Activities />
@@ -9,6 +10,7 @@
 <script>
   import Particles from '~/components/background/Particles';
   import Intro from '~/components/sections/Intro';
+  import SidebarMenu from '~/components/etc/SidebarMenu';
   import About from '~/components/sections/About';
   import Executives from '~/components/sections/Executives';
   import Activities from '../components/sections/Activities.vue';
@@ -26,6 +28,7 @@
       Intro,
       Particles,
       About,
+      SidebarMenu,
       Executives,
       Activities,
     },
