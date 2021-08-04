@@ -1,3 +1,10 @@
+import { gsap } from 'gsap';
+import scrollTo from 'gsap/ScrollToPlugin';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(scrollTo);
+gsap.registerPlugin(ScrollTrigger);
+
 export default function(){  
 
   /* SHOW MENU */
@@ -53,15 +60,30 @@ export default function(){
       const snCollapseLink = snLinkList.querySelector('.collapse__link');
       const snCollapseMenu = snLinkList.querySelector('.collapse__menu');
       snLinkList.addEventListener('click', ()=>{
-        if (snNavBar.classList.contains('expander')){      
-          console.log(snCollapseLink, snCollapseMenu)
+        if (snNavBar.classList.contains('expander')){ 
           snCollapseLink.classList.toggle('rotate');
           snCollapseMenu.classList.toggle('showCollapse');
-          console.log(snCollapseLink, snCollapseMenu)
+          // console.log(snCollapseLink, snCollapseMenu)
         }
       })
     })
   }
   linkListCollapse()
+
+  /* scroll to section */
+  const sectionSelectors = [0, '#about', '#executives', '#activities']
+  function scrollToSection(i){
+    console.log('스크롤 이벤트 작동')
+    gsap.to(window, {
+      scrollTo: sectionSelectors[i]
+    })
+  }
+
+  snLinks.forEach((snLink, i) => {
+    snLink.addEventListener('click', ()=>{
+      console.log('클릭 이벤트 작동')
+      scrollToSection(i)
+    })
+  })
 }
 

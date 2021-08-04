@@ -3,80 +3,102 @@
     class="side-navbar"
     id="navbar">
     <div class="side-nav">
-      <div>
-        <div class="side-nav__brand">
-          <span
-            class="material-icons side-nav__toggle"
-            id="nav-toggle"> menu </span>
-          <a
-            href="#"
-            class="side-nav__logo">J-bit</a>
+      <div class="side-nav__logo">
+        <img
+          src="~/assets/logo/sn_logo_icon.png"
+          alt="sn_logo_icon"
+          class="logo-icon" />
+        <img
+          src="~/assets/logo/sn_logo_title.png"
+          alt="sn_logo_title"
+          class="logo-title" />
+      </div>
+      <div class="side-nav__list">
+        <a
+          href="#"
+          class="side-nav__link color-active">
+          <span class="material-icons"> home </span>
+          <span class="slide-nav__name">Home</span>
+        </a>
+        <a
+          href="#"
+          class="side-nav__link">
+          <span class="material-icons">info</span>
+          <span class="slide-nav__name">About</span>
+        </a>
+
+        <div class="side-nav__link collapse">
+          <span class="material-icons"> groups </span>
+          <span class="side-nav__name">Executivives</span>
+
+          <span class="material-icons collapse__link"> expand_more </span>
+          <ul class="collapse__menu">
+            <a
+              href="#"
+              class="collapse__sublink">회장</a>
+            <a
+              href="#"
+              class="collapse__sublink">부회장</a>
+            <a
+              href="#"
+              class="collapse__sublink">총무</a>
+            <a
+              href="#"
+              class="collapse__sublink">홍보 부장</a>
+            <a
+              href="#"
+              class="collapse__sublink"
+              v-for="n in 6"
+              :key="n"> {{ n }}조 조장 </a>
+          </ul>
         </div>
 
-        <div class="slide-nav__list">
-          <a
-            href="#"
-            class="side-nav__link color-active">
-            <span class="material-icons"> home </span>
-            <span class="slide-nav__name">Home</span>
-          </a>
-          <a
-            href="#"
-            class="side-nav__link">
-            <span class="material-icons">info</span>
-            <span class="slide-nav__name">About</span>
-          </a>
+        <div class="side-nav__link collapse">
+          <span class="material-icons"> local_activity </span>
+          <span class="side-nav__name">Activities</span>
 
-          <div class="side-nav__link collapse">
-            <span class="material-icons"> groups </span>
-            <span class="side-nav__name">Executivives</span>
-
-            <span class="material-icons collapse__link"> expand_more </span>
-            <ul class="collapse__menu">
-              <a
-                href="#"
-                class="collapse__sublink">회장</a>
-              <a
-                href="#"
-                class="collapse__sublink">부회장</a>
-              <a
-                href="#"
-                class="collapse__sublink">총무</a>
-              <a
-                href="#"
-                class="collapse__sublink">홍보 부장</a>
-              <a
-                href="#"
-                class="collapse__sublink"
-                v-for="n in 6"
-                :key="n"> {{ n }}조 조장 </a>
-            </ul>
-          </div>
-
-          <div class="side-nav__link collapse">
-            <span class="material-icons"> local_activity </span>
-            <span class="side-nav__name">Activities</span>
-
-            <span class="material-icons collapse__link"> expand_more </span>
-            <ul class="collapse__menu">
-              <a
-                href="#"
-                class="collapse__sublink">1</a>
-              <a
-                href="#"
-                class="collapse__sublink">2</a>
-              <a
-                href="#"
-                class="collapse__sublink">3</a>
-            </ul>
-          </div>
+          <span class="material-icons collapse__link"> expand_more </span>
+          <ul class="collapse__menu">
+            <a
+              href="#"
+              class="collapse__sublink">1</a>
+            <a
+              href="#"
+              class="collapse__sublink">2</a>
+            <a
+              href="#"
+              class="collapse__sublink">3</a>
+          </ul>
+        </div>
+      </div> 
+      <div class="side-nav__brand">
+        <span
+          class="material-icons side-nav__toggle"
+          id="nav-toggle"> menu </span>
+      </div>
+      <div class="side-nav__routeBtns">
+        <div class="routeBtn">
+          <RouterLink
+            :to="'/'"
+            active-class="active">
+            KR
+          </RouterLink>
+        </div>
+        <div class="routeBtn">
+          <RouterLink
+            :to="'/jp'"
+            active-class="active">
+            JP
+          </RouterLink>
+        </div>
+        <div class="routeBtn">
+          <RouterLink
+            :to="'/contact'"
+            active-class="active">
+            CONTACT
+          </RouterLink>
         </div>
       </div>
-      <a
-        href="#"
-        class="side-nav__link">
-        <span class="side-nav__name">test</span>
-      </a>
     </div>
   </div>
 </template>
@@ -148,6 +170,22 @@
     justify-content: space-between;
     overflow: hidden;
 
+    &__logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 190px;
+      height: 45px;
+      .logo-icon{
+        width: 45px;
+        height: 45px;
+      }
+      .logo-title{
+        width: 90px;
+        height: 45px;
+      }
+    }
+
     &__brand {
       display: grid;
       grid-template-columns: max-content max-content;
@@ -159,10 +197,6 @@
       font-size: 1.25rem;
       padding: 0.75rem;
       cursor: pointer;
-    }
-    &__logo {
-      color: $white-color;
-      font-weight: 600;
     }
 
     &__link {
