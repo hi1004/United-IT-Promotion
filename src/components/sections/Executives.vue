@@ -89,8 +89,8 @@
         <div class="profile">
           <div class="photo">
             <img
-              src="~/assets/executives/executives1.png"
-              alt="장현아" />
+              src="~/assets/executives/executives5.png"
+              alt="오병헌" />
           </div>
           <div class="name">
             오병헌
@@ -99,7 +99,8 @@
             부회장
           </div>
           <p class="description">
-            안녕하세요 저는 장현아라고 합니다. 잘부탁드립니다.
+            전반적으로 동아리를 총괄하며,
+            Web관련 스터디를 진행하고 있습니다.
           </p>
         </div>
         <!-- 총무 -->
@@ -216,7 +217,11 @@
         </div>
         <!-- 5조 -->
         <div class="profile">
-          <div class="photo"></div>
+          <div class="photo">
+            <img
+              src="~/assets/executives/executives5.png"
+              alt="오병헌" />
+          </div>
           <div class="name">
             오병헌
           </div>
@@ -268,6 +273,7 @@
   .executives__section {
     position: relative;
     margin-top: 40rem;
+    
     color: #000;
     // height: 380vh;
     .container {
@@ -290,14 +296,13 @@
           .title {
             width: 100%;
             font-family: 'Black Han Sans', sans-serif;
-            font-size: 5vw;
+            font-size: 4.5vw;
             padding: 0;
             position: absolute;
             bottom: 10rem;
             text-align: center;
             z-index: 1;
-            transition: all 0.3s;
-            left: unset;
+            color: rgb(64, 64, 64);
           }
           .img-wrap {
             width: 100%;
@@ -308,7 +313,7 @@
               position: absolute;
               opacity: 0;
               top: -16rem;
-              transform: scale(0.6);
+              transform: scale(0.5);
               transition: all 0.2s;
             }
           }

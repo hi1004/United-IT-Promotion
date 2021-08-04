@@ -52,9 +52,11 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif|webp)$/,
-        use: 'file-loader'
+        test: /\.(png|jpe?g|gif|webp|mp4)$/,
+        use: 'file-loader',
+       
       },
+    
       {
         test: /\.svg$/,
         loader: 'vue-svg-loader', // `vue-svg` for webpack 1.x

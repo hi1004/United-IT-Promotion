@@ -43,7 +43,8 @@ export default function () {
   const aboutSection = document.querySelector('#about');
   const aboutTitle = document.querySelector('#about .about__title');
   const aboutTitleText = document.querySelector('#about .about__title h1');
-  const videoBG = document.querySelector('.video-bg');
+  const videoWrap = document.querySelector('.video-wrap');
+  // const videoBG = document.querySelector('.video-bg');
 
   /* SCROLL MAGIC - CHANGE TO ABOUT */
   function changeToAbout() {
@@ -93,8 +94,10 @@ export default function () {
 
   /* SCROLL MAGIC - ABOUT VIDEO ANIMATE */
   function aboutVideoAnimate() {
-    const changeSize = new TimelineMax().to(videoBG, 1, {
-      scale: 1.3,
+    const changeSize = new TimelineMax().to(videoWrap, 1, {
+      scale: 1,
+      position: 'absolute',
+      left: 0,
     });
 
     new ScrollMagic.Scene({
@@ -112,6 +115,76 @@ export default function () {
       .addTo(controller);
   }
   aboutVideoAnimate();
+
+  function videoBtnPlay() {
+    const videoPlayBtn = aboutSection.querySelector('.video-intro .play-btn');
+    const videocloseBtn = aboutSection.querySelector('.video-intro .close-btn');
+    const introVideo = aboutSection.querySelector('.video-intro video');
+    function playEvent(el) {
+      el.addEventListener('click', () => {
+        introVideo.play();
+        gsap.to(videoPlayBtn, 1, {
+          display: 'none',
+          opacity: 0,
+        });
+        gsap.to(videocloseBtn, .5, {
+          display: 'block',
+          opacity: 1,
+        });
+        gsap.to(aboutVideoIntro, .5, {
+          width: '100%',
+          position: 'fixed',
+          left: '50%',
+          top: '50%',
+          transform: 'translate(-50%, -50%)', 
+        });
+        gsap.to(bodyEl, 1, {
+          overflowY: 'hidden',
+        });
+        gsap.to('#app',1,{
+          backgroundColor: '#fdc00075'
+        })
+        executivesTitle.style.display = 'none';
+        introVideo.style.hover = 'unset'
+      });
+    }   
+      playEvent(videoPlayBtn);
+   
+    function closeEvent(el){
+      el.addEventListener('click', () => {
+      
+        introVideo.pause();
+        gsap.to(videoPlayBtn, 1, {
+          display: 'block',
+          opacity: 1,
+        });
+        gsap.to(videocloseBtn, .5, {
+          display: 'none',
+          opacity: 0,
+        });
+        gsap.to(aboutVideoIntro, .5, {
+          width: '100%',
+          position: 'relative',
+          left: '0%',
+          top: '0%',
+          transform: 'translate(0%, 0%)',
+          scale: 1
+        });
+        gsap.to(bodyEl, 1, {
+          overflowY: 'auto',
+          
+        });
+        gsap.to('#app',1,{
+          backgroundColor: 'unset'
+          
+        })
+        executivesTitle.style.display = 'block';
+      });
+    }
+    closeEvent(videocloseBtn);
+   
+  }
+  videoBtnPlay();
 
   // ---------------------------------------EXECUTIVES----------------------------------------------
 
@@ -137,6 +210,12 @@ export default function () {
       duration: '100%',
     })
       .setTween(changeToExecutivesEvent)
+      .addIndicators({
+        name: 'aboutVideo-event',
+        colorStart: 'red',
+        colorTrigger: 'red',
+        colorEnd: 'red',
+      })
       .addTo(controller);
   }
   changeToExecutives();
@@ -159,12 +238,11 @@ export default function () {
 
   /* SCROLL MAGIC - EXECUTIVES SCROLL ANIMATE */
   const executivesTitle = document.querySelector('#executives .title');
- 
+
   function executivesScrollAnimate() {
-    const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 1, {
+    const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 0.5, {
       position: 'fixed',
       width: '100%',
-      left: 'unset',
       bottom: '25rem',
       fontSize: '4vw',
     });
@@ -176,33 +254,44 @@ export default function () {
     })
       .setPin(executivesSection)
       .setTween(scrollToExecutivesEvent)
-      .addIndicators({
-        name: 'Title-event',
-        colorStart: 'red',
-        colorTrigger: 'red',
-        colorEnd: 'red',
-      })
-      .addTo(controller)
+
+      .addTo(controller);
   }
   executivesScrollAnimate();
   // const executivesImgWrap = document.querySelector('#executives .img-wrap');
   // const executivesImgs = executivesSection.querySelectorAll('.img');
-  const colorArry = ['#5b45ff','green','#FCA742','#F82DDE','#5b45ff','#463E43','#B0E7E4','#3C80FC','','#4EF480'];
+  const colorArry = [
+    '#5b45ff',
+    '#e9f036',
+    '#FCA742',
+    '#F82DDE',
+    '#5b45ff',
+    '#463E43',
+    '#B0E7E4',
+    '#3C80FC',
+    '#e9f036',
+    '#4EF480',
+  ];
 
   function profileScrollAnimate() {
     executivesProfiles.forEach(function (executivesProfile, i) {
       const scrollToExecutivesEvent = new TimelineMax()
-      .to(executivesTitle,.5,{
-        color: colorArry[i]
-      })
-      .fromTo(executivesImages[i], .7, {
-        y: 0,
-        opacity: 0,
-      }, {
-        y: -20,
-        opacity: 1,
-        yoyo: true
-      })
+        .to(executivesTitle, 0.5, {
+          color: colorArry[i],
+        })
+        .fromTo(
+          executivesImages[i],
+          0.7,
+          {
+            y: 0,
+            opacity: 0,
+          },
+          {
+            y: -20,
+            opacity: 1,
+            yoyo: true,
+          }
+        );
       new ScrollMagic.Scene({
         triggerElement: executivesProfile,
         triggerHook: 1,
@@ -243,9 +332,9 @@ export default function () {
 
   /* SCROLL MAGIC - EXECUTIVES SCROLL STOP ANIMATE */
   function executivesScrollStopAnimate() {
-    const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 1, {
-     opacity:0,
-     y: '-100%'
+    const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 0.5, {
+      opacity: 0,
+      y: '-100%',
     });
     new ScrollMagic.Scene({
       triggerElement: '#activity__container',
@@ -265,24 +354,24 @@ export default function () {
   executivesScrollStopAnimate();
 
   // ---------------------------------------ACTIVITY----------------------------------------------
-  const activityContainer = document.querySelector('#activity__container')
-  const slideContainer = document.querySelector('#slide__container')
+  const activityContainer = document.querySelector('#activity__container');
+  const slideContainer = document.querySelector('#slide__container');
 
-  const btnWrap = document.querySelector('.btn__wrap')
-  const moveBtns = document.querySelectorAll('.move_btn')
+  const btnWrap = document.querySelector('.btn__wrap');
+  const moveBtns = document.querySelectorAll('.move_btn');
 
-  const startYpos = activityContainer.offsetTop
+  const startYpos = activityContainer.offsetTop;
 
   /* SCROLL MAGIC - CHANGE TO EXECUTIVES */
   function changeToAcitivities() {
     const changeToAcitivitiesEvent = new TimelineMax()
-    .to(bodyEl, 1, {
-      backgroundColor: '#f6f6f6',
-      ease: 'power1.inOut',
-    })
-    .to('#index_title', 2, {
-      color: '#000',
-    })
+      .to(bodyEl, 1, {
+        backgroundColor: '#f6f6f6',
+        ease: 'power1.inOut',
+      })
+      .to('#index_title', 2, {
+        color: '#000',
+      });
     new ScrollMagic.Scene({
       triggerElement: activityContainer,
       triggerHook: 1,
@@ -293,14 +382,13 @@ export default function () {
   }
   changeToAcitivities();
 
-
-  /* SCROLL MAGIC - ACTIVITY SLIDE */  
+  /* SCROLL MAGIC - ACTIVITY SLIDE */
 
   function activitySlide() {
     const wipeAnimation = new TimelineMax()
-      .to('#slide__container', 1, {x: '-25%' })
+      .to('#slide__container', 1, { x: '-25%' })
       .to('#slide__container', 1, { x: '-50%' })
-      .to('#slide__container', 1, { x: '-75%' })
+      .to('#slide__container', 1, { x: '-75%' });
 
     new ScrollMagic.Scene({
       triggerElement: '#activity__container',
@@ -314,28 +402,27 @@ export default function () {
   activitySlide();
 
   function resizeTitle() {
-    const titleResize = new TimelineMax()
-      .to('#index_title', {
-        fontSize: '10vw'       
-      })
+    const titleResize = new TimelineMax().to('#index_title', {
+      fontSize: '10vw',
+    });
     new ScrollMagic.Scene({
       triggerElement: '#activity__container',
       triggerHook: 0,
       duration: '30%',
     })
-    .setTween(titleResize)
-    .addTo(controller);
+      .setTween(titleResize)
+      .addTo(controller);
   }
   resizeTitle();
 
   /* SLIDE MOVE BUTTON */
-  moveBtns.forEach((btn, i)=>{
-    btn.addEventListener('click', ()=>{
-      gsap.to(window, .3,{
-        scrollTo: startYpos + slideContainer.offsetHeight*(i+1)
-      })
-    })
-  })
+  moveBtns.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+      gsap.to(window, 0.3, {
+        scrollTo: startYpos + slideContainer.offsetHeight * (i + 1),
+      });
+    });
+  });
 
   function activeBtns() {
     new ScrollMagic.Scene({
@@ -347,5 +434,4 @@ export default function () {
       .addTo(controller);
   }
   activeBtns();
-
 } // end
