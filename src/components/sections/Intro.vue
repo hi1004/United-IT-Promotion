@@ -1,5 +1,7 @@
 <template>
-  <section class="intro-section">
+  <section
+    id="intro"
+    class="intro-section">
     <div
       class="intro-stage">
       <div id="scene">

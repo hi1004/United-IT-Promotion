@@ -34,46 +34,69 @@ export default function(){
 
 
   /* LINK CLICK EVENT */
-
-  /* active link color & reset collapse menu */
   const snLinks = document.querySelectorAll('.side-nav__link');
-  function linkActive() {
-    snLinks.forEach((snLink) => snLink.classList.remove('color-active'));
-    this.classList.add('color-active');    
-    resetSnCollapse(); 
-  }
-  snLinks.forEach((snLink) => snLink.addEventListener('click', linkActive));
-
-  /* toggle collapse menu */
-  const snLinkLists = document.querySelectorAll('.collapse');
   const snNavBar = document.getElementById('navbar');
-  function resetSnCollapse(){
-    snLinkLists.forEach((snLinkList)=>{
-      const snCollapseLink = snLinkList.querySelector('.collapse__link');
-      const snCollapseMenu = snLinkList.querySelector('.collapse__menu'); 
-      snCollapseLink.classList.remove('rotate');
-      snCollapseMenu.classList.remove('showCollapse');
-    })
+
+  const sectionSelectors = ['#intro', '#about', '#executives', '#activities']
+
+  /* active link on click */
+  function linkActiveOnClick() {    
+    snLinks.forEach((snLink) => {
+      snLink.classList.remove('color-active')
+      if (snLink.classList.contains('collapse')){ 
+        const snCollapseLink = snLink.querySelector('.collapse__link');
+        const snCollapseMenu = snLink.querySelector('.collapse__menu');        
+        snCollapseLink.classList.remove('rotate');
+        snCollapseMenu.classList.remove('showCollapse');
+      }
+    });    
+    this.classList.add('color-active');
+    if (this.classList.contains('collapse')&&snNavBar.classList.contains('expander')){        
+      const snCollapseLink = this.querySelector('.collapse__link');
+      const snCollapseMenu = this.querySelector('.collapse__menu'); 
+      snCollapseLink.classList.add('rotate');
+      snCollapseMenu.classList.add('showCollapse');
+    }        
   }
-  function linkListCollapse(){
-    snLinkLists.forEach((snLinkList)=>{
-      const snCollapseLink = snLinkList.querySelector('.collapse__link');
-      const snCollapseMenu = snLinkList.querySelector('.collapse__menu');
-      snLinkList.addEventListener('click', ()=>{
-        if (snNavBar.classList.contains('expander')){ 
-          snCollapseLink.classList.toggle('rotate');
-          snCollapseMenu.classList.toggle('showCollapse');
-          // console.log(snCollapseLink, snCollapseMenu)
+  snLinks.forEach((snLink) => {
+    snLink.addEventListener('click', linkActiveOnClick);
+  })
+
+  /* active link on scroll */
+  function linkActiveOnScroll() {    
+    snLinks.forEach((snLink, i) =>{
+      function enterSection() {
+        snLink.classList.add('color-active')
+        if (snLink.classList.contains('collapse')&&snNavBar.classList.contains('expander')){ 
+          const snCollapseLink = snLink.querySelector('.collapse__link');
+          const snCollapseMenu = snLink.querySelector('.collapse__menu');        
+          snCollapseLink.classList.add('rotate');
+          snCollapseMenu.classList.add('showCollapse');
         }
+      }
+      function leaveSection() {
+        snLink.classList.remove('color-active')
+        if (snLink.classList.contains('collapse')){ 
+          const snCollapseLink = snLink.querySelector('.collapse__link');
+          const snCollapseMenu = snLink.querySelector('.collapse__menu');        
+          snCollapseLink.classList.remove('rotate');
+          snCollapseMenu.classList.remove('showCollapse');
+        }
+      }
+      ScrollTrigger.create({
+        trigger: sectionSelectors[i],
+        end: 'bottom',
+        onEnter: enterSection,
+        onLeave: leaveSection,
+        onEnterBack: enterSection,
+        onLeaveBack: leaveSection    
       })
     })
   }
-  linkListCollapse()
+  linkActiveOnScroll()  
 
-  /* scroll to section */
-  const sectionSelectors = [0, '#about', '#executives', '#activities']
-  function scrollToSection(i){
-    console.log('스크롤 이벤트 작동')
+  /* scroll to section on click */  
+  function scrollToSection(i){    
     gsap.to(window, {
       scrollTo: sectionSelectors[i]
     })
