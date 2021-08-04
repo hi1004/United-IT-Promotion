@@ -37,14 +37,6 @@
 </template>
 
 <script>
-  import 'swiper/swiper.scss';
-  import 'swiper/components/pagination/pagination.min.css';
-  import SwiperCore, { Mousewheel, Pagination } from 'swiper/core';
-  import 'swiper/swiper-bundle.css';
-  
-  
-  SwiperCore.use([Mousewheel, Pagination]);
-
   export default {
     components: {
     },

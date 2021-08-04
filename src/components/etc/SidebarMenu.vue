@@ -82,56 +82,11 @@
 </template>
 
 <script>
-  export default {
+  import sidebarMenu from '~/config/etc/sidebarMenu';
+  export default {    
     mounted() {
-      
-      const rotates = document.querySelectorAll('.collapse__link');
-      
-      /* SHOW MENU */
-      const showMenu = (toggleId, navbarId, bodyId) => {
-        const toggle = document.getElementById(toggleId),
-          navbar = document.getElementById(navbarId),
-          bodyPadding = document.getElementById(bodyId);
-        if (toggle && navbar) {
-          toggle.addEventListener('click', () => {
-            navbar.classList.toggle('expander');
-            bodyPadding.classList.toggle('body-pd');
-
-
-
-            rotates.forEach((element) => {
-              element.classList.remove('rotate');
-              element.nextElementSibling.classList.remove('showCollapse')
-
-            });
-
-          });
-        }
-        console.log(bodyPadding);
-      };
-      showMenu('nav-toggle', 'navbar', 'body-pd');
-
-      /* LINK COLOR */
-      const linkColor = document.querySelectorAll('.side-nav__link');
-      function colorLink() {
-        linkColor.forEach((i) => i.classList.remove('color-active'));
-        this.classList.add('color-active');
-      }
-      linkColor.forEach((i) => i.addEventListener('click', colorLink));
-
-      /* LINK COLLAPSE */
-      const linkCollapse = document.getElementsByClassName('collapse__link');
-      let i;
-      for (i = 0; i < linkCollapse.length; i++) {
-        linkCollapse[i].addEventListener('click', function () {
-          const collapseMenu = this.nextElementSibling;
-          collapseMenu.classList.toggle('showCollapse');
-
-          const rotate = collapseMenu.previousElementSibling;
-          rotate.classList.toggle('rotate');
-        });
-      }
-    },
+      sidebarMenu();
+    }
   };
 </script>
 
