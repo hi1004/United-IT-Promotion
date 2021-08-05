@@ -3,135 +3,145 @@
     class="side-navbar"
     id="navbar">
     <div class="side-nav">
-      <div>
-        <div class="side-nav__brand">
-          <span
-            class="material-icons side-nav__toggle"
-            id="nav-toggle"> menu </span>
-          <a
-            href="#"
-            class="side-nav__logo">J-bit</a>
-        </div>
-
-        <div class="slide-nav__list">
-          <a
-            href="#"
-            class="side-nav__link color-active">
-            <span class="material-icons"> home </span>
-            <span class="slide-nav__name">Home</span>
-          </a>
-          <a
-            href="#"
-            class="side-nav__link">
-            <span class="material-icons">info</span>
-            <span class="slide-nav__name">About</span>
-          </a>
-
-          <div class="side-nav__link collapse">
-            <span class="material-icons"> groups </span>
-            <span class="side-nav__name">Executivives</span>
-
-            <span class="material-icons collapse__link"> expand_more </span>
-            <ul class="collapse__menu">
-              <a
-                href="#"
-                class="collapse__sublink">회장</a>
-              <a
-                href="#"
-                class="collapse__sublink">부회장</a>
-              <a
-                href="#"
-                class="collapse__sublink">총무</a>
-              <a
-                href="#"
-                class="collapse__sublink">홍보 부장</a>
-              <a
-                href="#"
-                class="collapse__sublink"
-                v-for="n in 6"
-                :key="n"> {{ n }}조 조장 </a>
-            </ul>
-          </div>
-
-          <div class="side-nav__link collapse">
-            <span class="material-icons"> local_activity </span>
-            <span class="side-nav__name">Activities</span>
-
-            <span class="material-icons collapse__link"> expand_more </span>
-            <ul class="collapse__menu">
-              <a
-                href="#"
-                class="collapse__sublink">1</a>
-              <a
-                href="#"
-                class="collapse__sublink">2</a>
-              <a
-                href="#"
-                class="collapse__sublink">3</a>
-            </ul>
-          </div>
-        </div>
-      </div>
       <a
         href="#"
-        class="side-nav__link">
-        <span class="side-nav__name">test</span>
+        class="side-nav__logo">
+        <img
+          src="~/assets/logo/sn_logo_icon.png"
+          alt="sn_logo_icon"
+          class="logo-icon" />
+        <img
+          src="~/assets/logo/sn_logo_title.png"
+          alt="sn_logo_title"
+          class="logo-title" />
       </a>
+      <div class="side-nav__list">
+        <a
+          href="#"
+          class="side-nav__link">
+          <span class="material-icons"> home </span>
+          <span class="slide-nav__name">Home</span>
+        </a>
+        <a
+          href="#"
+          class="side-nav__link">
+          <span class="material-icons">info</span>
+          <span class="slide-nav__name">About</span>
+        </a>
+
+        <div class="side-nav__link collapse cursor__hover_el">
+          <span class="material-icons"> groups </span>
+          <span class="side-nav__name">Executivives</span>
+
+          <span class="material-icons collapse__link"> expand_more </span>
+          <ul class="collapse__menu">
+            <a
+              href="#"
+              class="collapse__sublink">회장</a>
+            <a
+              href="#"
+              class="collapse__sublink">부회장</a>
+            <a
+              href="#"
+              class="collapse__sublink">총무</a>
+            <a
+              href="#"
+              class="collapse__sublink">홍보 부장</a>
+            <a
+              href="#"
+              class="collapse__sublink"
+              v-for="n in 6"
+              :key="n"> {{ n }}조 조장 </a>
+          </ul>
+        </div>
+
+        <div class="side-nav__link collapse cursor__hover_el">
+          <span class="material-icons"> local_activity </span>
+          <span class="side-nav__name">Activities</span>
+
+          <span class="material-icons collapse__link"> expand_more </span>
+          <ul class="collapse__menu">
+            <a
+              href="#"
+              class="collapse__sublink">1</a>
+            <a
+              href="#"
+              class="collapse__sublink">2</a>
+            <a
+              href="#"
+              class="collapse__sublink">3</a>
+          </ul>
+        </div>
+      </div> 
+      <div class="side-nav__brand cursor__hover_el">
+        <span
+          class="material-icons side-nav__toggle"
+          id="nav-toggle"> menu </span>
+      </div>
+
+      <div class="side-nav__routeBtns nav-pills">
+        <div class="routeBtn nav-item">
+          <RouterLink
+            :to="'/'"
+            class="nav-link"
+            active-class="active">
+            <img
+              src="~/assets/korea.png"
+              alt="korea" />
+            KR
+          </RouterLink>
+        </div>
+        <div class="routeBtn nav-item">
+          <RouterLink
+            :to="'/jp'"
+            class="nav-link"
+            active-class="active">
+            <img
+              src="~/assets/japan.png"
+              alt="japan" />
+            JP
+          </RouterLink>
+        </div>
+        <div class="routeBtn nav-item">
+          <RouterLink
+            :to="'/contact'"
+            class="nav-link"
+            active-class="active">
+            <span class="material-icons">
+              contact_support
+            </span>
+            CONTACT
+          </RouterLink>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
+  import sidebarMenu from '~/config/etc/sidebarMenu';
+  export default {    
     mounted() {
-      console.log(document.getElementById('#executives'))
-      const rotates = document.querySelectorAll('.collapse__link');
-      
-      /* SHOW MENU */
-      const showMenu = (toggleId, navbarId, bodyId) => {
-        const toggle = document.getElementById(toggleId),
-          navbar = document.getElementById(navbarId),
-          bodyPadding = document.getElementById(bodyId);
-        if (toggle && navbar) {
-          toggle.addEventListener('click', () => {
-            navbar.classList.toggle('expander');
-            bodyPadding.classList.toggle('body-pd');
+      sidebarMenu();
 
+      const bodyEl = document.querySelector('body');
+      bodyEl.width = window.innerWidth;
 
-
-            rotates.forEach((element) => {
-              element.classList.remove('rotate');
-              element.nextElementSibling.classList.remove('showCollapse')
-
-            });
-
+      window.addEventListener('resize', () => {
+        bodyEl.width = window.innerWidth;
+        init();
+      });
+      function init() {
+        if (bodyEl.width >= 1021) {
+          const navEls = document.querySelectorAll('.nav-link');
+          const navEl_Last = navEls[navEls.length - 1];
+          navEl_Last.addEventListener('click', () => {
+            window.location.reload();
           });
         }
-        console.log(bodyPadding);
-      };
-      showMenu('nav-toggle', 'navbar', 'body-pd');
-
-      /* LINK COLOR */
-      const linkColor = document.querySelectorAll('.side-nav__link');
-      function colorLink() {
-        linkColor.forEach((i) => i.classList.remove('color-active'));
-        this.classList.add('color-active');
       }
-      linkColor.forEach((i) => i.addEventListener('click', colorLink));
-
-      /* LINK COLLAPSE */
-      const linkCollapse = document.getElementsByClassName('collapse__link');
-      let i;
-      for (i = 0; i < linkCollapse.length; i++) {
-        linkCollapse[i].addEventListener('click', function () {
-          const collapseMenu = this.nextElementSibling;
-          collapseMenu.classList.toggle('showCollapse');
-
-          const rotate = collapseMenu.previousElementSibling;
-          rotate.classList.toggle('rotate');
-        });
-      }
-    },
+      init();
+    }
   };
 </script>
 
@@ -193,6 +203,22 @@
     justify-content: space-between;
     overflow: hidden;
 
+    &__logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 170px;
+      height: 45px;
+      .logo-icon{
+        width: 45px;
+        height: 45px;
+      }
+      .logo-title{
+        width: 90px;
+        height: 45px;
+      }
+    }
+
     &__brand {
       display: grid;
       grid-template-columns: max-content max-content;
@@ -204,10 +230,6 @@
       font-size: 1.25rem;
       padding: 0.75rem;
       cursor: pointer;
-    }
-    &__logo {
-      color: $white-color;
-      font-weight: 600;
     }
 
     &__link {
@@ -282,5 +304,31 @@
   /*Rotate icon*/
   .rotate {
     transform: rotate(180deg);
+  }
+
+  .routeBtn {
+    img {
+      width: 24px;
+    }
+    a {
+      font-family: 'Oswald', sans-serif;
+      display: grid;
+      grid-template-columns: max-content max-content;
+      align-items: center;
+      column-gap: 0.75rem;
+      padding: 0.75rem;
+      color: $white-color;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: #fdc000;
+      }
+     
+    }
+     &:last-child a{
+        background-color:#4baacf;
+      }
   }
 </style>

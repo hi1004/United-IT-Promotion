@@ -62,12 +62,6 @@ export default function () {
       duration: '100%',
     })
       .setTween(changeToAboutEvent)
-      .addIndicators({
-        name: 'bg-change',
-        colorStart: 'yellow',
-        colorTrigger: 'yellow',
-        colorEnd: 'yellow',
-      })
       .addTo(controller);
   }
   changeToAbout();
@@ -140,11 +134,6 @@ export default function () {
       triggerHook: 0.3,
       duration: '40%',
     })
-      .addIndicators({
-        name: 'about-title',
-        colorStart: 'green',
-        colorEnd: 'green',
-      })
       .setTween(changeSize)
       .addTo(controller);
   }
@@ -163,12 +152,6 @@ export default function () {
       triggerHook: 0.3,
       duration: '40%',
     })
-      .addIndicators({
-        name: 'about-video',
-        colorStart: 'blue',
-        colorTrigger: 'blue',
-        colorEnd: 'blue',
-      })
       .setTween(changeSize)
       .addTo(controller);
   }
@@ -201,6 +184,11 @@ export default function () {
         });
         gsap.to('#app',1,{
           backgroundColor: '#fdc00075'
+        });
+        gsap.to('#navbar',.5, { 
+          opacity:0,
+          display: 'none',
+          left: '-92px'
         })
         executivesTitle.style.display = 'none';
         introVideo.style.hover = 'unset'
@@ -235,6 +223,11 @@ export default function () {
         gsap.to('#app',1,{
           backgroundColor: 'unset'
           
+        });
+        gsap.to('#navbar',.5, { 
+          opacity:1,
+          display: 'block',
+          left: 0
         })
         executivesTitle.style.display = 'block';
       });
@@ -268,12 +261,6 @@ export default function () {
       duration: '100%',
     })
       .setTween(changeToExecutivesEvent)
-      .addIndicators({
-        name: 'aboutVideo-event',
-        colorStart: 'red',
-        colorTrigger: 'red',
-        colorEnd: 'red',
-      })
       .addTo(controller);
   }
   changeToExecutives();
@@ -355,12 +342,6 @@ export default function () {
         triggerHook: 1,
         duration: '130%',
       })
-        .addIndicators({
-          name: 'img-event',
-          colorStart: 'green',
-          colorTrigger: 'green',
-          colorEnd: 'green',
-        })
         // .setClassToggle(executivesProfile, 'active')
         .setTween(scrollToExecutivesEvent)
         .on('end', function () {
@@ -378,12 +359,6 @@ export default function () {
       duration: '1200%',
     })
       .setPin(executivesLeftBox)
-      .addIndicators({
-        name: 'pin-event',
-        colorStart: 'yellow',
-        colorEnd: 'yellow',
-      })
-
       .addTo(controller);
   }
   executivesImagesAnimate();
@@ -400,12 +375,6 @@ export default function () {
       duration: '100%',
     })
       .setPin(executivesSection)
-      .addIndicators({
-        name: 'stop-event',
-        colorStart: 'red',
-        colorTrigger: 'red',
-        colorEnd: 'red',
-      })
       .setTween(scrollToExecutivesEvent)
       .addTo(controller);
   }
@@ -539,5 +508,7 @@ export default function () {
     window.addEventListener('scroll', setBtnClickedByScroll)    
   }
   activeBtn();
+
+  
 
 } // end

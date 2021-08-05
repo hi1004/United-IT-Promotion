@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="contact-container">
     <section
       id="scene"
@@ -179,17 +180,19 @@
 
 <script>
   import common from '~/config/common';
-  import cursor from '~/config/etc/cursor';
   import dotImage from '~/config/background/dotImage';
   import particles from '~/config/background/particles';
   import about from '~/config/routes/about';
   import $ from 'jquery';
+  import Header from '~/components/header/Header';
 
   const Parallax = require('parallax-js');
   export default {
+    components: {
+      Header
+    },
     mounted() {
       common();
-      cursor();
       dotImage();
       particles();
       about();

@@ -7,11 +7,8 @@
 </template>
 
 <script>
-import common from '~/config/common'
-
 export default {
-  mounted() {
-    common()
+  mounted() {    
   }
 }
 </script>

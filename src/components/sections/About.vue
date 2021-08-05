@@ -27,15 +27,15 @@
 
       <!-- ABOUT-DESCRIPTION01 -->
       <div class="about__description description01">
-        <span class="about__word">IT에&nbsp</span>
-        <span class="about__word">관심이&nbsp</span>
+        <span class="about__word">IT에&nbsp;</span>
+        <span class="about__word">관심이&nbsp;</span>
         <span class="about__word">있거나</span>
         <br />
-        <span class="about__word">일본&nbsp</span>
-        <span class="about__word">취업을&nbsp</span>
+        <span class="about__word">일본&nbsp;</span>
+        <span class="about__word">취업을&nbsp;</span>
         <span class="about__word">희망하는</span>
         <br />
-        <span class="about__word">사람들의&nbsp</span>
+        <span class="about__word">사람들의&nbsp;</span>
         <span class="about__word">모임</span>
       </div>
 

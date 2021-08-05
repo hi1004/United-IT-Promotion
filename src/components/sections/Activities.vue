@@ -1,50 +1,46 @@
 <template>
-  <div id="activities__container">
-    <div class="btn__wrap">
-      <button class="move_btn">
-      </button>        
-      <button class="move_btn">
-      </button>        
-      <button class="move_btn">
-      </button>
+  <section
+    id="activities"
+    class="activities__section">
+    <div id="activities__container">
+      <div class="btn__wrap">
+        <button class="move_btn">
+        </button>        
+        <button class="move_btn">
+        </button>        
+        <button class="move_btn">
+        </button>
+      </div>
+      <h1 id="index_title">
+        Activities
+      </h1>   
+      <div id="slide__container">
+        <section class="slide index">             
+        </section>
+        <section class="slide first">
+          <h1 class="slide__title">
+            First
+          </h1>
+          <div class="slide__image_section"></div>
+        </section>
+        <section class="slide second">
+          <h1 class="slide__title">
+            Second
+          </h1>
+          <div class="slide__image_section"></div>
+        </section>
+        <section class="slide third">
+          <h1 class="slide__title">
+            Third
+          </h1>
+          <div class="slide__image_section"></div>
+        </section> 
+      </div>
     </div>
-    <h1 id="index_title">
-      Activities
-    </h1>   
-    <div id="slide__container">
-      <section class="slide index">             
-      </section>
-      <section class="slide first">
-        <h1 class="slide__title">
-          First
-        </h1>
-        <div class="slide__image_section"></div>
-      </section>
-      <section class="slide second">
-        <h1 class="slide__title">
-          Second
-        </h1>
-        <div class="slide__image_section"></div>
-      </section>
-      <section class="slide third">
-        <h1 class="slide__title">
-          Third
-        </h1>
-        <div class="slide__image_section"></div>
-      </section> 
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>
-  import 'swiper/swiper.scss';
-  import 'swiper/components/pagination/pagination.min.css';
-  import SwiperCore, { Mousewheel, Pagination } from 'swiper/core';
-  import 'swiper/swiper-bundle.css';
-  
-  
-  SwiperCore.use([Mousewheel, Pagination]);
-
   export default {
     components: {
     },
