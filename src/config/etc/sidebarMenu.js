@@ -19,6 +19,8 @@ export default function(){
       snToggle.addEventListener('click', () => {
         snNavBar.classList.toggle('expander');
         snBodyPadding.classList.toggle('body-pd');
+        snToggle.classList.toggle('toggle-active');
+
         snCollapseLinks.forEach((snCollapseLink) => {
           snCollapseLink.classList.remove('rotate');          
         });

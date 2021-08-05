@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="contact-container">
     <section
       id="scene"
@@ -183,9 +184,13 @@
   import particles from '~/config/background/particles';
   import about from '~/config/routes/about';
   import $ from 'jquery';
+  import Header from '~/components/header/Header';
 
   const Parallax = require('parallax-js');
   export default {
+    components: {
+      Header
+    },
     mounted() {
       common();
       dotImage();

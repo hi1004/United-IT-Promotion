@@ -1,6 +1,5 @@
 <template>
   <a
-   
     class="btn btn-outline-primary"
     id="to-top">
     Top

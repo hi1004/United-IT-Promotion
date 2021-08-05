@@ -62,12 +62,6 @@ export default function () {
       duration: '100%',
     })
       .setTween(changeToAboutEvent)
-      .addIndicators({
-        name: 'bg-change',
-        colorStart: 'yellow',
-        colorTrigger: 'yellow',
-        colorEnd: 'yellow',
-      })
       .addTo(controller);
   }
   changeToAbout();
@@ -140,11 +134,6 @@ export default function () {
       triggerHook: 0.3,
       duration: '40%',
     })
-      .addIndicators({
-        name: 'about-title',
-        colorStart: 'green',
-        colorEnd: 'green',
-      })
       .setTween(changeSize)
       .addTo(controller);
   }
@@ -163,12 +152,6 @@ export default function () {
       triggerHook: 0.3,
       duration: '40%',
     })
-      .addIndicators({
-        name: 'about-video',
-        colorStart: 'blue',
-        colorTrigger: 'blue',
-        colorEnd: 'blue',
-      })
       .setTween(changeSize)
       .addTo(controller);
   }
@@ -201,6 +184,11 @@ export default function () {
         });
         gsap.to('#app',1,{
           backgroundColor: '#fdc00075'
+        });
+        gsap.to('#navbar',.5, { 
+          opacity:0,
+          display: 'none',
+          left: '-92px'
         })
         executivesTitle.style.display = 'none';
         introVideo.style.hover = 'unset'
@@ -235,6 +223,11 @@ export default function () {
         gsap.to('#app',1,{
           backgroundColor: 'unset'
           
+        });
+        gsap.to('#navbar',.5, { 
+          opacity:1,
+          display: 'block',
+          left: 0
         })
         executivesTitle.style.display = 'block';
       });
@@ -268,12 +261,6 @@ export default function () {
       duration: '100%',
     })
       .setTween(changeToExecutivesEvent)
-      .addIndicators({
-        name: 'aboutVideo-event',
-        colorStart: 'red',
-        colorTrigger: 'red',
-        colorEnd: 'red',
-      })
       .addTo(controller);
   }
   changeToExecutives();
@@ -355,12 +342,6 @@ export default function () {
         triggerHook: 1,
         duration: '130%',
       })
-        .addIndicators({
-          name: 'img-event',
-          colorStart: 'green',
-          colorTrigger: 'green',
-          colorEnd: 'green',
-        })
         // .setClassToggle(executivesProfile, 'active')
         .setTween(scrollToExecutivesEvent)
         .on('end', function () {
@@ -378,12 +359,6 @@ export default function () {
       duration: '1200%',
     })
       .setPin(executivesLeftBox)
-      .addIndicators({
-        name: 'pin-event',
-        colorStart: 'yellow',
-        colorEnd: 'yellow',
-      })
-
       .addTo(controller);
   }
   executivesImagesAnimate();
@@ -400,12 +375,6 @@ export default function () {
       duration: '100%',
     })
       .setPin(executivesSection)
-      .addIndicators({
-        name: 'stop-event',
-        colorStart: 'red',
-        colorTrigger: 'red',
-        colorEnd: 'red',
-      })
       .setTween(scrollToExecutivesEvent)
       .addTo(controller);
   }
@@ -502,81 +471,6 @@ export default function () {
       btn.classList.remove('btn_clicked')
     })
   }
-
-
-
-
-
-
-  /* CURSOR */
-  const cursorWrap = document.querySelector('#cursor__wrap');
-  const cursors = cursorWrap.querySelectorAll('.cursor')  
-
-  /* CURSOR MOVE AND TRAIL EFFECT */
-  let aimX = 0;
-  let aimY = 0;
   
-  cursors.forEach((cursor, i)=>{
-  let currentX = 0;
-  let currentY = 0;
-
-  let speed = 0.4 - i * 0.01
-
-  const animate = function() {
-    currentX += (aimX - currentX) * speed;
-    currentY += (aimY - currentY) * speed;
-
-    cursor.style.left = currentX + 'px';      
-    cursor.style.top = currentY + 'px';
-
-    requestAnimationFrame(animate);
-  }
-  animate();
-  })
-  
-  // let timer
-
-  document.addEventListener('mousemove', function(e){
-    aimX = e.clientX;
-    aimY = e.clientY;
-    cursorWrap.classList.remove('cursor_hidden')
-    cursorWrap.style.display = 'block';
-    // clearTimeout(timer);
-    // timer = setTimeout(()=>{cursorWrap.classList.add('cursor_hidden');},300);
-  })
-  document.addEventListener('mouseout', function(){
-    cursorWrap.style.display = 'none';
-  })
-  
-
-  /* HOVER EFFECT */
-  const anchorEls = document.querySelectorAll('a');
-  const hoverClassEls = document.querySelectorAll('.cursor__hover_el');
-  
-  const hoverEls = [
-    ...anchorEls,
-    ...hoverClassEls
-  ]
-
-  hoverEls.forEach((element)=>{
-  element.addEventListener('mouseover', ()=>{
-    cursors.forEach((cursor)=>{
-      cursor.classList.add('hover')
-    })
-  })
-  element.addEventListener('mouseout', ()=>{
-    cursors.forEach((cursor)=>{
-      cursor.classList.remove('hover')
-    })
-  })
-  })
-
-  /* MOUSE CLICK EFFECT */
-  window.addEventListener('click', ()=>{
-    cursors.forEach((cursor)=>{
-      cursor.classList.add('click')
-      setTimeout(()=>{cursor.classList.remove('click')}, 500)
-    })
-  })  
 
 } // end
