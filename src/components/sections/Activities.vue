@@ -10,31 +10,33 @@
         </button>        
         <button class="move_btn">
         </button>
-      </div>
-      <h1 id="index_title">
-        Activities
-      </h1>   
-      <div id="slide__container">
-        <section class="slide index">             
-        </section>
-        <section class="slide first">
+      </div>  
+      <div class="slide__wrap">
+        <h1 id="slide__index_title">
+          Activities
+        </h1> 
+        <section class="slide__content first">
           <h1 class="slide__title">
             First
           </h1>
           <div class="slide__image_section"></div>
         </section>
-        <section class="slide second">
+      </div>
+      <div class="slide__wrap">
+        <section class="slide__content second">
           <h1 class="slide__title">
             Second
           </h1>
           <div class="slide__image_section"></div>
         </section>
-        <section class="slide third">
+      </div>
+      <div class="slide__wrap">
+        <section class="slide__content third">
           <h1 class="slide__title">
             Third
           </h1>
           <div class="slide__image_section"></div>
-        </section> 
+        </section>
       </div>
     </div>
   </section>
@@ -42,21 +44,16 @@
 
 <script>
   export default {
-    components: {
-    },
-    data() {
-      return {};
-    },
-    methods: {},
     mounted() {
-    },
+    }
   };
 </script>
 
 <style lang="scss" scoped>
  #activities__container {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   .btn__wrap{
     bottom: 5vh;
@@ -89,55 +86,59 @@
         box-shadow: 0 0 20px 1px white;
       }
     }  
-  }
-  #index_title{
-    position: absolute;
-    left: 7vw;
-    top: 5vh;
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: 15vw;
-    color: white;
-  }
-}
-
-#slide__container {
-  width: 400%;// 100*4 slides
-  height: 100%;
-  .slide {
+  }  
+  .slide__wrap {
     position: relative;
-    float: left;
-    width: 25%;
-    height: 100vh;    
-    overflow: hidden;
-    .slide__title {
+    width: 100%;
+    height: 100vh;
+    #slide__index_title{
       position: absolute;
       left: 7vw;
       top: 5vh;
-      color: #000;
-      font-size: 10vw;
       font-family: 'Black Han Sans', sans-serif;
+      font-size: 15vw;
+      color: white;
     }
-    .slide__image_section{
-      width: 70%;
-      height: 150%;
-      background-color: lightgray;
-      position: absolute;
-      top: -5vh;
-      right: -20vw;
-      transform: rotate(10deg);
-    }    
-    &.index {
-      background-color: transparent;
-    }
-    &.first {
-      background-color: lightyellow;
-    }
-    &.second {
-      background-color: lightpink;
-    }
-    &.third {
-      background-color: lightcoral;
+    .slide__content {
+      position: fixed;
+      top: 0;
+      left: 100%;
+      width: 90%;
+      height: 100vh;    
+      overflow: hidden;
+      z-index: 1000;
+      .slide__title {
+        position: absolute;
+        left: 7vw;
+        top: 5vh;
+        color: #000;
+        font-size: 10vw;
+        font-family: 'Black Han Sans', sans-serif;
+      }
+      .slide__image_section{
+        width: 70%;
+        height: 150%;
+        background-color: lightgray;
+        position: absolute;
+        top: -5vh;
+        right: -20vw;
+        transform: rotate(10deg);
+      }    
+      &.index {
+        background-color: transparent;
+      }
+      &.first {
+        background-color: lightyellow;
+      }
+      &.second {
+        background-color: lightpink;
+      }
+      &.third {
+        background-color: lightcoral;
+      }
     }
   }
 }
+
+
 </style>

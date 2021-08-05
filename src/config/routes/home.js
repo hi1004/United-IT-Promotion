@@ -411,31 +411,24 @@ export default function () {
   }
   executivesScrollStopAnimate();
 
-  // ---------------------------------------Activities----------------------------------------------
+  // ---------------------------------------ACTIVITIES----------------------------------------------
   const activitiesContainer = document.querySelector('#activities__container')
-  const slideContainer = document.querySelector('#slide__container')
 
   const btnWrap = document.querySelector('.btn__wrap');
   const moveBtns = document.querySelectorAll('.move_btn');
 
-  let startYpos = activitiesContainer.offsetTop;
-
+  const slideWraps = document.querySelectorAll('.slide__wrap')
+  const slideContents = document.querySelectorAll('.slide__content')
   
-  
-  /* RESIZE HANDLING */
-  window.addEventListener('resize', ()=>{
-    console.log(startYpos)
-    btnFunction()
-  })
 
-  /* SCROLL MAGIC - CHANGE TO EXECUTIVES */
+  /* SCROLL MAGIC - CHANGE TO ACTIVITIES */
   function changeToActivities() {
     const changeToActivitiesEvent = new TimelineMax()
     .to(bodyEl, 1, {
       backgroundColor: '#f6f6f6',
       ease: 'power1.inOut',
     })
-    .to('#index_title', 2, {
+    .to('#slide__index_title', 2, {
       color: '#000',
     })
     new ScrollMagic.Scene({
@@ -448,30 +441,25 @@ export default function () {
   }
   changeToActivities();
 
-
-  /* SCROLL MAGIC - Activities SLIDE */  
-
-  function activitiesSlide() {
+  slideWraps.forEach((slideWrap, i)=>{
     const wipeAnimation = new TimelineMax()
-      .to('#slide__container', 1, { x: '-25%' })
-      .to('#slide__container', 1, { x: '-50%' })
-      .to('#slide__container', 1, { x: '-75%' });
-
-    new ScrollMagic.Scene({
-      triggerElement: '#activities__container',
-      triggerHook: 0,
-      duration: '300%',
-    })
-      .setPin('#activities__container')
+      .to(slideContents[i], 1, { x: '-100%'})
+      new ScrollMagic.Scene({
+        triggerElement: slideWrap,
+        triggerHook: 0,
+        duration: '100%',
+      })      
       .setTween(wipeAnimation)
       .addTo(controller);
-  }
-  activitiesSlide();
+  })
+
+
+
 
   /* SLIDE INDEX TITLE RESIZING */
   function resizeTitle() {
     const titleResize = new TimelineMax()
-      .to('#index_title', {
+      .to('#slide__index_title', {
         fontSize: '7vw'       
       })
     new ScrollMagic.Scene({
@@ -490,61 +478,15 @@ export default function () {
       btn.classList.remove('btn_clicked')
     })
   }
-  function setBtnClickedByScroll() {
-    if (startYpos + slideContainer.offsetHeight*0.5 <= window.scrollY && window.scrollY < startYpos + slideContainer.offsetHeight*1.5){
-      resetBtnClicked()
-      moveBtns[0].classList.add('btn_clicked')
-    } else if (startYpos + slideContainer.offsetHeight*1.5 <= window.scrollY && window.scrollY < startYpos + slideContainer.offsetHeight*2.5){
-      resetBtnClicked()
-      moveBtns[1].classList.add('btn_clicked')
-    } else if (startYpos + slideContainer.offsetHeight*2.5 <= window.scrollY && window.scrollY < startYpos + slideContainer.offsetHeight*4){
-      resetBtnClicked()
-      moveBtns[2].classList.add('btn_clicked')
-    } else {
-      resetBtnClicked()
-    }
-  }
-  
 
-  function btnFunction() {    
-    moveBtns.forEach((btn, i)=>{
-      btn.addEventListener('click', ()=>{
-        // console.log(`현재 위치 : ${window.scrollY}`);
-        // console.log(`슬라이드 시작점 위치 : ${startYpos}`);
-        // console.log(`슬라이드 위치 : ${startYpos + slideContainer.offsetHeight*(i+1)}`);
-        window.removeEventListener('scroll', setBtnClickedByScroll)
-        setTimeout(activeBtn, 1000)
-        resetBtnClicked()
-        btn.classList.add('btn_clicked')
-        gsap.to(window, .3,{
-          scrollTo: startYpos + slideContainer.offsetHeight*(i+1)        
-        })
-      })
-    })
-  }
-  btnFunction()
 
-  function activeBtns() {
-    new ScrollMagic.Scene({
-      triggerElement: '#activities__container',
-      triggerHook: 0,
-      duration: '305%',
-    })
-      .setClassToggle(btnWrap, 'btn_active')
-      .addTo(controller);
-  }
-  activeBtns();
 
-  function activeBtn(){
-    window.addEventListener('scroll', setBtnClickedByScroll)    
-  }
-  activeBtn();
+
+
 
   /* CURSOR */
   const cursorWrap = document.querySelector('#cursor__wrap');
-  const cursors = cursorWrap.querySelectorAll('.cursor')
-  
-  
+  const cursors = cursorWrap.querySelectorAll('.cursor')  
 
   /* CURSOR MOVE AND TRAIL EFFECT */
   let aimX = 0;
