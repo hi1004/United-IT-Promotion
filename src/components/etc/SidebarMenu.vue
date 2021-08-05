@@ -179,7 +179,7 @@
   body {
     position: relative;
     margin: 0;
-    padding: 2rem 0 0 6.75rem;
+    padding: 2rem 0 0 92px;
     font-family: $body-font;
     font-size: $normal-font-size;
     transition: 0.5s;
