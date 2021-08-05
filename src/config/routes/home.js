@@ -417,7 +417,8 @@ export default function () {
   const btnWrap = document.querySelector('.btn__wrap');
   const moveBtns = document.querySelectorAll('.move_btn');
 
-  const slideWraps = document.querySelectorAll('.slide__wrap')
+  const slideSpaces = document.querySelectorAll('.slide__space')
+  const slideWrap = document.querySelector('.slide__wrap')
   const slideContents = document.querySelectorAll('.slide__content')
   
 
@@ -441,36 +442,59 @@ export default function () {
   }
   changeToActivities();
 
-  slideWraps.forEach((slideWrap, i)=>{
-    const wipeAnimation = new TimelineMax()
+  /* SLIDE WIPE */
+
+  slideSpaces.forEach((slideSpace, i)=>{
+    const wipeSlide = new TimelineMax()
       .to(slideContents[i], 1, { x: '-100%'})
-      new ScrollMagic.Scene({
-        triggerElement: slideWrap,
-        triggerHook: 0,
-        duration: '100%',
-      })      
-      .setTween(wipeAnimation)
-      .addTo(controller);
+    new ScrollMagic.Scene({
+      triggerElement: slideSpace,
+      triggerHook: 0,
+      duration: '100%',
+    })
+      .setTween(wipeSlide)
+      .addTo(controller);    
   })
 
-
-
-
-  /* SLIDE INDEX TITLE RESIZING */
+  function pinSlide() {
+    new ScrollMagic.Scene({
+      triggerElement: activitiesContainer,
+      triggerHook: 0,
+      duration: '300%',
+    })
+      .setPin(slideWrap)
+      .addTo(controller); 
+  }
+  pinSlide()
+  
+        
+  
+  /* SLIDE INDEX TITLE */
   function resizeTitle() {
     const titleResize = new TimelineMax()
       .to('#slide__index_title', {
-        fontSize: '7vw'       
+        fontSize: '5vw'       
       })
     new ScrollMagic.Scene({
-      triggerElement: '#activities__container',
+      triggerElement: slideSpaces[0],
       triggerHook: 0,
-      duration: '30%',
+      duration: '50%',
     })
       .setTween(titleResize)
       .addTo(controller);
   }
   resizeTitle();
+
+  function pinTitle() {
+    new ScrollMagic.Scene({
+      triggerElement: slideSpaces[0],
+      triggerHook: 0,
+      duration: '100%',
+    })
+      .setPin('#slide__index_title')
+      .addTo(controller);
+  }
+  pinTitle();
 
   /* SLIDE MOVE BUTTON */
   function resetBtnClicked() {
