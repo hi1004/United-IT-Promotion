@@ -20,7 +20,6 @@
   import Header from '~/components/header/Header';
   import Totop from '~/components/etc/Totop';
   import Footer from '~/components/footer/Footer';
-  import cursor from '~/config/etc/cursor';
   export default {
     components: {
       Loading,
@@ -30,7 +29,6 @@
       Footer,
     },
     mounted() {
-      cursor();
     },
     data() {
       return  {

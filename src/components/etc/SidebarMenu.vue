@@ -16,7 +16,7 @@
       <div class="side-nav__list">
         <a
           href="#"
-          class="side-nav__link color-active">
+          class="side-nav__link">
           <span class="material-icons"> home </span>
           <span class="slide-nav__name">Home</span>
         </a>
@@ -27,7 +27,7 @@
           <span class="slide-nav__name">About</span>
         </a>
 
-        <div class="side-nav__link collapse">
+        <div class="side-nav__link collapse cursor__hover_el">
           <span class="material-icons"> groups </span>
           <span class="side-nav__name">Executivives</span>
 
@@ -53,7 +53,7 @@
           </ul>
         </div>
 
-        <div class="side-nav__link collapse">
+        <div class="side-nav__link collapse cursor__hover_el">
           <span class="material-icons"> local_activity </span>
           <span class="side-nav__name">Activities</span>
 
@@ -71,7 +71,7 @@
           </ul>
         </div>
       </div> 
-      <div class="side-nav__brand">
+      <div class="side-nav__brand cursor__hover_el">
         <span
           class="material-icons side-nav__toggle"
           id="nav-toggle"> menu </span>
