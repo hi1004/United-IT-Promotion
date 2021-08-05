@@ -2,15 +2,7 @@
   <section
     id="activities"
     class="activities__section">
-    <div id="activities__container">
-      <div class="btn__wrap">
-        <button class="move_btn">
-        </button>        
-        <button class="move_btn">
-        </button>        
-        <button class="move_btn">
-        </button>
-      </div>  
+    <div id="activities__container"> 
       <div class="slide__wrap">
         <section class="slide__content first">
           <h1 class="slide__title">
@@ -56,38 +48,6 @@
  #activities__container {
   position: relative;
   overflow: hidden;
-  .btn__wrap{
-    bottom: 5vh;
-    left: 45vw;
-    width: 10vw;
-    height: 5vw;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-    z-index: -1;
-    opacity: 0;
-    transition: 0.5s;
-    &.btn_active{
-      opacity: 1;
-      z-index: 10000;
-    }
-    .move_btn{
-      width: 2vw;
-      height: 2vw;
-      border: none;
-      border-radius: 50%;
-      text-align: center;
-      background-color: black;
-      box-shadow: 0 0 10px 1px black;
-      transition: 0.5s;
-      &.btn_clicked{
-        background-color: white;
-        box-shadow: 0 0 20px 1px white;
-      }
-    }  
-  }
   .slide__wrap {    
     width: 100%;
     height: 100%;

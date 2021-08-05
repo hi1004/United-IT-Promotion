@@ -383,9 +383,6 @@ export default function () {
   // ---------------------------------------ACTIVITIES----------------------------------------------
   const activitiesContainer = document.querySelector('#activities__container')
 
-  const btnWrap = document.querySelector('.btn__wrap');
-  const moveBtns = document.querySelectorAll('.move_btn');
-
   const slideSpaces = document.querySelectorAll('.slide__space')
   const slideWrap = document.querySelector('.slide__wrap')
   const slideContents = document.querySelectorAll('.slide__content')
@@ -463,14 +460,6 @@ export default function () {
       .setPin('#slide__index_title')
       .addTo(controller);
   }
-  pinTitle();
-
-  /* SLIDE MOVE BUTTON */
-  function resetBtnClicked() {
-    moveBtns.forEach((btn)=>{
-      btn.classList.remove('btn_clicked')
-    })
-  }
-  
+  pinTitle();  
 
 } // end
