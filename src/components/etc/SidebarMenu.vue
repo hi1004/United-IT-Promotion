@@ -31,10 +31,9 @@
 
         <div class="side-nav__link collapse cursor__hover_el">
           <span class="material-icons"> groups </span>
-          <span class="side-nav__name">Executivives</span>
-
+          <span class="side-nav__name">Executives</span>
           <span class="material-icons collapse__link"> expand_more </span>
-          <ul class="collapse__menu">
+          <ul class="collapse__menu menu__executives">
             <a
               href="#"
               class="collapse__sublink">회장</a>
@@ -58,7 +57,6 @@
         <div class="side-nav__link collapse cursor__hover_el">
           <span class="material-icons"> local_activity </span>
           <span class="side-nav__name">Activities</span>
-
           <span class="material-icons collapse__link"> expand_more </span>
           <ul class="collapse__menu menu__activities">
             <a

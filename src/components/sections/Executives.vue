@@ -69,7 +69,9 @@
 
       <div class="right-box">
         <!-- 회장 -->
-        <div class="profile">
+        <div
+          id="executive_1"
+          class="profile">
           <div class="photo">
             <img
               src="~/assets/executives/executives1.png"
@@ -86,7 +88,9 @@
           </p>
         </div>
         <!-- 부회장 -->
-        <div class="profile">
+        <div
+          id="executive_2"
+          class="profile">
           <div class="photo">
             <img
               src="~/assets/executives/executives5.png"
@@ -104,7 +108,9 @@
           </p>
         </div>
         <!-- 총무 -->
-        <div class="profile">
+        <div
+          id="executive_3"
+          class="profile">
           <div class="photo">
             <img
               src="~/assets/executives/executives_affairs.png"
@@ -121,7 +127,9 @@
           </p>
         </div>
         <!-- 홍보 -->
-        <div class="profile">
+        <div
+          id="executive_4"
+          class="profile">
           <div class="photo">
             <img
               src="~/assets/executives/executives_promotion.png"
@@ -138,7 +146,9 @@
           </p>
         </div>
         <!-- 1조 -->
-        <div class="profile">
+        <div
+          id="executive_5"
+          class="profile">
           <div class="photo">
             <img
               src="~/assets/executives/executives1.png"
@@ -156,7 +166,9 @@
           </p>
         </div>
         <!-- 2조 -->
-        <div class="profile">
+        <div
+          id="executive_6"
+          class="profile">
           <div class="photo">
             <img
               src="~/assets/executives/executives2.png"
@@ -176,7 +188,9 @@
           </p>
         </div>
         <!-- 3조 -->
-        <div class="profile">
+        <div
+          id="executive_7"
+          class="profile">
           <div class="photo">
             <img
               src="~/assets/executives/executives3.png"
@@ -196,7 +210,9 @@
           </p>
         </div>
         <!-- 4조 -->
-        <div class="profile">
+        <div
+          id="executive_8"
+          class="profile">
           <div class="photo">
             <img
               src="~/assets/executives/executives4.png"
@@ -216,7 +232,9 @@
           </p>
         </div>
         <!-- 5조 -->
-        <div class="profile">
+        <div
+          id="executive_9"
+          class="profile">
           <div class="photo">
             <img
               src="~/assets/executives/executives5.png"
@@ -234,7 +252,9 @@
           </p>
         </div>
         <!-- 6조 -->
-        <div class="profile">
+        <div
+          id="executive_10"
+          class="profile">
           <div class="photo">
             <img
               src="~/assets/executives/executives6.png"

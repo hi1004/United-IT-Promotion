@@ -114,16 +114,33 @@ export default function(){
   const activitiesSlideSelectors = ['#first_space', '#second_space', '#third_space']
 
   function scrollToActivitiesSubLink(i){
-    console.log(activitiesSlideSelectors[i]) 
     gsap.to(window, {
       scrollTo: activitiesSlideSelectors[i]
     })
   }
-
   activitiesSubLinks.forEach((subLink, i) => {
     subLink.addEventListener('click', ()=>{
       event.stopPropagation()
       scrollToActivitiesSubLink(i)
+    }, {capture: true})
+  })
+
+
+  const executivesSubLinks = document.querySelectorAll('.menu__executives > .collapse__sublink')
+  const executiveSelectors = []
+  for (let i=1 ; i<11; i++){
+    executiveSelectors.push(`#executive_${i}`)
+  }
+
+  function scrollToExecutivesSubLink(i){
+    gsap.to(window, {
+      scrollTo: executiveSelectors[i]
+    })
+  }
+  executivesSubLinks.forEach((subLink, i) => {
+    subLink.addEventListener('click', ()=>{
+      event.stopPropagation()
+      scrollToExecutivesSubLink(i)
     }, {capture: true})
   })
 }
