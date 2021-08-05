@@ -15,7 +15,6 @@ export default function(){
     const snToggle = document.getElementById(toggleId),
       snNavBar = document.getElementById(navbarId),
       snBodyPadding = document.getElementById(bodyId);
-    if (snToggle && snNavBar) {
       snToggle.addEventListener('click', () => {
         snNavBar.classList.toggle('expander');
         snBodyPadding.classList.toggle('body-pd');
@@ -27,9 +26,15 @@ export default function(){
         snCollapseMenus.forEach((snCollapseMenu)=>{
           snCollapseMenu.classList.remove('showCollapse')
         })
+        if(snNavBar.classList.contains('expander')){
+          snLinks.forEach((snLink) => {
+            if(snLink.classList.contains('color-active')){
+              snLink.querySelector('.collapse__link').classList.add('rotate')
+              snLink.querySelector('.collapse__menu').classList.add('showCollapse')
+            }
+          })
+        }
       });
-    }
-    console.log(snBodyPadding);
   };
   showMenu('nav-toggle', 'navbar', 'body-pd');
 
