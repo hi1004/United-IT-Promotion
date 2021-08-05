@@ -104,7 +104,6 @@ export default function(){
 
   snLinks.forEach((snLink, i) => {
     snLink.addEventListener('click', ()=>{
-      console.log('클릭 이벤트 작동')
       scrollToSection(i)
     })
   })

@@ -591,8 +591,6 @@ export default function () {
     ...anchorEls,
     ...hoverClassEls
   ]
-  
-  console.log(hoverEls)   
 
   hoverEls.forEach((element)=>{
   element.addEventListener('mouseover', ()=>{

@@ -174,7 +174,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 190px;
+      width: 170px;
       height: 45px;
       .logo-icon{
         width: 45px;

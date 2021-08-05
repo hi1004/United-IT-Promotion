@@ -8,27 +8,29 @@
   </div>
   <Loading />
   <Stars />
-  <Header />
+  <!-- <Header /> -->
   <RouterView />
   <Totop />
   <Footer />
 </template>
 
 <script>
+  import common from '~/config/common'
   import Loading from '~/components/etc/Loading';
   import Stars from '~/components/background/Stars';
-  import Header from '~/components/header/Header';
+  // import Header from '~/components/header/Header';
   import Totop from '~/components/etc/Totop';
   import Footer from '~/components/footer/Footer';
   export default {
     components: {
       Loading,
-      Header,
+      // Header,
       Stars,
       Totop,
       Footer,
     },
     mounted() {
+      common()
     },
     data() {
       return  {
