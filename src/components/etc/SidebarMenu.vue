@@ -84,7 +84,7 @@
 <script>
   export default {
     mounted() {
-      
+      console.log(document.getElementById('#executives'))
       const rotates = document.querySelectorAll('.collapse__link');
       
       /* SHOW MENU */

@@ -7,7 +7,6 @@
       <div class="about__title">
         <h1>ABOUT</h1>
       </div>
-
       <!-- VIDEO-BG -->
       <div class="video-wrap">
         <div class="video-title">
@@ -71,7 +70,8 @@
         </div>
       </div>
 
-      <div class="spacer sp2"></div>
+      <div
+        class="spacer sp2"></div>
     </div>
   </section>
 </template>
