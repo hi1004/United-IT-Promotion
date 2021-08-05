@@ -27,16 +27,16 @@ export default function () {
     });
   }, 2000);
 
-  window.onload = function () {
-    const toolBar = document.querySelector('.main-tool-bar');
-    setTimeout(() => {
-      toolBar.classList.add('show-tool-bar');
-    }, 2000);
+  // window.onload = function () {
+  //   const toolBar = document.querySelector('.main-tool-bar');
+  //   setTimeout(() => {
+  //     toolBar.classList.add('show-tool-bar');
+  //   }, 2000);
 
-    gsap.to(window, 0, {
-      scrollTo: 0,
-    });
-  };
+  //   gsap.to(window, 0, {
+  //     scrollTo: 0,
+  //   });
+  // };
 
   // ---------------------------------------ABOUT----------------------------------------------
 

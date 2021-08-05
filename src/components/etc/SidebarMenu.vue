@@ -60,7 +60,7 @@
           <span class="side-nav__name">Activities</span>
 
           <span class="material-icons collapse__link"> expand_more </span>
-          <ul class="collapse__menu">
+          <ul class="collapse__menu menu__activities">
             <a
               href="#"
               class="collapse__sublink">1</a>

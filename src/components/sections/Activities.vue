@@ -28,11 +28,17 @@
           Activities
         </h1>         
       </div>
-      <div class="slide__space">
+      <div
+        id="first_space"
+        class="slide__space">
       </div>
-      <div class="slide__space">
+      <div
+        id="second_space"
+        class="slide__space second_space">
       </div>
-      <div class="slide__space"></div>
+      <div
+        id="third_space"
+        class="slide__space third_space"></div>
     </div>
   </section>
 </template>

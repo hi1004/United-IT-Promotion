@@ -37,7 +37,7 @@ export default function(){
 
   /* LINK CLICK EVENT */
   const snLinks = document.querySelectorAll('.side-nav__link');
-  const snNavBar = document.getElementById('navbar');
+  const snNavBar = document.getElementById('navbar');  
 
   const sectionSelectors = ['#intro', '#about', '#executives', '#activities']
 
@@ -103,11 +103,28 @@ export default function(){
       scrollTo: sectionSelectors[i]
     })
   }
-
   snLinks.forEach((snLink, i) => {
     snLink.addEventListener('click', ()=>{
       scrollToSection(i)
     })
+  })
+
+  /* scroll to sub link */
+  const activitiesSubLinks = document.querySelectorAll('.menu__activities > .collapse__sublink')
+  const activitiesSlideSelectors = ['#first_space', '#second_space', '#third_space']
+
+  function scrollToActivitiesSubLink(i){
+    console.log(activitiesSlideSelectors[i]) 
+    gsap.to(window, {
+      scrollTo: activitiesSlideSelectors[i]
+    })
+  }
+
+  activitiesSubLinks.forEach((subLink, i) => {
+    subLink.addEventListener('click', ()=>{
+      event.stopPropagation()
+      scrollToActivitiesSubLink(i)
+    }, {capture: true})
   })
 }
 
