@@ -91,6 +91,7 @@ export default function(){
         }
       }
       ScrollTrigger.create({
+        id: `active link scroll${i}`, 
         trigger: sectionSelectors[i],
         end: 'bottom',
         onEnter: enterSection,
@@ -103,10 +104,21 @@ export default function(){
   linkActiveOnScroll()  
 
   /* scroll to section on click */  
-  function scrollToSection(i){    
+  function scrollToSection(i){      
+    for(let j=0; j<snLinks.length; j++){
+      snLinks[j].style.pointerEvents = 'none';
+      ScrollTrigger.getById(`active link scroll${j}`).disable();
+    }
     gsap.to(window, {
       scrollTo: sectionSelectors[i]
     })
+    setTimeout(()=>{
+      for(let j=0; j<snLinks.length; j++){
+        snLinks[j].style.pointerEvents = 'auto';
+        ScrollTrigger.getById(`active link scroll${j}`).enable();
+      }
+    }, 1000)
+    
   }
   snLinks.forEach((snLink, i) => {
     snLink.addEventListener('click', ()=>{
@@ -118,10 +130,10 @@ export default function(){
   const activitiesSubLinks = document.querySelectorAll('.menu__activities > .collapse__sublink')
   const activitiesSlideSelectors = ['#first_space', '#second_space', '#third_space']
 
-  function scrollToActivitiesSubLink(i){
+  function scrollToActivitiesSubLink(i){    
     gsap.to(window, {
       scrollTo: activitiesSlideSelectors[i]
-    })
+    })         
   }
   activitiesSubLinks.forEach((subLink, i) => {
     subLink.addEventListener('click', ()=>{
