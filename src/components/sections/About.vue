@@ -14,7 +14,7 @@
         </div>
         <div class="video-bg">
           <video
-            src="~/assets/video/intro_video.mp4"
+            src="~/assets/video/Render.mp4"
             autoplay
             loop
             muted>
