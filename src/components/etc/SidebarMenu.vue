@@ -177,7 +177,7 @@
   body {
     position: relative;
     margin: 0;
-    padding: 2rem 0 0 92px;
+    padding: 0 0 0 92px;
     font-family: $body-font;
     font-size: $normal-font-size;
     transition: 0.5s;
@@ -335,6 +335,10 @@
   /*Active links menu*/
   .color-active {
     background-color: $first-color;
+  }
+  .collapse__sublink.sublink-active {
+    font-weight: 900;
+    color: #fff;
   }
 
   /*===== COLLAPSE =====*/

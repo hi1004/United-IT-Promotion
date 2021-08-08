@@ -93,6 +93,7 @@ export default function(){
       ScrollTrigger.create({
         id: `active link scroll${i}`, 
         trigger: sectionSelectors[i],
+
         end: 'bottom',
         onEnter: enterSection,
         onLeave: leaveSection,
@@ -135,11 +136,27 @@ export default function(){
       scrollTo: activitiesSlideSelectors[i]
     })         
   }
+    /* active sublink on scroll */
   activitiesSubLinks.forEach((subLink, i) => {
     subLink.addEventListener('click', ()=>{
       event.stopPropagation()
       scrollToActivitiesSubLink(i)
     }, {capture: true})
+    function enterSection() {
+      subLink.classList.add('sublink-active')
+    }
+    function leaveSection() {
+      subLink.classList.remove('sublink-active')
+    }
+    ScrollTrigger.create({
+      trigger: activitiesSlideSelectors[i],
+      end: 'top',
+      markers: true,
+      onEnter: enterSection,
+      onLeave: leaveSection,
+      onEnterBack: enterSection,
+      onLeaveBack: leaveSection    
+    })
   })
 
 
@@ -148,17 +165,32 @@ export default function(){
   for (let i=1 ; i<11; i++){
     executiveSelectors.push(`#executive_${i}`)
   }
-
   function scrollToExecutivesSubLink(i){
     gsap.to(window, {
       scrollTo: executiveSelectors[i]
     })
   }
+  /* active sublink on scroll */
   executivesSubLinks.forEach((subLink, i) => {
     subLink.addEventListener('click', ()=>{
       event.stopPropagation()
       scrollToExecutivesSubLink(i)
     }, {capture: true})
+    function enterSection() {
+      subLink.classList.add('sublink-active')
+    }
+    function leaveSection() {
+      subLink.classList.remove('sublink-active')
+    }
+    ScrollTrigger.create({
+      trigger: executiveSelectors[i],
+      end: 'bottom center',
+      onEnter: enterSection,
+      onLeave: leaveSection,
+      onEnterBack: enterSection,
+      onLeaveBack: leaveSection    
+    })
   })
+ 
 }
 
