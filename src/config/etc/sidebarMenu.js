@@ -119,11 +119,27 @@ export default function(){
       scrollTo: activitiesSlideSelectors[i]
     })
   }
+    /* active sublink on scroll */
   activitiesSubLinks.forEach((subLink, i) => {
     subLink.addEventListener('click', ()=>{
       event.stopPropagation()
       scrollToActivitiesSubLink(i)
     }, {capture: true})
+    function enterSection() {
+      subLink.classList.add('sublink-active')
+    }
+    function leaveSection() {
+      subLink.classList.remove('sublink-active')
+    }
+    ScrollTrigger.create({
+      trigger: activitiesSlideSelectors[i],
+      end: 'top',
+      markers: true,
+      onEnter: enterSection,
+      onLeave: leaveSection,
+      onEnterBack: enterSection,
+      onLeaveBack: leaveSection    
+    })
   })
 
 
@@ -152,7 +168,6 @@ export default function(){
     ScrollTrigger.create({
       trigger: executiveSelectors[i],
       end: 'bottom center',
-      markers: true,
       onEnter: enterSection,
       onLeave: leaveSection,
       onEnterBack: enterSection,
