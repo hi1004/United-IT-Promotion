@@ -173,7 +173,7 @@ export default function(){
       scrollTo: executiveSelectors[i]
     })
   }
-  /* active sublink on scroll */
+  /* active sublink on click */
   executivesSubLinks.forEach((subLink, i) => {
     subLink.addEventListener('click', ()=>{
       event.stopPropagation()
@@ -187,6 +187,7 @@ export default function(){
     }
     ScrollTrigger.create({
       trigger: executiveSelectors[i],
+      start: 'top center',
       end: 'bottom center',
       onEnter: enterSection,
       onLeave: leaveSection,
