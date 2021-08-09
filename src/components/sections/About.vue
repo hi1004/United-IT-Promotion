@@ -86,14 +86,14 @@
   .about__section {
     position: relative;
     font-family: 'Black Han Sans', sans-serif;
-    margin: 5rem 0;
+    // margin: 5rem 0;
     color: #fff;
     .container {
       .about__title {
         h1{
           font-size: 20vw;
           text-align: center;
-          margin-top: 10rem; 
+          // margin-top: 10rem;
         }        
       }
       .video-bg {

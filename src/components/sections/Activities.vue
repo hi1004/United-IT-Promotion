@@ -51,6 +51,27 @@
 </script>
 
 <style lang="scss" scoped>
+.activities__section {
+  position: relative;
+   &::after, &::before {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 400px;
+    margin-bottom: 255px;
+  }
+  &::after {
+    bottom: -4.4%;
+      background-color: blue;
+      transform: skewY(-170deg);
+  }
+   &::before {
+     top: -4.4%;
+     background-color: red;
+     transform: skewY(170deg);
+   }
+}
  #activities__container {
   position: relative;
   overflow: hidden;

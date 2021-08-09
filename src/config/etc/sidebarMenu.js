@@ -1,9 +1,5 @@
-import { gsap } from 'gsap';
-import scrollTo from 'gsap/ScrollToPlugin';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(scrollTo);
-gsap.registerPlugin(ScrollTrigger);
+const ScrollTrigger = window.ScrollTrigger;
+const gsap = window.gsap;
 
 export default function(){  
 
@@ -87,8 +83,9 @@ export default function(){
       }
       ScrollTrigger.create({
         trigger: sectionSelectors[i],
-
-        end: 'bottom',
+        markers: true,
+        start: 'top 80%',
+        end: 'bottom 80%',
         onEnter: enterSection,
         onLeave: leaveSection,
         onEnterBack: enterSection,
@@ -134,7 +131,6 @@ export default function(){
     ScrollTrigger.create({
       trigger: activitiesSlideSelectors[i],
       end: 'top',
-      markers: true,
       onEnter: enterSection,
       onLeave: leaveSection,
       onEnterBack: enterSection,
