@@ -6,7 +6,7 @@
     <div class="container">
       <div class="left-box">
         <div class="contents">
-          <h1 class="title">
+          <h1 class="executives__title">
             J-BIT UNITED IT<br />
             EXECUTIVES
           </h1>
@@ -319,7 +319,7 @@
           display: flex;
           justify-content: center;
 
-          .title {
+          .executives__title {
             width: 100%;
             font-family: 'Black Han Sans', sans-serif;
             font-size: 4.5vw;

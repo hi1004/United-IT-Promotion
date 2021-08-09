@@ -16,9 +16,7 @@ export default function () {
   const canvases = document.querySelectorAll('.bg-canvas');
 
   setTimeout(function () {
-    // bodyEl.style.overflowY = 'visible';
     bodyEl.style.position = 'relative';
-    // bodyEl.style.backgroundColor = '#171818';
     canvases.forEach(function (canvas) {
       gsap.to(canvas, 2, {
         opacity: 1,
@@ -27,24 +25,12 @@ export default function () {
     });
   }, 2000);
 
-  // window.onload = function () {
-  //   const toolBar = document.querySelector('.main-tool-bar');
-  //   setTimeout(() => {
-  //     toolBar.classList.add('show-tool-bar');
-  //   }, 2000);
-
-  //   gsap.to(window, 0, {
-  //     scrollTo: 0,
-  //   });
-  // };
-
   // ---------------------------------------ABOUT----------------------------------------------
 
   const aboutSection = document.querySelector('#about');
   const aboutTitle = document.querySelector('#about .about__title');
   const aboutTitleText = document.querySelector('#about .about__title h1');
-  const videoWrap = document.querySelector('.video-wrap');
-  // const videoBG = document.querySelector('.video-bg');
+  const videoContent = document.querySelector('.video__content');
 
   /* SCROLL MAGIC - CHANGE TO ABOUT */
   function changeToAbout() {
@@ -141,12 +127,10 @@ export default function () {
 
   /* SCROLL MAGIC - ABOUT VIDEO ANIMATE */
   function aboutVideoAnimate() {
-    const changeSize = new TimelineMax().to(videoWrap, 1, {
-      scale: 1,
-      position: 'absolute',
-      left: 0,
+    const changeSize = new TimelineMax()
+    .to(videoContent, 1, {
+      scale: 1.25
     });
-
     new ScrollMagic.Scene({
       triggerElement: aboutTitle,
       triggerHook: 0.3,
@@ -282,27 +266,29 @@ export default function () {
   executivesTextAnimate();
 
   /* SCROLL MAGIC - EXECUTIVES SCROLL ANIMATE */
-  const executivesTitle = document.querySelector('#executives .title');
+  const executivesTitle = document.querySelector('.executives__title');
 
-  function executivesScrollAnimate() {
-    const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 0.5, {
-      position: 'fixed',
-      width: '100%',
-      bottom: '25rem',
-      fontSize: '4vw',
-    });
+  // function executivesScrollAnimate() {
+  //   const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 0.5, {
+  //     position: 'fixed',
+  //     width: '100%',
+  //     bottom: '25rem',
+  //     fontSize: '4vw',
+  //   });
 
-    new ScrollMagic.Scene({
-      triggerElement: aboutSpacer,
-      triggerHook: 0,
-      duration: '50%',
-    })
-      .setPin(executivesSection)
-      .setTween(scrollToExecutivesEvent)
+  //   new ScrollMagic.Scene({
+  //     triggerElement: aboutSpacer,
+  //     triggerHook: 0,
+  //     duration: '50%',
+  //   })
+  //     .setPin(executivesSection)
+  //     .setTween(scrollToExecutivesEvent)
 
-      .addTo(controller);
-  }
-  executivesScrollAnimate();
+  //     .addTo(controller);
+  // }
+
+  // executivesScrollAnimate();
+
   // const executivesImgWrap = document.querySelector('#executives .img-wrap');
   // const executivesImgs = executivesSection.querySelectorAll('.img');
   const colorArry = [

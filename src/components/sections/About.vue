@@ -8,21 +8,17 @@
         <h1>ABOUT</h1>
       </div>
       <!-- VIDEO-BG -->
-      <div class="video-wrap">
-        <div class="video-title">
-          Independent manufacturing
-        </div>
-        <div class="video-bg">
-          <video
-            src="~/assets/video/Render.mp4"
-            autoplay
-            loop
-            muted>
-            <source
-              src="data/comp.ogv"
-              type="video/mp4" />
-          </video>
-        </div>
+      <div class="video__bg">
+        <video
+          class="video__content"
+          src="~/assets/video/Render.mp4"
+          autoplay
+          loop
+          muted>
+          <source
+            src="data/comp.ogv"
+            type="video/mp4" />
+        </video>
       </div>
 
       <!-- ABOUT-DESCRIPTION01 -->
@@ -86,19 +82,24 @@
   .about__section {
     position: relative;
     font-family: 'Black Han Sans', sans-serif;
-    // margin: 5rem 0;
     color: #fff;
     .container {
       .about__title {
         h1{
           font-size: 20vw;
           text-align: center;
-          // margin-top: 10rem;
         }        
       }
-      .video-bg {
-        height: 50vh;
+      .video__bg {
+        width: 100%;
+        height: 55vw;
         background-color: gray;
+        display: flex;
+        justify-content: center;
+        .video__content{
+          width: 80%;
+          height: auto;
+        }
       }
       .about__description {
         width: 90%;
@@ -106,10 +107,9 @@
         font-stretch: 50%;
         letter-spacing: -2px;
         line-height: 0.9;
-        margin: 10rem 0;
+        margin: 10vh 0;
       }
       .description01 {    
-        margin-top: 100%;  
         .about__word {
           display: inline-block;             
           opacity: 0;     
