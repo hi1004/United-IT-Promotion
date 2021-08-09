@@ -75,10 +75,11 @@
           </ul>
         </div>
       </div>
-      <div class="side-nav__brand cursor__hover_el">
+      <div
+        class="side-nav__brand cursor__hover_el"
+        id="nav-toggle">
         <div
-          class="side-nav__toggle"
-          id="nav-toggle">
+          class="side-nav__toggle">
           <span class="top"></span>
           <span class="mid"></span>
           <span class="bottom"></span>
@@ -168,7 +169,7 @@
   $small-font-size: 0.875rem;
 
   /*===== z index =====*/
-  $z-fixed: 100;
+  $z-fixed: 999;
 
   /*===== BASE =====*/
   *,
@@ -231,51 +232,41 @@
       grid-template-columns: max-content max-content;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 2rem;
+      position: absolute;
+      top: 57%;
+      right: -20px;
+      width: 40px;
+      height: 40px;
+      background-color: #f5f5f5;
+      cursor: pointer;
+      border: 5px solid #12192C;
+      border-radius: 50%;
       padding: 0.75rem;
-      border-radius: 0.5rem;
+      &::before {
+        content: '\f054';
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        line-height: 30px;
+        text-align: center;
+        font-weight: 900;
+        color: #0c5df4;
+      }
+      &.toggle-active::before {
+        content: '\f053';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
     }
 
     &__toggle {
       cursor: pointer;
       transition: 1s;
-      position: relative;
+      position: absolute;
       display: block;
-      width: 21px;
-      height: 21px;
-      span {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: $white-color;
-        transition: 0.4s;
-        position: absolute;
-        &.mid {
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        &.top {
-          top: 0px;
-        }
-        &.bottom {
-          bottom: 0px;
-        }
-      }
-      &.toggle-active {
-        span {
-          &.mid {
-            opacity: 0;
-          }
-          &.top {
-            transform: translateY(8px) rotate(-45deg);
-            background-color: rgb(255, 54, 54);
-          }
-          &.bottom {
-            transform: translateY(-9px) rotate(45deg);
-            background-color: rgb(255, 54, 54);
-          }
-        }
-      }
+      width: 100%;
+      height: 100%;
     }
 
     &__link {
