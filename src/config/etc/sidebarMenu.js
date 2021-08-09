@@ -11,7 +11,6 @@ export default function(){
     const snToggle = document.getElementById(toggleId),
       snNavBar = document.getElementById(navbarId),
       snBodyPadding = document.getElementById(bodyId);
-    if (snToggle && snNavBar) {
       snToggle.addEventListener('click', () => {
         snNavBar.classList.toggle('expander');
         snBodyPadding.classList.toggle('body-pd');
@@ -23,9 +22,15 @@ export default function(){
         snCollapseMenus.forEach((snCollapseMenu)=>{
           snCollapseMenu.classList.remove('showCollapse')
         })
+        if(snNavBar.classList.contains('expander')){
+          snLinks.forEach((snLink) => {
+            if(snLink.classList.contains('color-active')){
+              snLink.querySelector('.collapse__link').classList.add('rotate')
+              snLink.querySelector('.collapse__menu').classList.add('showCollapse')
+            }
+          })
+        }
       });
-    }
-    console.log(snBodyPadding);
   };
   showMenu('nav-toggle', 'navbar', 'body-pd');
 
@@ -82,6 +87,7 @@ export default function(){
         }
       }
       ScrollTrigger.create({
+        id: `active link scroll${i}`, 
         trigger: sectionSelectors[i],
         markers: true,
         start: 'top 80%',
@@ -96,10 +102,21 @@ export default function(){
   linkActiveOnScroll()  
 
   /* scroll to section on click */  
-  function scrollToSection(i){    
+  function scrollToSection(i){      
+    for(let j=0; j<snLinks.length; j++){
+      snLinks[j].style.pointerEvents = 'none';
+      ScrollTrigger.getById(`active link scroll${j}`).disable();
+    }
     gsap.to(window, {
       scrollTo: sectionSelectors[i]
     })
+    setTimeout(()=>{
+      for(let j=0; j<snLinks.length; j++){
+        snLinks[j].style.pointerEvents = 'auto';
+        ScrollTrigger.getById(`active link scroll${j}`).enable();
+      }
+    }, 1000)
+    
   }
   snLinks.forEach((snLink, i) => {
     snLink.addEventListener('click', ()=>{
@@ -111,10 +128,10 @@ export default function(){
   const activitiesSubLinks = document.querySelectorAll('.menu__activities > .collapse__sublink')
   const activitiesSlideSelectors = ['#first_space', '#second_space', '#third_space']
 
-  function scrollToActivitiesSubLink(i){
+  function scrollToActivitiesSubLink(i){    
     gsap.to(window, {
       scrollTo: activitiesSlideSelectors[i]
-    })
+    })         
   }
     /* active sublink on scroll */
   activitiesSubLinks.forEach((subLink, i) => {
