@@ -6,7 +6,9 @@ export default function(){
   /* SHOW MENU */
   const snCollapseLinks = document.querySelectorAll('.collapse__link'); 
   const snCollapseMenus = document.querySelectorAll('.collapse__menu'); 
-  
+  const snToolTips = document.querySelectorAll('.side-nav__tooltip');
+
+
   const showMenu = (toggleId, navbarId, bodyId) => {
     const snToggle = document.getElementById(toggleId),
       snNavBar = document.getElementById(navbarId),
@@ -16,12 +18,17 @@ export default function(){
         snBodyPadding.classList.toggle('body-pd');
         snToggle.classList.toggle('toggle-active');
 
+        snToolTips.forEach((snToolTip) => {
+          snToolTip.classList.toggle('snToolTip-active');
+        })
+       
         snCollapseLinks.forEach((snCollapseLink) => {
           snCollapseLink.classList.remove('rotate');          
         });
         snCollapseMenus.forEach((snCollapseMenu)=>{
           snCollapseMenu.classList.remove('showCollapse')
         })
+        
 
         if(snNavBar.classList.contains('expander')){
           snLinks.forEach((snLink) => {

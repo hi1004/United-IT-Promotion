@@ -20,18 +20,21 @@
           href="#"
           class="side-nav__link">
           <span class="material-icons"> home </span>
-          <span class="slide-nav__name">Home</span>
+          <span class="side-nav__name">Home</span>
+          <span class="side-nav__tooltip">Home</span>
         </a>
         <a
           href="#"
           class="side-nav__link">
           <span class="material-icons">info</span>
-          <span class="slide-nav__name">About</span>
+          <span class="side-nav__name">About</span>
+          <span class="side-nav__tooltip">About</span>
         </a>
 
         <div class="side-nav__link collapse cursor__hover_el">
           <span class="material-icons"> groups </span>
           <span class="side-nav__name">Executives</span>
+          <span class="side-nav__tooltip">Executives</span>
           <span class="material-icons collapse__link"> expand_more </span>
           <ul class="collapse__menu menu__executives">
             <a
@@ -57,6 +60,7 @@
         <div class="side-nav__link collapse cursor__hover_el">
           <span class="material-icons"> local_activity </span>
           <span class="side-nav__name">Activities</span>
+          <span class="side-nav__tooltip">Activities</span>
           <span class="material-icons collapse__link"> expand_more </span>
           <ul class="collapse__menu menu__activities">
             <a
@@ -71,12 +75,7 @@
           </ul>
         </div>
       </div>
-      <div
-    
-        class="side-nav__brand cursor__hover_el">
-        <!-- <span
-          class="material-icons side-nav__toggle"
-          id="nav-toggle"> menu </span> -->
+      <div class="side-nav__brand cursor__hover_el">
         <div
           class="side-nav__toggle"
           id="nav-toggle">
@@ -96,6 +95,7 @@
               src="~/assets/korea.png"
               alt="korea" />
             KR
+            <span class="side-nav__tooltip">KR</span>
           </RouterLink>
         </div>
         <div class="routeBtn nav-item">
@@ -107,6 +107,7 @@
               src="~/assets/japan.png"
               alt="japan" />
             JP
+            <span class="side-nav__tooltip">JP</span>
           </RouterLink>
         </div>
         <div class="routeBtn nav-item">
@@ -116,6 +117,7 @@
             active-class="active">
             <span class="material-icons"> contact_support </span>
             CONTACT
+            <span class="side-nav__tooltip">CONTACT</span>
           </RouterLink>
         </div>
       </div>
@@ -258,30 +260,6 @@
         &.bottom {
           bottom: 0px;
         }
-        // &::after {
-        //   position: absolute;
-        //   content: '';
-        //   display: block;
-        //   width: 100%;
-        //   height: 2px;
-        //   background-color: $white-color;
-        //   bottom: -8px;
-        //   left: 0;
-        //   transform: translateY(0px) rotate(0deg);
-        //   transition: .5s;
-        // }
-        // &::before {
-        //   position: absolute;
-        //   content: '';
-        //   display: block;
-        //   width: 100%;
-        //   height: 2px;
-        //   background-color: $white-color;
-        //   top: -8px;
-        //   left: 0;
-        //   transform: translateY(0px) rotate(0deg);
-        //   transition: .5s;
-        // }
       }
       &.toggle-active {
         span {
@@ -290,7 +268,7 @@
           }
           &.top {
             transform: translateY(8px) rotate(-45deg);
-               background-color: rgb(255, 54, 54);
+            background-color: rgb(255, 54, 54);
           }
           &.bottom {
             transform: translateY(-9px) rotate(45deg);
@@ -314,6 +292,11 @@
       &:hover {
         background-color: $first-color;
         color: $white-color;
+        .side-nav__tooltip {
+          transform: translateY(-15%) translateX(10px);
+          visibility: visible;
+          opacity: 1;
+        }
       }
     }
     &__icon {
@@ -321,6 +304,40 @@
     }
     &__name {
       font-size: $small-font-size;
+    }
+    &__tooltip {
+      position: absolute;
+      left: 72px;
+      display: block;
+      background-color: #0c5df4;
+      width: auto;
+      padding: 5px 10px;
+      transform: translateY(-15%) translate(0);
+      border-radius: 6px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.5s;
+      color: #fff;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 48%;
+        left: -8px;
+        width: 12px;
+        height: 12px;
+        background-color: #0c5df4;
+        transform: rotate(45deg) translateY(-50%);
+        border-radius: 2px;
+        transition: 0.5s;
+      }
+      &:hover {
+        color: #0c5df4;
+        background-color: #fff;
+        &::before {
+          background-color: #fff;
+        }
+      }
     }
   }
   /*Expander menu*/
@@ -372,17 +389,21 @@
   .showCollapse {
     display: block;
   }
-
   /*Rotate icon*/
   .rotate {
     transform: rotate(180deg);
   }
 
+  /* hide ToolTip */
+ .snToolTip-active {
+   display: none !important;
+ }
+
   .routeBtn {
     img {
       width: 24px;
     }
-    a {
+    a.nav-link {
       font-family: 'Oswald', sans-serif;
       display: grid;
       grid-template-columns: max-content max-content;
@@ -396,6 +417,45 @@
       cursor: pointer;
       &:hover {
         background-color: #fdc000;
+        .side-nav__tooltip {
+          transform: translateY(-15%) translateX(10px);
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      .side-nav__tooltip {
+        position: absolute;
+        left: 72px;
+        display: block;
+        background-color: #fdc000;
+        width: auto;
+        padding: 5px 10px;
+        transform: translateY(-15%) translate(0);
+        border-radius: 6px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        color: #fff;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 48%;
+          left: -8px;
+          width: 12px;
+          height: 12px;
+          background: #fdc000;
+          transform: rotate(45deg) translateY(-50%);
+          border-radius: 2px;
+          transition: 0.5s;
+        }
+        &:hover {
+          color: #fdc000;
+          background-color: #fff;
+          &::before {
+            background-color: #fff;
+          }
+        }
       }
     }
   }
