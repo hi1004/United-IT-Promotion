@@ -4,8 +4,8 @@ const gsap = window.gsap;
 export default function(){  
 
   /* SHOW MENU */
-  const snCollapseLinks = document.querySelectorAll('.collapse__link');
-  const snCollapseMenus = document.querySelectorAll('.collapse__menu');
+  const snCollapseLinks = document.querySelectorAll('.collapse__link'); 
+  const snCollapseMenus = document.querySelectorAll('.collapse__menu'); 
   
   const showMenu = (toggleId, navbarId, bodyId) => {
     const snToggle = document.getElementById(toggleId),
@@ -22,6 +22,7 @@ export default function(){
         snCollapseMenus.forEach((snCollapseMenu)=>{
           snCollapseMenu.classList.remove('showCollapse')
         })
+
         if(snNavBar.classList.contains('expander')){
           snLinks.forEach((snLink) => {
             if(snLink.classList.contains('color-active')){
@@ -89,7 +90,6 @@ export default function(){
       ScrollTrigger.create({
         id: `active link scroll${i}`, 
         trigger: sectionSelectors[i],
-        markers: true,
         start: 'top 80%',
         end: 'bottom 80%',
         onEnter: enterSection,

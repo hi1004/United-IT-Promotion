@@ -26,7 +26,17 @@
       <div class="slide__space">
         <h1 id="slide__index_title">
           Activities
-        </h1>         
+        </h1>
+
+        <div class="slide__index_text">
+          HOW ARE MAKERS<br />
+          EXPERIENCING THE<br />
+          EFFECTS OF THE<br />
+          GLOBAL PANDEMIC?<br />
+        </div>
+        <div class="slide__index_description">
+          n the wake of Covid-19, the world has changed in ways that no one could have expected. From months spent in quarantine grew a global movement for justice and equality. Each of us has processed and adapted to the events of the last few months in our own way. In an effort to stay connected and support one another through these unprecedented times, we created At Home: a series of stories documenting the experience.  
+        </div>         
       </div>
       <div
         id="first_space"
@@ -53,22 +63,14 @@
 <style lang="scss" scoped>
 .activities__section {
   position: relative;
-   &::after, &::before {
-    position: absolute;
+   &::before {
+      position: absolute;
     left: 0;
     content: '';
     width: 100%;
-    height: 400px;
-    margin-bottom: 255px;
-  }
-  &::after {
-    bottom: -4.4%;
-      background-color: blue;
-      transform: skewY(-170deg);
-  }
-   &::before {
+    height: 500px;
      top: -4.4%;
-     background-color: red;
+     background-color: #fdc000;
      transform: skewY(170deg);
    }
 }
@@ -130,9 +132,23 @@
       font-family: 'Black Han Sans', sans-serif;
       font-size: 12vw;
       color: white;
+    }
+    .slide__index_text {
+       position: absolute;
+       font-size: 3vw;
+       color: #000;
+      font-family: 'Black Han Sans', sans-serif;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .slide__index_description {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 15vw;
+      color: #000;
     }    
   }
 }
-
-
 </style>

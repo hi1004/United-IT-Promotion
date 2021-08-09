@@ -374,7 +374,7 @@ export default function () {
       triggerHook: 1,
       duration: '100%',
     })
-      .setPin(executivesSection)
+      // .setPin(executivesSection)
       .setTween(scrollToExecutivesEvent)
       .addTo(controller);
   }
@@ -439,7 +439,7 @@ export default function () {
   function resizeTitle() {
     const titleResize = new TimelineMax()
       .to('#slide__index_title', {
-        fontSize: '5vw'       
+        fontSize: '5vw',      
       })
     new ScrollMagic.Scene({
       triggerElement: slideSpaces[0],

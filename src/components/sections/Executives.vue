@@ -103,8 +103,7 @@
             부회장
           </div>
           <p class="description">
-            전반적으로 동아리를 총괄하며,
-            Web관련 스터디를 진행하고 있습니다.
+            전반적으로 동아리를 총괄하며, Web관련 스터디를 진행하고 있습니다.
           </p>
         </div>
         <!-- 총무 -->
@@ -227,8 +226,8 @@
           <p class="description">
             4조 조장을 맡게 된 허민입니다.<br />
             1학기 4조 조장님이 취업을 해서 조장직을 맡게 됐습니다.<br />
-            경력이 짧아 미숙하지만, 즐거운 분위기의 조가 될수 있도록 노력하겠습니다.<br />
-            잘 부탁드립니다.
+            경력이 짧아 미숙하지만, 즐거운 분위기의 조가 될수 있도록<br />
+            노력하겠습니다. 잘 부탁드립니다.
           </p>
         </div>
         <!-- 5조 -->
@@ -250,6 +249,13 @@
             부회장겸 5조 조장을 맡고 있는 오병헌입니다.<br />
             주로 WEB관련 스터디와 프로젝트를 진행 할 예정입니다.
           </p>
+          <div class="hashteg-wrap">
+            <span class="hashteg">#JavaScript</span>
+            <span class="hashteg">#HTML5,CSS3</span>
+            <span class="hashteg">#Frontend</span>
+            <span class="hashteg">#Web</span>
+            <span class="hashteg">#Node.js</span>
+          </div>
         </div>
         <!-- 6조 -->
         <div
@@ -293,7 +299,7 @@
   .executives__section {
     position: relative;
     margin-top: 40rem;
-    
+
     color: #000;
     // height: 380vh;
     .container {
@@ -378,6 +384,18 @@
           text-align: center;
           font-size: 1.2rem;
           margin-top: 10px;
+        }
+        .hashteg-wrap {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          align-items: center;
+          height: 50px;
+          padding: 1rem;
+          flex-wrap: wrap;
+          .hashteg {
+            padding: 10px;
+          }
         }
 
         align-items: center;
