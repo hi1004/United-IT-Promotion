@@ -21,7 +21,7 @@ export default {
     right: 30px;
     display: none;
     cursor: pointer;
-    z-index: 99;
+    z-index: 10000;
     cursor: pointer;
   }
 </style>

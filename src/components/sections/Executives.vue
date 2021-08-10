@@ -163,6 +163,9 @@
             Java에 관심있으신 분<br />
             스파르타로 성장 시켜드립니다.
           </p>
+          <div class="hashtag-wrap">
+            <span class="hashtag">#Java</span>
+          </div>
         </div>
         <!-- 2조 -->
         <div
@@ -185,6 +188,9 @@
             대신 함께하는 분위기의 조가 되도록 노력하겠습니다.<br />
             어떤 주제든 질문은 환영입니다. 잘 부탁드립니다.
           </p>
+          <div class="hashtag-wrap">
+            <span class="hashtag">#Java</span>
+          </div>
         </div>
         <!-- 3조 -->
         <div
@@ -207,6 +213,9 @@
             비로서 프로그래머가 될 수 있습니다. <br />
             동아리에서 다 같이 우리의 미래를 코딩해봅시다.
           </p>
+          <div class="hashtag-wrap">
+            <span class="hashtag">#Java</span>
+          </div>
         </div>
         <!-- 4조 -->
         <div
@@ -229,6 +238,9 @@
             경력이 짧아 미숙하지만, 즐거운 분위기의 조가 될수 있도록<br />
             노력하겠습니다. 잘 부탁드립니다.
           </p>
+          <div class="hashtag-wrap">
+            <span class="hashtag">#Java</span>
+          </div>
         </div>
         <!-- 5조 -->
         <div
@@ -249,12 +261,12 @@
             부회장겸 5조 조장을 맡고 있는 오병헌입니다.<br />
             주로 WEB관련 스터디와 프로젝트를 진행 할 예정입니다.
           </p>
-          <div class="hashteg-wrap">
-            <span class="hashteg">#JavaScript</span>
-            <span class="hashteg">#HTML5,CSS3</span>
-            <span class="hashteg">#Frontend</span>
-            <span class="hashteg">#Web</span>
-            <span class="hashteg">#Node.js</span>
+          <div class="hashtag-wrap">
+            <span class="hashtag">#Web</span>
+            <span class="hashtag">#Frontend</span>
+            <span class="hashtag">#Vue</span>
+            <span class="hashtag">#React</span>
+            <span class="hashtag">#Node</span>
           </div>
         </div>
         <!-- 6조 -->
@@ -276,6 +288,11 @@
             안녕하세요. 6조 조장을 맡고 있는 김동훈입니다.<br />
             목표는 초봉 4천 이상, 함께 하실 분 구합니다.
           </p>
+          <div class="hashtag-wrap">
+            <span class="hashtag">#Web</span>
+            <span class="hashtag">#Frontend</span>
+            <span class="hashtag">#Java</span>
+          </div>
         </div>
       </div>
     </div>
@@ -322,13 +339,13 @@
           .executives__title {
             width: 100%;
             font-family: 'Black Han Sans', sans-serif;
-            font-size: 4.5vw;
+            font-size: 4vw;
             padding: 0;
             position: absolute;
-            bottom: 10rem;
+            bottom: 0;
             text-align: center;
             z-index: 1;
-            color: rgb(64, 64, 64);
+            color: #fff;
           }
           .img-wrap {
             width: 100%;
@@ -385,7 +402,7 @@
           font-size: 1.2rem;
           margin-top: 10px;
         }
-        .hashteg-wrap {
+        .hashtag-wrap {
           display: flex;
           justify-content: center;
           width: 100%;
@@ -393,7 +410,7 @@
           height: 50px;
           padding: 1rem;
           flex-wrap: wrap;
-          .hashteg {
+          .hashtag {
             padding: 10px;
           }
         }

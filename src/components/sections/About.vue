@@ -51,7 +51,7 @@
         <img
           src="~/assets/video/poster.png"
           alt="poster" />
-        <span class="material-icons play-btn">
+        <span class="material-icons play-btn cursor__hover_el">
           play_circle_filled
         </span>
       </div>
@@ -64,7 +64,7 @@
             type="video/mp4" />
         </video>
         
-        <span class="material-icons close-btn">
+        <span class="material-icons close-btn cursor__hover_el">
           close
         </span>
       </div>
@@ -96,12 +96,14 @@
       .video__bg {
         width: 100%;
         height: 55vw;
-        background-color: gray;
         display: flex;
         justify-content: center;
         .video__content{
-          width: 80%;
+          width: 100%;
           height: auto;
+          position: absolute;
+          left: 0;
+          transform: scale(0.8);
         }
       }
       .about__description {
@@ -203,7 +205,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 10000;
+        z-index: 9999;
         background-color: rgba(0, 0, 0, 0.85);
         width: 100%;
         height: 100%;

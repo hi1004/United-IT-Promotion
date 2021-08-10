@@ -14,7 +14,6 @@ export default function () {
   /* SCROLL DISABLE */
   const bodyEl = document.querySelector('body');
   const canvases = document.querySelectorAll('.bg-canvas');
-
   setTimeout(function () {
     canvases.forEach(function (canvas) {
       gsap.to(canvas, 2, {
@@ -32,7 +31,7 @@ export default function () {
   const aboutTitleText = document.querySelector('#about .about__title h1');
   const videoContent = document.querySelector('.video__content');
 
-  /* SCROLL MAGIC - CHANGE TO ABOUT */
+  // /* SCROLL MAGIC - CHANGE TO ABOUT */
   function changeToAbout() {
     const changeToAboutEvent = new TimelineMax()
       .to(bodyEl, 2, {
@@ -44,16 +43,11 @@ export default function () {
 
     new ScrollMagic.Scene({
       triggerElement: aboutSection,
-      triggerHook: 0,
+      triggerHook: 0.7,
       duration: '100%',
     })
       .setTween(changeToAboutEvent)
-      .addIndicators({
-        name: 'changeToAbout',
-        colorTrigger: 'green',
-        colorStart: 'green',
-        colorEnd: 'green'
-      })
+      
       .addTo(controller);
   }
   changeToAbout();
@@ -135,7 +129,7 @@ export default function () {
   function aboutVideoAnimate() {
     const changeSize = new TimelineMax()
     .to(videoContent, 1, {
-      scale: 1.25
+      scale: 1
     });
     new ScrollMagic.Scene({
       triggerElement: aboutTitle,
@@ -175,10 +169,10 @@ export default function () {
   const executivesSection = document.querySelector('#executives');
   // const executivesRightBox = document.querySelector('#executives .right-box');
   const executivesLeftBox = document.querySelector('#executives .left-box');
-  const aboutVideoIntro = document.querySelector('#about .video-intro');
   const aboutSpacer = document.querySelector('#about .spacer');
   const executivesProfiles = document.querySelectorAll('.profile');
   const executivesImages = document.querySelectorAll('.img');
+  const abouVideoPoster = document.querySelector('.video-poster');
 
   // const executivesSpacer = document.querySelector('#executives .spacer');
 
@@ -189,7 +183,7 @@ export default function () {
       ease: 'power1.inOut',
     });
     new ScrollMagic.Scene({
-      triggerElement: aboutVideoIntro,
+      triggerElement: abouVideoPoster,
       triggerHook: 0.2,
       duration: '100%',
     })

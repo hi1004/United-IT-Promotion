@@ -257,6 +257,12 @@
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
       }
+      &:hover {
+        background-color: #0c5df4;
+        &::before {
+          color: #fff;
+        }
+      }
     }
 
     &__toggle {
@@ -266,6 +272,7 @@
       display: block;
       width: 100%;
       height: 100%;
+      
     }
 
     &__link {
