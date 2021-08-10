@@ -52,13 +52,15 @@
         init();
       });
       function init() {
-        if (bodyEl.width >= 1021) {
-          const navEls = document.querySelectorAll('.nav-link');
+         const navEls = document.querySelectorAll('.nav-link');
           const navEl_Last = navEls[navEls.length - 1];
+        if (bodyEl.width >= 1021) {
           navEl_Last.addEventListener('click', () => {
             window.location.reload();
           });
         }
+        navEl_Last.classList.add('btn')
+        navEl_Last.classList.add('btn-info')
       }
       init();
     },

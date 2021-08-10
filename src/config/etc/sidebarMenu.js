@@ -48,7 +48,7 @@ export default function(){
   const snLinks = document.querySelectorAll('.side-nav__link');
   const snNavBar = document.getElementById('navbar');  
 
-  const sectionSelectors = ['#intro', '#about', '#executives', '#activities']
+  const sectionSelectors = ['#intro', '#about', '#executives', '#activities', '#contact']
 
   /* active link on click */
   function linkActiveOnClick() {    
@@ -60,6 +60,7 @@ export default function(){
         snCollapseLink.classList.remove('rotate');
         snCollapseMenu.classList.remove('showCollapse');
       }
+      console.log(snLink)
     });    
     this.classList.add('color-active');
     if (this.classList.contains('collapse')&&snNavBar.classList.contains('expander')){        
@@ -195,6 +196,8 @@ export default function(){
       onLeaveBack: leaveSection    
     })
   })
+
+  
  
 }
 

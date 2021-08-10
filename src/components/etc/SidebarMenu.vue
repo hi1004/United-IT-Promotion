@@ -74,12 +74,18 @@
               class="collapse__sublink">3</a>
           </ul>
         </div>
+        <a
+          href="#"
+          class="side-nav__link">
+          <span class="material-icons"> contact_support </span>
+          <span class="side-nav__name">Contact</span>
+          <span class="side-nav__tooltip">Contact</span>
+        </a>
       </div>
       <div
         class="side-nav__brand cursor__hover_el"
         id="nav-toggle">
-        <div
-          class="side-nav__toggle">
+        <div class="side-nav__toggle">
           <span class="top"></span>
           <span class="mid"></span>
           <span class="bottom"></span>
@@ -111,16 +117,6 @@
             <span class="side-nav__tooltip">JP</span>
           </RouterLink>
         </div>
-        <div class="routeBtn nav-item">
-          <RouterLink
-            :to="'/contact'"
-            class="nav-link"
-            active-class="active">
-            <span class="material-icons"> contact_support </span>
-            CONTACT
-            <span class="side-nav__tooltip">CONTACT</span>
-          </RouterLink>
-        </div>
       </div>
     </div>
   </div>
@@ -131,7 +127,7 @@
   export default {
     mounted() {
       sidebarMenu();
-
+      /* CONTACT LINK */
       const bodyEl = document.querySelector('body');
       bodyEl.width = window.innerWidth;
 
@@ -216,6 +212,7 @@
       justify-content: space-between;
       width: 170px;
       height: 45px;
+      margin-bottom: 0.3rem;
       .logo-icon {
         width: 45px;
         height: 45px;
@@ -232,18 +229,18 @@
       justify-content: space-between;
       align-items: center;
       position: absolute;
-      top: 57%;
+      top: 15%;
       right: -20px;
       width: 40px;
       height: 40px;
       background-color: #f5f5f5;
       cursor: pointer;
-      border: 5px solid #12192C;
+      border: 5px solid #12192c;
       border-radius: 50%;
       padding: 0.75rem;
       &::before {
         content: '\f054';
-        font-family: "Font Awesome 5 Free";
+        font-family: 'Font Awesome 5 Free';
         position: absolute;
         width: 100%;
         height: 100%;
@@ -254,7 +251,7 @@
       }
       &.toggle-active::before {
         content: '\f053';
-        font-family: "Font Awesome 5 Free";
+        font-family: 'Font Awesome 5 Free';
         font-weight: 900;
       }
       &:hover {
@@ -272,7 +269,6 @@
       display: block;
       width: 100%;
       height: 100%;
-      
     }
 
     &__link {
@@ -283,7 +279,7 @@
       padding: 0.75rem;
       color: $white-color;
       border-radius: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.48rem;
       transition: 0.3s;
       cursor: pointer;
       &:hover {
@@ -392,9 +388,9 @@
   }
 
   /* hide ToolTip */
- .snToolTip-active {
-   display: none !important;
- }
+  .snToolTip-active {
+    display: none !important;
+  }
 
   .routeBtn {
     img {
@@ -409,7 +405,7 @@
       padding: 0.75rem;
       color: $white-color;
       border-radius: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.48rem;
       transition: 0.3s;
       cursor: pointer;
       &:hover {

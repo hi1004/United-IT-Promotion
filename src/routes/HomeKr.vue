@@ -5,6 +5,7 @@
   <About />
   <Executives />
   <Activities />
+  <Contact />
 </template>
 
 <script>
@@ -14,6 +15,7 @@
   import About from '~/components/sections/About';
   import Executives from '~/components/sections/Executives';
   import Activities from '../components/sections/Activities.vue';
+  import Contact from '../components/sections/Contact'
   import common from '~/config/common';
   import home from '~/config/routes/home';
 
@@ -31,6 +33,7 @@
       SidebarMenu,
       Executives,
       Activities,
+      Contact
     },
   };
 </script>
