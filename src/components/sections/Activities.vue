@@ -9,7 +9,7 @@
             <div class="content">
               <h1 class="slide__title">
                 개발자가 되기 위한 <span>자바/웹</span> 통합 스터디
-              </h1>
+              </h1> 
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corrupti omnis vel suscipit odit quod temporibus nihil mollitia, corporis est deleniti repellat saepe sunt voluptatibus obcaecati dolorum nemo, ut rerum.</p>
               <div class="slide__animation"></div>
             </div>
