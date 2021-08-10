@@ -45,25 +45,28 @@
         <span class="about__screamer">!</span>
       </div>
    
+      <!-- VIDEO INTRO -->
+      <div
+        class="video-poster">
+        <img
+          src="~/assets/video/poster.png"
+          alt="poster" />
+        <span class="material-icons play-btn">
+          play_circle_filled
+        </span>
+      </div>
       <div class="video-intro">
-        <div class="btn play-btn">
-          <span class="material-icons play-btn"> play_circle_filled </span>
-        </div>
-        <div class="btn close-btn">
-          <span class="material-icons">
-            close
-          </span>
-        </div>
-
-        <div class="intro-video-wrap">
-          <video
-            src="~/assets/video/intro_video.mp4"
-            muted>
-            <source
-              src="data/comp.ogv"
-              type="video/mp4" />
-          </video>
-        </div>
+        <video
+          src="~/assets/video/intro_video.mp4"
+          controls="true">
+          <source
+            src="data/comp.ogv"
+            type="video/mp4" />
+        </video>
+        
+        <span class="material-icons close-btn">
+          close
+        </span>
       </div>
 
       <div
@@ -163,46 +166,73 @@
           }
         }
       }
-      .video-intro {
+      .video-poster {
         width: 100%;
+        height: 100%;
         position: relative;
-        .play-btn {
+        img {
+          width: 100%;
+          display: block;
+          opacity: 1;
+        }
+         .play-btn {
           position: absolute;
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
           z-index: 1;
+          cursor: pointer;
+          font-size: 15vw;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fdc000;
+          transition: .5s;
+          background-color: rgba(0, 0, 0, 0.6);
           &:hover {
             opacity: .8;
+            color: #fff;
           }
-          span {
-            color: #fdc000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 15vw;
-            
-          }
+        
+        }
+      }
+      .video-intro {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+        background-color: rgba(0, 0, 0, 0.85);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        &.video-active {
+          visibility: visible;
+          opacity: 1;
+        }
+        video {
+          max-width: 900px;
+          outline: none;
         }
         .close-btn {
            position: absolute;
-            z-index: 1;
-            display: none;
-            top: 10%;
-            right: 0%;
-          span {
-           color: #fdc000;
+            top: 30px;
+            right: 30px;
+            cursor: pointer;
+            z-index: 10000;
+             color: #fdc000;
+             transition: .5s;
            font-size: 5vw;
-          }
+           &:hover {
+             color: #fff;
+           }
         }
-
-        .intro-video-wrap {
-          video {
-            width: 100%;
-            transition: all 0.5s;
-          }
-        }
-        
       }
       .spacer.sp2 {
         position: absolute;

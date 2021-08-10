@@ -16,7 +16,6 @@ export default function () {
   const canvases = document.querySelectorAll('.bg-canvas');
 
   setTimeout(function () {
-    bodyEl.style.position = 'relative';
     canvases.forEach(function (canvas) {
       gsap.to(canvas, 2, {
         opacity: 1,
@@ -24,6 +23,7 @@ export default function () {
       });
     });
   }, 2000);
+  
 
   // ---------------------------------------ABOUT----------------------------------------------
 
@@ -44,10 +44,16 @@ export default function () {
 
     new ScrollMagic.Scene({
       triggerElement: aboutSection,
-      triggerHook: 0.7,
+      triggerHook: 0,
       duration: '100%',
     })
       .setTween(changeToAboutEvent)
+      .addIndicators({
+        name: 'changeToAbout',
+        colorTrigger: 'green',
+        colorStart: 'green',
+        colorEnd: 'green'
+      })
       .addTo(controller);
   }
   changeToAbout();
@@ -141,85 +147,28 @@ export default function () {
   }
   aboutVideoAnimate();
 
-  function videoBtnPlay() {
-    const videoPlayBtn = aboutSection.querySelector('.video-intro .play-btn');
-    const videocloseBtn = aboutSection.querySelector('.video-intro .close-btn');
-    const introVideo = aboutSection.querySelector('.video-intro video');
-    function playEvent(el) {
-      el.addEventListener('click', () => {
-        introVideo.play();
-        gsap.to(videoPlayBtn, 1, {
-          display: 'none',
-          opacity: 0,
-        });
-        gsap.to(videocloseBtn, .5, {
-          display: 'block',
-          opacity: 1,
-        });
-        gsap.to(aboutVideoIntro, .5, {
-          width: '100%',
-          position: 'fixed',
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)', 
-        });
-        gsap.to(bodyEl, 1, {
-          overflowY: 'hidden',
-        });
-        gsap.to('#app',1,{
-          backgroundColor: '#fdc00075'
-        });
-        gsap.to('#navbar',.5, { 
-          opacity:0,
-          display: 'none',
-          left: '-92px'
-        })
-        executivesTitle.style.display = 'none';
-        introVideo.style.hover = 'unset'
-      });
-    }   
-      playEvent(videoPlayBtn);
-   
-    function closeEvent(el){
-      el.addEventListener('click', () => {
-      
-        introVideo.pause();
-        gsap.to(videoPlayBtn, 1, {
-          display: 'block',
-          opacity: 1,
-        });
-        gsap.to(videocloseBtn, .5, {
-          display: 'none',
-          opacity: 0,
-        });
-        gsap.to(aboutVideoIntro, .5, {
-          width: '100%',
-          position: 'relative',
-          left: '0%',
-          top: '0%',
-          transform: 'translate(0%, 0%)',
-          scale: 1
-        });
-        gsap.to(bodyEl, 1, {
-          overflowY: 'auto',
-          
-        });
-        gsap.to('#app',1,{
-          backgroundColor: 'unset'
-          
-        });
-        gsap.to('#navbar',.5, { 
-          opacity:1,
-          display: 'block',
-          left: 0
-        })
-        executivesTitle.style.display = 'block';
-      });
-    }
-    closeEvent(videocloseBtn);
-   
+  function videoToggle() {
+    const videoIntro = aboutSection.querySelector('.video-intro');
+    const videoPlayBtn = aboutSection.querySelector('.play-btn')
+    const videoCloseBtn = aboutSection.querySelector('.close-btn')
+    const video = videoIntro.querySelector('video');
+    
+    
+    videoPlayBtn.addEventListener('click',()=>{
+      videoIntro.classList.toggle('video-active')
+      bodyEl.style.overflowY="hidden"
+      video.play();
+      video.currentTime = 0;
+    })
+    videoCloseBtn.addEventListener('click',()=>{
+      bodyEl.style.overflowY="unset"
+      videoIntro.classList.toggle('video-active')
+      video.currentTime = 0;
+      video.pause();
+    })
+    
   }
-  videoBtnPlay();
+  videoToggle();
 
   // ---------------------------------------EXECUTIVES----------------------------------------------
 

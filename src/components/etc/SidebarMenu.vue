@@ -178,7 +178,6 @@
     box-sizing: border-box;
   }
   body {
-    position: relative;
     margin: 0;
     padding: 0 0 0 92px;
     font-family: $body-font;

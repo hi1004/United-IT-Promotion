@@ -8,7 +8,7 @@
       <span>i</span>
       <span>n</span>
       <span>g</span>
-      <span>...<span> </span></span>
+      <span>...</span>
     </h2>
   </div>
 </template>
@@ -20,17 +20,23 @@
     font-family: consolas;
   }
   #load {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #171818;
+    z-index: 10000;
     h2 {
       color: #171818;
       font-size: 6rem;  
       display: flex;
       span {
-        animation: animate 4s linear infinite;
+        animation: animate 2s linear infinite;
         &:nth-child(1) {
           animation-delay: 0s;
         }
