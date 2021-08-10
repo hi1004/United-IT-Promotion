@@ -14,53 +14,53 @@
             <div class="img-box">
               <img
                 class="img"
-                src="~/assets/executives/office.png"
+                src="~/assets/executives_symbol/ex_kaichou.png"
                 alt="office" />
               <img
                 class="img"
-                src="~/assets/executives/office.png"
+                src="~/assets/executives_symbol/ex_fukukaichou.png"
                 alt="office" />
               <img
                 class="img"
-                src="~/assets/executives/office.png"
+                src="~/assets/executives_symbol/office.png"
                 alt="office" />
               <img
                 class="img"
-                src="~/assets/executives/office.png"
+                src="~/assets/executives_symbol/office.png"
                 alt="office" />
               <img
                 class="img"
-                src="~/assets/logo/group1.png"
+                src="~/assets/executives_symbol/group1.png"
                 alt="group-logo" />
             </div>
             <div class="img-box">
               <img
                 class="img"
-                src="~/assets/logo/group2.png"
+                src="~/assets/executives_symbol/group2.png"
                 alt="group-logo" />
             </div>
             <div class="img-box">
               <img
                 class="img"
-                src="~/assets/logo/group3.png"
+                src="~/assets/executives_symbol/group3.png"
                 alt="group-logo" />
             </div>
             <div class="img-box">
               <img
                 class="img"
-                src="~/assets/logo/group4.png"
+                src="~/assets/executives_symbol/group4.png"
                 alt="group-logo" />
             </div>
             <div class="img-box">
               <img
                 class="img"
-                src="~/assets/logo/group5.png"
+                src="~/assets/executives_symbol/group5.png"
                 alt="group-logo" />
             </div>
             <div class="img-box">
               <img
                 class="img"
-                src="~/assets/logo/group6.png"
+                src="~/assets/executives_symbol/group6.png"
                 alt="group-logo" />
             </div>
           </div>
@@ -164,7 +164,7 @@
             스파르타로 성장 시켜드립니다.
           </p>
           <div class="hashtag-wrap">
-            <span class="hashtag">#Java</span>
+            <span class="hashtag tag_java">#Java</span>
           </div>
         </div>
         <!-- 2조 -->
@@ -189,7 +189,7 @@
             어떤 주제든 질문은 환영입니다. 잘 부탁드립니다.
           </p>
           <div class="hashtag-wrap">
-            <span class="hashtag">#Java</span>
+            <span class="hashtag tag_java">#Java</span>
           </div>
         </div>
         <!-- 3조 -->
@@ -214,7 +214,7 @@
             동아리에서 다 같이 우리의 미래를 코딩해봅시다.
           </p>
           <div class="hashtag-wrap">
-            <span class="hashtag">#Java</span>
+            <span class="hashtag tag_java">#Java</span>
           </div>
         </div>
         <!-- 4조 -->
@@ -239,7 +239,7 @@
             노력하겠습니다. 잘 부탁드립니다.
           </p>
           <div class="hashtag-wrap">
-            <span class="hashtag">#Java</span>
+            <span class="hashtag tag_java">#Java</span>
           </div>
         </div>
         <!-- 5조 -->
@@ -262,11 +262,11 @@
             주로 WEB관련 스터디와 프로젝트를 진행 할 예정입니다.
           </p>
           <div class="hashtag-wrap">
-            <span class="hashtag">#Web</span>
-            <span class="hashtag">#Frontend</span>
-            <span class="hashtag">#Vue</span>
-            <span class="hashtag">#React</span>
-            <span class="hashtag">#Node</span>
+            <span class="hashtag tag_web">#Web</span>
+            <span class="hashtag tag_frontend">#Frontend</span>
+            <span class="hashtag tag_vue">#Vue</span>
+            <span class="hashtag tag_react">#React</span>
+            <span class="hashtag tag_nodejs">#Node.js</span>
           </div>
         </div>
         <!-- 6조 -->
@@ -289,9 +289,9 @@
             목표는 초봉 4천 이상, 함께 하실 분 구합니다.
           </p>
           <div class="hashtag-wrap">
-            <span class="hashtag">#Web</span>
-            <span class="hashtag">#Frontend</span>
-            <span class="hashtag">#Java</span>
+            <span class="hashtag tag_web">#Web</span>
+            <span class="hashtag tag_frontend">#Frontend</span>
+            <span class="hashtag tag_java">#Java</span>
           </div>
         </div>
       </div>
@@ -411,7 +411,29 @@
           padding: 1rem;
           flex-wrap: wrap;
           .hashtag {
-            padding: 10px;
+            font-weight: 900;
+            padding: 5px 10px;
+            margin: 10px;
+            border-radius: 3rem;
+            color: white;
+            &.tag_java {
+              background-color: #B07219;
+            }
+            &.tag_react {
+              background-color: #3FD9F6;
+            }
+            &.tag_vue {
+              background-color: #41B883;
+            }
+            &.tag_nodejs {
+              background-color: #689F63;
+            }
+            &.tag_web {
+              background-color: #0D7ED5;
+            }
+            &.tag_frontend {
+              background-color: #EAB921;
+            }
           }
         }
 
