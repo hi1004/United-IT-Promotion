@@ -299,7 +299,7 @@
   .executives__section {
     position: relative;
     margin-top: 40rem;
-
+    margin-bottom: 20rem;
     color: #000;
     // height: 380vh;
     .container {
