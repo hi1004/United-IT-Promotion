@@ -412,26 +412,39 @@ export default function () {
   pinTitle();
 
   // ------------------------------ CONTACT ---------------------------------------------
-  const contactEl = document.querySelector('#contact');
-  const contactTitle = contactEl.querySelector('h2');
-  const contactBtn = contactEl.querySelector('a');
+  // const contactEl = document.querySelector('#contact');
+  // const contactTitle = contactEl.querySelector('h2');
+  // const contactBtn = contactEl.querySelector('a');
   function contactScrollTrigger() {
-    function enterSection() {
-      contactTitle.classList.add('show');
-      contactBtn.classList.add('show');
-    }
-    function leaveSection() {
-      contactTitle.classList.remove('show');
-      contactBtn.classList.remove('show');
-    }
-    ScrollTrigger.create({
-      trigger: '#contact',
-      start: 'top center',
-      onEnter: enterSection,
-      onLeave: leaveSection,
-      onEnterBack: enterSection,
-      onLeaveBack: leaveSection,
-    });
-  }
+  //   function enterSection() {
+  //     contactTitle.classList.add('show');
+  //     contactBtn.classList.add('show');
+  //   }
+  //   function leaveSection() {
+  //     contactTitle.classList.remove('show');
+  //     contactBtn.classList.remove('show');
+  //   }
+  //   ScrollTrigger.create({
+  //     trigger: '#contact',
+  //     start: 'top center',
+  //     onEnter: enterSection,
+  //     onLeave: leaveSection,
+  //     onEnterBack: enterSection,
+  //     onLeaveBack: leaveSection,
+  //   });
+  const controller = new ScrollMagic.Controller();
+  const spyEls = document.querySelectorAll('.back-to-position');
+  spyEls.forEach((spyEl) => {
+    new ScrollMagic.Scene({
+      triggerElement: spyEl,
+      triggerHook: 0.8,
+    })
+      .setClassToggle(spyEl, 'show')
+      .addTo(controller);
+  });
+   }
+
+  
   contactScrollTrigger();
-} // end
+
+}

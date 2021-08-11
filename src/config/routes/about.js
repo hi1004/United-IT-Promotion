@@ -44,7 +44,7 @@ export default function() {
   });
 
   const controller = new ScrollMagic.Controller();
-  const spyEls = document.querySelectorAll('.scroll-spy');
+  const spyEls = document.querySelectorAll('.back-to-position');
   spyEls.forEach((spyEl) => {
     new ScrollMagic.Scene({
       triggerElement: spyEl,
