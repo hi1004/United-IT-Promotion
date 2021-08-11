@@ -4,13 +4,12 @@
     id="contact">
     <div class="contact__title_wrap">
       <h2
-        id="contact__title"
-        class="back-to-position to-top">
+        id="contact__title">
       </h2>
     </div>    
     <RouterLink
       :to="'/contact'"
-      class="nav-link btn btn-info back-to-position to-top delay-5"
+      class="nav-link btn btn-info back-to-position to-top delay-3s"
       active-class="active">
       <span class="material-icons">contact_support</span>
       CONTACT
@@ -31,6 +30,7 @@
   font-family: 'Black Han Sans', sans-serif;
   #contact__title {
     font-size: 5rem;
+    margin: 5vh 0;
     &:after {
       font-size: 5rem;
       content: 'Ι';
