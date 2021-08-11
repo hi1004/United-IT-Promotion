@@ -17,10 +17,10 @@
     <!-- CONTACT -->
     <section class="contact2 section">
       <div class="container2 scroll-spy">
-        <h1 class="contact__title back-to-position delay-0 to-bottom">
+        <h1 class="contact__title back-to-position delay-0 to-top">
           Contact Us
         </h1>
-        <div class="contact__box2 back-to-position delay-1 to-bottom">
+        <div class="contact__box2 back-to-position delay-1 to-top">
           <a
             class="contact__btn"
             href="mailto:wkdgusdk20@gmail.com@gmile.com">
