@@ -30,7 +30,7 @@
     align-items: center;
     min-height: 100vh;
     background-color: #171818;
-    z-index: 10000;
+    z-index: 9999;
     h2 {
       color: #171818;
       font-size: 6rem;  

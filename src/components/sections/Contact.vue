@@ -2,41 +2,19 @@
   <section
     class="contect__section"
     id="contact">
-    <h2>궁금한 사항이 있으신가요?</h2>
+    <h2 class="back-to-position to-bottom delay-0">
+      가입 신청 및 문의하기
+    </h2>
     <RouterLink
       :to="'/contact'"
-      class="nav-link btn btn-info"
+      class="nav-link btn btn-info back-to-position to-bottom delay-1"
       active-class="active">
       <span class="material-icons">contact_support</span>
       CONTACT
     </RouterLink>
   </section>
 </template>
-<script>
-export default {
-  mounted() {
-    /* CONTACT LINK */
-  const bodyEl = document.querySelector('body');
-  bodyEl.width = window.innerWidth;
 
-  window.addEventListener('resize', () => {
-    bodyEl.width = window.innerWidth;
-    init();
-  });
-  function init() {
-    if (bodyEl.width >= 1021) {
-      const navEls = document.querySelectorAll('.nav-link');
-      const navEl_Last = navEls[navEls.length - 1];
-      navEl_Last.addEventListener('click', () => {
-        window.location.reload();
-      });
-    }
-  }
-  init();
- 
-  }
-}
-</script>
 
 
 <style lang="scss" scoped>
@@ -61,6 +39,11 @@ export default {
      height: 80px;
   width: 300px;
   margin: 2rem 0;
+  font-size: 2rem;
+  span {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
  
   }
 }

@@ -32,7 +32,7 @@ export default function(){
 
         if(snNavBar.classList.contains('expander')){
           snLinks.forEach((snLink) => {
-            if(snLink.classList.contains('color-active')){
+            if(snLink.classList.contains('color-active')&& snLink.classList.contains('collapse')){
               snLink.querySelector('.collapse__link').classList.add('rotate')
               snLink.querySelector('.collapse__menu').classList.add('showCollapse')
             }
