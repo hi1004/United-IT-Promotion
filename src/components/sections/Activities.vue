@@ -7,13 +7,13 @@
         <section class="slide__content first">
           <div class="banner first__banner">
             <div class="content">
-              <h1 class="slide__title">
+              <h1 class="slide__title back-to-position to-top">
                 PROGRAMMING STUDY
               </h1>
-              <h2 class="slide-sub__title">
+              <h2 class="slide__subtitle back-to-position to-top delay-1">
                 개발자가 되기 위한 <span>자바/웹</span> 통합 스터디
               </h2>
-              <p>
+              <p class="slide__paragraph back-to-position to-top delay-2">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corrupti omnis vel
                 suscipit odit quod temporibus nihil mollitia, corporis est deleniti repellat saepe
                 sunt voluptatibus obcaecati dolorum nemo, ut rerum.
@@ -22,15 +22,15 @@
           </div>
         </section>
         <section class="slide__content second">
-          <div class="banner first__banner">
+          <div class="banner second__banner">
             <div class="content">
-              <h1 class="slide__title">
-                PROGRAMMING STUDY
+              <h1 class="slide__title back-to-position scroll-spy to-top">
+                KR↔JP EXCHANGE
               </h1>
-              <h2 class="slide-sub__title">
-                개발자가 되기 위한 <span>자바/웹</span> 통합 스터디
+              <h2 class="slide__subtitle back-to-position scroll-spy to-top delay-1">
+                일본인 친구들과 언어 교류
               </h2>
-              <p>
+              <p class="slide__paragraph back-to-position scroll-spy to-top delay-2">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corrupti omnis vel
                 suscipit odit quod temporibus nihil mollitia, corporis est deleniti repellat saepe
                 sunt voluptatibus obcaecati dolorum nemo, ut rerum.
@@ -39,15 +39,15 @@
           </div>
         </section>
         <section class="slide__content third">
-          <div class="banner first__banner">
+          <div class="banner third__banner">
             <div class="content">
-              <h1 class="slide__title">
-                PROGRAMMING STUDY
+              <h1 class="slide__title back-to-position to-top">
+                JOB STUDY
               </h1>
-              <h2 class="slide-sub__title">
-                개발자가 되기 위한 <span>자바/웹</span> 통합 스터디
+              <h2 class="slide__subtitle back-to-position to-top delay-1">
+                일본 취업을 위한 다양한 활동들
               </h2>
-              <p>
+              <p class="slide__paragraph back-to-position to-top delay-2">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corrupti omnis vel
                 suscipit odit quod temporibus nihil mollitia, corporis est deleniti repellat saepe
                 sunt voluptatibus obcaecati dolorum nemo, ut rerum.
@@ -80,10 +80,10 @@
         class="slide__space"></div>
       <div
         id="second_space"
-        class="slide__space second_space"></div>
+        class="slide__space"></div>
       <div
         id="third_space"
-        class="slide__space third_space"></div>
+        class="slide__space"></div>
     </div>
   </section>
 </template>
@@ -134,8 +134,27 @@
           align-items: center;
           &.first__banner {
             background: url('~/assets/activity/activity_study.jpg');
-              background-position: center;
-          background-size: cover;
+            background-position: center;
+            background-size: cover;
+            .slide__title {
+              color: lightgoldenrodyellow;
+            }
+          }
+          &.second__banner {
+            background: url('~/assets/activity/activity_study.jpg');
+            background-position: center;
+            background-size: cover;
+            .slide__title {
+              color: pink;
+            }
+          }
+          &.third__banner {
+            background: url('~/assets/activity/activity_study.jpg');
+            background-position: center;
+            background-size: cover;
+            .slide__title {
+              color: aqua;
+            }
           }
           .content {
             max-width: 550px;
@@ -146,7 +165,7 @@
               letter-spacing: 0.1rem;
               font-family: 'Black Han Sans', sans-serif;
             }
-            .slide-sub__title {
+            .slide__subtitle {
               font-size: 2.2rem;
               font-family: 'Black Han Sans', sans-serif;
               span {

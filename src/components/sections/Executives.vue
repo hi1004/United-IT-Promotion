@@ -22,11 +22,11 @@
                 alt="office" />
               <img
                 class="img"
-                src="~/assets/executives_symbol/office.png"
+                src="~/assets/executives_symbol/ex_soumu.png"
                 alt="office" />
               <img
                 class="img"
-                src="~/assets/executives_symbol/office.png"
+                src="~/assets/executives_symbol/ex_kouhou.png"
                 alt="office" />
               <img
                 class="img"

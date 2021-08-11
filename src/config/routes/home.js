@@ -340,6 +340,9 @@ export default function () {
   const slideSpaces = document.querySelectorAll('.slide__space');
   const slideWrap = document.querySelector('.slide__wrap');
   const slideContents = document.querySelectorAll('.slide__content');
+  const slideTitles = document.querySelectorAll('.slide__title');
+  const slideSubTitles = document.querySelectorAll('.slide__subtitle');
+  const slideParagraph = document.querySelectorAll('.slide__paragraph')
 
   /* SCROLL MAGIC - CHANGE TO ACTIVITIES */
   function changeToActivities() {
@@ -362,7 +365,6 @@ export default function () {
   changeToActivities();
 
   /* SLIDE WIPE */
-
   slideSpaces.forEach((slideSpace, i) => {
     const wipeSlide = new TimelineMax().to(slideContents[i], 1, { x: '-100%' });
     new ScrollMagic.Scene({
@@ -411,40 +413,72 @@ export default function () {
   }
   pinTitle();
 
-  // ------------------------------ CONTACT ---------------------------------------------
-  // const contactEl = document.querySelector('#contact');
-  // const contactTitle = contactEl.querySelector('h2');
-  // const contactBtn = contactEl.querySelector('a');
-  function contactScrollTrigger() {
-  //   function enterSection() {
-  //     contactTitle.classList.add('show');
-  //     contactBtn.classList.add('show');
-  //   }
-  //   function leaveSection() {
-  //     contactTitle.classList.remove('show');
-  //     contactBtn.classList.remove('show');
-  //   }
-  //   ScrollTrigger.create({
-  //     trigger: '#contact',
-  //     start: 'top center',
-  //     onEnter: enterSection,
-  //     onLeave: leaveSection,
-  //     onEnterBack: enterSection,
-  //     onLeaveBack: leaveSection,
-  //   });
-  const controller = new ScrollMagic.Controller();
-  const spyEls = document.querySelectorAll('.back-to-position');
-  spyEls.forEach((spyEl) => {
-    new ScrollMagic.Scene({
-      triggerElement: spyEl,
-      triggerHook: 0.8,
+  function activitiesContentTrigger(){       
+    slideSpaces.forEach((slideSpace, i)=>{   
+      if (i != 0) {     
+        ScrollTrigger.create({
+          trigger: slideSpace,
+          start: 'top center',
+          onEnter: ()=>{
+            slideTitles[i-1].classList.add('show')
+            slideSubTitles[i-1].classList.add('show')
+            slideParagraph[i-1].classList.add('show')
+          },
+          onLeave: ()=>{
+            slideTitles[i-1].classList.remove('show')
+            slideSubTitles[i-1].classList.remove('show')
+            slideParagraph[i-1].classList.remove('show')
+          },
+          onEnterBack: ()=>{
+            slideTitles[i-1].classList.add('show')
+            slideSubTitles[i-1].classList.add('show')
+            slideParagraph[i-1].classList.add('show')
+          },
+          onLeaveBack: ()=>{
+            slideTitles[i-1].classList.remove('show')
+            slideSubTitles[i-1].classList.remove('show')
+            slideParagraph[i-1].classList.remove('show')
+          },
+        });
+      }
     })
-      .setClassToggle(spyEl, 'show')
-      .addTo(controller);
-  });
-   }
+  }
+  activitiesContentTrigger()
 
-  
+  // ------------------------------ CONTACT ---------------------------------------------
+  const contactEl = document.querySelector('#contact');
+  const contactTitle = contactEl.querySelector('#contact__title');
+  const contactBtn = contactEl.querySelector('a');
+  function contactScrollTrigger() {
+    let text = '가입 신청 및 문의하기'
+    let i = 0
+    function contactTitleTyping() {
+      if(i<text.length){
+        contactTitle.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(contactTitleTyping, 120);
+      }
+    }    
+    function enterSection() {
+      contactTitle.classList.add('show');
+      contactBtn.classList.add('show');
+      contactTitleTyping();
+    }
+    function leaveSection() {
+      contactTitle.classList.remove('show');
+      contactBtn.classList.remove('show');
+      i = 0;
+      contactTitle.innerHTML = ''
+    }
+    ScrollTrigger.create({
+      trigger: '#contact',
+      start: 'top center',
+      onEnter: enterSection,
+      onLeave: leaveSection,
+      onEnterBack: enterSection,
+      onLeaveBack: leaveSection,
+    });
+  }
   contactScrollTrigger();
 
-}
+} //end
