@@ -1,11 +1,13 @@
 <template>
-  <Particles />
-  <Intro />
-  <SidebarMenu />
-  <About />
-  <Executives />
-  <Activities />
-  <Contact />
+  <div class="padding">
+    <Particles />
+    <Intro />
+    <SidebarMenu />
+    <About />
+    <Executives />
+    <Activities />
+    <Contact />
+  </div>
 </template>
 
 <script>
@@ -43,5 +45,8 @@
   .home-background {
     position: relative;
     z-index: 99;
+  }
+  .padding {
+    padding: 0 0 0 92px;
   }
 </style>

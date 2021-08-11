@@ -47,7 +47,7 @@
    
       <!-- VIDEO INTRO -->
       <div
-        class="video-poster">
+        class="video-poster back-to-position delay-0 to-bottom">
         <img
           src="~/assets/video/poster.png"
           alt="poster" />

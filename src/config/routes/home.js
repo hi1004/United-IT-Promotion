@@ -22,7 +22,6 @@ export default function () {
       });
     });
   }, 2000);
-  
 
   // ---------------------------------------ABOUT----------------------------------------------
 
@@ -47,68 +46,79 @@ export default function () {
       duration: '100%',
     })
       .setTween(changeToAboutEvent)
-      
+
       .addTo(controller);
   }
   changeToAbout();
 
   /* SCROLL TRIGGER - ABOUT DESCRIPTION EFFECT */
   function aboutDescriptionEffect() {
-    const aboutWords = document.querySelectorAll('.about__word')
-    const aboutWords02 = document.querySelectorAll('.about__word02')
-    const aboutScreamer = document.querySelector('.about__screamer')
+    const aboutWords = document.querySelectorAll('.about__word');
+    const aboutWords02 = document.querySelectorAll('.about__word02');
+    const aboutScreamer = document.querySelector('.about__screamer');
 
-    function enterDesc(){
-      aboutWords.forEach((word, i)=>{
-        setTimeout(()=>{word.classList.add('word_show')}, 50*i)
-      })        
+    function enterDesc() {
+      aboutWords.forEach((word, i) => {
+        setTimeout(() => {
+          word.classList.add('word_show');
+        }, 50 * i);
+      });
     }
-    function enterBackDesc(){
-      aboutWords.forEach((word, i)=>{
-        setTimeout(()=>{word.classList.add('word_show')}, 100*(aboutWords.length-1-i))
-      })        
+    function enterBackDesc() {
+      aboutWords.forEach((word, i) => {
+        setTimeout(() => {
+          word.classList.add('word_show');
+        }, 100 * (aboutWords.length - 1 - i));
+      });
     }
-    function leaveDesc(){
-      aboutWords.forEach((word)=>{
-        word.classList.remove('word_show')
-      })
+    function leaveDesc() {
+      aboutWords.forEach((word) => {
+        word.classList.remove('word_show');
+      });
     }
     ScrollTrigger.create({
       trigger: '.description01',
       onEnter: enterDesc,
       onEnterBack: enterBackDesc,
       onLeave: leaveDesc,
-      onLeaveBack: leaveDesc
-    })   
+      onLeaveBack: leaveDesc,
+    });
 
-
-    function enterDesc02(){
-      aboutWords02.forEach((word, i)=>{
-        setTimeout(()=>{word.classList.add('word_show')}, 100*i)
-      })        
-      setTimeout(()=>{aboutScreamer.classList.add('word_show')}, 350)
+    function enterDesc02() {
+      aboutWords02.forEach((word, i) => {
+        setTimeout(() => {
+          word.classList.add('word_show');
+        }, 100 * i);
+      });
+      setTimeout(() => {
+        aboutScreamer.classList.add('word_show');
+      }, 350);
     }
-    function enterBackDesc02(){
-      aboutWords02.forEach((word, i)=>{
-        setTimeout(()=>{word.classList.add('word_show')}, 100*(aboutWords02.length-1-i))
-      })        
-      setTimeout(()=>{aboutScreamer.classList.add('word_show')}, 350)
+    function enterBackDesc02() {
+      aboutWords02.forEach((word, i) => {
+        setTimeout(() => {
+          word.classList.add('word_show');
+        }, 100 * (aboutWords02.length - 1 - i));
+      });
+      setTimeout(() => {
+        aboutScreamer.classList.add('word_show');
+      }, 350);
     }
-    function leaveDesc02(){
-      aboutWords02.forEach((word)=>{
-        word.classList.remove('word_show')
-      })
-      aboutScreamer.classList.remove('word_show')
+    function leaveDesc02() {
+      aboutWords02.forEach((word) => {
+        word.classList.remove('word_show');
+      });
+      aboutScreamer.classList.remove('word_show');
     }
     ScrollTrigger.create({
       trigger: '.description02',
       onEnter: enterDesc02,
       onEnterBack: enterBackDesc02,
       onLeave: leaveDesc02,
-      onLeaveBack: leaveDesc02
-    })
+      onLeaveBack: leaveDesc02,
+    });
   }
-  aboutDescriptionEffect()
+  aboutDescriptionEffect();
 
   /* SCROLL MAGIC - ABOUT TITLE ANIMATE */
   function aboutTitleAnimate() {
@@ -127,9 +137,8 @@ export default function () {
 
   /* SCROLL MAGIC - ABOUT VIDEO ANIMATE */
   function aboutVideoAnimate() {
-    const changeSize = new TimelineMax()
-    .to(videoContent, 1, {
-      scale: 1
+    const changeSize = new TimelineMax().to(videoContent, 1, {
+      scale: 1,
     });
     new ScrollMagic.Scene({
       triggerElement: aboutTitle,
@@ -143,26 +152,42 @@ export default function () {
 
   function videoToggle() {
     const videoIntro = aboutSection.querySelector('.video-intro');
-    const videoPlayBtn = aboutSection.querySelector('.play-btn')
-    const videoCloseBtn = aboutSection.querySelector('.close-btn')
+    const videoPlayBtn = aboutSection.querySelector('.play-btn');
+    const videoCloseBtn = aboutSection.querySelector('.close-btn');
     const video = videoIntro.querySelector('video');
-    
-    
-    videoPlayBtn.addEventListener('click',()=>{
-      videoIntro.classList.toggle('video-active')
-      bodyEl.style.overflowY="hidden"
+
+    videoPlayBtn.addEventListener('click', () => {
+      videoIntro.classList.toggle('video-active');
+      bodyEl.style.overflowY = 'hidden';
       video.play();
       video.currentTime = 0;
-    })
-    videoCloseBtn.addEventListener('click',()=>{
-      bodyEl.style.overflowY="unset"
-      videoIntro.classList.toggle('video-active')
+    });
+    videoCloseBtn.addEventListener('click', () => {
+      bodyEl.style.overflowY = 'unset';
+      videoIntro.classList.toggle('video-active');
       video.currentTime = 0;
       video.pause();
-    })
-    
+    });
   }
   videoToggle();
+
+  function aboutScrollTrigger() {
+    const videoPoster = aboutSection.querySelector('.video-poster');
+    function enterSection() {
+      videoPoster.classList.add('show');
+    }
+    function leaveSection() {
+      videoPoster.classList.remove('show');
+    }
+    ScrollTrigger.create({
+      trigger: '.video-poster',
+      onEnter: enterSection,
+      onLeave: leaveSection,
+      onEnterBack: enterSection,
+      onLeaveBack: leaveSection,
+    });
+  }
+  aboutScrollTrigger();
 
   // ---------------------------------------EXECUTIVES----------------------------------------------
 
@@ -310,23 +335,22 @@ export default function () {
   executivesScrollStopAnimate();
 
   // ---------------------------------------ACTIVITIES----------------------------------------------
-  const activitiesContainer = document.querySelector('#activities__container')
+  const activitiesContainer = document.querySelector('#activities__container');
 
-  const slideSpaces = document.querySelectorAll('.slide__space')
-  const slideWrap = document.querySelector('.slide__wrap')
-  const slideContents = document.querySelectorAll('.slide__content')
-  
+  const slideSpaces = document.querySelectorAll('.slide__space');
+  const slideWrap = document.querySelector('.slide__wrap');
+  const slideContents = document.querySelectorAll('.slide__content');
 
   /* SCROLL MAGIC - CHANGE TO ACTIVITIES */
   function changeToActivities() {
     const changeToActivitiesEvent = new TimelineMax()
-    .to(bodyEl, 1, {
-      backgroundColor: '#f6f6f6',
-      ease: 'power1.inOut',
-    })
-    .to('#slide__index_title', 2, {
-      color: '#000',
-    })
+      .to(bodyEl, 1, {
+        backgroundColor: '#f6f6f6',
+        ease: 'power1.inOut',
+      })
+      .to('#slide__index_title', 2, {
+        color: '#000',
+      });
     new ScrollMagic.Scene({
       triggerElement: activitiesContainer,
       triggerHook: 1,
@@ -339,17 +363,16 @@ export default function () {
 
   /* SLIDE WIPE */
 
-  slideSpaces.forEach((slideSpace, i)=>{
-    const wipeSlide = new TimelineMax()
-      .to(slideContents[i], 1, { x: '-100%'})
+  slideSpaces.forEach((slideSpace, i) => {
+    const wipeSlide = new TimelineMax().to(slideContents[i], 1, { x: '-100%' });
     new ScrollMagic.Scene({
       triggerElement: slideSpace,
       triggerHook: 0,
       duration: '100%',
     })
       .setTween(wipeSlide)
-      .addTo(controller);    
-  })
+      .addTo(controller);
+  });
 
   function pinSlide() {
     new ScrollMagic.Scene({
@@ -358,18 +381,15 @@ export default function () {
       duration: '300%',
     })
       .setPin(slideWrap)
-      .addTo(controller); 
+      .addTo(controller);
   }
-  pinSlide()
-  
-        
-  
+  pinSlide();
+
   /* SLIDE INDEX TITLE */
   function resizeTitle() {
-    const titleResize = new TimelineMax()
-      .to('#slide__index_title', {
-        fontSize: '5vw',      
-      })
+    const titleResize = new TimelineMax().to('#slide__index_title', {
+      fontSize: '5vw',
+    });
     new ScrollMagic.Scene({
       triggerElement: slideSpaces[0],
       triggerHook: 0,
@@ -389,6 +409,29 @@ export default function () {
       .setPin('#slide__index_title')
       .addTo(controller);
   }
-  pinTitle();  
+  pinTitle();
 
+  // ------------------------------ CONTACT ---------------------------------------------
+  const contactEl = document.querySelector('#contact');
+  const contactTitle = contactEl.querySelector('h2');
+  const contactBtn = contactEl.querySelector('a');
+  function contactScrollTrigger() {
+    function enterSection() {
+      contactTitle.classList.add('show');
+      contactBtn.classList.add('show');
+    }
+    function leaveSection() {
+      contactTitle.classList.remove('show');
+      contactBtn.classList.remove('show');
+    }
+    ScrollTrigger.create({
+      trigger: '#contact',
+      start: 'top center',
+      onEnter: enterSection,
+      onLeave: leaveSection,
+      onEnterBack: enterSection,
+      onLeaveBack: leaveSection,
+    });
+  }
+  contactScrollTrigger();
 } // end

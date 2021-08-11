@@ -175,7 +175,7 @@
   }
   body {
     margin: 0;
-    padding: 0 0 0 92px;
+    // padding: 0 0 0 92px;
     font-family: $body-font;
     font-size: $normal-font-size;
     transition: 0.5s;
