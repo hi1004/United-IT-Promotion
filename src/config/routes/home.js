@@ -447,16 +447,28 @@ export default function () {
 
   // ------------------------------ CONTACT ---------------------------------------------
   const contactEl = document.querySelector('#contact');
-  const contactTitle = contactEl.querySelector('h2');
+  const contactTitle = contactEl.querySelector('#contact__title');
   const contactBtn = contactEl.querySelector('a');
   function contactScrollTrigger() {
+    let text = '가입 신청 및 문의하기'
+    let i = 0
+    function contactTitleTyping() {
+      if(i<text.length){
+        contactTitle.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(contactTitleTyping, 120);
+      }
+    }    
     function enterSection() {
       contactTitle.classList.add('show');
       contactBtn.classList.add('show');
+      contactTitleTyping();
     }
     function leaveSection() {
       contactTitle.classList.remove('show');
       contactBtn.classList.remove('show');
+      i = 0;
+      contactTitle.innerHTML = ''
     }
     ScrollTrigger.create({
       trigger: '#contact',
