@@ -35,16 +35,20 @@
       font-size: 5rem;
       content: 'Ι';
       animation-name: twinkling;
-      animation-duration: .8s;
+      animation-duration: .5s;
       animation-direction: alternate;
       animation-iteration-count: infinite;
+      animation-timing-function: step-end;
     }
     @keyframes twinkling {
       0% {
         opacity: 0;
       }      
-      100% {
+      50% {
         opacity: 1;
+      }
+      100%{
+        opacity: 0;
       }
     }
   }
@@ -53,10 +57,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-     height: 80px;
-  width: 300px;
-  margin: 2rem 0;
-  font-size: 2rem;
+    height: 80px;
+    width: 300px;
+    margin: 2rem 0;
+    font-size: 2rem;    
     span {
       font-size: 2rem;
       margin-right: 10px;

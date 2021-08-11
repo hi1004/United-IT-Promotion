@@ -456,7 +456,7 @@ export default function () {
       if(i<text.length){
         contactTitle.innerHTML += text.charAt(i);
         i++;
-        setTimeout(contactTitleTyping, 120);
+        setTimeout(contactTitleTyping, 150);
       }
     }    
     function enterSection() {
