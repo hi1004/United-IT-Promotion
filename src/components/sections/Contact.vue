@@ -2,12 +2,12 @@
   <section
     class="contect__section"
     id="contact">
-    <h2 class="back-to-position to-bottom delay-0">
+    <h2 class="back-to-position to-top delay-0">
       가입 신청 및 문의하기
     </h2>
     <RouterLink
       :to="'/contact'"
-      class="nav-link btn btn-info back-to-position to-bottom delay-1"
+      class="nav-link btn btn-info back-to-position to-top delay-1"
       active-class="active">
       <span class="material-icons">contact_support</span>
       CONTACT

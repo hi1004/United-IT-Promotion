@@ -340,6 +340,9 @@ export default function () {
   const slideSpaces = document.querySelectorAll('.slide__space');
   const slideWrap = document.querySelector('.slide__wrap');
   const slideContents = document.querySelectorAll('.slide__content');
+  const slideTitles = document.querySelectorAll('.slide__title');
+  const slideSubTitles = document.querySelectorAll('.slide__subtitle');
+  const slideParagraph = document.querySelectorAll('.slide__paragraph')
 
   /* SCROLL MAGIC - CHANGE TO ACTIVITIES */
   function changeToActivities() {
@@ -362,7 +365,6 @@ export default function () {
   changeToActivities();
 
   /* SLIDE WIPE */
-
   slideSpaces.forEach((slideSpace, i) => {
     const wipeSlide = new TimelineMax().to(slideContents[i], 1, { x: '-100%' });
     new ScrollMagic.Scene({
@@ -384,6 +386,38 @@ export default function () {
       .addTo(controller);
   }
   pinSlide();
+
+  function activitiesContentTrigger(){       
+    slideSpaces.forEach((slideSpace, i)=>{      
+      if (i != 0) {     
+        ScrollTrigger.create({
+          trigger: slideSpace,
+          start: 'top center',
+          onEnter: ()=>{
+            slideTitles[i-1].classList.add('show')
+            slideSubTitles[i-1].classList.add('show')
+            slideParagraph[i-1].classList.add('show')
+          },
+          onLeave: ()=>{
+            slideTitles[i-1].classList.remove('show')
+            slideSubTitles[i-1].classList.remove('show')
+            slideParagraph[i-1].classList.remove('show')
+          },
+          onEnterBack: ()=>{
+            slideTitles[i-1].classList.add('show')
+            slideSubTitles[i-1].classList.add('show')
+            slideParagraph[i-1].classList.add('show')
+          },
+          onLeaveBack: ()=>{
+            slideTitles[i-1].classList.remove('show')
+            slideSubTitles[i-1].classList.remove('show')
+            slideParagraph[i-1].classList.remove('show')
+          },
+        });
+      }
+    })
+  }
+  activitiesContentTrigger()
 
   /* SLIDE INDEX TITLE */
   function resizeTitle() {

@@ -50,10 +50,10 @@ body {
         transform: translateX(150px);
         text-align: right;
       }
-      &.to-top {
+      &.to-bottom {
         transform: translateY(100px);
       }
-      &.to-bottom {
+      &.to-top {
         transform: translateY(-50px);
       }
       &.delay-0 {
