@@ -64,7 +64,7 @@
     span {
       font-size: 2rem;
       margin-right: 10px;
-    } 
+    }
   }
 }
 </style>

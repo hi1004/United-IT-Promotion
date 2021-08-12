@@ -455,14 +455,18 @@ export default function () {
     function contactTitleTyping() {
       if(i<text.length){
         contactTitle.innerHTML += text.charAt(i);
+        contactTitle.style.fontSize = '5rem';
         i++;
         setTimeout(contactTitleTyping, 120);
+      }else {
+        contactTitle.style.fontSize = '6rem';
       }
-    }    
+    }
     function enterSection() {
       contactTitle.classList.add('show');
       contactBtn.classList.add('show');
       contactTitleTyping();
+     
     }
     function leaveSection() {
       contactTitle.classList.remove('show');
@@ -480,5 +484,6 @@ export default function () {
     });
   }
   contactScrollTrigger();
+  
 
 } //end
