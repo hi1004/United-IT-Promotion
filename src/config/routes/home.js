@@ -348,11 +348,11 @@ export default function () {
   function changeToActivities() {
     const changeToActivitiesEvent = new TimelineMax()
       .to(bodyEl, 1, {
-        backgroundColor: '#f6f6f6',
+        backgroundColor: '#000',
         ease: 'power1.inOut',
       })
       .to('#slide__index_title', 2, {
-        color: '#000',
+        color: '#fff',
       });
     new ScrollMagic.Scene({
       triggerElement: activitiesContainer,
@@ -419,7 +419,6 @@ export default function () {
     const textResize = new TimelineMax().to('.slide__index_text', {
       color: 'red',
       x: -window.innerWidth,
-      fontSize: '1vw'
      });
     new ScrollMagic.Scene({
       triggerElement: slideSpaces[0],

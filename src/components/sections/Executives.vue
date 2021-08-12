@@ -86,6 +86,11 @@
           <p class="description">
             삼성회장이 꿈입니다.
           </p>
+          <div class="hashtag-wrap">
+            <span class="hashtag">#족장</span>  
+            <span class="hashtag">#우가우가</span>  
+            <span class="hashtag">#비주얼</span>  
+          </div>
         </div>
         <!-- 부회장 -->
         <div
@@ -165,6 +170,9 @@
           </p>
           <div class="hashtag-wrap">
             <span class="hashtag tag_java">#Java</span>
+            <span class="hashtag">#족장</span>  
+            <span class="hashtag">#우가우가</span>  
+            <span class="hashtag">#비주얼</span>  
           </div>
         </div>
         <!-- 2조 -->
