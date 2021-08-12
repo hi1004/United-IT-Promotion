@@ -1,5 +1,6 @@
 <template>
   <div class="padding">
+    <MoNav />
     <Particles />
     <Intro />
     <SidebarMenu />
@@ -17,10 +18,11 @@
   import About from '~/components/sections/About';
   import Executives from '~/components/sections/Executives';
   import Activities from '../components/sections/Activities.vue';
-  import Contact from '../components/sections/Contact'
+  import Contact from '../components/sections/Contact';
+  import MoNav from '../components/mobile/MoNav.vue';
   import common from '~/config/common';
   import home from '~/config/routes/home';
- 
+
   export default {
     mounted() {
       common();
@@ -33,7 +35,8 @@
       SidebarMenu,
       Executives,
       Activities,
-      Contact
+      Contact,
+      MoNav,
     },
   };
 </script>
@@ -44,12 +47,15 @@
     position: relative;
     z-index: 99;
   }
-  .padding {
+  @media screen and (min-width: 769px) {
+    
+    .padding {
       transition: 0.5s;
-    padding: 0 0 0 92px;
-    &.body-padding {
-    padding: 0;
-  }
+      padding: 0 0 0 92px;
+      &.body-padding {
+        padding: 0;
+      }
+    }
   }
   
 </style>

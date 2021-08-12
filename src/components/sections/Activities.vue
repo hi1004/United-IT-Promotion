@@ -68,6 +68,12 @@
           EFFECTS OF THE<br />
           GLOBAL PANDEMIC?<br />
         </div>
+        <div class="slide__index_images">
+          <img
+            class="slide__index_img"
+            src="~/assets/activity/roket01.png"
+            alt="" />
+        </div>
       </div>
       <div
         id="first_space"
@@ -169,7 +175,6 @@
                 font-size: 1.2rem;
                 font-weight: 300;
                 letter-spacing: 0.02rem;
-
                 margin: 15px 0 35px;
               }
             }
@@ -214,17 +219,25 @@
         top: 5vh;
         font-family: 'Black Han Sans', sans-serif;
         font-size: 12vw;
-        color: white;
+        color: #fff;
       }
       .slide__index_text {
         position: absolute;
         font-size: 3vw;
-        color: #000;
+        color: #fff;
         font-family: 'Black Han Sans', sans-serif;
         right: 0;
         top: 50vh;
         width: 500px;
         // transform: translate(-50%, -50%);
+      }
+      .slide__index_images {
+        img {
+          position: absolute;
+          width: 50px;
+          bottom: 0;
+          left: 0;
+        }
       }
       .slide__index_description {
         position: absolute;

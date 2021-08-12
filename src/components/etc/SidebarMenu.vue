@@ -173,6 +173,7 @@
   ::after {
     box-sizing: border-box;
   }
+  
   body {
     margin: 0;
     font-family: $body-font;
@@ -449,6 +450,11 @@
           }
         }
       }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #navbar {
+      display: none;
     }
   }
 </style>
