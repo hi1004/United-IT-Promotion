@@ -68,11 +68,6 @@
           EFFECTS OF THE<br />
           GLOBAL PANDEMIC?<br />
         </div>
-        <div class="slide__index_description">
-          <img
-            src="~/assets/activity/activity_study.png"
-            alt="" />
-        </div>
       </div>
       <div
         id="first_space"
@@ -226,7 +221,7 @@
         font-size: 3vw;
         color: #000;
         font-family: 'Black Han Sans', sans-serif;
-        left: 7vw;
+        right: 0;
         top: 50vh;
         width: 500px;
         // transform: translate(-50%, -50%);

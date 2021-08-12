@@ -415,8 +415,11 @@ export default function () {
   pinTitle();
 
   function pinText() {
+    
     const textResize = new TimelineMax().to('.slide__index_text', {
-      color: 'red'
+      color: 'red',
+      x: -window.innerWidth,
+      fontSize: '1vw'
      });
     new ScrollMagic.Scene({
       triggerElement: slideSpaces[0],
@@ -424,12 +427,6 @@ export default function () {
       duration: '100%',
     })
       .setPin('.slide__index_text')
-      .addIndicators({
-        name: 'slide__index_text',
-        colorStart: 'red',
-        colorTrigger: 'red',
-        colorEnd: 'red'
-      })
       .setTween(textResize)
       .addTo(controller);
   }
@@ -504,18 +501,24 @@ export default function () {
         contactTitle.innerHTML = text[i];
         setTimeout(contactTitleTyping, typingSpeed);
         i++;
+      }else {
+        i = 0;
+        setTimeout(()=>{
+          contactTitle.innerHTML = '';
+        },2000)
       }
     }
     function enterSection() {
       contactTitle.classList.add('show');
       contactBtn.classList.add('show');
-      setTimeout(contactTitleTyping, 500);
+      // setTimeout(contactTitleTyping, 500);
+       setInterval(contactTitleTyping, 1500);
     }
     function leaveSection() {
       contactTitle.classList.remove('show');
       contactBtn.classList.remove('show');
       i = 0;
-      contactTitle.innerHTML = ''
+      contactTitle.innerHTML = '';
     }
     ScrollTrigger.create({
       trigger: '#contact',
