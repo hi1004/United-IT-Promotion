@@ -15,18 +15,18 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="contact2 section">
-      <div class="container2 scroll-spy">
-        <h1 class="contact__title back-to-position delay-0 to-top">
+    <section class="contactus section">
+      <div class="contactus__container scroll-spy">
+        <h1 class="contactus__title back-to-position delay-0 to-top">
           Contact Us
         </h1>
-        <div class="contact__box2 back-to-position delay-1 to-top">
+        <div class="contactus__box back-to-position delay-1 to-top">
           <a
-            class="contact__btn"
+            class="contactus__btn"
             href="mailto:wkdgusdk20@gmail.com@gmile.com">
-            <div class="contact__item">
+            <div class="contactus__item">
               <svg
-                class="contact__icon"
+                class="contactus__icon"
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -72,12 +72,12 @@
             </div>
           </a>
           <a
-            class="contact__btn"
+            class="contactus__btn"
             href="javascript:void(0)"
             onclick="void chatChannel();">
-            <div class="contact__item">
+            <div class="contactus__item">
               <svg
-                class="contact__icon"
+                class="contactus__icon"
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -90,7 +90,7 @@
                   d="M10.427 1C5.773 1 2 4.49 2 8.795c0 3.18 1.33 4.698 3.156 6.082l.01.004v3.732c0 .176.201.277.34.171l3.196-2.373.07.03c.535.099 1.09.151 1.655.151 4.655 0 8.427-3.49 8.427-7.795C18.854 4.491 15.082 1 10.427 1zm-2.824 9.77c.827 0 1.532-.495 1.745-1.258h1.221c-.298 1.47-1.443 2.433-2.966 2.433-1.77 0-3.175-1.322-3.175-3.16 0-1.839 1.404-3.158 3.175-3.158 1.54 0 2.691.983 2.975 2.478H9.36c-.186-.813-.916-1.319-1.757-1.319-1.191 0-1.984.85-1.984 2 0 1.152.9 1.984 1.984 1.984zm8.051 1.056h-1.12V9.299c0-.582-.339-.893-.859-.893-.582 0-.955.355-.955 1.076v2.344H11.6v-6.18h1.12V7.97c.268-.407.703-.607 1.294-.607.477 0 .868.156 1.173.477.314.32.47.756.47 1.32v2.665h-.003z"
                   fill="#000100" />
               </svg>
-              <h1><span>by</span> KakaoTalk</h1>
+              <h1><span>by</span>KakaoTalk</h1>
             </div>
           </a>
         </div>
@@ -147,109 +147,34 @@
   }
   #dotImage {
     z-index: -1;
-  }
-
-  /* ABOUT */
-  .about {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      .about__wrap {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        .about__title__box {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          .about__title {
-            font-size: 9vw;
-            font-weight: 300;
-            line-height: 1.4;
-            // text-align: center;  
-            transition: all 0.1;
-            margin-bottom: 16px;
-            font-family: 'Black Han Sans', sans-serif;
-          }
-          h4 {
-            font-family: 'Noto Sans KR', sans-serif;
-            line-height: 1.3;
-          }
-        }
-        .about-box {
-          background-color: #1e1d1d;
-          border-radius: 3.2rem;
-          padding: 2rem 10vw;
-          // width: 100%;
-          margin: 1rem;
-          height: 100%;
-          .introduce {
-            h1 {
-              font-size: calc(20px + 2vw);
-              font-weight: 700;
-            }
-            .photo {
-              width: 250px;
-              height: 250px;
-              margin: 40px auto 20px;
-              padding: 30px;
-              border: 10px solid $gray-300;
-              border-radius: 50%;
-              box-sizing: border-box;
-              background-color: $gray-200;
-              overflow: hidden;
-              position: relative;
-              img {
-                width: 100%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) scale(0.8);
-              }
-            }
-            .name {
-              font-size: 40px;
-              font-family: 'Oswald', sans-serif;
-              margin-bottom: 20px;
-            }
-          }
-        }
-      }
-    }
-  }
+  }  
 
   /* CONTACT by kdh */
-  .contact2 {
+  .contactus {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20vh 0;
-    .container2 {
+    .contactus__container {
       display: flex;
       width: 100%;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      .contact__title {
+      .contactus__title {
         font-size: 8vw;
         font-family: 'Black Han Sans', sans-serif;
         @media all and (min-width: 1200px) {
           font-size: 96px;
         }
       }
-      .contact__box2 {
+      .contactus__box {
         display: flex;
         justify-content: center;
         flex-direction: row;
-        .contact__btn {
-          // width: 40vw;
-          // height: 50vw;
+        .contactus__btn {
+          width: 40vw;
+          height: 50vw;
           color: white;
           background-color: #1e1d1d;
           border-radius: 2rem;
@@ -269,14 +194,14 @@
             transition: 0s;
             background-color: lightgray;
           }
-          .contact__item {
+          .contactus__item {
             width: 100%;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            .contact__icon {
+            .contactus__icon {
               width: 25vw;
               height: 25vw;
               margin-bottom: 2vw;
@@ -289,7 +214,7 @@
               }
             }
             @media all and (min-width: 1200px) {
-              .contact__icon {
+              .contactus__icon {
                 width: 300px;
                 height: 300px;
                 margin-bottom: 12px;
@@ -300,70 +225,6 @@
                   font-size: 36px;
                 }
               }
-            }
-          }
-        }
-      }
-    }
-  }
-  @media all and (max-width: 1199px) {
-    h4 {
-      // margin-bottom: 20vh;
-      font-size: 3.7vw;
-    }
-    .about__wrap {
-      .about__title__box {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-    .about-box {
-      height: 100%;
-      align-items: center;
-
-      .introduce {
-        h1 {
-          font-size: 6vw;
-        }
-      }
-    }
-
-    .contact {
-      height: 100vh;
-      display: flex;
-    }
-    .contact__box {
-      border-radius: 4.2rem;
-      padding: 2rem;
-      min-width: 35vw;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-  }
-  /* 1200px 이상일 때 */
-  @media all and (min-width: 1200px) {
-    .about {
-      .container {
-        justify-content: space-between;
-        .about__wrap {
-          display: flex;
-          justify-content: space-between;
-          width: 100%;
-          flex-direction: row-reverse;
-          align-items: center;
-          &:last-child {
-            flex-direction: row;
-            margin-top: 20vh;
-          }
-          .about__title__box {
-            align-items: unset;
-            text-align: left;
-            .about__title {
-              font-size: 3rem !important;
-              // text-align: unset;
             }
           }
         }
