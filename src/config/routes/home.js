@@ -403,6 +403,7 @@ export default function () {
   resizeTitle();
 
   function pinTitle() {
+    
     new ScrollMagic.Scene({
       triggerElement: slideSpaces[0],
       triggerHook: 0,
@@ -412,6 +413,28 @@ export default function () {
       .addTo(controller);
   }
   pinTitle();
+
+  function pinText() {
+    const textResize = new TimelineMax().to('.slide__index_text', {
+      color: 'red'
+     });
+    new ScrollMagic.Scene({
+      triggerElement: slideSpaces[0],
+      triggerHook: 0,
+      duration: '100%',
+    })
+      .setPin('.slide__index_text')
+      .addIndicators({
+        name: 'slide__index_text',
+        colorStart: 'red',
+        colorTrigger: 'red',
+        colorEnd: 'red'
+      })
+      .setTween(textResize)
+      .addTo(controller);
+  }
+  pinText();
+ 
 
   function activitiesContentTrigger(){       
     slideSpaces.forEach((slideSpace, i)=>{   

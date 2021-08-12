@@ -56,6 +56,7 @@
           </div>
         </section>
       </div>
+
       <div class="slide__space">
         <h1 id="slide__index_title">
           Activities
@@ -68,11 +69,9 @@
           GLOBAL PANDEMIC?<br />
         </div>
         <div class="slide__index_description">
-          n the wake of Covid-19, the world has changed in ways that no one could have expected.
-          From months spent in quarantine grew a global movement for justice and equality. Each of
-          us has processed and adapted to the events of the last few months in our own way. In an
-          effort to stay connected and support one another through these unprecedented times, we
-          created At Home: a series of stories documenting the experience.
+          <img
+            src="~/assets/activity/activity_study.png"
+            alt="" />
         </div>
       </div>
       <div
@@ -227,9 +226,10 @@
         font-size: 3vw;
         color: #000;
         font-family: 'Black Han Sans', sans-serif;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        left: 7vw;
+        top: 50vh;
+        width: 500px;
+        // transform: translate(-50%, -50%);
       }
       .slide__index_description {
         position: absolute;
