@@ -9,7 +9,7 @@
     </div>    
     <RouterLink
       :to="'/contact'"
-      class="nav-link btn btn-info back-to-position to-top delay-3s"
+      class="nav-link btn btn-info back-to-position to-top delay-4"
       active-class="active">
       <span class="material-icons">contact_support</span>
       CONTACT

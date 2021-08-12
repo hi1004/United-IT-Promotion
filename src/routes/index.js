@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeKr from './HomeKr'
 import HomeJp from './HomeJp'
-import Contact from './Contact'
+import ContactUs from './ContactUs'
 import NotFound from './NotFound'
 
 
@@ -22,7 +22,7 @@ export default createRouter({
     },
     {
       path: '/contact',
-      component: Contact
+      component: ContactUs
     },
     {
       path: '/:notFound(.*)',

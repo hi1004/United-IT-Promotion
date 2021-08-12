@@ -441,7 +441,7 @@ export default function () {
       if (i != 0) {     
         ScrollTrigger.create({
           trigger: slideSpace,
-          start: 'top center',
+          start: 'top 70%',
           onEnter: ()=>{
             slideTitles[i-1].classList.add('show')
             slideSubTitles[i-1].classList.add('show')
@@ -473,15 +473,37 @@ export default function () {
   const contactTitle = contactEl.querySelector('#contact__title');
   const contactBtn = contactEl.querySelector('a');
   function contactScrollTrigger() {
-    const typingSpeed = [150, 150, 150, 150, 300, 500, 300, 150, 150, 150, 150]
-    let text = '가입신청 및 문의하기'
+    const typingSpeed = 50
+    let text = [
+      'ㄱ',
+      '가',
+      '강',
+      '가이',
+      '가입',
+      '가입ㅅ',
+      '가입시',
+      '가입신',
+      '가입신ㅊ',
+      '가입신처',
+      '가입신청',
+      '가입신청 ',
+      '가입신청 ㅁ',
+      '가입신청 미',
+      '가입신청 및',
+      '가입신청 및 ',
+      '가입신청 및 ㅁ',
+      '가입신청 및 무',
+      '가입신청 및 문',
+      '가입신청 및 문ㅇ',
+      '가입신청 및 문으',
+      '가입신청 및 문의'
+    ]
     let i = 0
     function contactTitleTyping() {
       if(i<text.length){
-        contactTitle.innerHTML += text.charAt(i);
-        contactTitle.style.fontSize = '5rem';
+        contactTitle.innerHTML = text[i];
+        setTimeout(contactTitleTyping, typingSpeed);
         i++;
-        setTimeout(contactTitleTyping, typingSpeed[i]);
       }
     }
     function enterSection() {
