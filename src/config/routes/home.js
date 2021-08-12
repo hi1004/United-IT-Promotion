@@ -418,7 +418,7 @@ export default function () {
       if (i != 0) {     
         ScrollTrigger.create({
           trigger: slideSpace,
-          start: 'top center',
+          start: 'top 70%',
           onEnter: ()=>{
             slideTitles[i-1].classList.add('show')
             slideSubTitles[i-1].classList.add('show')
@@ -450,14 +450,14 @@ export default function () {
   const contactTitle = contactEl.querySelector('#contact__title');
   const contactBtn = contactEl.querySelector('a');
   function contactScrollTrigger() {
-    const typingSpeed = [150, 150, 150, 150, 300, 500, 300, 150, 150, 150, 150]
+    const typingSpeed = [150, 150, 200, 300, 500, 300, 150, 150, 150, 250]
     let text = '가입신청 및 문의하기'
     let i = 0
     function contactTitleTyping() {
       if(i<text.length){
-        contactTitle.innerHTML += text.charAt(i);
-        i++;
+        contactTitle.innerHTML += text.charAt(i);        
         setTimeout(contactTitleTyping, typingSpeed[i]);
+        i++;
       }
     }    
     function enterSection() {
