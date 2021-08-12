@@ -472,6 +472,7 @@ export default function () {
   function contactScrollTrigger() {
     const typingSpeed = 50
     let text = [
+      '',
       'ㄱ',
       '가',
       '강',
@@ -492,29 +493,31 @@ export default function () {
       '가입신청 및 무',
       '가입신청 및 문',
       '가입신청 및 문ㅇ',
-      '가입신청 및 문으',
-      '가입신청 및 문의'
+      '가입신청 및 문으'      
     ]
+    for(let i=0; i<40; i++){
+      text.push('가입신청 및 문의');
+    }
+    let doTyping = false;
     let i = 0
     function contactTitleTyping() {
-      if(i<text.length){
+      if(i<text.length && doTyping){
         contactTitle.innerHTML = text[i];
         setTimeout(contactTitleTyping, typingSpeed);
         i++;
       }else {
         i = 0;
-        setTimeout(()=>{
-          contactTitle.innerHTML = '';
-        },2000)
+        contactTitleTyping()  
       }
     }
     function enterSection() {
+      doTyping = true;
       contactTitle.classList.add('show');
       contactBtn.classList.add('show');
-      // setTimeout(contactTitleTyping, 500);
-       setInterval(contactTitleTyping, 1500);
+      contactTitleTyping()
     }
     function leaveSection() {
+      doTyping = false;
       contactTitle.classList.remove('show');
       contactBtn.classList.remove('show');
       i = 0;
