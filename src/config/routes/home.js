@@ -450,23 +450,21 @@ export default function () {
   const contactTitle = contactEl.querySelector('#contact__title');
   const contactBtn = contactEl.querySelector('a');
   function contactScrollTrigger() {
-    let text = '가입 신청 및 문의하기'
+    const typingSpeed = [150, 150, 150, 150, 300, 500, 300, 150, 150, 150, 150]
+    let text = '가입신청 및 문의하기'
     let i = 0
     function contactTitleTyping() {
       if(i<text.length){
         contactTitle.innerHTML += text.charAt(i);
         contactTitle.style.fontSize = '5rem';
         i++;
-        setTimeout(contactTitleTyping, 120);
-      }else {
-        contactTitle.style.fontSize = '6rem';
+        setTimeout(contactTitleTyping, typingSpeed[i]);
       }
     }
     function enterSection() {
       contactTitle.classList.add('show');
       contactBtn.classList.add('show');
-      contactTitleTyping();
-     
+      setTimeout(contactTitleTyping, 500);
     }
     function leaveSection() {
       contactTitle.classList.remove('show');

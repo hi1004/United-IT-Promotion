@@ -20,8 +20,6 @@
   import Contact from '../components/sections/Contact'
   import common from '~/config/common';
   import home from '~/config/routes/home';
-
- 
  
   export default {
     mounted() {
@@ -47,6 +45,11 @@
     z-index: 99;
   }
   .padding {
+      transition: 0.5s;
     padding: 0 0 0 92px;
+    &.body-padding {
+    padding: 0;
   }
+  }
+  
 </style>
