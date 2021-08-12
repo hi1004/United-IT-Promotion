@@ -17,21 +17,40 @@
       <ul>
         <li>
           <a
-            class="active"
+            class="mobile-nav__link"
             href="#">Home</a>
         </li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#">Executives</a></li>
-        <li><a href="#">Activities</a></li>
-        <li><a href="#">Contact</a></li>
+        <li>
+          <a
+            class="mobile-nav__link"
+            href="#">About</a>
+        </li>
+        <li>
+          <a
+            class="mobile-nav__link"
+            href="#">Executives</a>
+        </li>
+        <li>
+          <a
+            class="mobile-nav__link"
+            href="#">Activities</a>
+        </li>
+        <li>
+          <a
+            class="mobile-nav__link"
+            href="#">Contact</a>
+        </li>
       </ul>
     </nav>
   </header>
 </template>
 
 <script>
+import mobileNav from '~/config/etc/mobileNav';
   export default {
-    mounted() {},
+    mounted() {
+      mobileNav();
+    },
   };
 </script>
 
@@ -66,7 +85,7 @@
         display: flex;
         height: 80px;
         width: 100%;
-        background: #1b1b1b;
+        background: rgba(64, 64, 64, .1);
         align-items: center;
         justify-content: space-between;
         padding: 0 50px 0 50px;
@@ -85,7 +104,7 @@
           list-style: none;
           li {
             margin: 0 5px;
-            a {
+            .mobile-nav__link {
               color: #f2f2f2;
               text-decoration: none;
               font-size: 18px;
@@ -94,6 +113,10 @@
               border-radius: 5px;
               letter-spacing: 1px;
               transition: all 0.3s ease;
+              &.link_actived {
+                font-size: 20px;
+                color: #fdc000;
+              }
             }
           }
         }
@@ -103,8 +126,7 @@
           cursor: pointer;
           display: none;
         }
-      }
-      nav ul li a.active,
+      }      
       nav ul li a:hover {
         color: #111;
         background: #fff;

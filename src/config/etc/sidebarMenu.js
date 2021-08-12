@@ -61,7 +61,6 @@ export default function(){
         snCollapseLink.classList.remove('rotate');
         snCollapseMenu.classList.remove('showCollapse');
       }
-      console.log(snLink)
     });    
     this.classList.add('color-active');
     if (this.classList.contains('collapse')&&snNavBar.classList.contains('expander')){        
@@ -124,8 +123,7 @@ export default function(){
         snLinks[j].style.pointerEvents = 'auto';
         ScrollTrigger.getById(`active link scroll${j}`).enable();
       }
-    }, 1000)
-    
+    }, 1000)    
   }
   snLinks.forEach((snLink, i) => {
     snLink.addEventListener('click', ()=>{

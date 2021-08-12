@@ -1,6 +1,6 @@
 <template>
   <div class="padding">
-    <MoNav />
+    <MobileNav />
     <Particles />
     <Intro />
     <SidebarMenu />
@@ -19,7 +19,7 @@
   import Executives from '~/components/sections/Executives';
   import Activities from '../components/sections/Activities.vue';
   import Contact from '../components/sections/Contact';
-  import MoNav from '../components/mobile/MoNav.vue';
+  import MobileNav from '../components/mobile/MobileNav.vue';
   import common from '~/config/common';
   import home from '~/config/routes/home';
 
@@ -36,7 +36,7 @@
       Executives,
       Activities,
       Contact,
-      MoNav,
+      MobileNav,
     },
   };
 </script>
