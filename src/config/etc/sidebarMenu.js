@@ -3,11 +3,11 @@ const gsap = window.gsap;
 
 export default function(){  
 
+  const homePadding = document.querySelector('.padding');
   /* SHOW MENU */
   const snCollapseLinks = document.querySelectorAll('.collapse__link'); 
   const snCollapseMenus = document.querySelectorAll('.collapse__menu'); 
   const snToolTips = document.querySelectorAll('.side-nav__tooltip');
-
 
   const showMenu = (toggleId, navbarId, bodyId) => {
     const snToggle = document.getElementById(toggleId),
@@ -17,6 +17,7 @@ export default function(){
         snNavBar.classList.toggle('expander');
         snBodyPadding.classList.toggle('body-pd');
         snToggle.classList.toggle('toggle-active');
+        homePadding.classList.toggle('body-padding')
 
         snToolTips.forEach((snToolTip) => {
           snToolTip.classList.toggle('snToolTip-active');
