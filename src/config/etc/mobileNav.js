@@ -75,7 +75,10 @@ export default function () {
       ScrollTrigger.getById(`active mnLink scroll${j}`).disable();
     }
     gsap.to(window, {
-      scrollTo: sectionSelectors[i],
+      scrollTo: {
+        y: sectionSelectors[i],
+        offsetY: 80
+      }
     });
     setTimeout(() => {
       for (let j = 0; j < mnLinks.length; j++) {
