@@ -23,6 +23,9 @@ body {
   overflow-x: hidden;
   position: fixed;
   top: 0;
+  &.bd-overflow {
+    overflow:hidden;
+  }
   cursor:none;
   a {
     text-decoration: none;

@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <nav>
+    <nav class="mobile-nav">
       <div class="logo">
         <img
           src="~/assets/logo/logo.png"
@@ -8,13 +8,14 @@
       </div>
       <input
         type="checkbox"
+        name="menuBtn"
         id="click" />
       <label
         for="click"
         class="menu-btn">
         <i class="fas fa-bars"></i>
       </label>
-      <ul>
+      <ul class="mobile-nav__menu">
         <li>
           <a
             class="mobile-nav__link"
@@ -46,7 +47,7 @@
 </template>
 
 <script>
-import mobileNav from '~/config/etc/mobileNav';
+  import mobileNav from '~/config/etc/mobileNav';
   export default {
     mounted() {
       mobileNav();
@@ -57,6 +58,9 @@ import mobileNav from '~/config/etc/mobileNav';
 <style lang="scss" scoped>
   /*===== GOOGLE FONTS =====*/
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+  
+ 
+ 
 
   /* 769 이상 */
   @media screen and (min-width: 769px) {
@@ -85,11 +89,16 @@ import mobileNav from '~/config/etc/mobileNav';
         display: flex;
         height: 80px;
         width: 100%;
-        background: rgba(64, 64, 64, .1);
+        background: #12192c;
         align-items: center;
         justify-content: space-between;
-        padding: 0 50px 0 50px;
+        padding: 0 25px 0 25px;
         flex-wrap: wrap;
+        transition: all .5s;
+        &.nav-active {
+          background-color: #111;
+        }
+       
         .logo {
           color: #fff;
           font-size: 35px;
@@ -126,7 +135,7 @@ import mobileNav from '~/config/etc/mobileNav';
           cursor: pointer;
           display: none;
         }
-      }      
+      }
       nav ul li a:hover {
         color: #111;
         background: #fff;
@@ -157,7 +166,11 @@ import mobileNav from '~/config/etc/mobileNav';
         text-align: center;
         display: block;
         transition: all 0.3s ease;
+        &.menu-active {
+          right: -100%;
+        }
       }
+     
       #click:checked ~ ul {
         left: 0;
       }
@@ -181,20 +194,6 @@ import mobileNav from '~/config/etc/mobileNav';
         color: cyan;
       }
     }
-    .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      z-index: -1;
-      width: 100%;
-      padding: 0 30px;
-      color: #1b1b1b;
-    }
-    .content div {
-      font-size: 40px;
-      font-weight: 700;
-    }
+  
   }
 </style>
