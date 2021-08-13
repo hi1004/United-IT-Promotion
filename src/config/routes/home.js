@@ -504,9 +504,9 @@ export default function () {
         contactTitle.innerHTML = text[i];
         setTimeout(contactTitleTyping, typingSpeed);
         i++;
-      }else {
+      }else if (doTyping){        
         i = 0;
-        contactTitleTyping()  
+        contactTitleTyping();
       }
     }
     function enterSection() {
@@ -519,8 +519,7 @@ export default function () {
       doTyping = false;
       contactTitle.classList.remove('show');
       contactBtn.classList.remove('show');
-      i = 0;
-      contactTitle.innerHTML = '';
+      i = 0;      
     }
     ScrollTrigger.create({
       trigger: '#contact',
