@@ -14,9 +14,11 @@
                 개발자가 되기 위한 <span>자바/웹</span> 통합 스터디
               </h2>
               <p class="slide__paragraph back-to-position to-top delay-2">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corrupti omnis vel
-                suscipit odit quod temporibus nihil mollitia, corporis est deleniti repellat saepe
-                sunt voluptatibus obcaecati dolorum nemo, ut rerum.
+                저희 동아리는 다양한 플랫폼에서 쓰이고 있는 자바 언어를 기본으로 스터디를 진행하고 있습니다. 
+                개별로 진행되던 스터디를 하나로 통합하여 실력 편차를 최소한으로 하며 누구나 개발 경험을
+                쌓을 수 있는 스터디로 준비했습니다. 또한 최근에는 웹 개발에 관심있는 분들이 늘어나
+                프론트엔드 스터디를 기획하여, 레이아웃부터 자바스크립트 나아가 다양한 라이브러리를
+                활용할 수 있도록 하고 있습니다.
               </p>
             </div>
           </div>
@@ -31,9 +33,13 @@
                 일본인 친구들과 언어 교류
               </h2>
               <p class="slide__paragraph back-to-position scroll-spy to-top delay-2">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corrupti omnis vel
-                suscipit odit quod temporibus nihil mollitia, corporis est deleniti repellat saepe
-                sunt voluptatibus obcaecati dolorum nemo, ut rerum.
+                2020년도부터 코로나 상황으로 인해 해외로 갈 수 있는 기회가 거의 없어졌습니다. 
+                이로 인해 대다수의 학생들이 회화에 있어 어려움을 느낄 때가 많았습니다. 
+                그래서 저희 동아리에서는 학교에 있는 일본인 유학생들을 모아 
+                언어교류를 할 수 있는 교류회를 만들었습니다. 2대2로 진행되는 교류회는 한 시간은 일본어, 
+                한 시간은 한국어로 하며 토론형식으로 진행돼 언어 뿐만아니라 논리적인 사고 또한 기를 수 있도록
+                노력하고 있습니다. 
+                저희 동아리에서는 부원들을 위해 어디서든 성장할 수 있는 환경을 제공해 드리겠습니다.
               </p>
             </div>
           </div>
@@ -48,9 +54,12 @@
                 일본 취업을 위한 다양한 활동들
               </h2>
               <p class="slide__paragraph back-to-position to-top delay-2">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corrupti omnis vel
-                suscipit odit quod temporibus nihil mollitia, corporis est deleniti repellat saepe
-                sunt voluptatibus obcaecati dolorum nemo, ut rerum.
+                일본 취업을 희망하는 친구들을 모아 일본 취업에 필요한 정보들을 공유하며 더 나아가 이력서 첨삭,
+                모의 면접까지 진행하고 있습니다. 
+                그리고 매주마다 진행되는 기업 분석 발표를 통해 말하기 연습과 기업과 업계에 대한 이해도도 깊게
+                하고 있습니다.
+                하지만 최근 코로나로 인해 취업 활동이 힘들어진 상황이 되었지만, 
+                이 시기를 발판으로 스스로 더 성장할 수 있는 기회로 만들겠습니다.
               </p>
             </div>
           </div>
@@ -177,6 +186,9 @@
                 letter-spacing: 0.02rem;
                 margin: 15px 0 35px;
               }
+            }
+            .slide__paragraph {
+              font-family: 'Noto Sans KR', sans-serif;
             }
           }
         }
