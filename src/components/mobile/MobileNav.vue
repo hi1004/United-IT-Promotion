@@ -39,7 +39,9 @@
         <li>
           <a
             class="mobile-nav__link"
-            href="#">Contact</a>
+            href="#">
+            <span class="material-icons">contact_support</span>
+            Contact</a>
         </li>
       </ul>
     </nav>
@@ -58,7 +60,7 @@
 <style lang="scss" scoped>
   /*===== GOOGLE FONTS =====*/
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-  
+
  
  
 
@@ -83,7 +85,6 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
       }
       nav {
         display: flex;
@@ -113,6 +114,9 @@
           list-style: none;
           li {
             margin: 0 5px;
+            display: flex;
+              justify-content: space-between;
+              align-items: center;
             .mobile-nav__link {
               color: #f2f2f2;
               text-decoration: none;
@@ -122,6 +126,7 @@
               border-radius: 5px;
               letter-spacing: 1px;
               transition: all 0.3s ease;
+              
               &.link_actived {
                 font-size: 20px;
                 color: #fdc000;
