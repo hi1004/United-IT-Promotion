@@ -4,6 +4,7 @@
     class="executives__section"
     id="executives">
     <div class="container">
+      <!-- PC -->
       <div class="left-box">
         <div class="contents">
           <h1 class="executives__title">
@@ -66,7 +67,6 @@
           </div>
         </div>
       </div>
-
       <div class="right-box">
         <!-- 회장 -->
         <div
@@ -298,6 +298,13 @@
           </div>
         </div>
       </div>
+      <!-- Mobile -->
+      <div class="mobile-box">
+        <h1 class="mobile-executives__title">
+          J-BIT UNITED IT<br />
+          EXECUTIVES
+        </h1>
+      </div>
     </div>
   </section>
 </template>
@@ -311,163 +318,200 @@
     margin: 0;
     padding: 0;
   }
-  #pin1 {
-    width: 100%;
-    height: 5px;
-    background-color: blue;
-  }
-  .executives__section {
-    position: relative;
-    margin-top: 40rem;
-    margin-bottom: 20rem;
-    color: #000;
-    // height: 380vh;
-    .container {
-      display: flex;
-      width: 100%;
-      margin: 0 auto;
-      .left-box {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        position: relative;
-        .contents {
-          position: relative;
-          width: 100%;
-          display: flex;
-          justify-content: center;
 
-          .executives__title {
+  @media screen and (min-width: 769px) {
+    #pin1 {
+      width: 100%;
+      height: 5px;
+      background-color: blue;
+    }
+    .executives__section {
+      position: relative;
+      margin-top: 40rem;
+      margin-bottom: 20rem;
+      color: #000;
+      .container {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        .mobile-box {
+          visibility: hidden;
+          display: none;
+        }
+        .left-box {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+          .contents {
+            position: relative;
             width: 100%;
-            font-family: 'Black Han Sans', sans-serif;
-            font-size: 4vw;
-            padding: 0;
-            position: absolute;
-            bottom: 0;
-            text-align: center;
-            z-index: 1;
-            color: #fff;
-          }
-          .img-wrap {
-            width: 100%;
-            position: absolute;
-            top: 3rem;
-            .img {
+            display: flex;
+            justify-content: center;
+
+            .executives__title {
+              width: 100%;
+              font-family: 'Black Han Sans', sans-serif;
+              font-size: 4vw;
+              padding: 0;
+              position: absolute;
+              bottom: 0;
+              text-align: center;
+              z-index: 1;
+              color: #fff;
+            }
+            .img-wrap {
               width: 100%;
               position: absolute;
-              opacity: 0;
-              top: -16rem;
-              transform: scale(0.5);
-              transition: all 0.2s;
+              top: 3rem;
+              .img {
+                width: 100%;
+                position: absolute;
+                opacity: 0;
+                top: -16rem;
+                transform: scale(0.5);
+                transition: all 0.2s;
+              }
+            }
+          }
+        }
+      }
+      .right-box {
+        width: 50%;
+        position: relative;
+        height: 100%;
+        .profile {
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          .photo {
+            max-width: 350px;
+            img {
+              width: 100%;
+            }
+          }
+          .name {
+            font-size: 3rem;
+            font-weight: bold;
+          }
+          .position {
+            position: relative;
+            padding: 10px 0;
+            &::after {
+              position: absolute;
+              content: '';
+              width: 100%;
+              height: 3px;
+              background-color: red;
+              display: block;
+              bottom: 0;
+              left: 0;
+            }
+          }
+          .description {
+            max-width: 666px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 10px;
+          }
+          .hashtag-wrap {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+            height: 50px;
+            padding: 1rem;
+            flex-wrap: wrap;
+            .hashtag {
+              font-weight: 900;
+              padding: 5px 10px;
+              margin: 10px;
+              border-radius: 3rem;
+              color: white;
+              &.tag_java {
+                background-color: #B07219;
+              }
+              &.tag_react {
+                background-color: #3FD9F6;
+              }
+              &.tag_vue {
+                background-color: #41B883;
+              }
+              &.tag_nodejs {
+                background-color: #689F63;
+              }
+              &.tag_web {
+                background-color: #0D7ED5;
+              }
+              &.tag_frontend {
+                background-color: #EAB921;
+              }
+              &.tag_first {
+                background-color: #FC6C9C;
+              }
+              &.tag_second {
+                background-color: #0C9CCC;
+              }
+              &.tag_third {
+                background-color: #FCCC9C;
+              }
+            }
+          }
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 10rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .img {
+            position: absolute;
+            width: 100%;
+            left: -100%;
+            top: 0;
+            display: none;
+            opacity: 0;
+          }
+          &.active {
+            .img {
+              display: block;
+              opacity: 1;
             }
           }
         }
       }
     }
-    .right-box {
-      width: 50%;
-      position: relative;
-      height: 100%;
-      .profile {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        .photo {
-          max-width: 350px;
-          img {
-            width: 100%;
-          }
-        }
-        .name {
-          font-size: 3rem;
-          font-weight: bold;
-        }
-        .position {
-          position: relative;
-          padding: 10px 0;
-          &::after {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 3px;
-            background-color: red;
-            display: block;
-            bottom: 0;
-            left: 0;
-          }
-        }
-        .description {
-          max-width: 666px;
-          text-align: center;
-          font-size: 1.2rem;
-          margin-top: 10px;
-        }
-        .hashtag-wrap {
-          display: flex;
-          justify-content: center;
-          width: 100%;
-          align-items: center;
-          height: 50px;
-          padding: 1rem;
-          flex-wrap: wrap;
-          .hashtag {
-            font-weight: 900;
-            padding: 5px 10px;
-            margin: 10px;
-            border-radius: 3rem;
-            color: white;
-            &.tag_java {
-              background-color: #B07219;
-            }
-            &.tag_react {
-              background-color: #3FD9F6;
-            }
-            &.tag_vue {
-              background-color: #41B883;
-            }
-            &.tag_nodejs {
-              background-color: #689F63;
-            }
-            &.tag_web {
-              background-color: #0D7ED5;
-            }
-            &.tag_frontend {
-              background-color: #EAB921;
-            }
-            &.tag_first {
-              background-color: #FC6C9C;
-            }
-            &.tag_second {
-              background-color: #0C9CCC;
-            }
-            &.tag_third {
-              background-color: #FCCC9C;
-            }
-          }
-        }
+  }
 
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 10rem;
-        &:last-child {
-          margin-bottom: 0;
-        }
-        .img {
+  /* 768 이하 */
+  @media screen and (max-width: 768px) {
+    .executives__section {
+      position: relative;
+      margin: 20vh 0;
+      height: 100vh;
+      color: #000;
+      .left-box, .right-box {
+        visibility: hidden;
+        display: none;
+      }
+      .mobile-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .mobile-executives__title{          
           position: absolute;
           width: 100%;
-          left: -100%;
-          top: 0;
-          display: none;
-          opacity: 0;
-        }
-        &.active {
-          .img {
-            display: block;
-            opacity: 1;
-          }
+          display: block;
+          top: 5vh;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 1;
+          font-family: 'Black Han Sans', sans-serif;
+          font-size: 5vw;
+          text-align: center;
+          color: #fff;
         }
       }
     }
