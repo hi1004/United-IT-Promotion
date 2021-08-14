@@ -172,6 +172,7 @@
   ::before,
   ::after {
     box-sizing: border-box;
+  
   }
   
   body {
@@ -408,6 +409,7 @@
       margin-bottom: 0.48rem;
       transition: 0.3s;
       cursor: pointer;
+      
       &:hover {
         background-color: #fdc000;
         .side-nav__tooltip {

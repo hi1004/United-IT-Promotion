@@ -17,7 +17,6 @@ export default function () {
 
    
   });
-
   /* TO-TOP */
   const toTopEl = document.querySelector('#to-top');
   window.addEventListener(

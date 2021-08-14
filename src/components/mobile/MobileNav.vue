@@ -19,22 +19,30 @@
         <li>
           <a
             class="mobile-nav__link"
-            href="#">Home</a>
+            href="#">
+            <span class="material-icons"> home </span>
+            Home</a>
         </li>
         <li>
           <a
             class="mobile-nav__link"
-            href="#">About</a>
+            href="#">
+            <span class="material-icons">info</span>
+            About</a>
         </li>
         <li>
           <a
             class="mobile-nav__link"
-            href="#">Executives</a>
+            href="#">
+            <span class="material-icons"> groups </span>
+            Executives</a>
         </li>
         <li>
           <a
             class="mobile-nav__link"
-            href="#">Activities</a>
+            href="#">
+            <span class="material-icons"> local_activity </span>
+            Activities</a>
         </li>
         <li>
           <a
@@ -43,6 +51,30 @@
             <span class="material-icons">contact_support</span>
             Contact</a>
         </li>
+        <div class="side-nav__routeBtns nav-pills">
+          <div class="routeBtn nav-item">
+            <RouterLink
+              :to="'/'"
+              class="nav-link"
+              active-class="active">
+              <img
+                src="~/assets/korea.png"
+                alt="korea" />
+              KR
+            </RouterLink>
+          </div>
+          <div class="routeBtn nav-item">
+            <RouterLink
+              :to="'/jp'"
+              class="nav-link"
+              active-class="active">
+              <img
+                src="~/assets/japan.png"
+                alt="japan" />
+              JP
+            </RouterLink>
+          </div>
+        </div>
       </ul>
     </nav>
   </header>
@@ -61,9 +93,6 @@
   /*===== GOOGLE FONTS =====*/
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
- 
- 
-
   /* 769 이상 */
   @media screen and (min-width: 769px) {
     header {
@@ -75,6 +104,9 @@
   /* 768 이하 */
   @media screen and (max-width: 768px) {
     /*===== VARIABLES CSS =====*/
+    a.nav-link {
+      margin: 0;
+    }
     header {
       width: 100%;
       position: fixed;
@@ -95,11 +127,11 @@
         justify-content: space-between;
         padding: 0 25px 0 25px;
         flex-wrap: wrap;
-        transition: all .5s;
+        transition: all 0.5s;
         &.nav-active {
           background-color: #111;
         }
-       
+
         .logo {
           color: #fff;
           font-size: 35px;
@@ -115,21 +147,24 @@
           li {
             margin: 0 5px;
             display: flex;
-              justify-content: space-between;
-              align-items: center;
+            justify-content: space-between;
+            align-items: center;
             .mobile-nav__link {
               color: #f2f2f2;
               text-decoration: none;
-              font-size: 18px;
+              font-size: 2.5rem;
               font-weight: 500;
               padding: 8px 15px;
               border-radius: 5px;
               letter-spacing: 1px;
               transition: all 0.3s ease;
-              
+
               &.link_actived {
-                font-size: 20px;
+                font-size: 2.6rem;
                 color: #fdc000;
+              }
+              span {
+                font-size: 2.5rem;
               }
             }
           }
@@ -166,22 +201,26 @@
         top: 80px;
         left: -100%;
         background: #111;
-        height: 100vh;
+        height: calc(100% - 80px);
         width: 100%;
         text-align: center;
-        display: block;
         transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
         &.menu-active {
           right: -100%;
         }
       }
-     
+
       #click:checked ~ ul {
         left: 0;
       }
       nav ul li {
         width: 100%;
-        margin: 40px 0;
+        // margin: 20px 0;
       }
       nav ul li a {
         width: 100%;
@@ -190,8 +229,19 @@
         font-size: 20px;
         transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       }
+      .side-nav__routeBtns {
+        display: flex;
+        justify-content: center;
+        .routeBtn:nth-child(1) {
+          margin-right: 0.5rem;
+        }
+      }
       #click:checked ~ ul li a {
         margin-left: 0px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
       }
       nav ul li a.active,
       nav ul li a:hover {
@@ -199,6 +249,5 @@
         color: cyan;
       }
     }
-  
   }
 </style>
