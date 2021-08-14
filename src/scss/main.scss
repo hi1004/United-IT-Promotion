@@ -3,7 +3,7 @@ $container-max-widths: (
   sm: 540px,
   md: 704px,
   lg: 924px,
-  xl: 1140px, 
+  xl: 1140px,
   xxl: 1364px,
 );
 
@@ -12,7 +12,6 @@ $container-max-widths: (
 @import '../../node_modules/bootstrap/scss/mixins';
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
-
 
 body {
   width: 100%;
@@ -24,9 +23,9 @@ body {
   position: fixed;
   top: 0;
   &.bd-overflow {
-    overflow:hidden;
+    overflow: hidden;
   }
-  cursor:none;
+  cursor: none;
   a {
     text-decoration: none;
   }
@@ -38,51 +37,61 @@ body {
     padding: 0;
   }
 }
-
-
-  .back-to-position {
-    opacity: 0;
-    transition: 1s;
-    &.show {
-      opacity: 1;
-      &.to-right {
-        transform: translateX(-150px);
-        text-align: left;
-      }
-      &.to-left {
-        transform: translateX(150px);
-        text-align: right;
-      }
-      &.to-bottom {
-        transform: translateY(100px);
-      }
-      &.to-top {
-        transform: translateY(-50px);
-      }
-      &.delay-0 {
-        transition-delay: 0s;
-      }
-      &.delay-1 {
-        transition-delay: 0.3s;
-      }
-      &.delay-2 {
-        transition-delay: 0.6s;
-      }
-      &.delay-3 {
-        transition-delay: 0.9s;
-      }
-      &.delay-4 {
-        transition-delay: 1.2s;
-      }
-      &.delay-5 {
-        transition-delay: 1.5s;
-      }
-      &.delay-3s {
-        transition-delay: 3s;
-      }
-    }
-   
+html::-webkit-scrollbar {
+  width: 14px;
+}
+html::-webkit-scrollbar-thumb {
+  background: #fdc000;
+  border-radius: 6px;
+  filter: blur(30px);
+  &:hover {
+    background: #fff2c7;
   }
+}
+html::-webkit-scrollbar-track {
+  background: #000;
+}
 
-   
 
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+  &.show {
+    opacity: 1;
+    &.to-right {
+      transform: translateX(-150px);
+      text-align: left;
+    }
+    &.to-left {
+      transform: translateX(150px);
+      text-align: right;
+    }
+    &.to-bottom {
+      transform: translateY(100px);
+    }
+    &.to-top {
+      transform: translateY(-50px);
+    }
+    &.delay-0 {
+      transition-delay: 0s;
+    }
+    &.delay-1 {
+      transition-delay: 0.3s;
+    }
+    &.delay-2 {
+      transition-delay: 0.6s;
+    }
+    &.delay-3 {
+      transition-delay: 0.9s;
+    }
+    &.delay-4 {
+      transition-delay: 1.2s;
+    }
+    &.delay-5 {
+      transition-delay: 1.5s;
+    }
+    &.delay-3s {
+      transition-delay: 3s;
+    }
+  }
+}

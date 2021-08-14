@@ -9,7 +9,6 @@ export default function () {
   const mnMenuBtn = document.querySelector('input[type="checkbox"]');
   const mnMenuBtnLabel = document.querySelector('.menu-btn');
   const mnNav = document.querySelector('.mobile-nav');
-
   /* active mobile menu-btn on click */
   function menuBtnOnClick() {
     mnMenu.classList.add('menu-active');
@@ -32,6 +31,18 @@ export default function () {
     });
   }
   menuBtnClickBodyEvent();
+
+  /* window reize => bodyOverFlow & unchecked MenuBtn  */
+  function bodyOverflowResize(){
+    window.addEventListener('resize', ()=> {
+      const windowWidth = window.innerWidth;
+      if(windowWidth>=769) {
+        bodyEl.classList.remove('bd-overflow');
+        mnMenuBtn.checked = false;
+      }
+    })
+  }
+  bodyOverflowResize();
 
   /* active mobile link on click */
   function linkActiveOnClick() {
