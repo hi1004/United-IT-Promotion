@@ -3,6 +3,13 @@
   <section
     class="executives__section"
     id="executives">
+    <div class="progress-section">
+      <div class="progress-bar-wrap">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="progress-num"></div>
+    </div>
+
     <div class="container">
       <div class="left-box">
         <div class="contents">
@@ -165,9 +172,9 @@
           </p>
           <div class="hashtag-wrap">
             <span class="hashtag tag_java">#Java</span>
-            <span class="hashtag tag_first">#족장</span>  
-            <span class="hashtag tag_second">#우가우가</span>  
-            <span class="hashtag tag_third">#비주얼</span>  
+            <span class="hashtag tag_first">#족장</span>
+            <span class="hashtag tag_second">#우가우가</span>
+            <span class="hashtag tag_third">#비주얼</span>
           </div>
         </div>
         <!-- 2조 -->
@@ -303,7 +310,12 @@
 </template>
 
 <script>
-  export default {};
+
+  export default {
+    mounted() {
+      
+    }
+  };
 </script>
 
 <style lang="scss" scoped>
@@ -321,7 +333,40 @@
     margin-top: 40rem;
     margin-bottom: 20rem;
     color: #000;
-    // height: 380vh;
+    .progress-section {
+      position: fixed;
+      left: 10px;
+      top: -10px;
+      width: 60px;
+      height: 20%;
+      display: flex;
+      justify-content: space-between;
+      will-change: transform;
+      z-index: 9999;
+      transition: .3s ease-out;
+      .progress-bar-wrap {
+        position: relative;
+        width: 5px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: rgb(70,70,70);
+        .progress-bar {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 0%;
+          background-color: #25c946;
+        }
+      }
+      .progress-num {
+        color: #25c946;
+      }
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
     .container {
       display: flex;
       width: 100%;
@@ -420,31 +465,31 @@
             border-radius: 3rem;
             color: white;
             &.tag_java {
-              background-color: #B07219;
+              background-color: #b07219;
             }
             &.tag_react {
-              background-color: #3FD9F6;
+              background-color: #3fd9f6;
             }
             &.tag_vue {
-              background-color: #41B883;
+              background-color: #41b883;
             }
             &.tag_nodejs {
-              background-color: #689F63;
+              background-color: #689f63;
             }
             &.tag_web {
-              background-color: #0D7ED5;
+              background-color: #0d7ed5;
             }
             &.tag_frontend {
-              background-color: #EAB921;
+              background-color: #eab921;
             }
             &.tag_first {
-              background-color: #FC6C9C;
+              background-color: #fc6c9c;
             }
             &.tag_second {
-              background-color: #0C9CCC;
+              background-color: #0c9ccc;
             }
             &.tag_third {
-              background-color: #FCCC9C;
+              background-color: #fccc9c;
             }
           }
         }
