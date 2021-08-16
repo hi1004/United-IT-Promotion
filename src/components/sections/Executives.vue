@@ -310,6 +310,18 @@
           J-BIT UNITED IT<br />
           EXECUTIVES
         </h1>
+        <div class="mobile-executives__wrap">
+          <div class="mobile-executives__space"></div>
+          <div class="mobile-executives__space"></div>
+          <div class="mobile-executives__space"></div>
+          <div class="mobile-executives__space"></div>
+          <div class="mobile-executives__space"></div>
+          <div class="mobile-executives__space"></div>
+          <div class="mobile-executives__space"></div>
+          <div class="mobile-executives__space"></div>
+          <div class="mobile-executives__space"></div>
+          <div class="mobile-executives__space"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -340,40 +352,7 @@
       position: relative;
       margin-top: 40rem;
       margin-bottom: 20rem;
-      color: #000;
-      .progress-section {
-        position: fixed;
-        left: 10px;
-        top: -10px;
-        width: 60px;
-        height: 20%;
-        display: flex;
-        justify-content: space-between;
-        will-change: transform;
-        z-index: 9999;
-        transition: .3s ease-out;
-        .progress-bar-wrap {
-          position: relative;
-          width: 5px;
-          border: 1px solid #000;
-          border-radius: 10px;
-          overflow: hidden;
-          background-color: rgb(70,70,70);
-          .progress-bar {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 0%;
-            background-color: #25c946;
-          }
-        }
-        .progress-num {
-          color: #25c946;
-        }
-      }
-      body::-webkit-scrollbar {
-        display: none;
-      }
+      color: #000;      
       .container {
         display: flex;
         width: 100%;
@@ -531,11 +510,15 @@
 
   /* 768 이하 */
   @media screen and (max-width: 768px) {
+    
     .executives__section {
       position: relative;
       margin: 20vh 0;
-      height: 100vh;
+      height: 720vw;
       color: #000;
+      .container {
+        margin: 0 auto;
+      }
       .left-box, .right-box {
         visibility: hidden;
         display: none;
@@ -544,20 +527,66 @@
         position: relative;
         width: 100%;
         height: 100%;
-        .mobile-executives__title{          
-          position: absolute;
-          width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .mobile-executives__title {
+          height: 20vw;
           display: block;
-          top: 5vh;
-          left: 50%;
-          transform: translateX(-50%);
           z-index: 1;
           font-family: 'Black Han Sans', sans-serif;
           font-size: 5vw;
           text-align: center;
           color: #fff;
         }
+        .mobile-executives__wrap {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 60vw;
+          .mobile-executives__space {
+            border: solid white 1px;
+            width: 60vw;
+            height: 70vw;
+            background-color: purple;
+          }
+        }        
       }
     }
+  }
+
+  /* 프로그레스 바 */
+  .progress-section {
+    position: fixed;
+    left: 10px;
+    top: -10px;
+    width: 60px;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    will-change: transform;
+    z-index: 9999;
+    transition: .3s ease-out;
+    .progress-bar-wrap {
+      position: relative;
+      width: 5px;
+      border: 1px solid #000;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: rgb(70,70,70);
+      .progress-bar {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0%;
+        background-color: #25c946;
+      }
+    }
+    .progress-num {
+      color: #25c946;
+    }
+  }
+  body::-webkit-scrollbar {
+    display: none;
   }
 </style>

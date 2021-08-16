@@ -38,9 +38,7 @@ export default function () {
     function getScrollPercentage() {
       return ((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100);
     }
-    updateProgressBar();
-  
-  
+    updateProgressBar();  
 
 
   /* SCROLL DISABLE */
