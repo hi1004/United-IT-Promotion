@@ -310,215 +310,89 @@
 
     <!-- mobile -->
     <section id="executives__mobile">
+      <h1 class="executives__title">
+        J-BIT UNITED IT<br />
+        EXECUTIVES
+      </h1>
       <div class="testimonials">
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="card">
-                <div class="layer">
-                  <div class="content">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                      officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                      repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                    </p>
-                    <div class="imgBx">
-                      <img
-                        src="~/assets/executives/executives1.png"
-                        alt="" />
-                    </div>
-                    <div class="details">
-                      <h2>Someone Famous<br /><span>website Designer</span></h2>
-                    </div>
+                <div class="layer"></div>
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
+                    officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
+                    repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
+                  </p>
+                  <div class="imgBx">
+                    <img
+                      src="~/assets/executives/executives1.png"
+                      alt="" />
+                  </div>
+                  <div class="details">
+                    <h2>Someone Famous<br /><span>website Designer</span></h2>
                   </div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="card">
-                <div class="layer">
-                  <div class="content">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                      officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                      repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                    </p>
-                    <div class="imgBx">
-                      <img
-                        src="~/assets/executives/executives1.png"
-                        alt="" />
-                    </div>
-                    <div class="details">
-                      <h2>Someone Famous<br /><span>website Designer</span></h2>
-                    </div>
+                <div class="layer"></div>
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
+                    officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
+                    repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
+                  </p>
+                  <div class="imgBx">
+                    <img
+                      src="~/assets/executives/executives1.png"
+                      alt="" />
+                  </div>
+                  <div class="details">
+                    <h2>Someone Famous<br /><span>website Designer</span></h2>
                   </div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="card">
-                <div class="layer">
-                  <div class="content">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                      officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                      repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                    </p>
-                    <div class="imgBx">
-                      <img
-                        src="~/assets/executives/executives1.png"
-                        alt="" />
-                    </div>
-                    <div class="details">
-                      <h2>Someone Famous<br /><span>website Designer</span></h2>
-                    </div>
+                <div class="layer"></div>
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
+                    officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
+                    repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
+                  </p>
+                  <div class="imgBx">
+                    <img
+                      src="~/assets/executives/executives1.png"
+                      alt="" />
+                  </div>
+                  <div class="details">
+                    <h2>Someone Famous<br /><span>website Designer</span></h2>
                   </div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="card">
-                <div class="layer">
-                  <div class="content">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                      officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                      repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                    </p>
-                    <div class="imgBx">
-                      <img
-                        src="~/assets/executives/executives1.png"
-                        alt="" />
-                    </div>
-                    <div class="details">
-                      <h2>Someone Famous<br /><span>website Designer</span></h2>
-                    </div>
+                <div class="layer"></div>
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
+                    officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
+                    repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
+                  </p>
+                  <div class="imgBx">
+                    <img
+                      src="~/assets/executives/executives1.png"
+                      alt="" />
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card">
-                <div class="layer">
-                  <div class="content">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                      officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                      repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                    </p>
-                    <div class="imgBx">
-                      <img
-                        src="~/assets/executives/executives1.png"
-                        alt="" />
-                    </div>
-                    <div class="details">
-                      <h2>Someone Famous<br /><span>website Designer</span></h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card">
-                <div class="layer">
-                  <div class="content">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                      officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                      repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                    </p>
-                    <div class="imgBx">
-                      <img
-                        src="~/assets/executives/executives1.png"
-                        alt="" />
-                    </div>
-                    <div class="details">
-                      <h2>Someone Famous<br /><span>website Designer</span></h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card">
-                <div class="layer">
-                  <div class="content">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                      officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                      repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                    </p>
-                    <div class="imgBx">
-                      <img
-                        src="~/assets/executives/executives1.png"
-                        alt="" />
-                    </div>
-                    <div class="details">
-                      <h2>Someone Famous<br /><span>website Designer</span></h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card">
-                <div class="layer">
-                  <div class="content">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                      officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                      repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                    </p>
-                    <div class="imgBx">
-                      <img
-                        src="~/assets/executives/executives1.png"
-                        alt="" />
-                    </div>
-                    <div class="details">
-                      <h2>Someone Famous<br /><span>website Designer</span></h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card">
-                <div class="layer">
-                  <div class="content">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                      officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                      repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                    </p>
-                    <div class="imgBx">
-                      <img
-                        src="~/assets/executives/executives1.png"
-                        alt="" />
-                    </div>
-                    <div class="details">
-                      <h2>Someone Famous<br /><span>website Designer</span></h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card">
-                <div class="layer">
-                  <div class="content">
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                      officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                      repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                    </p>
-                    <div class="imgBx">
-                      <img
-                        src="~/assets/executives/executives1.png"
-                        alt="" />
-                    </div>
-                    <div class="details">
-                      <h2>Someone Famous<br /><span>website Designer</span></h2>
-                    </div>
+                  <div class="details">
+                    <h2>Someone Famous<br /><span>website Designer</span></h2>
                   </div>
                 </div>
               </div>
@@ -641,7 +515,7 @@
                 position: absolute;
                 opacity: 0;
                 top: -16rem;
-                transform: scale(0.5);
+                // transform: scale(0.5);
                 transition: all 0.2s;
               }
             }
@@ -756,27 +630,102 @@
 
     /* mobile */
     #executives__mobile {
-      position: relative;
-      height: 100vh;
-      display: flex;
+     position: relative;
+      // min-height: 100vh;
+      padding: 0 0 10rem;
+      .executives__title {
+        font-family: 'Black Han Sans', sans-serif;
+        font-size: 3rem;
+        text-align: center;
+      }
+      .testimonials {
+        max-width: 100%;
+         display: flex;
       justify-content: center;
       align-items: center;
+      
+      background: #111;
+        position: relative;
+        -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
+        .swiper-slide {
+          background-position: center;
+          background-size: cover;
+          width: 350px ;
+          min-height: 350px;
+          margin: 0 20px;
+          background: #fff;
+        }
+        .card {
+          position: relative;
+          width: 100%;
+          margin: 0 auto;
+          background: #333333;
+          padding: 60px 40px;
+          text-align: center;
+          overflow: hidden;
+          .layer {
+            position: absolute;
+            top: calc(100% - 2px);
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#03a9f4, #e91ee3);
+            z-index: 1;
+            transition: 0.5s;
+          }
+          .content {
+            position: relative;
+            z-index: 2;
+            p {
+              font-size: 18px;
+              line-height: 24px;
+              margin-bottom: 20px;
+              color: #fff;
+            }
+            .imgBx {
+              width: 100px;
+              height: 100px;
+              margin: 0 auto;
+              overflow: hidden;
+              border: 4px solid #fff;
+              border-radius: 50%;
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+              img {
+                width: 100%;
+              }
+            }
+            .details {
+              h2 {
+                font-size: 18px;
+                color: #fff;
+                span {
+                  color: #03a9f4;
+                  font-size: 14px;
+                  transition: 0.5s;
+                }
+              }
+            }
+          }
+          &:hover .layer {
+            top: 0;
+          }
+        }
+      }
+      .swiper-container-3d .swiper-slide-shadow-left,
+      .swiper-container-3d .swiper-slide-shadow-right {
+        background-image: none;
       }
     }
-  
+  }
 
   @media screen and (max-width: 768px) {
     #executives__pc {
       display: none;
     }
-    #executives__mobile {
-      display: block;
-    }
+ 
   }
   @media screen and (min-width: 769px) {
-    #executives__pc {
-      display: block;
-    }
+ 
     #executives__mobile {
       display: none;
     }

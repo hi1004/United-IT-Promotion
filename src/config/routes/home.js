@@ -8,15 +8,10 @@ const gsap = window.gsap;
 const TimelineMax = window.TimelineMax;
 const controller = new ScrollMagic.Controller();
 
-
 gsap.registerPlugin(scrollTo);
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 export default function () {
-
-
   /* SCROLL DISABLE */
   const bodyEl = document.querySelector('body');
   const canvases = document.querySelectorAll('.bg-canvas');
@@ -204,9 +199,8 @@ export default function () {
   const executivesImages = document.querySelectorAll('.img');
   const abouVideoPoster = document.querySelector('.video-poster');
 
-  
   /* SCROLL MAGIC - CHANGE TO EXECUTIVES */
-  function changeToExecutives() {    
+  function changeToExecutives() {
     const changeToExecutivesEvent = new TimelineMax().to(bodyEl, 1, {
       backgroundColor: '#171818',
       ease: 'power1.inOut',
@@ -217,12 +211,12 @@ export default function () {
       duration: '100%',
     })
       .setTween(changeToExecutivesEvent)
-      .addTo(controller);      
+      .addTo(controller);
   }
   changeToExecutives();
 
   /* SCROLL MAGIC - EXECUTIVES TEXT ANIMATE  */
-  function executivesTextAnimate() {    
+  function executivesTextAnimate() {
     const changeToExecutivesEvent = new TimelineMax().to(executivesSection, 1, {
       color: '#fff',
     });
@@ -231,14 +225,14 @@ export default function () {
       triggerHook: 0.2,
       duration: '100%',
     })
-      .setTween(changeToExecutivesEvent)      
-      .addTo(controller);       
+      .setTween(changeToExecutivesEvent)
+      .addTo(controller);
   }
   executivesTextAnimate();
 
   /* SCROLL MAGIC - EXECUTIVES SCROLL ANIMATE */
   const executivesTitle = document.querySelector('.executives__title');
-  
+
   const colorArry = [
     '#5b45ff',
     '#e9f036',
@@ -264,11 +258,13 @@ export default function () {
           {
             y: 0,
             opacity: 0,
+           
           },
           {
             y: -20,
             opacity: 1,
             yoyo: true,
+            scale: .5
           }
         );
       new ScrollMagic.Scene({
@@ -281,69 +277,64 @@ export default function () {
           executivesImages[i].style.opacity = 0;
         })
         .addTo(controller);
-    });        
+    });
   }
   profileScrollAnimate();
 
-  function executivesImagesAnimate() {   
+  function executivesImagesAnimate() {
     new ScrollMagic.Scene({
       triggerElement: executivesLeftBox,
       duration: executivesSection.offsetHeight,
     })
       .setPin(executivesLeftBox)
-      .addTo(controller);      
+      .addTo(controller)
   }
+  
   executivesImagesAnimate();
 
   /* SCROLL MAGIC - EXECUTIVES SCROLL STOP ANIMATE */
-  function executivesScrollStopAnimate() {    
-
+  function executivesScrollStopAnimate() {
     new ScrollMagic.Scene({
       triggerElement: '#activities__container',
       triggerHook: 1,
-      duration: executivesSection.offsetHeight
-    })
-      .addTo(controller);    
-  }  
+      duration: executivesSection.offsetHeight,
+    }).addTo(controller);
+  }
   executivesScrollStopAnimate();
-
-
-
   /* progress */
-  
+
   const progressSection = document.querySelector('.progress-section');
   const progressBar = document.querySelector('.progress-bar');
   const progressNum = document.querySelector('.progress-num');
 
-  let x,y;
+  let x, y;
 
   window.addEventListener('mousemove', (e) => {
     x = e.clientX;
     y = e.clientY;
-  })
+  });
   function updateProgressBar() {
-    progressSection.style.transform = `translate(${x}px, ${y}px)`
+    progressSection.style.transform = `translate(${x}px, ${y}px)`;
     progressBar.style.height = `${getScrollPercentage()}%`;
     progressNum.innerText = `${Math.ceil(getScrollPercentage())}%`;
     requestAnimationFrame(updateProgressBar);
   }
 
   function getScrollPercentage() {
-    return ((window.scrollY - executivesSection.offsetTop + (window.innerHeight* 0.5)) / (executivesSection.offsetHeight) * 100);
+    return (
+      ((window.scrollY - executivesSection.offsetTop + window.innerHeight * 0.5) /
+        executivesSection.offsetHeight) *
+      100
+    );
   }
-  updateProgressBar();  
+  updateProgressBar();
   new ScrollMagic.Scene({
     triggerElement: executivesSection,
     triggerHook: 0.5,
     duration: executivesSection.offsetHeight,
-    
   })
-  .setClassToggle(progressSection, "progress-active")
-  .addTo(controller);
-
-
-  
- 
+    .setClassToggle(progressSection, 'progress-active')
+    .addTo(controller);
 
   // ---------------------------------------ACTIVITIES----------------------------------------------
   const activitiesContainer = document.querySelector('#activities__container');
@@ -353,7 +344,7 @@ export default function () {
   const slideContents = document.querySelectorAll('.slide__content');
   const slideTitles = document.querySelectorAll('.slide__title');
   const slideSubTitles = document.querySelectorAll('.slide__subtitle');
-  const slideParagraph = document.querySelectorAll('.slide__paragraph')
+  const slideParagraph = document.querySelectorAll('.slide__paragraph');
 
   /* SCROLL MAGIC - CHANGE TO ACTIVITIES */
   function changeToActivities() {
@@ -414,7 +405,6 @@ export default function () {
   resizeTitle();
 
   function pinTitle() {
-    
     new ScrollMagic.Scene({
       triggerElement: slideSpaces[0],
       triggerHook: 0,
@@ -426,11 +416,10 @@ export default function () {
   pinTitle();
 
   function pinText() {
-    
     const textResize = new TimelineMax().to('.slide__index_text', {
       color: 'red',
       x: -window.innerWidth,
-     });
+    });
     new ScrollMagic.Scene({
       triggerElement: slideSpaces[0],
       triggerHook: 0,
@@ -441,46 +430,45 @@ export default function () {
       .addTo(controller);
   }
   pinText();
- 
 
-  function activitiesContentTrigger(){       
-    slideSpaces.forEach((slideSpace, i)=>{   
-      if (i != 0) {     
+  function activitiesContentTrigger() {
+    slideSpaces.forEach((slideSpace, i) => {
+      if (i != 0) {
         ScrollTrigger.create({
           trigger: slideSpace,
           start: 'top 70%',
-          onEnter: ()=>{
-            slideTitles[i-1].classList.add('show')
-            slideSubTitles[i-1].classList.add('show')
-            slideParagraph[i-1].classList.add('show')
+          onEnter: () => {
+            slideTitles[i - 1].classList.add('show');
+            slideSubTitles[i - 1].classList.add('show');
+            slideParagraph[i - 1].classList.add('show');
           },
-          onLeave: ()=>{
-            slideTitles[i-1].classList.remove('show')
-            slideSubTitles[i-1].classList.remove('show')
-            slideParagraph[i-1].classList.remove('show')
+          onLeave: () => {
+            slideTitles[i - 1].classList.remove('show');
+            slideSubTitles[i - 1].classList.remove('show');
+            slideParagraph[i - 1].classList.remove('show');
           },
-          onEnterBack: ()=>{
-            slideTitles[i-1].classList.add('show')
-            slideSubTitles[i-1].classList.add('show')
-            slideParagraph[i-1].classList.add('show')
+          onEnterBack: () => {
+            slideTitles[i - 1].classList.add('show');
+            slideSubTitles[i - 1].classList.add('show');
+            slideParagraph[i - 1].classList.add('show');
           },
-          onLeaveBack: ()=>{
-            slideTitles[i-1].classList.remove('show')
-            slideSubTitles[i-1].classList.remove('show')
-            slideParagraph[i-1].classList.remove('show')
+          onLeaveBack: () => {
+            slideTitles[i - 1].classList.remove('show');
+            slideSubTitles[i - 1].classList.remove('show');
+            slideParagraph[i - 1].classList.remove('show');
           },
         });
       }
-    })
+    });
   }
-  activitiesContentTrigger()
+  activitiesContentTrigger();
 
   // ------------------------------ CONTACT ---------------------------------------------
   const contactEl = document.querySelector('#contact');
   const contactTitle = contactEl.querySelector('#contact__title');
   const contactBtn = contactEl.querySelector('a');
   function contactScrollTrigger() {
-    const typingSpeed = 50
+    const typingSpeed = 50;
     let text = [
       '',
       'ㄱ',
@@ -503,19 +491,19 @@ export default function () {
       '가입신청 및 무',
       '가입신청 및 문',
       '가입신청 및 문ㅇ',
-      '가입신청 및 문으'      
-    ]
-    for(let i=0; i<40; i++){
+      '가입신청 및 문으',
+    ];
+    for (let i = 0; i < 40; i++) {
       text.push('가입신청 및 문의');
     }
     let doTyping = false;
-    let i = 0
+    let i = 0;
     function contactTitleTyping() {
-      if(i<text.length && doTyping){
+      if (i < text.length && doTyping) {
         contactTitle.innerHTML = text[i];
         setTimeout(contactTitleTyping, typingSpeed);
         i++;
-      }else if (doTyping){        
+      } else if (doTyping) {
         i = 0;
         contactTitleTyping();
       }
@@ -524,13 +512,13 @@ export default function () {
       doTyping = true;
       contactTitle.classList.add('show');
       contactBtn.classList.add('show');
-      contactTitleTyping()
+      contactTitleTyping();
     }
     function leaveSection() {
       doTyping = false;
       contactTitle.classList.remove('show');
       contactBtn.classList.remove('show');
-      i = 0;      
+      i = 0;
     }
     ScrollTrigger.create({
       trigger: '#contact',
@@ -542,7 +530,4 @@ export default function () {
     });
   }
   contactScrollTrigger();
-  
-  
-
 } //end

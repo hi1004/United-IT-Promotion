@@ -106,7 +106,7 @@
 <style lang="scss" scoped>
   .activities__section {
     position: relative;
-    display: none;
+ 
     &::before {
       position: absolute;
       left: 0;
@@ -114,7 +114,7 @@
       width: 100%;
       height: 500px;
       top: -4.4%;
-      background-color: #fdc000;
+      // background-color: #fdc000;
       transform: skewY(170deg);
     }
   }
