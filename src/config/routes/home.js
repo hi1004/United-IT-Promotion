@@ -297,17 +297,12 @@ export default function () {
 
   /* SCROLL MAGIC - EXECUTIVES SCROLL STOP ANIMATE */
   function executivesScrollStopAnimate() {    
-    const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 0.5, {
-      opacity: 0,
-      y: '-100%',
-    });
+
     new ScrollMagic.Scene({
       triggerElement: '#activities__container',
       triggerHook: 1,
-      duration: '100%',
+      duration: executivesSection.offsetHeight
     })
-      // .setPin(executivesSection)
-      .setTween(scrollToExecutivesEvent)
       .addTo(controller);    
   }  
   executivesScrollStopAnimate();
@@ -337,10 +332,6 @@ export default function () {
     return ((window.scrollY - executivesSection.offsetTop + (window.innerHeight* 0.5)) / (executivesSection.offsetHeight) * 100);
   }
   updateProgressBar();  
-  window.addEventListener('scroll', ()=>{
-    console.log(scrollY)
-   
-  })
   new ScrollMagic.Scene({
     triggerElement: executivesSection,
     triggerHook: 0.5,
@@ -348,10 +339,6 @@ export default function () {
     
   })
   .setClassToggle(progressSection, "progress-active")
-  .addIndicators({
-    name: 'progress',
-  
-  })
   .addTo(controller);
 
 

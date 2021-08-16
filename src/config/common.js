@@ -116,6 +116,16 @@ export default function () {
     })
   })  
 
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach((navLink)=>{
+    navLink.addEventListener('click', ()=>{
+      window.location.reload();
+     
+   })
+  })
+
+
  
 
 } /* end */

@@ -9,6 +9,7 @@
     </div>    
     <RouterLink
       :to="'/contact'"
+      id="contact__btn"
       class="nav-link btn btn-info back-to-position to-top delay-4"
       active-class="active">
       <span class="material-icons">contact_support</span>
@@ -16,7 +17,6 @@
     </RouterLink>
   </section>
 </template>
-
 
 
 <style lang="scss" scoped>
