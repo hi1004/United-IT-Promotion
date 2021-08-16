@@ -4,13 +4,45 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const ScrollMagic = window.ScrollMagic;
 const gsap = window.gsap;
+
 const TimelineMax = window.TimelineMax;
 const controller = new ScrollMagic.Controller();
+
 
 gsap.registerPlugin(scrollTo);
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 export default function () {
+
+  /* persent */
+  
+    const progressSection = document.querySelector('.progress-section');
+    const progressBar = document.querySelector('.progress-bar');
+    const progressNum = document.querySelector('.progress-num');
+
+    let x,y;
+
+    window.addEventListener('mousemove', (e) => {
+      x = e.clientX;
+      y = e.clientY;
+    })
+    function updateProgressBar() {
+      progressSection.style.transform = `translate(${x}px, ${y}px)`
+      progressBar.style.height = `${getScrollPercentage()}%`;
+      progressNum.innerText = `${Math.ceil(getScrollPercentage())}%`;
+      requestAnimationFrame(updateProgressBar);
+    }
+
+    function getScrollPercentage() {
+      return ((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100);
+    }
+    updateProgressBar();
+  
+  
+
+
   /* SCROLL DISABLE */
   const bodyEl = document.querySelector('body');
   const canvases = document.querySelectorAll('.bg-canvas');
@@ -331,6 +363,10 @@ export default function () {
   
   executivesScrollStopAnimate();
 
+
+  
+ 
+
   // ---------------------------------------ACTIVITIES----------------------------------------------
   const activitiesContainer = document.querySelector('#activities__container');
 
@@ -528,6 +564,7 @@ export default function () {
     });
   }
   contactScrollTrigger();
+  
   
 
 } //end

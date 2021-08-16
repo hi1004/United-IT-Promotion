@@ -25,7 +25,7 @@ body {
   &.bd-overflow {
     overflow: hidden;
   }
-  cursor: none;
+  // cursor: none;
   a {
     text-decoration: none;
   }
@@ -43,7 +43,6 @@ html::-webkit-scrollbar {
 html::-webkit-scrollbar-thumb {
   background: #fdc000;
   border-radius: 6px;
-  filter: blur(30px);
   &:hover {
     background: #fff2c7;
   }

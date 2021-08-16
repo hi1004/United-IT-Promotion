@@ -3,6 +3,12 @@
   <section
     class="executives__section"
     id="executives">
+    <div class="progress-section">
+      <div class="progress-bar-wrap">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="progress-num"></div>
+    </div>
     <div class="container">
       <!-- PC -->
       <div class="left-box">
@@ -165,9 +171,9 @@
           </p>
           <div class="hashtag-wrap">
             <span class="hashtag tag_java">#Java</span>
-            <span class="hashtag tag_first">#족장</span>  
-            <span class="hashtag tag_second">#우가우가</span>  
-            <span class="hashtag tag_third">#비주얼</span>  
+            <span class="hashtag tag_first">#족장</span>
+            <span class="hashtag tag_second">#우가우가</span>
+            <span class="hashtag tag_third">#비주얼</span>
           </div>
         </div>
         <!-- 2조 -->
@@ -310,7 +316,12 @@
 </template>
 
 <script>
-  export default {};
+
+  export default {
+    mounted() {
+      
+    }
+  };
 </script>
 
 <style lang="scss" scoped>
@@ -330,6 +341,39 @@
       margin-top: 40rem;
       margin-bottom: 20rem;
       color: #000;
+      .progress-section {
+        position: fixed;
+        left: 10px;
+        top: -10px;
+        width: 60px;
+        height: 20%;
+        display: flex;
+        justify-content: space-between;
+        will-change: transform;
+        z-index: 9999;
+        transition: .3s ease-out;
+        .progress-bar-wrap {
+          position: relative;
+          width: 5px;
+          border: 1px solid #000;
+          border-radius: 10px;
+          overflow: hidden;
+          background-color: rgb(70,70,70);
+          .progress-bar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 0%;
+            background-color: #25c946;
+          }
+        }
+        .progress-num {
+          color: #25c946;
+        }
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
       .container {
         display: flex;
         width: 100%;
