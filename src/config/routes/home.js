@@ -16,30 +16,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function () {
 
-  /* persent */
-  
-    const progressSection = document.querySelector('.progress-section');
-    const progressBar = document.querySelector('.progress-bar');
-    const progressNum = document.querySelector('.progress-num');
-
-    let x,y;
-
-    window.addEventListener('mousemove', (e) => {
-      x = e.clientX;
-      y = e.clientY;
-    })
-    function updateProgressBar() {
-      progressSection.style.transform = `translate(${x}px, ${y}px)`
-      progressBar.style.height = `${getScrollPercentage()}%`;
-      progressNum.innerText = `${Math.ceil(getScrollPercentage())}%`;
-      requestAnimationFrame(updateProgressBar);
-    }
-
-    function getScrollPercentage() {
-      return ((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100);
-    }
-    updateProgressBar();  
-
 
   /* SCROLL DISABLE */
   const bodyEl = document.querySelector('body');
@@ -227,6 +203,7 @@ export default function () {
   const executivesProfiles = document.querySelectorAll('.profile');
   const executivesImages = document.querySelectorAll('.img');
   const abouVideoPoster = document.querySelector('.video-poster');
+
   
   /* SCROLL MAGIC - CHANGE TO EXECUTIVES */
   function changeToExecutives() {
@@ -254,6 +231,7 @@ export default function () {
         duration: '40%',
       })
         .setTween(changeToExecutivesEvent)
+       
         .addTo(controller);
     }    
     
@@ -272,7 +250,7 @@ export default function () {
         duration: '100%',
       })
         .setTween(changeToExecutivesEvent)
-  
+        
         .addTo(controller);
     }    
   }
@@ -333,7 +311,7 @@ export default function () {
     if (innerWidth > 769) {
       new ScrollMagic.Scene({
         triggerElement: executivesLeftBox,
-        duration: '1200%',
+        duration: executivesSection.offsetHeight,
       })
         .setPin(executivesLeftBox)
         .addTo(controller);
@@ -360,6 +338,48 @@ export default function () {
   }
   
   executivesScrollStopAnimate();
+
+
+
+  /* progress */
+  
+  const progressSection = document.querySelector('.progress-section');
+  const progressBar = document.querySelector('.progress-bar');
+  const progressNum = document.querySelector('.progress-num');
+
+  let x,y;
+
+  window.addEventListener('mousemove', (e) => {
+    x = e.clientX;
+    y = e.clientY;
+  })
+  function updateProgressBar() {
+    progressSection.style.transform = `translate(${x}px, ${y}px)`
+    progressBar.style.height = `${getScrollPercentage()}%`;
+    progressNum.innerText = `${Math.ceil(getScrollPercentage())}%`;
+    requestAnimationFrame(updateProgressBar);
+  }
+
+  function getScrollPercentage() {
+    return ((window.scrollY - executivesSection.offsetTop + (window.innerHeight* 0.5)) / (executivesSection.offsetHeight) * 100);
+  }
+  updateProgressBar();  
+  window.addEventListener('scroll', ()=>{
+    console.log(scrollY)
+   
+  })
+  new ScrollMagic.Scene({
+    triggerElement: executivesSection,
+    triggerHook: 0.5,
+    duration: executivesSection.offsetHeight,
+    
+  })
+  .setClassToggle(progressSection, "progress-active")
+  .addIndicators({
+    name: 'progress',
+  
+  })
+  .addTo(controller);
 
 
   

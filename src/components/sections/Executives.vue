@@ -558,15 +558,19 @@
   /* 프로그레스 바 */
   .progress-section {
     position: fixed;
-    left: 10px;
+    left: 50px;
     top: -10px;
     width: 60px;
-    height: 20%;
-    display: flex;
+    height: 100px;
+    // display: flex;
     justify-content: space-between;
     will-change: transform;
     z-index: 9999;
     transition: .3s ease-out;
+    display:none;
+    &.progress-active {
+      display: flex;
+    }
     .progress-bar-wrap {
       position: relative;
       width: 5px;
