@@ -303,26 +303,7 @@
             <span class="hashtag tag_java">#Java</span>
           </div>
         </div>
-      </div>
-      <!-- Mobile -->
-      <div class="mobile-box">
-        <h1 class="mobile-executives__title">
-          J-BIT UNITED IT<br />
-          EXECUTIVES
-        </h1>
-        <div class="mobile-executives__wrap">
-          <div class="mobile-executives__space"></div>
-          <div class="mobile-executives__space"></div>
-          <div class="mobile-executives__space"></div>
-          <div class="mobile-executives__space"></div>
-          <div class="mobile-executives__space"></div>
-          <div class="mobile-executives__space"></div>
-          <div class="mobile-executives__space"></div>
-          <div class="mobile-executives__space"></div>
-          <div class="mobile-executives__space"></div>
-          <div class="mobile-executives__space"></div>
-        </div>
-      </div>
+      </div>      
     </div>
   </section>
 </template>
@@ -506,54 +487,7 @@
         }
       }
     }
-  }
-
-  /* 768 이하 */
-  @media screen and (max-width: 768px) {
-    
-    .executives__section {
-      position: relative;
-      margin: 20vh 0;
-      height: 720vw;
-      color: #000;
-      .container {
-        margin: 0 auto;
-      }
-      .left-box, .right-box {
-        visibility: hidden;
-        display: none;
-      }
-      .mobile-box {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .mobile-executives__title {
-          height: 20vw;
-          display: block;
-          z-index: 1;
-          font-family: 'Black Han Sans', sans-serif;
-          font-size: 5vw;
-          text-align: center;
-          color: #fff;
-        }
-        .mobile-executives__wrap {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          width: 60vw;
-          .mobile-executives__space {
-            border: solid white 1px;
-            width: 60vw;
-            height: 70vw;
-            background-color: purple;
-          }
-        }        
-      }
-    }
-  }
+  }  
 
   /* 프로그레스 바 */
   .progress-section {

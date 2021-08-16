@@ -206,53 +206,33 @@ export default function () {
 
   
   /* SCROLL MAGIC - CHANGE TO EXECUTIVES */
-  function changeToExecutives() {
-    if (window.innerWidth>769) {
-      const changeToExecutivesEvent = new TimelineMax().to(bodyEl, 1, {
-        backgroundColor: '#171818',
-        ease: 'power1.inOut',
-      });
-      new ScrollMagic.Scene({
-        triggerElement: abouVideoPoster,
-        triggerHook: 0.2,
-        duration: '100%',
-      })
-        .setTween(changeToExecutivesEvent)
-        .addTo(controller);
-    }
-    else {
-      const changeToExecutivesEvent = new TimelineMax().to(bodyEl, 1, {
-        backgroundColor: '#171818',
-        ease: 'power1.inOut',
-      });
-      new ScrollMagic.Scene({
-        triggerElement: abouVideoPoster,
-        triggerHook: 0.2,
-        duration: '40%',
-      })
-        .setTween(changeToExecutivesEvent)
-       
-        .addTo(controller);
-    }    
-    
+  function changeToExecutives() {    
+    const changeToExecutivesEvent = new TimelineMax().to(bodyEl, 1, {
+      backgroundColor: '#171818',
+      ease: 'power1.inOut',
+    });
+    new ScrollMagic.Scene({
+      triggerElement: abouVideoPoster,
+      triggerHook: 0.2,
+      duration: '100%',
+    })
+      .setTween(changeToExecutivesEvent)
+      .addTo(controller);      
   }
   changeToExecutives();
 
   /* SCROLL MAGIC - EXECUTIVES TEXT ANIMATE  */
-  function executivesTextAnimate() {
-    if (window.innerWidth>769) {
-      const changeToExecutivesEvent = new TimelineMax().to(executivesSection, 1, {
-        color: '#fff',
-      });
-      new ScrollMagic.Scene({
-        triggerElement: aboutSpacer,
-        triggerHook: 0.2,
-        duration: '100%',
-      })
-        .setTween(changeToExecutivesEvent)
-        
-        .addTo(controller);
-    }    
+  function executivesTextAnimate() {    
+    const changeToExecutivesEvent = new TimelineMax().to(executivesSection, 1, {
+      color: '#fff',
+    });
+    new ScrollMagic.Scene({
+      triggerElement: aboutSpacer,
+      triggerHook: 0.2,
+      duration: '100%',
+    })
+      .setTween(changeToExecutivesEvent)      
+      .addTo(controller);       
   }
   executivesTextAnimate();
 
@@ -273,70 +253,63 @@ export default function () {
   ];
 
   function profileScrollAnimate() {
-    if (window.innerWidth > 769){
-      executivesProfiles.forEach(function (executivesProfile, i) {
-        const scrollToExecutivesEvent = new TimelineMax()
-          .to(executivesTitle, 0.5, {
-            color: colorArry[i],
-          })
-          .fromTo(
-            executivesImages[i],
-            0.7,
-            {
-              y: 0,
-              opacity: 0,
-            },
-            {
-              y: -20,
-              opacity: 1,
-              yoyo: true,
-            }
-          );
-        new ScrollMagic.Scene({
-          triggerElement: executivesProfile,
-          triggerHook: 1,
-          duration: '130%',
+    executivesProfiles.forEach(function (executivesProfile, i) {
+      const scrollToExecutivesEvent = new TimelineMax()
+        .to(executivesTitle, 0.5, {
+          color: colorArry[i],
         })
-          .setTween(scrollToExecutivesEvent)
-          .on('end', function () {
-            executivesImages[i].style.opacity = 0;
-          })
-          .addTo(controller);
-      });
-    }    
+        .fromTo(
+          executivesImages[i],
+          0.7,
+          {
+            y: 0,
+            opacity: 0,
+          },
+          {
+            y: -20,
+            opacity: 1,
+            yoyo: true,
+          }
+        );
+      new ScrollMagic.Scene({
+        triggerElement: executivesProfile,
+        triggerHook: 1,
+        duration: '130%',
+      })
+        .setTween(scrollToExecutivesEvent)
+        .on('end', function () {
+          executivesImages[i].style.opacity = 0;
+        })
+        .addTo(controller);
+    });        
   }
   profileScrollAnimate();
 
-  function executivesImagesAnimate() {
-    if (innerWidth > 769) {
-      new ScrollMagic.Scene({
-        triggerElement: executivesLeftBox,
-        duration: executivesSection.offsetHeight,
-      })
-        .setPin(executivesLeftBox)
-        .addTo(controller);
-    }    
+  function executivesImagesAnimate() {   
+    new ScrollMagic.Scene({
+      triggerElement: executivesLeftBox,
+      duration: executivesSection.offsetHeight,
+    })
+      .setPin(executivesLeftBox)
+      .addTo(controller);      
   }
   executivesImagesAnimate();
 
   /* SCROLL MAGIC - EXECUTIVES SCROLL STOP ANIMATE */
-  function executivesScrollStopAnimate() {
-    if (innerWidth > 769) {
-      const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 0.5, {
-        opacity: 0,
-        y: '-100%',
-      });
-      new ScrollMagic.Scene({
-        triggerElement: '#activities__container',
-        triggerHook: 1,
-        duration: '100%',
-      })
-        // .setPin(executivesSection)
-        .setTween(scrollToExecutivesEvent)
-        .addTo(controller);
-    }
-  }
-  
+  function executivesScrollStopAnimate() {    
+    const scrollToExecutivesEvent = new TimelineMax().to(executivesTitle, 0.5, {
+      opacity: 0,
+      y: '-100%',
+    });
+    new ScrollMagic.Scene({
+      triggerElement: '#activities__container',
+      triggerHook: 1,
+      duration: '100%',
+    })
+      // .setPin(executivesSection)
+      .setTween(scrollToExecutivesEvent)
+      .addTo(controller);    
+  }  
   executivesScrollStopAnimate();
 
 
