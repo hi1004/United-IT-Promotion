@@ -630,9 +630,9 @@
 
     /* mobile */
     #executives__mobile {
-     position: relative;
-      // min-height: 100vh;
-      padding: 0 0 10rem;
+    margin: 20rem 0;
+    position: relative;
+    padding: 0 0 10rem;
       .executives__title {
         font-family: 'Black Han Sans', sans-serif;
         font-size: 3rem;

@@ -208,7 +208,7 @@ export default function () {
     new ScrollMagic.Scene({
       triggerElement: abouVideoPoster,
       triggerHook: 0.2,
-      duration: '100%',
+      duration: '50%',
     })
       .setTween(changeToExecutivesEvent)
       .addTo(controller);
