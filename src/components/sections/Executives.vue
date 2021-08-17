@@ -572,6 +572,7 @@
           </div>
         </div>
       </div>
+      <div class="swiper-pagination"></div>
     </section>
   </section>
 </template>
@@ -593,6 +594,11 @@
           slideShadows: true,
         },
         loop: true,
+        pagination : {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        bulletClass: 'swiper-pagination-bullet'
       });
     },
   };
@@ -807,7 +813,7 @@
         font-family: 'Black Han Sans', sans-serif;
         font-size: 2.6rem;
         text-align: center;
-        margin-bottom: 5rem;
+        margin: 2rem auto;
       }
       .testimonials {
         max-width: 100%;
@@ -816,6 +822,7 @@
         align-items: center;        
         background-color: transparent;
         position: relative;
+        margin-bottom: 2rem;
         -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
         .swiper-slide {
           background-position: center;
@@ -928,10 +935,26 @@
           }
         }
       }     
+      .swiper-pagination ::v-deep {
+        position: relative;
+        margin: 0 auto;
+        .swiper-pagination-bullet {
+          width: 1rem;
+          height: 1rem;
+          margin: 0 .3rem;
+          background: white;
+        }
+        .swiper-pagination-bullet-active {
+          width: 3rem;
+          border-radius: 1rem;
+          transition: width .5s;
+          background: #fdc000;
+        }
+      }
       .swiper-container-3d .swiper-slide-shadow-left,
       .swiper-container-3d .swiper-slide-shadow-right {
         background-image: none;
-      }
+      } 
     }
   }
   
