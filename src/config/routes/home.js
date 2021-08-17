@@ -413,8 +413,8 @@ export default function () {
         });
       new ScrollMagic.Scene({
         triggerElement: slideWrap,
-        triggerHook: 0.5,
-        duration: '50%',
+        triggerHook: 0.4,
+        duration: '40%',
       })
         .setTween(setWordYpos)
         .addTo(controller);

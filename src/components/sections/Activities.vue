@@ -200,6 +200,20 @@
               font-family: 'Noto Sans KR', sans-serif;
             }
           }
+        }
+        @media all and (max-width: 991px) {
+          .banner {
+            padding: 100px 50px;
+            .content {
+              .slide__title {
+                font-size: 2rem;
+                letter-spacing: 0.05rem;
+              }
+              p {
+                font-size: 1rem;
+              }
+            }
+          }
         } 
       }  
     }
@@ -213,7 +227,7 @@
         position: absolute;
         width: auto;
         left: 50%;
-        top: 50%;
+        top: 40%;
         transform: translate(-50%, -50%);
         font-family: 'Black Han Sans', sans-serif;
         font-size: 12vw;
