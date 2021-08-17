@@ -316,84 +316,256 @@
       </h1>
       <div class="testimonials">
         <div class="swiper-container">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper">            
             <div class="swiper-slide">
-              <div class="card">
-                <div class="layer"></div>
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                    officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                    repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                  </p>
+              <div class="swiper-card">
+                <div class="swiper-layer"></div>
+                <div class="swiper-content">
                   <div class="imgBx">
                     <img
                       src="~/assets/executives/executives1.png"
                       alt="" />
                   </div>
                   <div class="details">
-                    <h2>Someone Famous<br /><span>website Designer</span></h2>
+                    <h2>장현아<br /><span>회장</span></h2>
                   </div>
+                  <div class="description-wrap">
+                    <p class="description">
+                      삼성회장이 꿈입니다.
+                    </p>
+                  </div>
+                  <div class="hashtag-wrap"></div>                  
                 </div>
               </div>
             </div>
+
             <div class="swiper-slide">
-              <div class="card">
-                <div class="layer"></div>
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                    officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                    repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                  </p>
+              <div class="swiper-card">
+                <div class="swiper-layer"></div>
+                <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives1.png"
+                      src="~/assets/executives/executives5.png"
                       alt="" />
                   </div>
                   <div class="details">
-                    <h2>Someone Famous<br /><span>website Designer</span></h2>
+                    <h2>오병헌<br /><span>부회장</span></h2>
                   </div>
+                  <div class="description-wrap">
+                    <p class="description">
+                      전반적으로 동아리를 총괄하며, Web관련 스터디를 진행하고 있습니다. 
+                    </p>
+                  </div>
+                  <div class="hashtag-wrap"></div>                  
                 </div>
               </div>
             </div>
+
             <div class="swiper-slide">
-              <div class="card">
-                <div class="layer"></div>
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                    officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                    repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                  </p>
+              <div class="swiper-card">
+                <div class="swiper-layer"></div>
+                <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives1.png"
+                      src="~/assets/executives/executives_affairs.png"
                       alt="" />
                   </div>
                   <div class="details">
-                    <h2>Someone Famous<br /><span>website Designer</span></h2>
+                    <h2>손혜진<br /><span>총무</span></h2>
                   </div>
+                  <div class="description-wrap">
+                    <p class="description">
+                      돈 계산은 정확하고 신중하게!!
+                    </p>
+                  </div>
+                  <div class="hashtag-wrap"></div>                  
                 </div>
               </div>
             </div>
+
             <div class="swiper-slide">
-              <div class="card">
-                <div class="layer"></div>
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quisquam. Eius
-                    officia eum similique placeat sint nobis deserunt! Odit deserunt dolorem
-                    repellendus mollitia assumenda veniam quae quis praesentium et excepturi?
-                  </p>
+              <div class="swiper-card">
+                <div class="swiper-layer"></div>
+                <div class="swiper-content">
+                  <div class="imgBx">
+                    <img
+                      src="~/assets/executives/executives_promotion.png"
+                      alt="" />
+                  </div>
+                  <div class="details">
+                    <h2>표예원<br /><span>홍보부장</span></h2>
+                  </div>
+                  <div class="description-wrap">
+                    <p class="description">
+                      동아리를 위해 열심히 홍보하고 퀄리티 있도록 노력하겠습니다.
+                    </p>
+                  </div>
+                  <div class="hashtag-wrap"></div>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="swiper-layer"></div>
+                <div class="swiper-content">
                   <div class="imgBx">
                     <img
                       src="~/assets/executives/executives1.png"
                       alt="" />
                   </div>
                   <div class="details">
-                    <h2>Someone Famous<br /><span>website Designer</span></h2>
+                    <h2>장현아<br /><span>1조 조장</span></h2>
                   </div>
+                  <div class="description-wrap">
+                    <p class="description">
+                      Java에 관심있으신 분<br />
+                      스파르타로 성장 시켜드립니다.
+                    </p>
+                  </div> 
+                  <div class="hashtag-wrap">
+                    <span class="hashtag tag_java">#Java</span>
+                    <span class="hashtag tag_first">#족장</span>
+                    <span class="hashtag tag_second">#우가우가</span>
+                    <span class="hashtag tag_third">#비주얼</span>
+                  </div>                 
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="swiper-layer"></div>
+                <div class="swiper-content">
+                  <div class="imgBx">
+                    <img
+                      src="~/assets/executives/executives2.png"
+                      alt="" />
+                  </div>
+                  <div class="details">
+                    <h2>최현진<br /><span>2조 조장</span></h2>
+                  </div>
+                  <div class="description-wrap">
+                    <p class="description">
+                      1학기에 이어서 2조 조장을 맡게 된 최현진입니다.<br />
+                      저도 실력이 부족하기 때문에 많이 알려드리지 못할까 걱정입니다. <br />
+                      대신 함께하는 분위기의 조가 되도록 노력하겠습니다.<br />
+                      어떤 주제든 질문은 환영입니다. 잘 부탁드립니다.
+                    </p>
+                  </div>  
+                  <div class="hashtag-wrap">
+                    <span class="hashtag tag_java">#Java</span>
+                  </div>                
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="swiper-layer"></div>
+                <div class="swiper-content">
+                  <div class="imgBx">
+                    <img
+                      src="~/assets/executives/executives3.png"
+                      alt="" />
+                  </div>
+                  <div class="details">
+                    <h2>김재영<br /><span>3조 조장</span></h2>
+                  </div>
+                  <div class="description-wrap">
+                    <p class="description">
+                      손으로 몇 초면 할 수 있는 일을 몇 시간의 코딩을 통해 <br />
+                      자동으로 수행시킬 때의 성취감을 느낄 수 있는 사람이<br />
+                      비로서 프로그래머가 될 수 있습니다. <br />
+                      동아리에서 다 같이 우리의 미래를 코딩해봅시다. 
+                    </p>
+                  </div>      
+                  <div class="hashtag-wrap">
+                    <span class="hashtag tag_java">#Java</span>
+                  </div>            
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="swiper-layer"></div>
+                <div class="swiper-content">
+                  <div class="imgBx">
+                    <img
+                      src="~/assets/executives/executives4.png"
+                      alt="" />
+                  </div>
+                  <div class="details">
+                    <h2>허민<br /><span>4조 조장</span></h2>
+                  </div>
+                  <div class="description-wrap">
+                    <p class="description">
+                      4조 조장을 맡게 된 허민입니다.<br />
+                      1학기 4조 조장님이 취업을 해서 조장직을 맡게 됐습니다.<br />
+                      경력이 짧아 미숙하지만, 즐거운 분위기의 조가 될수 있도록<br />
+                      노력하겠습니다. 잘 부탁드립니다.
+                    </p>
+                  </div>    
+                  <div class="hashtag-wrap">
+                    <span class="hashtag tag_java">#Java</span>
+                  </div>              
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="swiper-layer"></div>
+                <div class="swiper-content">
+                  <div class="imgBx">
+                    <img
+                      src="~/assets/executives/executives5.png"
+                      alt="" />
+                  </div>
+                  <div class="details">
+                    <h2>오병헌<br /><span>5조 조장</span></h2>
+                  </div>
+                  <div class="description-wrap">
+                    <p class="description">
+                      부회장겸 5조 조장을 맡고 있는 오병헌입니다.<br />
+                      주로 WEB관련 스터디와 프로젝트를 진행 할 예정입니다.
+                    </p>
+                  </div>    
+                  <div class="hashtag-wrap">
+                    <span class="hashtag tag_web">#Web</span>
+                    <span class="hashtag tag_frontend">#Frontend</span>
+                    <span class="hashtag tag_vue">#Vue</span>
+                    <span class="hashtag tag_react">#React</span>
+                    <span class="hashtag tag_nodejs">#Node.js</span>
+                  </div>              
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="swiper-layer"></div>
+                <div class="swiper-content">
+                  <div class="imgBx">
+                    <img
+                      src="~/assets/executives/executives6.png"
+                      alt="" />
+                  </div>
+                  <div class="details">
+                    <h2>김동훈<br /><span>6조 조장</span></h2>
+                  </div>
+                  <div class="description-wrap">
+                    <p class="description">
+                      안녕하세요. 6조 조장을 맡고 있는 김동훈입니다.<br />
+                      목표는 초봉 4천 이상, 함께 하실 분 구합니다. 
+                    </p>
+                  </div>      
+                  <div class="hashtag-wrap">
+                    <span class="hashtag tag_web">#Web</span>
+                    <span class="hashtag tag_frontend">#Frontend</span>
+                    <span class="hashtag tag_java">#Java</span>
+                  </div>            
                 </div>
               </div>
             </div>
@@ -492,8 +664,7 @@
             position: relative;
             width: 100%;
             display: flex;
-            justify-content: center;
-
+            justify-content: center;            
             .executives__title {
               width: 100%;
               font-family: 'Black Han Sans', sans-serif;
@@ -515,7 +686,6 @@
                 position: absolute;
                 opacity: 0;
                 top: -16rem;
-                // transform: scale(0.5);
                 transition: all 0.2s;
               }
             }
@@ -531,36 +701,9 @@
           height: 100vh;
           display: flex;
           justify-content: center;
-          .photo {
-            max-width: 350px;
-            img {
-              width: 100%;
-            }
-          }
-          .name {
-            font-size: 3rem;
-            font-weight: bold;
-          }
-          .position {
-            position: relative;
-            padding: 10px 0;
-            &::after {
-              position: absolute;
-              content: '';
-              width: 100%;
-              height: 3px;
-              background-color: red;
-              display: block;
-              bottom: 0;
-              left: 0;
-            }
-          }
-          .description {
-            max-width: 666px;
-            text-align: center;
-            font-size: 1.2rem;
-            margin-top: 10px;
-          }
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 10rem;
           .hashtag-wrap {
             display: flex;
             justify-content: center;
@@ -604,9 +747,36 @@
               }
             }
           }
-          align-items: center;
-          flex-direction: column;
-          margin-bottom: 10rem;
+          .photo {
+            max-width: 350px;
+            img {
+              width: 100%;
+            }
+          }
+          .name {
+            font-size: 3rem;
+            font-weight: bold;
+          }
+          .position {
+            position: relative;
+            padding: 10px 0;
+            &::after {
+              position: absolute;
+              content: '';
+              width: 100%;
+              height: 3px;
+              background-color: red;
+              display: block;
+              bottom: 0;
+              left: 0;
+            }
+          }
+          .description {
+            max-width: 666px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 10px;
+          }    
           &:last-child {
             margin-bottom: 0;
           }
@@ -635,16 +805,16 @@
     padding: 0 0 10rem;
       .executives__title {
         font-family: 'Black Han Sans', sans-serif;
-        font-size: 3rem;
+        font-size: 2.6rem;
         text-align: center;
+        margin-bottom: 5rem;
       }
       .testimonials {
         max-width: 100%;
-         display: flex;
-      justify-content: center;
-      align-items: center;
-      
-      background: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        background-color: transparent;
         position: relative;
         -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
         .swiper-slide {
@@ -653,9 +823,8 @@
           width: 350px ;
           min-height: 350px;
           margin: 0 20px;
-          background: #fff;
         }
-        .card {
+        .swiper-card {
           position: relative;
           width: 100%;
           margin: 0 auto;
@@ -663,7 +832,7 @@
           padding: 60px 40px;
           text-align: center;
           overflow: hidden;
-          .layer {
+          .swiper-layer {
             position: absolute;
             top: calc(100% - 2px);
             left: 0;
@@ -673,19 +842,14 @@
             z-index: 1;
             transition: 0.5s;
           }
-          .content {
+          .swiper-content {
             position: relative;
-            z-index: 2;
-            p {
-              font-size: 18px;
-              line-height: 24px;
-              margin-bottom: 20px;
-              color: #fff;
-            }
+            z-index: 2;                    
             .imgBx {
-              width: 100px;
-              height: 100px;
-              margin: 0 auto;
+              display: block;
+              width: 150px;
+              height: 150px;
+              margin: 10px auto;
               overflow: hidden;
               border: 4px solid #fff;
               border-radius: 50%;
@@ -696,36 +860,88 @@
             }
             .details {
               h2 {
-                font-size: 18px;
+                font-size: 22px;
                 color: #fff;
                 span {
                   color: #03a9f4;
                   font-size: 14px;
-                  transition: 0.5s;
+                }
+              }
+            }
+            .description-wrap {              
+              height: 150px;
+              overflow: hidden;
+              .description{
+                font-size: 16px;
+                line-height: 20px;
+                margin: 10px auto;
+                color: #fff;
+              }
+            }
+            .hashtag-wrap {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              align-items: center;
+              height: 50px;
+              padding: 1rem;
+              flex-wrap: wrap;
+              .hashtag {
+                font-size: 14px;
+                font-weight: 900;
+                padding: 3px 8px;
+                margin: 5px;
+                border-radius: 3rem;
+                color: white;
+                &.tag_java {
+                  background-color: #b07219;
+                }
+                &.tag_react {
+                  background-color: #3fd9f6;
+                }
+                &.tag_vue {
+                  background-color: #41b883;
+                }
+                &.tag_nodejs {
+                  background-color: #689f63;
+                }
+                &.tag_web {
+                  background-color: #0d7ed5;
+                }
+                &.tag_frontend {
+                  background-color: #eab921;
+                }
+                &.tag_first {
+                  background-color: #fc6c9c;
+                }
+                &.tag_second {
+                  background-color: #0c9ccc;
+                }
+                &.tag_third {
+                  background-color: #fccc9c;
                 }
               }
             }
           }
-          &:hover .layer {
+          &:hover .swiper-layer {
             top: 0;
           }
         }
-      }
+      }     
       .swiper-container-3d .swiper-slide-shadow-left,
       .swiper-container-3d .swiper-slide-shadow-right {
         background-image: none;
       }
     }
   }
+  
 
   @media screen and (max-width: 768px) {
     #executives__pc {
       display: none;
-    }
- 
+    } 
   }
-  @media screen and (min-width: 769px) {
- 
+  @media screen and (min-width: 769px) { 
     #executives__mobile {
       display: none;
     }
