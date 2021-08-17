@@ -284,13 +284,14 @@ export default function () {
   function executivesImagesAnimate() {
     new ScrollMagic.Scene({
       triggerElement: executivesLeftBox,
-      duration: executivesSection.offsetHeight,
+      duration: ()=>{
+        return executivesSection.offsetHeight
+      },
     })
       .setPin(executivesLeftBox)
       .addTo(controller)
   }
-  
-  executivesImagesAnimate();
+  executivesImagesAnimate(); 
 
   /* SCROLL MAGIC - EXECUTIVES SCROLL STOP ANIMATE */
   function executivesScrollStopAnimate() {
