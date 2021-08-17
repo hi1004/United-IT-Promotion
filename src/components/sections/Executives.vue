@@ -968,7 +968,8 @@
           width: 350px ;
           min-height: 350px;
           margin: 0 20px;
-        }
+        }        
+        
         .swiper-card {
           position: relative;
           width: 100%;
@@ -1067,10 +1068,10 @@
                 }
               }
             }
-          }
-          &:hover .swiper-layer {
-            top: 0;
-          }
+          }          
+        }
+        .swiper-slide-active > .swiper-card > .swiper-layer ::v-deep {
+          top: 0;
         }
       }     
       .swiper-pagination ::v-deep {
