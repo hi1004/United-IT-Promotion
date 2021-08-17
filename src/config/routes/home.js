@@ -336,6 +336,14 @@ export default function () {
     .setClassToggle(progressSection, 'progress-active')
     .addTo(controller);
 
+  new ScrollMagic.Scene({
+    triggerElement: '.testimonials',
+    triggerHook: 0.3,
+    duration: '100%'
+  })
+    .setClassToggle(document.querySelector('#swiper-notice'), 'notice-active')
+    .addTo(controller);
+
   // ---------------------------------------ACTIVITIES----------------------------------------------
   const activitiesContainer = document.querySelector('#activities__container');
 

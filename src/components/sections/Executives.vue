@@ -1,4 +1,4 @@
-<template>
+<template>  
   <!-- executives -->
   <section
     class="executives__section"
@@ -310,11 +310,16 @@
 
     <!-- mobile -->
     <section id="executives__mobile">
-      <h1 class="executives__title">
-        J-BIT UNITED IT<br />
-        EXECUTIVES
-      </h1>
+      <div class="executives__title-wrap">
+        <h1 class="executives__title">
+          J-BIT UNITED IT<br />
+          EXECUTIVES
+        </h1>
+      </div>      
       <div class="testimonials">
+        <div id="swiper-notice">
+          <i class="far fa-hand-point-up"></i>
+        </div>
         <div class="swiper-container">
           <div class="swiper-wrapper">            
             <div class="swiper-slide">
@@ -809,11 +814,13 @@
     margin: 20rem 0;
     position: relative;
     padding: 0 0 10rem;
-      .executives__title {
-        font-family: 'Black Han Sans', sans-serif;
-        font-size: 2.6rem;
-        text-align: center;
-        margin: 2rem auto;
+      .executives__title-wrap {
+        padding: 3rem 0;
+        .executives__title {
+          font-family: 'Black Han Sans', sans-serif;
+          font-size: 2.6rem;
+          text-align: center;
+        }
       }
       .testimonials {
         max-width: 100%;
@@ -824,6 +831,49 @@
         position: relative;
         margin-bottom: 2rem;
         -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
+        #swiper-notice {
+          z-index: 10;
+          i {
+            position: absolute; 
+            left: 70%;           
+            top: 50%;
+            opacity: 0;
+            font-size: 7rem;
+            color: white;            
+            display: none; 
+            transform: rotate(-10deg);
+          }
+          &.notice-active {
+            i{
+              display: block; 
+              animation: show-swipe 1.5s;
+              animation-iteration-count: 1;
+              animation-timing-function: ease-out;
+            }
+          }
+          @keyframes show-swipe {
+            0% {
+              opacity: 0;
+              left: 70%;
+              transform: rotate(-10deg) scale(1);
+            }
+            30% {
+              opacity: 1;
+              left: 70%;    
+              transform: rotate(-10deg) scale(.7);          
+            }
+            70%{
+              opacity: 1;
+              left: 20%;
+              transform: rotate(-10deg) scale(.7);
+            }    
+            100% {
+              opacity: 0;
+              left: 20%;
+              transform: rotate(-10deg) scale(1);
+            }
+          }          
+        }
         .swiper-slide {
           background-position: center;
           background-size: cover;
@@ -939,10 +989,11 @@
         position: relative;
         margin: 0 auto;
         .swiper-pagination-bullet {
-          width: 1rem;
-          height: 1rem;
+          width: 1.1rem;
+          height: 1.1rem;
           margin: 0 .3rem;
           background: white;
+          opacity: 0.7;
         }
         .swiper-pagination-bullet-active {
           width: 3rem;
