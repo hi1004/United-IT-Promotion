@@ -1086,8 +1086,10 @@
         .swiper-pagination-bullet-active {
           width: 3rem;
           border-radius: 1rem;
-          transition: width .5s;
+          transition: .5s;
           background: #fdc000;
+          box-shadow: 0 0 .5rem #fdc000;
+          opacity: 1;
         }
       }
       .swiper-container-3d .swiper-slide-shadow-left,

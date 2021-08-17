@@ -30,6 +30,9 @@
   font-family: 'Black Han Sans', sans-serif;
   #contact__title {
     font-size: 5rem;
+    @media screen and (max-width: 768px) {
+      font-size: 4rem;
+    }
     margin: 5vh 0;
     &:after {
       font-size: 5rem;
