@@ -67,16 +67,24 @@
       </div>
 
       <div class="slide__space">
-        <h1 id="slide__index_title">
-          Activities
-        </h1>
-
-        <div class="slide__index_text">
+        <div id="slide__index_title">
+          <span class="slide__index_title_word">A</span>
+          <span class="slide__index_title_word">C</span>
+          <span class="slide__index_title_word">T</span>
+          <span class="slide__index_title_word">I</span>
+          <span class="slide__index_title_word">V</span>
+          <span class="slide__index_title_word">I</span>
+          <span class="slide__index_title_word">T</span>
+          <span class="slide__index_title_word">I</span>
+          <span class="slide__index_title_word">E</span>
+          <span class="slide__index_title_word">S</span>
+        </div>
+        <!-- <div class="slide__index_text">
           HOW ARE MAKERS<br />
           EXPERIENCING THE<br />
           EFFECTS OF THE<br />
           GLOBAL PANDEMIC?<br />
-        </div>
+        </div> -->
         <div class="slide__index_images">
           <img
             class="slide__index_img"
@@ -192,47 +200,27 @@
               font-family: 'Noto Sans KR', sans-serif;
             }
           }
-        }
-    
-        @media all and (max-width: 991px) {
-          .banner {
-            padding: 100px 50px;
-            .content {
-              .slide__title {
-                font-size: 2rem;
-                letter-spacing: 0.05rem;
-              }
-              p {
-                font-size: 1rem;
-              }
-            }
-          }
-        }
-        &.index {
-          background-color: transparent;
-        }
-        &.first {
-          background-color: lightyellow;
-        }
-        &.second {
-          background-color: lightpink;
-        }
-        &.third {
-          background-color: lightcoral;
-        }
-      }
+        } 
+      }  
     }
     .slide__space {
       position: relative;
       width: 100%;
       height: 100vh;
       #slide__index_title {
+        display: flex;
+        flex-direction: row;
         position: absolute;
-        left: 7vw;
-        top: 5vh;
+        width: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         font-family: 'Black Han Sans', sans-serif;
         font-size: 12vw;
-        color: #fff;
+        color: #fff;        
+        .slide__index_title_word{
+          display: inline-block;
+        }        
       }
       .slide__index_text {
         position: absolute;
@@ -242,7 +230,6 @@
         right: 0;
         top: 50vh;
         width: 500px;
-        // transform: translate(-50%, -50%);
       }
       .slide__index_images {
         img {

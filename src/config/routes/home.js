@@ -399,19 +399,30 @@ export default function () {
   pinSlide();
 
   /* SLIDE INDEX TITLE */
-  function resizeTitle() {
-    const titleResize = new TimelineMax().to('#slide__index_title', {
-      fontSize: '5vw',
-    });
-    new ScrollMagic.Scene({
-      triggerElement: slideSpaces[0],
-      triggerHook: 0,
-      duration: '50%',
-    })
-      .setTween(titleResize)
-      .addTo(controller);
+
+  const titleWords = document.querySelectorAll('.slide__index_title_word')
+
+  function initTitleWordPos() {    
+    const yPosArray = [-100, 140, -80, 220, -20, 120, -40, 180, -110, 60 ]
+    titleWords.forEach((word, i)=>{
+      word.style.transform = `translateY(${yPosArray[i]}%)`
+
+      const setWordYpos = new TimelineMax()
+        .to(word, {
+          y: 0
+        });
+      new ScrollMagic.Scene({
+        triggerElement: slideWrap,
+        triggerHook: 0.5,
+        duration: '50%',
+      })
+        .setTween(setWordYpos)
+        .addTo(controller);
+      })
   }
-  resizeTitle();
+  initTitleWordPos()
+
+  
 
   function pinTitle() {
     new ScrollMagic.Scene({
@@ -424,21 +435,21 @@ export default function () {
   }
   pinTitle();
 
-  function pinText() {
-    const textResize = new TimelineMax().to('.slide__index_text', {
-      color: 'red',
-      x: -window.innerWidth,
-    });
-    new ScrollMagic.Scene({
-      triggerElement: slideSpaces[0],
-      triggerHook: 0,
-      duration: '100%',
-    })
-      .setPin('.slide__index_text')
-      .setTween(textResize)
-      .addTo(controller);
-  }
-  pinText();
+  // function pinText() {
+  //   const textResize = new TimelineMax().to('.slide__index_text', {
+  //     color: 'red',
+  //     x: -window.innerWidth,
+  //   });
+  //   new ScrollMagic.Scene({
+  //     triggerElement: slideSpaces[0],
+  //     triggerHook: 0,
+  //     duration: '100%',
+  //   })
+  //     .setPin('.slide__index_text')
+  //     .setTween(textResize)
+  //     .addTo(controller);
+  // }
+  // pinText();
 
   function activitiesContentTrigger() {
     slideSpaces.forEach((slideSpace, i) => {
