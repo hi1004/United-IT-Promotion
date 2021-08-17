@@ -318,6 +318,7 @@
       </div>      
       <div class="testimonials">
         <div id="swiper-notice">
+          <span>SWIPE!</span>
           <i class="far fa-hand-point-up"></i>
         </div>
         <div class="swiper-container">
@@ -833,44 +834,131 @@
         -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
         #swiper-notice {
           z-index: 10;
-          i {
+          pointer-events: none; 
+          span {
+            position: absolute;
+            font-family: 'Black Han Sans', sans-serif;
+            font-size: 2rem;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            color: white;
+            display: none;            
+          }
+          .fa-hand-point-up {
             position: absolute; 
-            left: 70%;           
+            left: 50%;           
             top: 50%;
             opacity: 0;
             font-size: 7rem;
             color: white;            
             display: none; 
-            transform: rotate(-10deg);
+            transform: rotate(-10deg) translateX(-50%);
           }
           &.notice-active {
-            i{
+            span {
               display: block; 
-              animation: show-swipe 1.5s;
+              animation: show-swipe-text 2s;
+              animation-iteration-count: 1;
+            }
+            .fa-hand-point-up{
+              display: block; 
+              animation: show-swipe 2s;
               animation-iteration-count: 1;
               animation-timing-function: ease-out;
             }
           }
-          @keyframes show-swipe {
+          @keyframes show-swipe-text {
             0% {
               opacity: 0;
-              left: 70%;
-              transform: rotate(-10deg) scale(1);
+              top: 50%;
+              left: 25%;
+              transform: rotate(-5deg) scale(.8) translateX(-50%);
             }
-            30% {
-              opacity: 1;
-              left: 70%;    
-              transform: rotate(-10deg) scale(.7);          
+            10% {
+              opacity: 0;
+              top: 50%;
+              left: 25%;    
+              transform: rotate(-5deg) scale(.8) translateX(-50%);          
             }
-            70%{
+            25%{
               opacity: 1;
+              top: 45%;
               left: 20%;
-              transform: rotate(-10deg) scale(.7);
+              transform: rotate(-5deg) scale(1) translateX(-50%);
+            }    
+            40% {
+              opacity: 0;
+              top: 45%;
+              left: 20%;
+              transform: rotate(-5deg) scale(.8) translateX(-50%);
+            }
+            60% {
+              opacity: 0;
+              top: 50%;
+              left: 75%;
+              transform: rotate(5deg) scale(.8) translateX(-50%);
+            }
+            70% {
+              opacity: 0;
+              top: 50%;
+              left: 75%;    
+              transform: rotate(5deg) scale(.8) translateX(-50%); 
+            }
+            85% {
+              opacity: 1;
+              top: 45%;
+              left: 80%;
+              transform: rotate(5deg) scale(1) translateX(-50%);
             }    
             100% {
               opacity: 0;
+              top: 45%;
+              left: 80%;
+              transform: rotate(5deg) scale(.8) translateX(-50%);
+            }
+          }   
+          @keyframes show-swipe {
+            0% {
+              opacity: 0;
+              left: 50%;
+              transform: rotate(-10deg) scale(1) translateX(-50%);
+            }
+            10% {
+              opacity: 1;
+              left: 50%;    
+              transform: rotate(-10deg) scale(.7) translateX(-50%);          
+            }
+            25%{
+              opacity: 1;
               left: 20%;
-              transform: rotate(-10deg) scale(1);
+              transform: rotate(-10deg) scale(.7) translateX(-50%);
+            }    
+            40% {
+              opacity: 0;
+              left: 20%;
+              transform: rotate(-10deg) scale(.7) translateX(-50%);
+            }
+            60% {
+              opacity: 0;
+              left: 50%;
+              transform: rotate(-10deg) .7 translateX(-50%);
+            }
+            70% {
+              opacity: 1;
+              left: 50%;    
+              transform: rotate(-10deg) scale(.7) translateX(-50%); 
+            }
+            85% {
+              opacity: 1;
+              left: 80%;
+              transform: rotate(-10deg) scale(.7) translateX(-50%);
+            }    
+            100% {
+              opacity: 0;
+              left: 80%;
+              transform: rotate(-10deg) scale(.7) translateX(-50%);
             }
           }          
         }
