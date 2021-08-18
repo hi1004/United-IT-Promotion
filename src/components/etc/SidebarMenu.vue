@@ -337,6 +337,7 @@
   .expander {
     width: calc(92px + 9.25rem);
   }
+  
   /*Add padding body*/
   .body-pd-reset {
     padding: 0;

@@ -3,21 +3,44 @@ const gsap = window.gsap;
 
 export default function(){  
 
-  const homePadding = document.querySelector('.padding');
+  // const homePadding = document.querySelector('.padding');
+
   /* SHOW MENU */
   const snCollapseLinks = document.querySelectorAll('.collapse__link'); 
   const snCollapseMenus = document.querySelectorAll('.collapse__menu'); 
   const snToolTips = document.querySelectorAll('.side-nav__tooltip');
 
-  const showMenu = (toggleId, navbarId, bodyId) => {
+  /* body padding control*/
+  const snBodyPadding = document.getElementById('body-pd');
+  function resetBodyPd() {
+    snBodyPadding.classList.remove('body-pd-reset')
+    snBodyPadding.classList.remove('body-pd-default')
+    snBodyPadding.classList.remove('body-pd-expander')
+  }
+  snBodyPadding.classList.add('body-pd-default')
+
+  window.addEventListener('resize', ()=>{
+    if (window.innerWidth < 768) {
+      resetBodyPd()
+      snBodyPadding.classList.add('body-pd-reset')
+    } else {
+      if (document.getElementById('navbar').classList.contains('expander')) {
+        resetBodyPd()
+        snBodyPadding.classList.add('body-pd-expander')
+      } else {
+        resetBodyPd()
+        snBodyPadding.classList.add('body-pd-default')
+      }      
+    }   
+  })
+
+  const showMenu = (toggleId, navbarId) => {
     const snToggle = document.getElementById(toggleId),
-      snNavBar = document.getElementById(navbarId),
-      snBodyPadding = document.getElementById(bodyId);
+      snNavBar = document.getElementById(navbarId);      
       snToggle.addEventListener('click', () => {
         snNavBar.classList.toggle('expander');
-        // snBodyPadding.classList.toggle('body-pd');
         snToggle.classList.toggle('toggle-active');
-        homePadding.classList.toggle('body-padding')
+        // homePadding.classList.toggle('body-padding')
 
         snToolTips.forEach((snToolTip) => {
           snToolTip.classList.toggle('snToolTip-active');
@@ -28,10 +51,11 @@ export default function(){
         });
         snCollapseMenus.forEach((snCollapseMenu)=>{
           snCollapseMenu.classList.remove('showCollapse')
-        })
+        })       
         
-
-        if(snNavBar.classList.contains('expander')){
+        resetBodyPd()
+        if(snNavBar.classList.contains('expander')){          
+          snBodyPadding.classList.add('body-pd-expander')
           snLinks.forEach((snLink) => {
             if(snLink.classList.contains('color-active')&& snLink.classList.contains('collapse')){
               snLink.querySelector('.collapse__link').classList.add('rotate')
@@ -39,10 +63,13 @@ export default function(){
             }
           })
         }
+        else{
+          snBodyPadding.classList.add('body-pd-default')
+        }
       });
   };
  
-  showMenu('nav-toggle', 'navbar', 'body-pd');
+  showMenu('nav-toggle', 'navbar');
 
 
 

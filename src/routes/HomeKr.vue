@@ -1,14 +1,14 @@
 <template>
-  <div class="padding">
-    <MobileNav />
-    <Particles />
-    <Intro />
-    <SidebarMenu />
-    <About />
-    <Executives />
-    <Activities />
-    <Contact />
-  </div>
+  <!-- <div class="padding"> -->
+  <MobileNav />
+  <Particles />
+  <Intro />
+  <SidebarMenu />
+  <About />
+  <Executives />
+  <Activities />
+  <Contact />
+  <!-- </div> -->
 </template>
 
 <script>

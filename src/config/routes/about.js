@@ -8,8 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 const ScrollMagic = window.ScrollMagic;
 
 export default function() {
-
-
   window.onload = function () {
     const bodyEl = document.querySelector('body')
     const toolBar = document.querySelector('.main-tool-bar');
@@ -18,13 +16,11 @@ export default function() {
       gsap.to(window, 0, {
       scrollTo: 0,
     });
-
     bodyEl.style.overflowY = 'visible';
     bodyEl.style.position = 'relative';
     starEl.style.opacity = 1
     starEl.style.display = 'block'
   };
-
 
   /* NAV-BAR */
   const showAnim = gsap
@@ -34,7 +30,6 @@ export default function() {
       duration: 0.2,
     })
     .progress(1);
-
   ScrollTrigger.create({
     start: 'top top',
     end: 99999,
@@ -53,7 +48,4 @@ export default function() {
       .setClassToggle(spyEl, 'show')
       .addTo(controller);
   });
-
-
-
 }
