@@ -835,7 +835,7 @@
         #swiper-notice {
           z-index: 10;
           pointer-events: none; 
-          span {
+          span {             
             position: absolute;
             font-family: 'Black Han Sans', sans-serif;
             font-size: 2rem;

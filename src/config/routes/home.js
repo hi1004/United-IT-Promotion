@@ -24,6 +24,8 @@ export default function () {
     });
   }, 2000);
 
+
+
   // ---------------------------------------ABOUT----------------------------------------------
 
   const aboutSection = document.querySelector('#about');
