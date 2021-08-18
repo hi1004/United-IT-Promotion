@@ -15,7 +15,7 @@ export default function(){
       snBodyPadding = document.getElementById(bodyId);
       snToggle.addEventListener('click', () => {
         snNavBar.classList.toggle('expander');
-        // snBodyPadding.classList.toggle('body-pd');
+        snBodyPadding.classList.toggle('body-pd');
         snToggle.classList.toggle('toggle-active');
         homePadding.classList.toggle('body-padding')
 
@@ -41,7 +41,13 @@ export default function(){
         }
       });
   };
- 
+  window.addEventListener('resize', function() {
+    const snBodyPadding = document.getElementById('body-pd');
+    if(window.innerWidth <= 768) {
+      snBodyPadding.classList.remove('body-pd');
+      snBodyPadding.classList.add('reset');
+    }
+  })
   showMenu('nav-toggle', 'navbar', 'body-pd');
 
 

@@ -61,7 +61,7 @@
       font-family: 'Oswald', sans-serif;
       position: relative;
       z-index: 1;
-      background-color: rgba(15, 15, 15, 0.801);
+      // background-color: rgba(15, 15, 15, 0.801);
       padding: 20px;
       .container {
         display: flex;
