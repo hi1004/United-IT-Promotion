@@ -128,7 +128,7 @@
   }
   #activities__container {
     position: relative;
-    overflow: hidden;
+
     .slide__wrap {
       width: 100%;
       height: 100%;

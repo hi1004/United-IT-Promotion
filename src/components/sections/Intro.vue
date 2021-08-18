@@ -2,44 +2,37 @@
   <section
     id="intro"
     class="intro-section">
-    <div
-      class="intro-stage">
+    <div class="intro-stage">
       <div id="scene">
         <div
           class="text-wrap"
           data-depth="0.5">
-          <div
-            class="ab main">
+          <div class="ab main">
             <img
               src="~/assets/Intro/m_J.png"
               alt="m_J" />
           </div>
-          <div
-            class="ab main">
+          <div class="ab main">
             <img
               src="~/assets/Intro/m_hyphen.png"
               alt="m_hyphen" />
           </div>
-          <div
-            class="ab main">
+          <div class="ab main">
             <img
               src="~/assets/Intro/m_B.png"
               alt="m_B" />
           </div>
-          <div
-            class="ab main">
+          <div class="ab main">
             <img
               src="~/assets/Intro/m_I.png"
               alt="m_I" />
           </div>
-          <div
-            class="ab main">
+          <div class="ab main">
             <img
               src="~/assets/Intro/m_T.png"
               alt="m_T" />
           </div>
-          <div
-            class="ab sub">
+          <div class="ab sub">
             <img
               src="~/assets/Intro/s_U.png"
               alt="s_U" />
@@ -134,7 +127,7 @@
     mounted() {
       intro();
       const scene = document.querySelector('#scene');
-      new Parallax(scene)
+      new Parallax(scene);
 
       /* LOGO MOVE */
       function logoMove() {
@@ -169,20 +162,20 @@
     overflow: hidden;
     z-index: -2;
     height: 100vh;
-  .text-wrap {
-    position: relative;
-    display: flex;
-    top: 0;
-    left: 0;
+    .text-wrap {
+      position: relative;
+      display: flex;
+      top: 0;
+      left: 0;
+    }
   }
-}
   .layer {
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     position: absolute;
-    img { 
+    img {
       position: absolute;
       top: 0;
       left: 0;
@@ -217,9 +210,20 @@
       margin: 0 auto;
       height: 100%;
     }
-  
   }
-    .zIndexUnder {
-      z-index: -2;
+  .zIndexUnder {
+    z-index: -2;
+  }
+  @media all and (max-width: 1000px) {
+    .layer {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    img {
+      display: none;
     }
+  }
+  }
 </style>
