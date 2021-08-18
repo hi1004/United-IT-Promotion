@@ -14,7 +14,15 @@
   img {
     display: inline-block;
     width: 135px;
+    transition: .2s;
   }
-
+}
+@media all and (max-width: 575px) {
+.logo {
+  img {
+    display: inline-block;
+    width: 100px;
+  }
+}
 }
 </style>

@@ -52,7 +52,7 @@ export default function () {
 
       .addTo(controller);
   }
-  changeToAbout();
+  // changeToAbout();
 
   /* SCROLL TRIGGER - ABOUT DESCRIPTION EFFECT */
   function aboutDescriptionEffect() {
@@ -215,7 +215,7 @@ export default function () {
       .setTween(changeToExecutivesEvent)
       .addTo(controller);
   }
-  changeToExecutives();
+  // changeToExecutives();
 
   /* SCROLL MAGIC - EXECUTIVES TEXT ANIMATE  */
   function executivesTextAnimate() {
@@ -334,7 +334,9 @@ export default function () {
   new ScrollMagic.Scene({
     triggerElement: executivesSection,
     triggerHook: 0.5,
-    duration: executivesSection.offsetHeight,
+    duration: ()=>{
+      return executivesSection.offsetHeight
+    },
   })
     .setClassToggle(progressSection, 'progress-active')
     .addTo(controller);
@@ -375,7 +377,7 @@ export default function () {
       .setTween(changeToActivitiesEvent)
       .addTo(controller);
   }
-  changeToActivities();
+  // changeToActivities();
 
   /* SLIDE WIPE */
   slideSpaces.forEach((slideSpace, i) => {

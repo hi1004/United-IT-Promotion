@@ -68,6 +68,17 @@
 </script>
 
 <style lang="scss" scoped>
+@media all and (max-width: 575px) {
+  .nav-link {
+        padding: 0.5rem;
+        font-size: 14px;
+      }
+  header {
+    .container {
+      padding: 0 20px;
+    }
+  }
+}
   header {
     .container {
       height: 70px;
@@ -103,12 +114,6 @@
     }
     .nav-link {
       transition: .5s ease-out;
-    }
-    @media all and (max-width: 400px) {
-      .nav-link {
-        padding: 0.5rem;
-        
-      }
     }
   }
 </style>

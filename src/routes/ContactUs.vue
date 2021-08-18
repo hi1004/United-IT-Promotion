@@ -154,7 +154,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20vh 0;
+    margin: 10rem 0 0;
     .contactus__container {
       display: flex;
       width: 100%;

@@ -172,9 +172,8 @@
   ::before,
   ::after {
     box-sizing: border-box;
-  
   }
-  
+
   body {
     margin: 0;
     font-family: $body-font;
@@ -339,7 +338,13 @@
     width: calc(92px + 9.25rem);
   }
   /*Add padding body*/
-  .body-pd {
+  .body-pd-reset {
+    padding: 0;
+  }
+  .body-pd-default {
+    padding: 0 0 0 92px;
+  }
+  .body-pd-expander {
     padding: 2rem 0 0 15rem;
   }
 
@@ -409,7 +414,7 @@
       margin-bottom: 0.48rem;
       transition: 0.3s;
       cursor: pointer;
-      
+
       &:hover {
         background-color: #fdc000;
         .side-nav__tooltip {

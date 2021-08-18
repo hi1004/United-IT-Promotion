@@ -812,9 +812,9 @@
 
     /* mobile */
     #executives__mobile {
-    margin: 20rem 0;
+    margin: 10rem 0;
     position: relative;
-    padding: 0 0 10rem;
+    // padding: 0 0 10rem;
       .executives__title-wrap {
         padding: 3rem 0;
         .executives__title {
@@ -984,7 +984,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(#03a9f4, #e91ee3);
+            background: linear-gradient(#6b6b6b, #122440);
             z-index: 1;
             transition: 0.5s;
           }
@@ -1009,8 +1009,9 @@
                 font-size: 22px;
                 color: #fff;
                 span {
-                  color: #03a9f4;
+                  color: #fdc000;
                   font-size: 14px;
+                  font-weight: 900;
                 }
               }
             }
