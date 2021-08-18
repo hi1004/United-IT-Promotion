@@ -227,7 +227,7 @@
         position: absolute;
         width: auto;
         left: 50%;
-        top: 40%;
+        top: 30%;
         transform: translate(-50%, -50%);
         font-family: 'Black Han Sans', sans-serif;
         font-size: 12vw;

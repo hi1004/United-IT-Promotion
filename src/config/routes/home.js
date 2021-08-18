@@ -1,4 +1,5 @@
 // import { $ } from "jquery";
+import { _numWithUnitExp } from 'gsap/gsap-core';
 import scrollTo from 'gsap/ScrollToPlugin';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -235,7 +236,7 @@ export default function () {
   /* SCROLL MAGIC - EXECUTIVES SCROLL ANIMATE */
   const executivesTitle = document.querySelector('.executives__title');
 
-  const colorArry = [
+  const colorArray = [
     '#5b45ff',
     '#e9f036',
     '#FCA742',
@@ -252,7 +253,7 @@ export default function () {
     executivesProfiles.forEach(function (executivesProfile, i) {
       const scrollToExecutivesEvent = new TimelineMax()
         .to(executivesTitle, 0.5, {
-          color: colorArry[i],
+          color: colorArray[i],
         })
         .fromTo(
           executivesImages[i],
@@ -410,15 +411,18 @@ export default function () {
     const yPosArray = [-100, 140, -80, 220, -20, 120, -40, 180, -110, 60 ]
     titleWords.forEach((word, i)=>{
       word.style.transform = `translateY(${yPosArray[i]}%)`
-
+      word.style.color = colorArray[i]
+      word.style.opacity = 0.5;
       const setWordYpos = new TimelineMax()
         .to(word, {
-          y: 0
+          y: 0,
+          color: 'white',
+          opacity: 1
         });
       new ScrollMagic.Scene({
         triggerElement: slideWrap,
-        triggerHook: 0.4,
-        duration: '40%',
+        triggerHook: 0.3,
+        duration: '30%',
       })
         .setTween(setWordYpos)
         .addTo(controller);
