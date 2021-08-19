@@ -409,29 +409,26 @@ export default function () {
   const activitiesTitleWords = document.querySelectorAll('.slide__index_title_word')
 
   function initTitleWordPos() {    
-    const yPosArray = [-100, 140, -80, 220, -20, 120, -40, 180, -110, 60 ]
-
-    const setTitleYpos = new TimelineMax()
-      .to(activitiesTitle, {
-        y: '100%'
-      });
-      new ScrollMagic.Scene({
-        triggerElement: slideWrap,
-        triggerHook: 0.5,
-        duration: '50%',
-      })
-        .setTween(setTitleYpos)
-        .addTo(controller);
+    const yPosArray = [-70, 98, -56, 154, -14, 84, -28, 136, -77, 54 ]
+    
+    new ScrollMagic.Scene({
+      triggerElement: slideWrap,
+      triggerHook: 0.5,
+      duration: '50%',
+    })
+      .setPin(activitiesTitle)
+      .addTo(controller);
 
     activitiesTitleWords.forEach((word, i)=>{
       word.style.transform = `translateY(${yPosArray[i]}%)`
       word.style.color = colorArray[i]
       word.style.opacity = 0.5;
+      word.style.textShadow = '0 0 10px ' + colorArray[i]
       const setWordYpos = new TimelineMax()
         .to(word, {
           y: 0,
           color: 'white',
-          opacity: 1
+          opacity: 1,
         });
       new ScrollMagic.Scene({
         triggerElement: slideWrap,
