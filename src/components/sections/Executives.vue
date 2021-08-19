@@ -340,7 +340,11 @@
                       삼성회장이 꿈입니다.
                     </p>
                   </div>
-                  <div class="hashtag-wrap"></div>                  
+                  <div class="hashtag-wrap">
+                    <span class="hashtag tag_second">#족장</span>
+                    <span class="hashtag tag_second">#우가우가</span>
+                    <span class="hashtag tag_third">#비주얼</span>  
+                  </div>                  
                 </div>
               </div>
             </div>
@@ -362,7 +366,11 @@
                       전반적으로 동아리를 총괄하며, Web관련 스터디를 진행하고 있습니다. 
                     </p>
                   </div>
-                  <div class="hashtag-wrap"></div>                  
+                  <div class="hashtag-wrap">
+                    <span class="hashtag tag_second">#부족장</span>
+                    <span class="hashtag tag_second">#으샤으샤</span>
+                    <span class="hashtag tag_third">#열정</span>  
+                  </div>                  
                 </div>
               </div>
             </div>
@@ -384,7 +392,11 @@
                       돈 계산은 정확하고 신중하게!!
                     </p>
                   </div>
-                  <div class="hashtag-wrap"></div>                  
+                  <div class="hashtag-wrap">
+                    <span class="hashtag tag_java">#Java</span>
+                    <span class="hashtag tag_second">#손혜진</span>
+                    <span class="hashtag tag_third">#초초초보</span>
+                  </div>                  
                 </div>
               </div>
             </div>
@@ -406,7 +418,11 @@
                       동아리를 위해 열심히 홍보하고 퀄리티 있도록 노력하겠습니다.
                     </p>
                   </div>
-                  <div class="hashtag-wrap"></div>                  
+                  <div class="hashtag-wrap">
+                    <span class="hashtag tag_second">#Effects</span>
+                    <span class="hashtag tag_second">#홍보</span>
+                    <span class="hashtag tag_third">#영상</span>
+                  </div>                  
                 </div>
               </div>
             </div>
@@ -431,9 +447,7 @@
                   </div> 
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_java">#Java</span>
-                    <span class="hashtag tag_first">#족장</span>
-                    <span class="hashtag tag_second">#우가우가</span>
-                    <span class="hashtag tag_third">#비주얼</span>
+                    <span class="hashtag tag_first">#취업스터디</span>
                   </div>                 
                 </div>
               </div>
@@ -461,6 +475,8 @@
                   </div>  
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_java">#Java</span>
+                    <span class="hashtag tag_backEnd">#BackEnd</span>
+                    <span class="hashtag tag_study">#스터디</span>
                   </div>                
                 </div>
               </div>
@@ -488,6 +504,8 @@
                   </div>      
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_java">#Java</span>
+                    <span class="hashtag tag_java">#Jsp</span>
+                    <span class="hashtag tag_java">#Coffee</span>
                   </div>            
                 </div>
               </div>
@@ -593,13 +611,17 @@
         centeredSlides: true,
         slidesPerView: 'auto',
         coverflowEffect: {
-          rotate: 0,
+          rotate: 50,
           stretch: 0,
-          depth: 0,
+          depth: 50,
           modifier: 1,
           slideShadows: true,
         },
         loop: true,
+        autoplay: {
+          disableOnInteraction: false,
+          delay: 5000
+        },
         pagination : {
           el: '.swiper-pagination',
           clickable: true
@@ -676,7 +698,8 @@
             position: relative;
             width: 100%;
             display: flex;
-            justify-content: center;            
+            justify-content: center; 
+            top: -8rem;           
             .executives__title {
               width: 100%;
               font-family: 'Black Han Sans', sans-serif;
@@ -692,12 +715,15 @@
             .img-wrap {
               width: 100%;
               position: absolute;
-              top: 3rem;
+              top: 0;
+              height: 100vw;
+              
               .img {
                 width: 100%;
                 position: absolute;
                 opacity: 0;
-                top: -16rem;
+                left: 50%;
+                top: -10%;
                 transition: all 0.2s;
               }
             }
@@ -784,7 +810,7 @@
             }
           }
           .description {
-            max-width: 666px;
+            max-width: 350px;
             text-align: center;
             font-size: 1.2rem;
             margin-top: 10px;
@@ -1067,6 +1093,7 @@
                 &.tag_third {
                   background-color: #fccc9c;
                 }
+                
               }
             }
           }          
@@ -1098,6 +1125,18 @@
       .swiper-container-3d .swiper-slide-shadow-right {
         background-image: none;
       } 
+    }
+  }
+
+  @media screen and (max-width: 991.5px) {
+    .executives__section #executives__pc .container .left-box .contents .img-wrap .img{
+      width: 500px;
+    }
+    .executives__section #executives__pc .right-box .profile .photo {
+      max-width: 270px;
+    }
+    .executives__section #executives__pc .right-box .profile .description {
+      max-width: 270px;
     }
   }
   

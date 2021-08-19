@@ -158,6 +158,7 @@
 </script>
 
 <style lang="scss" scoped>
+
   #scene {
     overflow: hidden;
     z-index: -2;
@@ -226,4 +227,5 @@
     }
   }
   }
+
 </style>

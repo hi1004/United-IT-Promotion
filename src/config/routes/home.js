@@ -259,22 +259,20 @@ export default function () {
           executivesImages[i],
           0.7,
           {
-            y: 0,
             opacity: 0,
-            scale: 0.5
-           
+            scale: 0.4,
+            x: '-50%'
           },
           {
-            y: -20,
             opacity: 1,
             yoyo: true,
-            scale: 0.7
+            scale: 0.6
           }
         );
       new ScrollMagic.Scene({
         triggerElement: executivesProfile,
         triggerHook: 1,
-        duration: '130%',
+        duration: '150%',
       })
         .setTween(scrollToExecutivesEvent)
         .on('end', function () {

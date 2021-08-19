@@ -244,7 +244,7 @@
   @media all and (min-width: 575px) and (max-width: 767px) {
     .about__description {
       width: 100%;
-      font-size: 4rem;
+      font-size: 3rem;
       text-align: center;
       margin: 15rem 0;
     }
@@ -259,19 +259,6 @@
           h1 {
             font-size: 20vw;
             text-align: center;
-          }
-        }
-        .video__bg {
-          width: 100%;
-          height: 55vw;
-          display: flex;
-          justify-content: center;
-          .video__content {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            left: 0;
-            transform: scale(0.8);
           }
         }
         .about__description {
@@ -414,4 +401,12 @@
       }
     }
    }
+   @media screen and (max-width: 415px) {
+     .video__bg {
+       display: none !important;
+     }
+   }
+     
+   
+   
 </style>
