@@ -78,4 +78,19 @@
       text-shadow: none;
     }
   }
+  @media all and (min-width: 450px) and (max-width: 768px)  {
+    #load {
+      h2 {
+        font-size: 4rem;
+      }
+    }
+  }
+  @media all and (max-width: 449px){
+    #load {
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
+
 </style>
