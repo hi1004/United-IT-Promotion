@@ -17,10 +17,14 @@ export default function(){
     snBodyPadding.classList.remove('body-pd-default')
     snBodyPadding.classList.remove('body-pd-expander')
   }
-  snBodyPadding.classList.add('body-pd-default')
+
+  if (window.innerWidth > 768) {
+    snBodyPadding.classList.add('body-pd-default')
+  }
+  
 
   window.addEventListener('resize', ()=>{
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 769) {
       resetBodyPd()
       snBodyPadding.classList.add('body-pd-reset')
     } else {
