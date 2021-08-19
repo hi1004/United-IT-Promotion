@@ -405,12 +405,25 @@ export default function () {
   pinSlide();
 
   /* SLIDE INDEX TITLE */
-
-  const titleWords = document.querySelectorAll('.slide__index_title_word')
+  const activitiesTitle = document.querySelectorAll('#slide__index_title')
+  const activitiesTitleWords = document.querySelectorAll('.slide__index_title_word')
 
   function initTitleWordPos() {    
     const yPosArray = [-100, 140, -80, 220, -20, 120, -40, 180, -110, 60 ]
-    titleWords.forEach((word, i)=>{
+
+    const setTitleYpos = new TimelineMax()
+      .to(activitiesTitle, {
+        y: '100%'
+      });
+      new ScrollMagic.Scene({
+        triggerElement: slideWrap,
+        triggerHook: 0.5,
+        duration: '50%',
+      })
+        .setTween(setTitleYpos)
+        .addTo(controller);
+
+    activitiesTitleWords.forEach((word, i)=>{
       word.style.transform = `translateY(${yPosArray[i]}%)`
       word.style.color = colorArray[i]
       word.style.opacity = 0.5;
@@ -422,8 +435,8 @@ export default function () {
         });
       new ScrollMagic.Scene({
         triggerElement: slideWrap,
-        triggerHook: 0.3,
-        duration: '30%',
+        triggerHook: 0.5,
+        duration: '50%',
       })
         .setTween(setWordYpos)
         .addTo(controller);
