@@ -1,6 +1,6 @@
 <template>
   <section
-    class="contect__section"
+    class="contact__section"
     id="contact">
     <div class="contact__title_wrap">
       <h2
@@ -20,7 +20,7 @@
 
 
 <style lang="scss" scoped>
-.contect__section {
+.contact__section {
   min-height: 100vh;
   background-color: #171818;
   display: flex;
@@ -70,27 +70,26 @@
   }
 }
  @media all and (max-width: 615px) {
-       .contect__section {
-  min-height: 100vh;
-  background-color: #171818;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'Black Han Sans', sans-serif;
-  #contact__title {
-    font-size: 2.8rem;
-    margin: 5vh 0;
-    &:after {
+  .contact__section {
+    min-height: 100vh;
+    background-color: #171818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Black Han Sans', sans-serif;
+    #contact__title {
       font-size: 2.8rem;
-      content: 'Ι';
-      animation-name: twinkling;
-      animation-duration: .5s;
-      animation-direction: alternate;
-      animation-iteration-count: infinite;
-      animation-timing-function: step-end;
-    }
-    
+      margin: 5vh 0;
+      &:after {
+        font-size: 2.8rem;
+        content: 'Ι';
+        animation-name: twinkling;
+        animation-duration: .5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: step-end;
+      }    
     @keyframes twinkling {
       0% {
         opacity: 0;

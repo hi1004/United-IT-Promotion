@@ -131,7 +131,7 @@
 
     .slide__wrap {
       width: 100%;
-      height: 100%;
+      height: 100vh;
       position: absolute;
       z-index: 100;
       .slide__content {
@@ -227,7 +227,7 @@
         position: absolute;
         width: auto;
         left: 50%;
-        top: 30%;
+        top: 0%;
         transform: translate(-50%, -50%);
         font-family: 'Black Han Sans', sans-serif;
         font-size: 12vw;
