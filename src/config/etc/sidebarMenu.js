@@ -142,13 +142,13 @@ export default function(){
   linkActiveOnScroll()  
 
   /* scroll to section on click */  
-  function scrollToSection(i){      
+  function scrollToSection(i, xPos){      
     for(let j=0; j<snLinks.length; j++){
       snLinks[j].style.pointerEvents = 'none';
       ScrollTrigger.getById(`active link scroll${j}`).disable();
     }
     gsap.to(window, {
-      scrollTo: sectionSelectors[i]
+      scrollTo: {offsetX: xPos, y:sectionSelectors[i]}
     })
     setTimeout(()=>{
       for(let j=0; j<snLinks.length; j++){
@@ -159,7 +159,12 @@ export default function(){
   }
   snLinks.forEach((snLink, i) => {
     snLink.addEventListener('click', ()=>{
-      scrollToSection(i)
+      if (snBodyPadding.classList.contains('body-pd-default')) {
+        scrollToSection(i, 92)
+      }
+      else if (snBodyPadding.classList.contains('body-pd-expander')) {
+        scrollToSection(i, '2rem')
+      }
     })
   })
 
