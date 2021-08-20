@@ -65,13 +65,13 @@
           <ul class="collapse__menu menu__activities">
             <a
               href="#"
-              class="collapse__sublink">1</a>
+              class="collapse__sublink">PROGRAMMING</a>
             <a
               href="#"
-              class="collapse__sublink">2</a>
+              class="collapse__sublink">KR↔JP</a>
             <a
               href="#"
-              class="collapse__sublink">3</a>
+              class="collapse__sublink">JOB STUDY</a>
           </ul>
         </div>
         <a
@@ -347,7 +347,7 @@
     padding: 0 0 0 92px;
   }
   .body-pd-expander {
-    padding: 2rem 0 0 15rem;
+    padding: 0 0 0 15rem;
   }
 
   /*Active links menu*/

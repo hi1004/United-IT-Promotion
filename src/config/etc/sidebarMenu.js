@@ -148,7 +148,7 @@ export default function(){
       ScrollTrigger.getById(`active link scroll${j}`).disable();
     }
     gsap.to(window, {
-      scrollTo: {offsetX: xPos, y:sectionSelectors[i]}
+      scrollTo: {offsetX: xPos, y: sectionSelectors[i]}
     })
     setTimeout(()=>{
       for(let j=0; j<snLinks.length; j++){
@@ -172,16 +172,22 @@ export default function(){
   const activitiesSubLinks = document.querySelectorAll('.menu__activities > .collapse__sublink')
   const activitiesSlideSelectors = ['#first_space', '#second_space', '#third_space']
 
-  function scrollToActivitiesSubLink(i){    
+  function scrollToActivitiesSubLink(i, xPos){    
     gsap.to(window, {
-      scrollTo: activitiesSlideSelectors[i]
+      scrollTo: {offsetX: xPos, y: activitiesSlideSelectors[i]}
     })         
   }
-    /* active sublink on scroll */
+
+  /* scrollTo sublink on click */
   activitiesSubLinks.forEach((subLink, i) => {
     subLink.addEventListener('click', ()=>{
       event.stopPropagation()
-      scrollToActivitiesSubLink(i)
+      if (snBodyPadding.classList.contains('body-pd-default')) {
+        scrollToActivitiesSubLink(i, 92)
+      }
+      else if (snBodyPadding.classList.contains('body-pd-expander')) {
+        scrollToActivitiesSubLink(i, '2rem')
+      }
     }, {capture: true})
     function enterSection() {
       subLink.classList.add('sublink-active')
@@ -199,22 +205,25 @@ export default function(){
     })
   })
 
-
   const executivesSubLinks = document.querySelectorAll('.menu__executives > .collapse__sublink')
   const executiveSelectors = []
   for (let i=1 ; i<11; i++){
     executiveSelectors.push(`#executive_${i}`)
   }
-  function scrollToExecutivesSubLink(i){
+  function scrollToExecutivesSubLink(i, xPos){
     gsap.to(window, {
-      scrollTo: executiveSelectors[i]
+      scrollTo: {offsetX: xPos, y: executiveSelectors[i]}
     })
   }
-  /* active sublink on click */
   executivesSubLinks.forEach((subLink, i) => {
     subLink.addEventListener('click', ()=>{
       event.stopPropagation()
-      scrollToExecutivesSubLink(i)
+      if (snBodyPadding.classList.contains('body-pd-default')) {
+        scrollToExecutivesSubLink(i, 92)
+      }
+      else if (snBodyPadding.classList.contains('body-pd-expander')) {
+        scrollToExecutivesSubLink(i, '2rem')
+      }
     }, {capture: true})
     function enterSection() {
       subLink.classList.add('sublink-active')
