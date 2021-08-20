@@ -85,11 +85,8 @@
           EFFECTS OF THE<br />
           GLOBAL PANDEMIC?<br />
         </div> -->
-        <div class="slide__index_images">
-          <img
-            class="slide__index_img"
-            src="~/assets/activity/roket01.png"
-            alt="" />
+        <div class="slide__index_icon">
+          <i class="fas fa-fighter-jet"></i>
         </div>
       </div>
       <div
@@ -245,12 +242,13 @@
         top: 50vh;
         width: 500px;
       }
-      .slide__index_images {
-        img {
+      .slide__index_icon {
+        i {
           position: absolute;
-          width: 50px;
+          font-size: 40px;
           bottom: 0;
           left: 0;
+          transform: rotate(-90deg);
         }
       }
       .slide__index_description {
@@ -260,6 +258,11 @@
         width: 15vw;
         color: #000;
       }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .activities__section {
+      margin-top : 50vh;
     }
   }
 </style>
