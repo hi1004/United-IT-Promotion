@@ -90,13 +90,19 @@
       </div>
       <div
         id="first_space"
-        class="slide__space"></div>
+        class="slide__space content_space">
+        으앙
+      </div>
       <div
         id="second_space"
-        class="slide__space"></div>
+        class="slide__space content_space">
+        보이냐?
+      </div>
       <div
         id="third_space"
-        class="slide__space"></div>
+        class="slide__space content_space">
+        보이네
+      </div>
     </div>
   </section>
 </template>
@@ -124,7 +130,6 @@
   }
   #activities__container {
     position: relative;
-
     .slide__wrap {
       width: 100%;
       height: 100vh;
@@ -257,26 +262,22 @@
         width: 15vw;
         color: #000;
       }
-      &#first_space {
-        background-color: pink;
+      &.content_space {
+        font-size: 20vw;
+        @media all and (min-width: 416px) {
+          visibility: hidden;
+        }
+        
       }
-      &#second_space {
-        background-color: aquamarine;
-      }
-      &#third_space {
-        background-color: lightgoldenrodyellow;
-      }
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .activities__section {
-      margin-top : 50vh;
     }
   }
 
-  @media screen and (max-width: 415px) {
+  @media (max-width: 415px) {
     .slide__wrap {
       display: none;
+    }
+    .content_space {      
+      visibility: visible; 
     }
   }
 

@@ -407,7 +407,7 @@ export default function () {
   const activitiesTitleWords = document.querySelectorAll('.slide__index_title_word')
 
   function initTitleWordPos() {    
-    const yPosArray = [-70, 98, -56, 154, -14, 84, -28, 136, -77, 54 ]
+    const yPosArray = [-120, 170, -100, 260, -30, 150, -60, 220, -150, 90]
     
     if (window.innerWidth > 415) {
       new ScrollMagic.Scene({
