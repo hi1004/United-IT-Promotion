@@ -316,6 +316,7 @@
           EXECUTIVES
         </h1>
       </div>      
+      <div class="swiper-pagination"></div>
       <div class="testimonials">
         <div id="swiper-notice">
           <span>SWIPE!</span>
@@ -341,9 +342,9 @@
                     </p>
                   </div>
                   <div class="hashtag-wrap">
-                    <span class="hashtag tag_second">#족장</span>
-                    <span class="hashtag tag_second">#우가우가</span>
-                    <span class="hashtag tag_third">#비주얼</span>  
+                    <span class="hashtag tag_first">#족장</span>
+                    <span class="hashtag tag_sixth">#우가우가</span>
+                    <span class="hashtag tag_fifth">#비주얼</span>  
                   </div>                  
                 </div>
               </div>
@@ -368,7 +369,7 @@
                   </div>
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_second">#부족장</span>
-                    <span class="hashtag tag_second">#으샤으샤</span>
+                    <span class="hashtag tag_fourth">#으샤으샤</span>
                     <span class="hashtag tag_third">#열정</span>  
                   </div>                  
                 </div>
@@ -394,8 +395,8 @@
                   </div>
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_java">#Java</span>
-                    <span class="hashtag tag_second">#손혜진</span>
-                    <span class="hashtag tag_third">#초초초보</span>
+                    <span class="hashtag tag_first">#손혜진</span>
+                    <span class="hashtag tag_second">#초초초보</span>
                   </div>                  
                 </div>
               </div>
@@ -419,8 +420,8 @@
                     </p>
                   </div>
                   <div class="hashtag-wrap">
-                    <span class="hashtag tag_second">#Effects</span>
-                    <span class="hashtag tag_second">#홍보</span>
+                    <span class="hashtag tag_fifth">#Effects</span>
+                    <span class="hashtag tag_fourth">#홍보</span>
                     <span class="hashtag tag_third">#영상</span>
                   </div>                  
                 </div>
@@ -447,7 +448,7 @@
                   </div> 
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_java">#Java</span>
-                    <span class="hashtag tag_first">#취업스터디</span>
+                    <span class="hashtag tag_fifth">#취업스터디</span>
                   </div>                 
                 </div>
               </div>
@@ -475,8 +476,8 @@
                   </div>  
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_java">#Java</span>
-                    <span class="hashtag tag_backEnd">#BackEnd</span>
-                    <span class="hashtag tag_study">#스터디</span>
+                    <span class="hashtag tag_backend">#BackEnd</span>
+                    <span class="hashtag tag_sixth">#스터디</span>
                   </div>                
                 </div>
               </div>
@@ -504,8 +505,8 @@
                   </div>      
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_java">#Java</span>
-                    <span class="hashtag tag_java">#Jsp</span>
-                    <span class="hashtag tag_java">#Coffee</span>
+                    <span class="hashtag tag_jsp">#Jsp</span>
+                    <span class="hashtag tag_fourth">#Coffee</span>
                   </div>            
                 </div>
               </div>
@@ -595,8 +596,7 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="swiper-pagination"></div>
+      </div>      
     </section>
   </section>
 </template>
@@ -624,9 +624,9 @@
         },
         pagination : {
           el: '.swiper-pagination',
-          clickable: true
-        },
-        bulletClass: 'swiper-pagination-bullet'
+          clickable: true,
+          type: 'fraction'
+        }
       });
     },
   };
@@ -856,7 +856,6 @@
         align-items: center;        
         background-color: transparent;
         position: relative;
-        margin-bottom: 2rem;
         -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
         #swiper-notice {
           z-index: 10;
@@ -998,10 +997,10 @@
         
         .swiper-card {
           position: relative;
-          width: 100%;
+          width: 290px;
+          height: 500px;
           margin: 0 auto;
           background: #333333;
-          padding: 60px 40px;
           text-align: center;
           overflow: hidden;
           .swiper-layer {
@@ -1016,12 +1015,13 @@
           }
           .swiper-content {
             position: relative;
-            z-index: 2;                    
+            z-index: 2;    
+            height: 500px;                
             .imgBx {
               display: block;
               width: 150px;
               height: 150px;
-              margin: 10px auto;
+              margin: 20px auto;
               overflow: hidden;
               border: 4px solid #fff;
               border-radius: 50%;
@@ -1031,8 +1031,9 @@
               }
             }
             .details {
+              margin: 5px auto;
               h2 {
-                font-size: 22px;
+                font-size: 20px;
                 color: #fff;
                 span {
                   color: #fdc000;
@@ -1042,12 +1043,13 @@
               }
             }
             .description-wrap {              
-              height: 150px;
+              height: 160px;
+              width: 90%;
+              margin: 10px auto;
               overflow: hidden;
               .description{
                 font-size: 16px;
-                line-height: 20px;
-                margin: 10px auto;
+                line-height: 20px;                
                 color: #fff;
               }
             }
@@ -1056,8 +1058,8 @@
               justify-content: center;
               width: 100%;
               align-items: center;
-              height: 50px;
-              padding: 1rem;
+              height: 30px;
+              margin-bottom: 10px;
               flex-wrap: wrap;
               .hashtag {
                 font-size: 14px;
@@ -1081,8 +1083,14 @@
                 &.tag_web {
                   background-color: #0d7ed5;
                 }
+                &.tag_jsp {
+                  background-color: #F75051;
+                }
                 &.tag_frontend {
                   background-color: #eab921;
+                }
+                &.tag_backend {
+                  background-color: #6E65A1;
                 }
                 &.tag_first {
                   background-color: #fc6c9c;
@@ -1092,8 +1100,16 @@
                 }
                 &.tag_third {
                   background-color: #fccc9c;
+                }    
+                &.tag_fourth {
+                  background-color: #654444;
+                }            
+                &.tag_fifth {
+                  background-color: #4D78A2;
                 }
-                
+                &.tag_sixth {
+                  background-color: #525252;
+                }
               }
             }
           }          
@@ -1105,21 +1121,8 @@
       .swiper-pagination ::v-deep {
         position: relative;
         margin: 0 auto;
-        .swiper-pagination-bullet {
-          width: 1.1rem;
-          height: 1.1rem;
-          margin: 0 .3rem;
-          background: white;
-          opacity: 0.7;
-        }
-        .swiper-pagination-bullet-active {
-          width: 3rem;
-          border-radius: 1rem;
-          transition: .5s;
-          background: #fdc000;
-          box-shadow: 0 0 .5rem #fdc000;
-          opacity: 1;
-        }
+        font-size: 24px;
+        font-family: 'Black Han Sans', sans-serif;
       }
       .swiper-container-3d .swiper-slide-shadow-left,
       .swiper-container-3d .swiper-slide-shadow-right {
