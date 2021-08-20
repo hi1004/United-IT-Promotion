@@ -353,11 +353,15 @@ export default function () {
   const activitiesContainer = document.querySelector('#activities__container');
 
   const slideSpaces = document.querySelectorAll('.slide__space');
+  const contentSpaces = document.querySelectorAll('.content_space')
   const slideWrap = document.querySelector('.slide__wrap');
   const slideContents = document.querySelectorAll('.slide__content');
   const slideTitles = document.querySelectorAll('.slide__title');
   const slideSubTitles = document.querySelectorAll('.slide__subtitle');
   const slideParagraph = document.querySelectorAll('.slide__paragraph');
+  const mSlideTitles = document.querySelectorAll('.mobile-slide__title');
+  const mSlideSubTitles = document.querySelectorAll('.mobile-slide__subtitle');
+  const mSlideParagraph = document.querySelectorAll('.mobile-slide__paragraph');
 
   /* SCROLL MAGIC - CHANGE TO ACTIVITIES */
   function changeToActivities() {
@@ -447,8 +451,7 @@ export default function () {
         .addTo(controller);
       })
   }
-  initTitleWordPos()
-  
+  initTitleWordPos()  
 
   
 
@@ -483,6 +486,37 @@ export default function () {
     });
   }
   activitiesContentTrigger();
+
+  function mobileActivitiesContentTrigger() {
+    contentSpaces.forEach((contentSpace, i) => {
+      ScrollTrigger.create({
+        trigger: contentSpace,
+        start: 'top 50%',
+        onEnter: () => {
+          mSlideTitles[i].classList.add('show');
+          mSlideSubTitles[i].classList.add('show');
+          mSlideParagraph[i].classList.add('show');
+        },
+        onLeave: () => {
+          mSlideTitles[i].classList.remove('show');
+          mSlideSubTitles[i].classList.remove('show');
+          mSlideParagraph[i].classList.remove('show');
+        },
+        onEnterBack: () => {
+          mSlideTitles[i].classList.add('show');
+          mSlideSubTitles[i].classList.add('show');
+          mSlideParagraph[i].classList.add('show');
+        },
+        onLeaveBack: () => {
+          mSlideTitles[i].classList.remove('show');
+          mSlideSubTitles[i].classList.remove('show');
+          mSlideParagraph[i].classList.remove('show');
+        },
+      });      
+    });
+  }
+  mobileActivitiesContentTrigger();
+  
 
   // ------------------------------ CONTACT ---------------------------------------------
   const contactEl = document.querySelector('#contact');
