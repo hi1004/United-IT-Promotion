@@ -409,13 +409,23 @@ export default function () {
   function initTitleWordPos() {    
     const yPosArray = [-70, 98, -56, 154, -14, 84, -28, 136, -77, 54 ]
     
-    new ScrollMagic.Scene({
-      triggerElement: slideWrap,
-      triggerHook: 0.5,
-      duration: '50%',
-    })
-      .setPin(activitiesTitle)
-      .addTo(controller);
+    if (window.innerWidth > 415) {
+      new ScrollMagic.Scene({
+        triggerElement: slideSpaces[0],
+        triggerHook: 0.5,
+        duration: '150%',
+      })
+        .setPin(activitiesTitle)
+        .addTo(controller);
+    } else {
+      new ScrollMagic.Scene({
+        triggerElement: slideSpaces[0],
+        triggerHook: 0.5,
+        duration: '100%',
+      })
+        .setPin(activitiesTitle)
+        .addTo(controller);
+    }
 
     activitiesTitleWords.forEach((word, i)=>{
       word.style.transform = `translateY(${yPosArray[i]}%)`
@@ -429,7 +439,7 @@ export default function () {
           opacity: 1,
         });
       new ScrollMagic.Scene({
-        triggerElement: slideWrap,
+        triggerElement: slideSpaces[0],
         triggerHook: 0.5,
         duration: '50%',
       })
@@ -438,35 +448,9 @@ export default function () {
       })
   }
   initTitleWordPos()
-
   
 
-  function pinTitle() {
-    new ScrollMagic.Scene({
-      triggerElement: slideSpaces[0],
-      triggerHook: 0,
-      duration: '100%',
-    })
-      .setPin('#slide__index_title')
-      .addTo(controller);
-  }
-  pinTitle();
-
-  // function pinText() {
-  //   const textResize = new TimelineMax().to('.slide__index_text', {
-  //     color: 'red',
-  //     x: -window.innerWidth,
-  //   });
-  //   new ScrollMagic.Scene({
-  //     triggerElement: slideSpaces[0],
-  //     triggerHook: 0,
-  //     duration: '100%',
-  //   })
-  //     .setPin('.slide__index_text')
-  //     .setTween(textResize)
-  //     .addTo(controller);
-  // }
-  // pinText();
+  
 
   function activitiesContentTrigger() {
     slideSpaces.forEach((slideSpace, i) => {

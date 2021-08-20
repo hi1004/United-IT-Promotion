@@ -65,7 +65,6 @@
           </div>
         </section>
       </div>
-
       <div class="slide__space">
         <div id="slide__index_title">
           <span class="slide__index_title_word">A</span>
@@ -111,7 +110,7 @@
 <style lang="scss" scoped>
   .activities__section {
     position: relative;
- 
+    margin-top : 50vh;
     &::before {
       position: absolute;
       left: 0;
@@ -258,6 +257,15 @@
         width: 15vw;
         color: #000;
       }
+      &#first_space {
+        background-color: pink;
+      }
+      &#second_space {
+        background-color: aquamarine;
+      }
+      &#third_space {
+        background-color: lightgoldenrodyellow;
+      }
     }
   }
   @media screen and (max-width: 768px) {
@@ -265,4 +273,11 @@
       margin-top : 50vh;
     }
   }
+
+  @media screen and (max-width: 415px) {
+    .slide__wrap {
+      display: none;
+    }
+  }
+
 </style>
