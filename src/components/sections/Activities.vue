@@ -65,7 +65,7 @@
           </div>
         </section>
       </div>
-      <div class="slide__space">
+      <div class="slide__space slideTitle__space">
         <div id="slide__index_title">
           <span class="slide__index_title_word">A</span>
           <span class="slide__index_title_word">C</span>
@@ -254,7 +254,7 @@
         }
         @media all and (max-width: 991px) {
           .banner {
-            padding: 100px 50px;
+            padding: 150px 50px 0 50px;
             .content {
               .slide__title {
                 font-size: 2rem;
@@ -262,6 +262,7 @@
               }
               p {
                 font-size: 1rem;
+                max-width: 55vw;
               }
             }
           }
@@ -271,7 +272,8 @@
     .slide__space {
       position: relative;
       width: 100%;
-      height: 100vh;      
+      height: 100vh;
+      
       #slide__index_title {
         display: flex;
         flex-direction: row;
@@ -324,34 +326,50 @@
   }
 
   @media (max-width: 415px) {
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .slide__space.slideTitle__space{
+      height: 100vh !important;
+    }
+    .slide__index_icon {
+      display: none;
+    }
     .activities__section {
       margin-top: 50vh;
     }
     .slide__wrap {
       display: none;
     }
-    .content_space {      
+    #activities__container .slide__space {      
       visibility: visible; 
       display: flex;
+      justify-content: space-between;  
       flex-direction: column;
-      justify-content: space-evenly;
-      align-content: center;
+      height: 800px;
       padding: 0 20px;
-      padding-top: 50px;
+      margin-bottom: 2rem;
+      font-family: 'Noto Sans KR', sans-serif;
+       &:last-child {
+        margin-bottom: 0;
+      }
       .mobile-slide__image {
         width: 300px;
-        height: 300px;
-        transform: translateY(-50px)
+        margin: 0 auto;
       }
       .mobile-slide__title {
         font-weight: 400;
         font-size: 35px;
         letter-spacing: 0.1rem;
-        font-family: 'Black Han Sans', sans-serif;
+        font-family: 'Black Han Sans';
+        padding: 1rem 0 0.5rem;
+        text-align: center;
       }
       .mobile-slide__subtitle {
         font-size: 20px;
-        font-family: 'Black Han Sans', sans-serif;
+        text-align: center;
+        font-weight: 900;
         span {
           color: #fdc000;
         }
@@ -361,7 +379,6 @@
         }
       }
       .mobile-slide__paragraph {
-        font-family: 'Noto Sans KR', sans-serif;
         font-size: 16px;
       }
     }
