@@ -48,6 +48,11 @@ export default function () {
   const cursors = cursorWrap.querySelectorAll('.cursor')
   
   
+  if (navigator.userAgentData.mobile) {
+    cursors.forEach((cursor)=>{
+      cursor.style.display = 'none'
+    })
+  }
 
   /* CURSOR MOVE AND TRAIL EFFECT */
   let aimX = 0;
@@ -111,8 +116,16 @@ export default function () {
   /* MOUSE CLICK EFFECT */
   window.addEventListener('click', ()=>{
     cursors.forEach((cursor)=>{
+      if (navigator.userAgentData.mobile) {
+        cursor.style.display = 'block'          
+      }
       cursor.classList.add('click')
-      setTimeout(()=>{cursor.classList.remove('click')}, 500)
+      setTimeout(()=>{
+        cursor.classList.remove('click')
+        if (navigator.userAgentData.mobile) {
+          cursor.style.display = 'none'          
+        }
+      }, 500)
     })
   })  
 
@@ -120,8 +133,7 @@ export default function () {
 
   navLinks.forEach((navLink)=>{
     navLink.addEventListener('click', ()=>{
-      window.location.reload();
-     
+      window.location.reload();     
    })
   })
 

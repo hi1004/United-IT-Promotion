@@ -384,16 +384,20 @@ export default function () {
   // changeToActivities();
 
   /* SLIDE WIPE */
-  slideSpaces.forEach((slideSpace, i) => {
-    const wipeSlide = new TimelineMax().to(slideContents[i], 1, { x: '-100%' });
-    new ScrollMagic.Scene({
-      triggerElement: slideSpace,
-      triggerHook: 0,
-      duration: '100%',
-    })
-      .setTween(wipeSlide)
-      .addTo(controller);
-  });
+  function slideWipe() {
+    slideSpaces.forEach((slideSpace, i) => {
+      const wipeSlide = new TimelineMax().to(slideContents[i], 1, { x: '-100%' });
+      new ScrollMagic.Scene({
+        triggerElement: slideSpace,
+        triggerHook: 0,
+        duration: '100%',
+      })
+        .setTween(wipeSlide)
+        .addTo(controller);
+    });
+  }
+  slideWipe();
+  
 
   function pinSlide() {
     new ScrollMagic.Scene({
@@ -451,9 +455,7 @@ export default function () {
         .addTo(controller);
       })
   }
-  initTitleWordPos()  
-
-  
+  initTitleWordPos()    
 
   function activitiesContentTrigger() {
     slideSpaces.forEach((slideSpace, i) => {
@@ -485,7 +487,7 @@ export default function () {
       }
     });
   }
-  activitiesContentTrigger();
+  activitiesContentTrigger()
 
   function mobileActivitiesContentTrigger() {
     contentSpaces.forEach((contentSpace, i) => {
@@ -515,7 +517,7 @@ export default function () {
       });      
     });
   }
-  mobileActivitiesContentTrigger();
+  mobileActivitiesContentTrigger();  
   
 
   // ------------------------------ CONTACT ---------------------------------------------

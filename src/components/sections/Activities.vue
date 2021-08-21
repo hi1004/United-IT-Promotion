@@ -164,7 +164,9 @@
 <style lang="scss" scoped>
   .activities__section {
     position: relative;
-    margin-top : 50vh;
+    @media all and (min-width: 416px) {
+      margin-top : 100vh;
+    }
     &::before {
       position: absolute;
       left: 0;
@@ -269,8 +271,7 @@
     .slide__space {
       position: relative;
       width: 100%;
-      height: 100vh;
-      overflow: hidden;
+      height: 100vh;      
       #slide__index_title {
         display: flex;
         flex-direction: row;
@@ -278,7 +279,7 @@
         width: auto;
         left: 50%;
         top: 0%;
-        transform: translate(-50%, -100%);
+        transform: translate(-50%, -50%);
         font-family: 'Black Han Sans', sans-serif;
         font-size: 12vw;
         color: #fff;    
@@ -312,6 +313,7 @@
         color: #000;
       }
       &.content_space {
+        overflow: hidden;
         font-size: 20vw;
         @media all and (min-width: 416px) {
           visibility: hidden;
@@ -322,6 +324,9 @@
   }
 
   @media (max-width: 415px) {
+    .activities__section {
+      margin-top: 50vh;
+    }
     .slide__wrap {
       display: none;
     }
