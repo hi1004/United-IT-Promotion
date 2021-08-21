@@ -1,4 +1,4 @@
-<template>  
+<template>
   <!-- executives -->
   <section
     class="executives__section"
@@ -96,8 +96,8 @@
             <div class="hashtag-wrap">
               <span class="hashtag tag_first">#족장</span>
               <span class="hashtag tag_sixth">#우가우가</span>
-              <span class="hashtag tag_fifth">#비주얼</span>  
-            </div> 
+              <span class="hashtag tag_fifth">#비주얼</span>
+            </div>
           </div>
           <!-- 부회장 -->
           <div
@@ -120,8 +120,8 @@
             <div class="hashtag-wrap">
               <span class="hashtag tag_second">#부족장</span>
               <span class="hashtag tag_fourth">#으샤으샤</span>
-              <span class="hashtag tag_third">#열정</span>  
-            </div>  
+              <span class="hashtag tag_third">#열정</span>
+            </div>
           </div>
           <!-- 총무 -->
           <div
@@ -145,7 +145,7 @@
               <span class="hashtag tag_java">#Java</span>
               <span class="hashtag tag_first">#손혜진</span>
               <span class="hashtag tag_second">#초초초보</span>
-            </div> 
+            </div>
           </div>
           <!-- 홍보 -->
           <div
@@ -169,7 +169,7 @@
               <span class="hashtag tag_fifth">#Effects</span>
               <span class="hashtag tag_fourth">#홍보</span>
               <span class="hashtag tag_third">#영상</span>
-            </div> 
+            </div>
           </div>
           <!-- 1조 -->
           <div
@@ -193,7 +193,7 @@
             <div class="hashtag-wrap">
               <span class="hashtag tag_java">#Java</span>
               <span class="hashtag tag_fifth">#취업스터디</span>
-            </div>   
+            </div>
           </div>
           <!-- 2조 -->
           <div
@@ -222,7 +222,7 @@
               <span class="hashtag tag_java">#Java</span>
               <span class="hashtag tag_backend">#BackEnd</span>
               <span class="hashtag tag_sixth">#스터디</span>
-            </div>  
+            </div>
           </div>
           <!-- 3조 -->
           <div
@@ -251,7 +251,7 @@
               <span class="hashtag tag_java">#Java</span>
               <span class="hashtag tag_jsp">#Jsp</span>
               <span class="hashtag tag_fourth">#Coffee</span>
-            </div>    
+            </div>
           </div>
           <!-- 4조 -->
           <div
@@ -346,7 +346,7 @@
           J-BIT UNITED IT<br />
           EXECUTIVES
         </h1>
-      </div>      
+      </div>
       <div class="swiper-pagination"></div>
       <div class="testimonials">
         <div id="swiper-notice">
@@ -354,7 +354,7 @@
           <i class="far fa-hand-point-up"></i>
         </div>
         <div class="swiper-container">
-          <div class="swiper-wrapper">            
+          <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="swiper-card">
                 <div class="swiper-layer"></div>
@@ -375,8 +375,8 @@
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_first">#족장</span>
                     <span class="hashtag tag_sixth">#우가우가</span>
-                    <span class="hashtag tag_fifth">#비주얼</span>  
-                  </div>                  
+                    <span class="hashtag tag_fifth">#비주얼</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -395,14 +395,14 @@
                   </div>
                   <div class="description-wrap">
                     <p class="description">
-                      전반적으로 동아리를 총괄하며, Web관련 스터디를 진행하고 있습니다. 
+                      전반적으로 동아리를 총괄하며, Web관련 스터디를 진행하고 있습니다.
                     </p>
                   </div>
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_second">#부족장</span>
                     <span class="hashtag tag_fourth">#으샤으샤</span>
-                    <span class="hashtag tag_third">#열정</span>  
-                  </div>                  
+                    <span class="hashtag tag_third">#열정</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -428,7 +428,7 @@
                     <span class="hashtag tag_java">#Java</span>
                     <span class="hashtag tag_first">#손혜진</span>
                     <span class="hashtag tag_second">#초초초보</span>
-                  </div>                  
+                  </div>
                 </div>
               </div>
             </div>
@@ -454,7 +454,7 @@
                     <span class="hashtag tag_fifth">#Effects</span>
                     <span class="hashtag tag_fourth">#홍보</span>
                     <span class="hashtag tag_third">#영상</span>
-                  </div>                  
+                  </div>
                 </div>
               </div>
             </div>
@@ -476,11 +476,11 @@
                       Java에 관심있으신 분<br />
                       스파르타로 성장 시켜드립니다.
                     </p>
-                  </div> 
+                  </div>
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_java">#Java</span>
                     <span class="hashtag tag_fifth">#취업스터디</span>
-                  </div>                 
+                  </div>
                 </div>
               </div>
             </div>
@@ -506,12 +506,12 @@
                       되도록 노력하겠습니다. 어떤 주제든<br />
                       질문은 환영입니다. 잘 부탁드립니다.
                     </p>
-                  </div>  
+                  </div>
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_java">#Java</span>
                     <span class="hashtag tag_backend">#BackEnd</span>
                     <span class="hashtag tag_sixth">#스터디</span>
-                  </div>                
+                  </div>
                 </div>
               </div>
             </div>
@@ -537,12 +537,12 @@
                       될 수 있습니다. 동아리에서 다<br />
                       같이 우리의 미래를 코딩해봅시다.
                     </p>
-                  </div>      
+                  </div>
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_java">#Java</span>
                     <span class="hashtag tag_jsp">#Jsp</span>
                     <span class="hashtag tag_fourth">#Coffee</span>
-                  </div>            
+                  </div>
                 </div>
               </div>
             </div>
@@ -568,11 +568,11 @@
                       즐거운 분위기의 조가 될수 있도록<br />
                       노력하겠습니다. 잘 부탁드립니다.
                     </p>
-                  </div>    
+                  </div>
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_java">#Java</span>
                     <span class="hashtag tag_first">#팔분음표</span>
-                  </div>              
+                  </div>
                 </div>
               </div>
             </div>
@@ -595,14 +595,14 @@
                       오병헌입니다. 주로 WEB관련 스터디와<br />
                       프로젝트를 진행 할 예정입니다.
                     </p>
-                  </div>    
+                  </div>
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_web">#Web</span>
                     <span class="hashtag tag_frontend">#Frontend</span>
                     <span class="hashtag tag_vue">#Vue</span>
                     <span class="hashtag tag_react">#React</span>
                     <span class="hashtag tag_nodejs">#Node.js</span>
-                  </div>              
+                  </div>
                 </div>
               </div>
             </div>
@@ -625,18 +625,18 @@
                       있는 김동훈입니다. 목표는<br />
                       초봉 4천 이상, 함께 하실 분 구합니다.
                     </p>
-                  </div>      
+                  </div>
                   <div class="hashtag-wrap">
                     <span class="hashtag tag_web">#Web</span>
                     <span class="hashtag tag_frontend">#Frontend</span>
                     <span class="hashtag tag_java">#Java</span>
-                  </div>            
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>      
+      </div>
     </section>
   </section>
 </template>
@@ -645,7 +645,7 @@
   export default {
     mounted() {
       const Swiper = window.Swiper;
-      new Swiper('.swiper-container', {
+      const mySwiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
@@ -660,12 +660,29 @@
         loop: true,
         autoplay: {
           disableOnInteraction: false,
-          delay: 5000
+          delay: 5000,
         },
-        pagination : {
+        pagination: {
           el: '.swiper-pagination',
           clickable: true,
-          type: 'fraction'
+          type: 'fraction',
+        },
+      });
+      const executivesSection = document.querySelector('#executives');
+      window.addEventListener('scroll', () => {
+        const scrollValue = window.scrollY;
+        const executivesSectionOffsetTop = executivesSection.offsetTop;
+        const executivesSectionOffsetBottom =
+          executivesSectionOffsetTop + executivesSection.offsetHeight;
+        if (window.innerWidth <= 768) {
+          if (
+            executivesSectionOffsetTop - 500 <= scrollValue &&
+            scrollValue <= executivesSectionOffsetBottom
+          ) {
+            mySwiper.autoplay.start();
+          } else {
+            mySwiper.autoplay.stop();
+          }
         }
       });
     },
@@ -738,8 +755,8 @@
             position: relative;
             width: 100%;
             display: flex;
-            justify-content: center; 
-            top: -8rem;           
+            justify-content: center;
+            top: -8rem;
             .executives__title {
               width: 100%;
               font-family: 'Black Han Sans', sans-serif;
@@ -757,7 +774,7 @@
               position: absolute;
               top: 0;
               height: 100vw;
-              
+
               .img {
                 width: 100%;
                 position: absolute;
@@ -798,47 +815,47 @@
               border-radius: 3rem;
               color: white;
               &.tag_java {
-                  background-color: #b07219;
-                }
-                &.tag_react {
-                  background-color: #3fd9f6;
-                }
-                &.tag_vue {
-                  background-color: #41b883;
-                }
-                &.tag_nodejs {
-                  background-color: #689f63;
-                }
-                &.tag_web {
-                  background-color: #0d7ed5;
-                }
-                &.tag_jsp {
-                  background-color: #F75051;
-                }
-                &.tag_frontend {
-                  background-color: #eab921;
-                }
-                &.tag_backend {
-                  background-color: #6E65A1;
-                }
-                &.tag_first {
-                  background-color: #fc6c9c;
-                }
-                &.tag_second {
-                  background-color: #0c9ccc;
-                }
-                &.tag_third {
-                  background-color: #fccc9c;
-                }    
-                &.tag_fourth {
-                  background-color: #654444;
-                }            
-                &.tag_fifth {
-                  background-color: #4D78A2;
-                }
-                &.tag_sixth {
-                  background-color: #525252;
-                }
+                background-color: #b07219;
+              }
+              &.tag_react {
+                background-color: #3fd9f6;
+              }
+              &.tag_vue {
+                background-color: #41b883;
+              }
+              &.tag_nodejs {
+                background-color: #689f63;
+              }
+              &.tag_web {
+                background-color: #0d7ed5;
+              }
+              &.tag_jsp {
+                background-color: #f75051;
+              }
+              &.tag_frontend {
+                background-color: #eab921;
+              }
+              &.tag_backend {
+                background-color: #6e65a1;
+              }
+              &.tag_first {
+                background-color: #fc6c9c;
+              }
+              &.tag_second {
+                background-color: #0c9ccc;
+              }
+              &.tag_third {
+                background-color: #fccc9c;
+              }
+              &.tag_fourth {
+                background-color: #654444;
+              }
+              &.tag_fifth {
+                background-color: #4d78a2;
+              }
+              &.tag_sixth {
+                background-color: #525252;
+              }
             }
           }
           .photo {
@@ -870,7 +887,7 @@
             text-align: center;
             font-size: 1.2rem;
             margin-top: 10px;
-          }    
+          }
           &:last-child {
             margin-bottom: 0;
           }
@@ -894,9 +911,9 @@
 
     /* mobile */
     #executives__mobile {
-    margin: 10rem 0;
-    position: relative;
-    // padding: 0 0 10rem;
+      margin: 10rem 0;
+      position: relative;
+      // padding: 0 0 10rem;
       .executives__title-wrap {
         padding: 3rem 0;
         .executives__title {
@@ -909,15 +926,15 @@
         max-width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;        
+        align-items: center;
         background-color: transparent;
         position: relative;
         -webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
         font-family: 'Noto Sans KR', sans-serif;
         #swiper-notice {
           z-index: 10;
-          pointer-events: none; 
-          span {             
+          pointer-events: none;
+          span {
             position: absolute;
             font-family: 'Black Han Sans', sans-serif;
             font-size: 2rem;
@@ -926,26 +943,26 @@
             transform: translateX(-50%);
             opacity: 0;
             color: white;
-            display: none;            
+            display: none;
           }
           .fa-hand-point-up {
-            position: absolute; 
-            left: 50%;           
+            position: absolute;
+            left: 50%;
             top: 50%;
             opacity: 0;
             font-size: 7rem;
-            color: white;            
-            display: none; 
+            color: white;
+            display: none;
             transform: rotate(-10deg) translateX(-50%);
           }
           &.notice-active {
             span {
-              display: block; 
+              display: block;
               animation: show-swipe-text 2s;
               animation-iteration-count: 1;
             }
-            .fa-hand-point-up{
-              display: block; 
+            .fa-hand-point-up {
+              display: block;
               animation: show-swipe 2s;
               animation-iteration-count: 1;
               animation-timing-function: ease-out;
@@ -956,51 +973,51 @@
               opacity: 0;
               top: 50%;
               left: 25%;
-              transform: rotate(-5deg) scale(.8) translateX(-50%);
+              transform: rotate(-5deg) scale(0.8) translateX(-50%);
             }
             10% {
               opacity: 0;
               top: 50%;
-              left: 25%;    
-              transform: rotate(-5deg) scale(.8) translateX(-50%);          
+              left: 25%;
+              transform: rotate(-5deg) scale(0.8) translateX(-50%);
             }
-            25%{
+            25% {
               opacity: 1;
               top: 45%;
               left: 20%;
               transform: rotate(-5deg) scale(1) translateX(-50%);
-            }    
+            }
             40% {
               opacity: 0;
               top: 45%;
               left: 20%;
-              transform: rotate(-5deg) scale(.8) translateX(-50%);
+              transform: rotate(-5deg) scale(0.8) translateX(-50%);
             }
             60% {
               opacity: 0;
               top: 50%;
               left: 75%;
-              transform: rotate(5deg) scale(.8) translateX(-50%);
+              transform: rotate(5deg) scale(0.8) translateX(-50%);
             }
             70% {
               opacity: 0;
               top: 50%;
-              left: 75%;    
-              transform: rotate(5deg) scale(.8) translateX(-50%); 
+              left: 75%;
+              transform: rotate(5deg) scale(0.8) translateX(-50%);
             }
             85% {
               opacity: 1;
               top: 45%;
               left: 80%;
               transform: rotate(5deg) scale(1) translateX(-50%);
-            }    
+            }
             100% {
               opacity: 0;
               top: 45%;
               left: 80%;
-              transform: rotate(5deg) scale(.8) translateX(-50%);
+              transform: rotate(5deg) scale(0.8) translateX(-50%);
             }
-          }   
+          }
           @keyframes show-swipe {
             0% {
               opacity: 0;
@@ -1009,49 +1026,49 @@
             }
             10% {
               opacity: 1;
-              left: 50%;    
-              transform: rotate(-10deg) scale(.7) translateX(-50%);          
+              left: 50%;
+              transform: rotate(-10deg) scale(0.7) translateX(-50%);
             }
-            25%{
+            25% {
               opacity: 1;
               left: 20%;
-              transform: rotate(-10deg) scale(.7) translateX(-50%);
-            }    
+              transform: rotate(-10deg) scale(0.7) translateX(-50%);
+            }
             40% {
               opacity: 0;
               left: 20%;
-              transform: rotate(-10deg) scale(.7) translateX(-50%);
+              transform: rotate(-10deg) scale(0.7) translateX(-50%);
             }
             60% {
               opacity: 0;
               left: 50%;
-              transform: rotate(-10deg) .7 translateX(-50%);
+              transform: rotate(-10deg) 0.7 translateX(-50%);
             }
             70% {
               opacity: 1;
-              left: 50%;    
-              transform: rotate(-10deg) scale(.7) translateX(-50%); 
+              left: 50%;
+              transform: rotate(-10deg) scale(0.7) translateX(-50%);
             }
             85% {
               opacity: 1;
               left: 80%;
-              transform: rotate(-10deg) scale(.7) translateX(-50%);
-            }    
+              transform: rotate(-10deg) scale(0.7) translateX(-50%);
+            }
             100% {
               opacity: 0;
               left: 80%;
-              transform: rotate(-10deg) scale(.7) translateX(-50%);
+              transform: rotate(-10deg) scale(0.7) translateX(-50%);
             }
-          }          
+          }
         }
         .swiper-slide {
           background-position: center;
           background-size: cover;
-          width: 350px ;
+          width: 350px;
           min-height: 350px;
           margin: 0 20px;
-        }        
-        
+        }
+
         .swiper-card {
           position: relative;
           width: 290px;
@@ -1072,8 +1089,8 @@
           }
           .swiper-content {
             position: relative;
-            z-index: 2;    
-            height: 500px;                
+            z-index: 2;
+            height: 500px;
             .imgBx {
               display: block;
               width: 150px;
@@ -1099,14 +1116,14 @@
                 }
               }
             }
-            .description-wrap {              
+            .description-wrap {
               height: 160px;
               width: 90%;
               margin: 10px auto;
               overflow: hidden;
-              .description{
+              .description {
                 font-size: 16px;
-                line-height: 20px;                
+                line-height: 20px;
                 color: #fff;
               }
             }
@@ -1141,13 +1158,13 @@
                   background-color: #0d7ed5;
                 }
                 &.tag_jsp {
-                  background-color: #F75051;
+                  background-color: #f75051;
                 }
                 &.tag_frontend {
                   background-color: #eab921;
                 }
                 &.tag_backend {
-                  background-color: #6E65A1;
+                  background-color: #6e65a1;
                 }
                 &.tag_first {
                   background-color: #fc6c9c;
@@ -1157,24 +1174,24 @@
                 }
                 &.tag_third {
                   background-color: #fccc9c;
-                }    
+                }
                 &.tag_fourth {
                   background-color: #654444;
-                }            
+                }
                 &.tag_fifth {
-                  background-color: #4D78A2;
+                  background-color: #4d78a2;
                 }
                 &.tag_sixth {
                   background-color: #525252;
                 }
               }
             }
-          }          
+          }
         }
         .swiper-slide-active > .swiper-card > .swiper-layer ::v-deep {
           top: 0;
         }
-      }     
+      }
       .swiper-pagination ::v-deep {
         position: relative;
         margin: 0 auto;
@@ -1184,12 +1201,12 @@
       .swiper-container-3d .swiper-slide-shadow-left,
       .swiper-container-3d .swiper-slide-shadow-right {
         background-image: none;
-      } 
+      }
     }
   }
 
   @media screen and (max-width: 991.5px) {
-    .executives__section #executives__pc .container .left-box .contents .img-wrap .img{
+    .executives__section #executives__pc .container .left-box .contents .img-wrap .img {
       width: 500px;
     }
     .executives__section #executives__pc .right-box .profile .photo {
@@ -1198,19 +1215,24 @@
     .executives__section #executives__pc .right-box .profile .description {
       max-width: 270px;
     }
-    .executives__section #executives__mobile .testimonials .swiper-card .swiper-content .description-wrap .description {
+    .executives__section
+      #executives__mobile
+      .testimonials
+      .swiper-card
+      .swiper-content
+      .description-wrap
+      .description {
       max-width: 270px;
       line-height: 1.4;
     }
   }
-  
 
   @media screen and (max-width: 768px) {
     #executives__pc {
       display: none;
-    } 
+    }
   }
-  @media screen and (min-width: 769px) { 
+  @media screen and (min-width: 769px) {
     #executives__mobile {
       display: none;
     }

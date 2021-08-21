@@ -154,10 +154,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10rem 0 0;
+    margin-top: 70px;
+    height: 100vh;
     .contactus__container {
       display: flex;
       width: 100%;
+      height: 100vh;
       justify-content: center;
       align-items: center;
       flex-direction: column;
