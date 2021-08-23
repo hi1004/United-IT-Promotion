@@ -55,6 +55,7 @@
         <video
           controls="true"
           playsinline
+          autoplay
           muted>
           <source
             src="~/assets/video/intro_video.mp4"
