@@ -64,6 +64,15 @@
 
         <span class="material-icons close-btn cursor__hover_el"> close </span>
       </div>
+      <video
+        controls="true"
+        playsinline
+        autoplay
+        muted>
+        <source
+          src="~/assets/video/intro_video.mp4"
+          type="video/mp4" />
+      </video>
 
       <div class="spacer sp2"></div>
     </div>
@@ -259,6 +268,9 @@
           margin: 20rem 0;
           text-align: center;
         }
+         .close-btn {
+        font-size: 10vw;
+      }
   } 
   @media all and (min-width: 575px) and (max-width: 768px) {
     .about__description {
@@ -398,7 +410,7 @@
             z-index: 10000;
             color: #fdc000;
             transition: 0.5s;
-            font-size: 5vw;
+            font-size: 3rem;
             &:hover {
               color: #fff;
             }
@@ -418,6 +430,7 @@
      .video__bg {
        display: none !important;
      }
+     
    }
      
    
