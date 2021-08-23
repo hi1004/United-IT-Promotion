@@ -11,12 +11,11 @@
       <div class="video__bg">
         <video
           class="video__content"
-          src="~/assets/video/Render.mp4"
           autoplay
           loop
           muted>
           <source
-            src="data/comp.ogv"
+            src="~/assets/video/Render.mp4"
             type="video/mp4" />
         </video>
       </div>
@@ -54,12 +53,11 @@
       </div>
       <div class="video-intro">
         <video
-          src="~/assets/video/intro_video.mp4"
           controls="true"
           playsinline
           muted>
           <source
-            src="data/comp.ogv"
+            src="~/assets/video/intro_video.mp4"
             type="video/mp4" />
         </video>
 
