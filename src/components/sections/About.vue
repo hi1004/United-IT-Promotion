@@ -57,7 +57,7 @@
           playsinline
           muted>
           <source
-            src="~/assets/video/test.mp4"
+            src="~/assets/video/intro_video.mp4"
             type="video/mp4" />
         </video>
 
