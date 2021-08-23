@@ -415,25 +415,30 @@ export default function () {
   const activitiesTitleWords = document.querySelectorAll('.slide__index_title_word')
 
   function initTitleWordPos() {    
-    const yPosArray = [-120, 170, -100, 260, -30, 150, -60, 220, -150, 90]
+    const yPosArray = [-120, 170, -100, 260, -30, 150, -60, 220, -150, 90]    
     
-    if (window.innerWidth > 415) {
-      new ScrollMagic.Scene({
-        triggerElement: slideSpaces[0],
-        triggerHook: 0.5,
-        duration: '150%',
-      })
-        .setPin(activitiesTitle)
-        .addTo(controller);
-    } else {
-      new ScrollMagic.Scene({
-        triggerElement: slideSpaces[0],
-        triggerHook: 0.5,
-        duration: '100%',
-      })
-        .setPin(activitiesTitle)
-        .addTo(controller);
+    let titleScene = new ScrollMagic.Scene({
+      triggerElement: slideSpaces[0],
+      triggerHook: 0.5,      
+    })
+      .setPin(activitiesTitle)
+      .addTo(controller);    
+
+    if (window.innerWidth < 415) {
+      titleScene.duration('100%')
+    }      
+    else {
+      titleScene.duration('150%')
     }
+    
+    window.addEventListener('resize', ()=>{
+      if (window.innerWidth < 415) {
+        titleScene.duration('100%')
+      }      
+      else {
+        titleScene.duration('150%')
+      }
+    })
 
     activitiesTitleWords.forEach((word, i)=>{
       word.style.transform = `translateY(${yPosArray[i]}%)`
