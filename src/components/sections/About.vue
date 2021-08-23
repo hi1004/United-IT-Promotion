@@ -53,37 +53,16 @@
       </div>
       <div class="video-intro">
         <video
-          controls="true"
+          controls
           playsinline
-          autoplay
           muted>
           <source
-            src="~/assets/video/intro_video.mp4"
+            src="~/assets/video/test.mp4"
             type="video/mp4" />
         </video>
 
         <span class="material-icons close-btn cursor__hover_el"> close </span>
       </div>
-      <video
-        controls="true"
-        playsinline
-        autoplay
-        muted>
-        <source
-          src="~/assets/video/test.mp4"
-          type="video/mp4" />
-      </video>
-      <video
-        controls
-         
-        autoplay
-        muted>
-        <source
-          src="~/assets/video/test.mp4"
-          type="video/mp4" />
-      </video>
-      
-
       <div class="spacer sp2"></div>
     </div>
   </section>
