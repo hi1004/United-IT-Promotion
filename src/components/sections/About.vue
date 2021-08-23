@@ -101,7 +101,8 @@
             transform: scale(0.8);
           }
         }
-        .about__description {
+        @media all and (min-width:769px) {
+           .about__description {
           width: 90%;
           font-size: 8vw;
           font-stretch: 50%;
@@ -109,6 +110,8 @@
           line-height: 0.9;
           margin: 10rem 0;
         }
+        }
+       
         .description01 {
           .about__word {
             display: inline-block;
@@ -213,7 +216,7 @@
             opacity: 1;
           }
           video {
-            max-width: 900px;
+            width: 80%;
             outline: none;
           }
           .close-btn {
@@ -240,16 +243,33 @@
       }
     }
 
-  
-  @media all and (min-width: 575px) and (max-width: 767px) {
+  // @media screen and (max-width: 768px) {
+  //   .video-intro video {
+  //     width: 100%;
+  //   }
+  // }
+  @media all and (max-width: 574px) {
+     .about__description {
+          width: 100%;
+          font-size: 4rem;
+          font-stretch: 50%;
+          letter-spacing: -2px;
+          line-height: 0.9;
+          margin: 20rem 0;
+          text-align: center;
+        }
+  } 
+  @media all and (min-width: 575px) and (max-width: 768px) {
     .about__description {
       width: 100%;
       font-size: 3rem;
       text-align: center;
       margin: 15rem 0;
+      line-height: 0.9;
     }
   }
-   @media all and (max-width: 574px) {
+
+   @media all and (max-width: 768px) {
      .about__section {
       position: relative;
       font-family: 'Black Han Sans', sans-serif;
@@ -261,15 +281,7 @@
             text-align: center;
           }
         }
-        .about__description {
-          width: 100%;
-          font-size: 4rem;
-          font-stretch: 50%;
-          letter-spacing: -2px;
-          line-height: 0.9;
-          margin: 20rem 0;
-          text-align: center;
-        }
+       
         .description01 {
           .about__word {
             display: inline-block;
@@ -374,7 +386,7 @@
             opacity: 1;
           }
           video {
-            max-width: 900px;
+            width: 100%;
             outline: none;
           }
           .close-btn {
