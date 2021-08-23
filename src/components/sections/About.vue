@@ -70,9 +70,19 @@
         autoplay
         muted>
         <source
-          src="~/assets/video/intro_video.mp4"
+          src="~/assets/video/test.mp4"
           type="video/mp4" />
       </video>
+      <video
+        controls
+         
+        autoplay
+        muted>
+        <source
+          src="~/assets/video/test.mp4"
+          type="video/mp4" />
+      </video>
+      
 
       <div class="spacer sp2"></div>
     </div>
