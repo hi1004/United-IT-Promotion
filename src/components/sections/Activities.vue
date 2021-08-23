@@ -91,16 +91,16 @@
       <div
         id="first_space"
         class="slide__space content_space">
-        <div class="mobile-slide__image">
+        <div class="mobile-slide__image back-to-position to-top">
           <img src="http://placehold.it/300x300" />
         </div>
-        <h1 class="mobile-slide__title back-to-position to-top">
+        <h1 class="mobile-slide__title back-to-position to-top delay-1">
           PROGRAMMING STUDY
         </h1>
-        <h2 class="mobile-slide__subtitle back-to-position to-top delay-1">
+        <h2 class="mobile-slide__subtitle back-to-position to-top delay-2">
           개발자가 되기 위한 <span>자바/웹</span> 통합 스터디
         </h2>
-        <p class="mobile-slide__paragraph back-to-position to-top delay-2">
+        <p class="mobile-slide__paragraph back-to-position to-top delay-3">
           저희 동아리는 다양한 플랫폼에서 쓰이고 있는 자바 언어를 기본으로 스터디를 진행하고 있습니다. 
           개별로 진행되던 스터디를 하나로 통합하여 실력 편차를 최소한으로 하며 누구나 개발 경험을
           쌓을 수 있는 스터디로 준비했습니다. 또한 최근에는 웹 개발에 관심있는 분들이 늘어나
@@ -111,16 +111,16 @@
       <div
         id="second_space"
         class="slide__space content_space">
-        <div class="mobile-slide__image">
+        <div class="mobile-slide__image back-to-position to-top">
           <img src="http://placehold.it/300x300" />
         </div>
-        <h1 class="mobile-slide__title back-to-position to-top">
+        <h1 class="mobile-slide__title back-to-position to-top delay-1">
           KR↔JP EXCHANGE
         </h1>
-        <h2 class="mobile-slide__subtitle back-to-position to-top delay-1">
+        <h2 class="mobile-slide__subtitle back-to-position to-top delay-2">
           일본인 친구들과 언어 교류
         </h2>
-        <p class="mobile-slide__paragraph back-to-position to-top delay-2">
+        <p class="mobile-slide__paragraph back-to-position to-top delay-3">
           2020년도부터 코로나 상황으로 인해 해외로 갈 수 있는 기회가 거의 없어졌습니다. 
           이로 인해 대다수의 학생들이 회화에 있어 어려움을 느낄 때가 많았습니다. 
           그래서 저희 동아리에서는 학교에 있는 일본인 유학생들을 모아 
@@ -133,16 +133,16 @@
       <div
         id="third_space"
         class="slide__space content_space">
-        <div class="mobile-slide__image">
+        <div class="mobile-slide__image back-to-position to-top">
           <img src="http://placehold.it/300x300" />
         </div>
-        <h1 class="mobile-slide__title back-to-position to-top">
+        <h1 class="mobile-slide__title back-to-position to-top delay-1">
           JOB STUDY
         </h1>
-        <h2 class="mobile-slide__subtitle back-to-position to-top delay-1">
+        <h2 class="mobile-slide__subtitle back-to-position to-top delay-2">
           일본 취업을 위한 다양한 활동들
         </h2>
-        <p class="mobile-slide__paragraph back-to-position to-top delay-2">
+        <p class="mobile-slide__paragraph back-to-position to-top delay-3">
           일본 취업을 희망하는 친구들을 모아 일본 취업에 필요한 정보들을 공유하며 더 나아가 이력서 첨삭,
           모의 면접까지 진행하고 있습니다. 
           그리고 매주마다 진행되는 기업 분석 발표를 통해 말하기 연습과 기업과 업계에 대한 이해도도 깊게
@@ -340,7 +340,7 @@
       margin-top: 50vh;
     }
     .slide__wrap {
-      display: none;
+      visibility: hidden;
     }
     #activities__container .slide__space {      
       visibility: visible; 
@@ -348,7 +348,7 @@
       justify-content: space-between;  
       flex-direction: column;
       height: 800px;
-      padding: 0 20px;
+      padding: 50px 20px;
       margin-bottom: 2rem;
       font-family: 'Noto Sans KR', sans-serif;
        &:last-child {
