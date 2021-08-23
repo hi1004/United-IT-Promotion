@@ -20,36 +20,36 @@
           <a
             class="mobile-nav__link"
             href="#">
-            <span class="material-icons"> home </span>
-            Home</a>
+            <span class="link_icon material-icons"> home </span>
+            <span class="link_title">Home</span></a>
         </li>
         <li>
           <a
             class="mobile-nav__link"
             href="#">
-            <span class="material-icons">info</span>
-            About</a>
+            <span class="link_icon material-icons">info</span>
+            <span class="link_title">About</span></a>
         </li>
         <li>
           <a
             class="mobile-nav__link"
             href="#">
-            <span class="material-icons"> groups </span>
-            Executives</a>
+            <span class="link_icon material-icons"> groups </span>
+            <span class="link_title">Executives</span></a>
         </li>
         <li>
           <a
             class="mobile-nav__link"
             href="#">
-            <span class="material-icons"> local_activity </span>
-            Activities</a>
+            <span class="link_icon material-icons"> local_activity </span>
+            <span class="link_title">Activities</span></a>
         </li>
         <li>
           <a
             class="mobile-nav__link"
             href="#">
-            <span class="material-icons">contact_support</span>
-            Contact</a>
+            <span class="link_icon material-icons">contact_support</span>
+            <span class="link_title">Contact</span></a>
         </li>
         <div class="side-nav__routeBtns nav-pills">
           <div class="routeBtn nav-item">
@@ -141,14 +141,10 @@
           }
         }
         ul {
-          display: flex;
-          flex-wrap: wrap;
+          display: flex;         
           list-style: none;
           li {
             margin: 0 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             .mobile-nav__link {
               color: #f2f2f2;
               text-decoration: none;
@@ -158,13 +154,28 @@
               border-radius: 5px;
               letter-spacing: 1px;
               transition: all 0.3s ease;
-
+              display: flex;
+              flex-direction: row;
+              justify-content: space-evenly;
               &.link_actived {
                 font-size: 2.6rem;
                 color: #fdc000;
               }
+              .link_icon {
+                width: 60px;
+              }
+              .link_title {
+                width: 280px;
+                text-align: right;
+                @media screen and (max-width: 415px){
+                  width: 200px;
+                }
+              }
               span {
-                font-size: 2.5rem;
+                font-size: 3.2rem;
+                @media screen and (max-width: 415px){
+                  font-size: 2rem;
+                }
               }
             }
           }
@@ -208,7 +219,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         padding: 0 1rem;
         &.menu-active {
           right: -100%;
@@ -241,7 +252,7 @@
         width: 100%;
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
       }
       nav ul li a.active,
       nav ul li a:hover {
