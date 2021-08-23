@@ -55,7 +55,9 @@
       <div class="video-intro">
         <video
           src="~/assets/video/intro_video.mp4"
-          controls="true">
+          controls="true"
+          playsinline
+          muted>
           <source
             src="data/comp.ogv"
             type="video/mp4" />
