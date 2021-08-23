@@ -1,5 +1,5 @@
 // import { $ } from "jquery";
-import { _numWithUnitExp } from 'gsap/gsap-core';
+// import { _numWithUnitExp } from 'gsap/gsap-core';
 import scrollTo from 'gsap/ScrollToPlugin';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -35,24 +35,24 @@ export default function () {
   const videoContent = document.querySelector('.video__content');
 
   // /* SCROLL MAGIC - CHANGE TO ABOUT */
-  function changeToAbout() {
-    const changeToAboutEvent = new TimelineMax()
-      .to(bodyEl, 2, {
-        backgroundColor: '#f6f6f6',
-      })
-      .to(aboutSection, 2, {
-        color: '#000',
-      });
+  // function changeToAbout() {
+  //   const changeToAboutEvent = new TimelineMax()
+  //     .to(bodyEl, 2, {
+  //       backgroundColor: '#f6f6f6',
+  //     })
+  //     .to(aboutSection, 2, {
+  //       color: '#000',
+  //     });
 
-    new ScrollMagic.Scene({
-      triggerElement: aboutSection,
-      triggerHook: 0.7,
-      duration: '100%',
-    })
-      .setTween(changeToAboutEvent)
+  //   new ScrollMagic.Scene({
+  //     triggerElement: aboutSection,
+  //     triggerHook: 0.7,
+  //     duration: '100%',
+  //   })
+  //     .setTween(changeToAboutEvent)
 
-      .addTo(controller);
-  }
+  //     .addTo(controller);
+  // }
   // changeToAbout();
 
   /* SCROLL TRIGGER - ABOUT DESCRIPTION EFFECT */
@@ -200,22 +200,22 @@ export default function () {
   const aboutSpacer = document.querySelector('#about .spacer');
   const executivesProfiles = document.querySelectorAll('.profile');
   const executivesImages = document.querySelectorAll('.img');
-  const abouVideoPoster = document.querySelector('.video-poster');
+  // const abouVideoPoster = document.querySelector('.video-poster');
 
   /* SCROLL MAGIC - CHANGE TO EXECUTIVES */
-  function changeToExecutives() {
-    const changeToExecutivesEvent = new TimelineMax().to(bodyEl, 1, {
-      backgroundColor: '#171818',
-      ease: 'power1.inOut',
-    });
-    new ScrollMagic.Scene({
-      triggerElement: abouVideoPoster,
-      triggerHook: 0.2,
-      duration: '50%',
-    })
-      .setTween(changeToExecutivesEvent)
-      .addTo(controller);
-  }
+  // function changeToExecutives() {
+  //   const changeToExecutivesEvent = new TimelineMax().to(bodyEl, 1, {
+  //     backgroundColor: '#171818',
+  //     ease: 'power1.inOut',
+  //   });
+  //   new ScrollMagic.Scene({
+  //     triggerElement: abouVideoPoster,
+  //     triggerHook: 0.2,
+  //     duration: '50%',
+  //   })
+  //     .setTween(changeToExecutivesEvent)
+  //     .addTo(controller);
+  // }
   // changeToExecutives();
 
   /* SCROLL MAGIC - EXECUTIVES TEXT ANIMATE  */
@@ -364,23 +364,23 @@ export default function () {
   const mSlideParagraph = document.querySelectorAll('.mobile-slide__paragraph');
 
   /* SCROLL MAGIC - CHANGE TO ACTIVITIES */
-  function changeToActivities() {
-    const changeToActivitiesEvent = new TimelineMax()
-      .to(bodyEl, 1, {
-        backgroundColor: '#000',
-        ease: 'power1.inOut',
-      })
-      .to('#slide__index_title', 2, {
-        color: '#fff',
-      });
-    new ScrollMagic.Scene({
-      triggerElement: activitiesContainer,
-      triggerHook: 1,
-      duration: '100%',
-    })
-      .setTween(changeToActivitiesEvent)
-      .addTo(controller);
-  }
+  // function changeToActivities() {
+  //   const changeToActivitiesEvent = new TimelineMax()
+  //     .to(bodyEl, 1, {
+  //       backgroundColor: '#000',
+  //       ease: 'power1.inOut',
+  //     })
+  //     .to('#slide__index_title', 2, {
+  //       color: '#fff',
+  //     });
+  //   new ScrollMagic.Scene({
+  //     triggerElement: activitiesContainer,
+  //     triggerHook: 1,
+  //     duration: '100%',
+  //   })
+  //     .setTween(changeToActivitiesEvent)
+  //     .addTo(controller);
+  // }
   // changeToActivities();
 
   /* SLIDE WIPE */
