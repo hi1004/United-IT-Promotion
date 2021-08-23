@@ -24,4 +24,10 @@ export default {
     z-index: 10000;
     cursor: pointer;
   }
+  @media all and (max-width: 415px){
+   #to-top {
+     bottom: 120px;
+     right: 20px;
+   }
+  }
 </style>
