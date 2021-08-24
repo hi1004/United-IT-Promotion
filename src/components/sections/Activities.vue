@@ -180,6 +180,7 @@
   }
   #activities__container {
     position: relative;
+    overflow: hidden;
     .slide__wrap {
       width: 100%;
       height: 100vh;
@@ -272,8 +273,7 @@
     .slide__space {
       position: relative;
       width: 100%;
-      height: 100vh;
-      
+      height: 100vh;      
       #slide__index_title {
         display: flex;
         flex-direction: row;
