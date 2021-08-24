@@ -359,6 +359,7 @@ export default function () {
   const slideTitles = document.querySelectorAll('.slide__title');
   const slideSubTitles = document.querySelectorAll('.slide__subtitle');
   const slideParagraph = document.querySelectorAll('.slide__paragraph');
+  const mSlideImages = document.querySelectorAll('.mobile-slide__image')
   const mSlideTitles = document.querySelectorAll('.mobile-slide__title');
   const mSlideSubTitles = document.querySelectorAll('.mobile-slide__subtitle');
   const mSlideParagraph = document.querySelectorAll('.mobile-slide__paragraph');
@@ -387,16 +388,29 @@ export default function () {
   function slideWipe() {
     slideSpaces.forEach((slideSpace, i) => {
       const wipeSlide = new TimelineMax().to(slideContents[i], 1, { x: '-100%' });
-      new ScrollMagic.Scene({
+      const wipeScene = new ScrollMagic.Scene({
         triggerElement: slideSpace,
         triggerHook: 0,
         duration: '100%',
       })
         .setTween(wipeSlide)
         .addTo(controller);
-    });
+      if(window.innerWidth > 415) {
+        wipeScene.enabled(true);
+      } else {
+        wipeScene.enabled(false);
+      }
+      window.addEventListener('resize', ()=>{
+        if(window.innerWidth > 415) {
+          wipeScene.enabled(true);
+        } else {
+          wipeScene.enabled(false);
+        }
+      })      
+    });    
   }
   slideWipe();
+
   
 
   function pinSlide() {
@@ -415,25 +429,30 @@ export default function () {
   const activitiesTitleWords = document.querySelectorAll('.slide__index_title_word')
 
   function initTitleWordPos() {    
-    const yPosArray = [-120, 170, -100, 260, -30, 150, -60, 220, -150, 90]
+    const yPosArray = [-120, 170, -100, 260, -30, 150, -60, 220, -150, 80]    
     
-    if (window.innerWidth > 415) {
-      new ScrollMagic.Scene({
-        triggerElement: slideSpaces[0],
-        triggerHook: 0.5,
-        duration: '150%',
-      })
-        .setPin(activitiesTitle)
-        .addTo(controller);
-    } else {
-      new ScrollMagic.Scene({
-        triggerElement: slideSpaces[0],
-        triggerHook: 0.5,
-        duration: '100%',
-      })
-        .setPin(activitiesTitle)
-        .addTo(controller);
+    let titleScene = new ScrollMagic.Scene({
+      triggerElement: slideSpaces[0],
+      triggerHook: 0.5,      
+    })
+      .setPin(activitiesTitle)
+      .addTo(controller);    
+
+    if (window.innerWidth < 415) {
+      titleScene.duration('100%')
+    }      
+    else {
+      titleScene.duration('150%')
     }
+    
+    window.addEventListener('resize', ()=>{
+      if (window.innerWidth < 415) {
+        titleScene.duration('100%')
+      }      
+      else {
+        titleScene.duration('150%')
+      }
+    })
 
     activitiesTitleWords.forEach((word, i)=>{
       word.style.transform = `translateY(${yPosArray[i]}%)`
@@ -495,21 +514,25 @@ export default function () {
         trigger: contentSpace,
         start: 'top 50%',
         onEnter: () => {
+          mSlideImages[i].classList.add('show');
           mSlideTitles[i].classList.add('show');
           mSlideSubTitles[i].classList.add('show');
           mSlideParagraph[i].classList.add('show');
         },
         onLeave: () => {
+          mSlideImages[i].classList.remove('show');
           mSlideTitles[i].classList.remove('show');
           mSlideSubTitles[i].classList.remove('show');
           mSlideParagraph[i].classList.remove('show');
         },
         onEnterBack: () => {
+          mSlideImages[i].classList.add('show');
           mSlideTitles[i].classList.add('show');
           mSlideSubTitles[i].classList.add('show');
           mSlideParagraph[i].classList.add('show');
         },
         onLeaveBack: () => {
+          mSlideImages[i].classList.remove('show');
           mSlideTitles[i].classList.remove('show');
           mSlideSubTitles[i].classList.remove('show');
           mSlideParagraph[i].classList.remove('show');
