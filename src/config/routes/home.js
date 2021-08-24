@@ -247,6 +247,7 @@ export default function () {
     '#3C80FC',
     '#e9f036',
     '#4EF480',
+    '#4EF480'
   ];
 
   function profileScrollAnimate() {
@@ -429,7 +430,7 @@ export default function () {
   const activitiesTitleWords = document.querySelectorAll('.slide__index_title_word')
 
   function initTitleWordPos() {    
-    const yPosArray = [-120, 170, -100, 260, -30, 150, -60, 220, -150, 80]    
+    const yPosArray = [-120, 170, -100, 260, -30, 150, -60, 220, -150, 100, 10]    
     
     let titleScene = new ScrollMagic.Scene({
       triggerElement: slideSpaces[0],
@@ -455,7 +456,7 @@ export default function () {
     })
 
     activitiesTitleWords.forEach((word, i)=>{
-      word.style.transform = `translateY(${yPosArray[i]}%)`
+      word.style.transform = `translateY(${yPosArray[i]}px)`
       word.style.color = colorArray[i]
       word.style.opacity = 0.5;
       word.style.textShadow = '0 0 10px ' + colorArray[i]
