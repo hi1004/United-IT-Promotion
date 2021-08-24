@@ -135,7 +135,7 @@
         id="third_space"
         class="slide__space content_space">
         <div class="mobile-slide__image back-to-position to-top">
-          <img src="http://placehold.it/300x300" />
+          <img src="~/assets/activity/mo_activity_job.jpg" />
         </div>
         <h1 class="mobile-slide__title back-to-position to-top delay-1">
           JOB STUDY
@@ -341,8 +341,11 @@
         margin-bottom: 0;
       }
       .mobile-slide__image {
-        width: 300px;
+        width: 100%;
         margin: 0 auto;
+        img {
+          width: 100%;
+        }
       }
       .mobile-slide__title {
         font-weight: 400;
