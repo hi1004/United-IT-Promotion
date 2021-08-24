@@ -21,7 +21,7 @@ export default {
     right: 30px;
     display: none;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 9998;
     cursor: pointer;
   }
   @media all and (max-width: 415px){
