@@ -77,6 +77,7 @@
           <span class="slide__index_title_word">I</span>
           <span class="slide__index_title_word">E</span>
           <span class="slide__index_title_word">S</span>
+          <span class="slide__index_title_word"> </span>
         </div>
         <!-- <div class="slide__index_text">
           HOW ARE MAKERS<br />
@@ -164,23 +165,13 @@
 <style lang="scss" scoped>
   .activities__section {
     position: relative;
+    overflow: hidden;
     @media all and (min-width: 416px) {
-      margin-top : 100vh;
-    }
-    &::before {
-      position: absolute;
-      left: 0;
-      content: '';
-      width: 100%;
-      height: 500px;
-      top: -4.4%;
-      // background-color: #fdc000;
-      transform: skewY(170deg);
+      padding-top : 100vh;
     }
   }
   #activities__container {
-    position: relative;
-    overflow: hidden;
+    position: relative;    
     .slide__wrap {
       width: 100%;
       height: 100vh;
