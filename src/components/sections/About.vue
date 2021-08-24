@@ -5,7 +5,13 @@
     <div class="container">
       <!-- ABOUT-TITLE -->
       <div class="about__title">
-        <h1>ABOUT</h1>
+        <h1>
+          <span class="about__title_word">A</span>
+          <span class="about__title_word">B</span>
+          <span class="about__title_word">O</span>
+          <span class="about__title_word">U</span>
+          <span class="about__title_word">T</span>
+        </h1>
       </div>
       <!-- VIDEO-BG -->
       <div class="video__bg">
@@ -281,6 +287,9 @@
           h1 {
             font-size: 20vw;
             text-align: center;
+            .about__title_word {
+              display: inline-block;
+            }
           }
         }
        
