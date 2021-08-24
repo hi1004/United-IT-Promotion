@@ -166,9 +166,7 @@
   .activities__section {
     position: relative;
     overflow: hidden;
-    @media all and (min-width: 416px) {
-      padding-top : 100vh;
-    }
+    padding-top : 50vh;    
   }
   #activities__container {
     position: relative;    
@@ -326,9 +324,6 @@
     }
     .slide__index_icon {
       display: none;
-    }
-    .activities__section {
-      margin-top: 50vh;
     }
     .slide__wrap {
       visibility: hidden;
