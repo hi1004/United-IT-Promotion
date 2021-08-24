@@ -1,11 +1,13 @@
 <template>
   <header class="header">
     <nav class="mobile-nav">
-      <div class="logo">
+      <a
+        hefr="#"
+        class="logo">
         <img
           src="~/assets/logo/logo.png"
           alt="mo-logo" />
-      </div>
+      </a>
       <input
         type="checkbox"
         name="menuBtn"
