@@ -208,7 +208,7 @@
             }
           }
           &.third__banner {
-            background: url('~/assets/activity/activity_study.jpg');
+            background: url('~/assets/activity/activity_job.jpg');
             background-position: center;
             background-size: cover;
             .slide__title {

@@ -126,8 +126,18 @@
   export default {
     mounted() {
       intro();
-      const scene = document.querySelector('#scene');
-      new Parallax(scene);
+      const sceneEl = document.querySelector('#scene');
+
+      if(window.innerWidth > 769) {
+         new Parallax(sceneEl);
+        } 
+      window.addEventListener('resize',()=>{
+         if(window.innerWidth > 769) {
+         new Parallax(sceneEl);
+        } 
+      })
+       
+ 
 
       /* LOGO MOVE */
       function logoMove() {
