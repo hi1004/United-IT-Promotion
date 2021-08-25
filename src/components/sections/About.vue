@@ -91,6 +91,7 @@
           h1 {            
             text-align: center;
             .about__title_word {
+              z-index: -1;
               @media screen and (min-width: 416px) {
                 font-size: 20vw;
               }    
