@@ -95,7 +95,7 @@
         <div class="mobile-slide__image back-to-position to-top">
           <img src="http://placehold.it/300x300" />
         </div>
-        <h1 class="mobile-slide__title back-to-position to-top delay-1">
+        <h1 class="mobile-slide__title title01 back-to-position to-top delay-1">
           PROGRAMMING STUDY
         </h1>
         <h2 class="mobile-slide__subtitle back-to-position to-top delay-2">
@@ -115,7 +115,7 @@
         <div class="mobile-slide__image back-to-position to-top">
           <img src="http://placehold.it/300x300" />
         </div>
-        <h1 class="mobile-slide__title back-to-position to-top delay-1">
+        <h1 class="mobile-slide__title title02 back-to-position to-top delay-1">
           KR↔JP EXCHANGE
         </h1>
         <h2 class="mobile-slide__subtitle back-to-position to-top delay-2">
@@ -137,7 +137,7 @@
         <div class="mobile-slide__image back-to-position to-top">
           <img src="~/assets/activity/mo_activity_job.jpg" />
         </div>
-        <h1 class="mobile-slide__title back-to-position to-top delay-1">
+        <h1 class="mobile-slide__title title03 back-to-position to-top delay-1">
           JOB STUDY
         </h1>
         <h2 class="mobile-slide__subtitle back-to-position to-top delay-2">
@@ -354,6 +354,15 @@
         font-family: 'Black Han Sans';
         padding: 1rem 0 0.5rem;
         text-align: center;
+        &.title01 {
+          color: lightgoldenrodyellow;
+        }
+        &.title02 {
+          color: pink;
+        }
+        &.title03 {
+          color: aqua;
+        }
       }
       .mobile-slide__subtitle {
         font-size: 20px;
