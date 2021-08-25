@@ -4,11 +4,16 @@ const gsap = window.gsap;
 export default function () {
   const bodyEl = document.querySelector('body');
   const sectionSelectors = ['#intro', '#about', '#executives', '#activities', '#contact'];
+  const scrollToYpos = [0, 0, 0, -window.innerHeight*0.5-80, -80]
+  window.addEventListener('resize', ()=>{
+    scrollToYpos[3] = -window.innerHeight*0.5-80;
+  })
   const mnLinks = document.querySelectorAll('.mobile-nav__link');
   const mnMenu = document.querySelector('.mobile-nav__menu');
   const mnMenuBtn = document.querySelector('input[type="checkbox"]');
   const mnMenuBtnLabel = document.querySelector('.menu-btn');
   const mnNav = document.querySelector('.mobile-nav');
+  
   /* active mobile menu-btn on click */
   function menuBtnOnClick() {
     mnMenu.classList.add('menu-active');
@@ -88,7 +93,7 @@ export default function () {
     gsap.to(window, {
       scrollTo: {
         y: sectionSelectors[i],
-        offsetY: 80
+        offsetY: 80 + scrollToYpos[i]
       }
     });
     setTimeout(() => {
