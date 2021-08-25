@@ -152,9 +152,9 @@ export default function(){
     }
     gsap.to(window, {
       scrollTo: {
-        y: sectionSelectors[i]},
+        y: sectionSelectors[i],
         offsetX: xPos,
-        offsetY: scrollToYpos[i]        
+        offsetY: scrollToYpos[i]}        
     })
     setTimeout(()=>{
       for(let j=0; j<snLinks.length; j++){
