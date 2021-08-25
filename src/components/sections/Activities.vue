@@ -185,9 +185,8 @@
         z-index: 100;
         .banner {
           position: relative;
-          width: 100%;
-          min-height: 100vh;
-          padding: 0 100px;
+          width: 100vw;
+          height: 100%;
           display: flex;
           justify-content: flex-start;
           align-items: center;
@@ -215,7 +214,8 @@
               color: aqua;
             }
           }
-          .content {
+          .content {            
+            padding: 0 3vw;
             max-width: 550px;
             color: #fff;
             .slide__title {
