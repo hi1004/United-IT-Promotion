@@ -449,7 +449,9 @@ export default function () {
       const wipeScene = new ScrollMagic.Scene({
         triggerElement: slideSpace,
         triggerHook: 0,
-        duration: '100%',
+        duration: ()=>{
+          return slideSpace.offsetHeight;
+        },
       })
         .setTween(wipeSlide)
         .addTo(controller);
@@ -467,15 +469,15 @@ export default function () {
       })      
     });    
   }
-  slideWipe();
-
-  
+  slideWipe();  
 
   function pinSlide() {
     new ScrollMagic.Scene({
       triggerElement: activitiesContainer,
       triggerHook: 0,
-      duration: '300%',
+      duration: ()=>{
+        return activitiesContainer.offsetHeight*0.75;
+      },
     })
       .setPin(slideWrap)
       .addTo(controller);

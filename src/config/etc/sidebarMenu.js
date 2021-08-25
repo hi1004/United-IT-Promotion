@@ -82,7 +82,10 @@ export default function(){
   const snNavBar = document.getElementById('navbar');  
 
   const sectionSelectors = ['#intro', '#about', '#executives', '#activities', '#contact']
-
+  const scrollToYpos = [0, 0, 0, -window.innerHeight*0.5, 0]
+  window.addEventListener('resize', ()=>{
+    scrollToYpos[3] = -window.innerHeight*0.5;
+  })
   /* active link on click */
   function linkActiveOnClick() {    
     snLinks.forEach((snLink) => {
@@ -148,7 +151,10 @@ export default function(){
       ScrollTrigger.getById(`active link scroll${j}`).disable();
     }
     gsap.to(window, {
-      scrollTo: {offsetX: xPos, y: sectionSelectors[i]}
+      scrollTo: {
+        y: sectionSelectors[i],
+        offsetX: xPos,
+        offsetY: scrollToYpos[i]}        
     })
     setTimeout(()=>{
       for(let j=0; j<snLinks.length; j++){

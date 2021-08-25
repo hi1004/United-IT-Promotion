@@ -88,9 +88,17 @@
       color: #fff;
       .container {
         .about__title {
-          h1 {
-            font-size: 20vw;
+          h1 {            
             text-align: center;
+            .about__title_word {
+              z-index: -1;
+              @media screen and (min-width: 416px) {
+                font-size: 20vw;
+              }    
+              @media screen and (max-width: 415px) {
+                font-size: 65px;    
+              } 
+            }               
           }
         }
         .video__bg {
@@ -107,14 +115,14 @@
           }
         }
         @media all and (min-width:769px) {
-           .about__description {
-          width: 90%;
-          font-size: 8vw;
-          font-stretch: 50%;
-          letter-spacing: -2px;
-          line-height: 0.9;
-          margin: 10rem 0;
-        }
+          .about__description {
+            width: 90%;
+            font-size: 8vw;
+            font-stretch: 50%;
+            letter-spacing: -2px;
+            line-height: 0.9;
+            margin: 10rem 0;
+          }
         }
        
         .description01 {
@@ -427,10 +435,8 @@
    @media screen and (max-width: 415px) {
      .video__bg {
        display: none !important;
-     }
-     
-   }
-     
+     }     
+   }    
    
    
 </style>
