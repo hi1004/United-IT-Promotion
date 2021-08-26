@@ -191,7 +191,7 @@
           justify-content: flex-start;
           align-items: center;
           &.first__banner {
-            background: url('~/assets/activity/activity_study.jpg');
+            background: url('~/assets/activity/study.jpg');
             background-position: center;
             background-size: cover;
             .slide__title {
@@ -199,7 +199,7 @@
             }
           }
           &.second__banner {
-            background: url('~/assets/activity/activity_tandem.jpg');
+            background: url('~/assets/activity/tandem.jpg');
             background-position: center;
             background-size: cover;
             .slide__title {
@@ -207,7 +207,7 @@
             }
           }
           &.third__banner {
-            background: url('~/assets/activity/activity_job.jpg');
+            background: url('~/assets/activity/job.jpg');
             background-position: center;
             background-size: cover;
             .slide__title {
@@ -216,8 +216,16 @@
           }
           .content {            
             padding: 0 3vw;
-            max-width: 550px;
+            width: 50%;
+            height: 100vh;
             color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #000000a8;
+            justify-content: center;
             .slide__title {
               font-weight: 400;
               font-size: 5rem;

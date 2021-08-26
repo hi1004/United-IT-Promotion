@@ -661,6 +661,7 @@
         autoplay: {
           disableOnInteraction: false,
           delay: 3000,
+          stop: true
         },
         pagination: {
           el: '.swiper-pagination',
@@ -669,11 +670,14 @@
         },
       });
       const executivesSection = document.querySelector('#executives');
+       mySwiper.autoplay.stop();
+       
       window.addEventListener('scroll', () => {
         const scrollValue = window.scrollY;
         const executivesSectionOffsetTop = executivesSection.offsetTop;
         const executivesSectionOffsetBottom =
           executivesSectionOffsetTop + executivesSection.offsetHeight;
+
         if (window.innerWidth <= 768) {
           if (
             executivesSectionOffsetTop - 500 <= scrollValue &&

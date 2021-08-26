@@ -55,21 +55,22 @@ html::-webkit-scrollbar-track {
 .back-to-position {
   opacity: 0;
   transition: 1s;
+  transform: translateY(50px);
   &.show {
     opacity: 1;
-    &.to-right {
-      transform: translateX(-150px);
-      text-align: left;
-    }
-    &.to-left {
-      transform: translateX(150px);
-      text-align: right;
-    }
-    &.to-bottom {
-      transform: translateY(100px);
-    }
+    // &.to-right {
+    //   transform: translateX(-150px);
+    //   text-align: left;
+    // }
+    // &.to-left {
+    //   transform: translateX(150px);
+    //   text-align: right;
+    // }
+    // &.to-bottom {
+    //   transform: translateY(100px);
+    // }
     &.to-top {
-      transform: translateY(-50px);
+      transform: translateY(0px);
     }
     &.delay-0 {
       transition-delay: 0s;
