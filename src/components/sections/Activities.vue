@@ -171,7 +171,7 @@
   #activities__container {
     position: relative;    
     .slide__wrap {
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       position: absolute;
       z-index: 100;
@@ -185,7 +185,7 @@
         z-index: 100;
         .banner {
           position: relative;
-          width: 100vw;
+          width: 100%;
           height: 100%;
           display: flex;
           justify-content: flex-start;
@@ -216,7 +216,7 @@
           }
           .content {            
             padding: 0 3vw;
-            width: 50%;
+            width: 650px;
             height: 100vh;
             color: #fff;
             position: absolute;
@@ -226,22 +226,16 @@
             flex-direction: column;
             background-color: #000000a8;
             justify-content: center;
-            .slide__title {
+            .slide__title {              
               font-weight: 400;
-              font-size: 5rem;
+              font-size: 4rem;
+              width: 500px;
               letter-spacing: 0.1rem;
               font-family: 'Black Han Sans', sans-serif;
             }
             .slide__subtitle {
               font-size: 2.2rem;
-              font-family: 'Black Han Sans', sans-serif;
-             
-              p {
-                font-size: 1.2rem;
-                font-weight: 300;
-                letter-spacing: 0.02rem;
-                margin: 15px 0 35px;
-              }
+              font-family: 'Black Han Sans', sans-serif;   
             }
             .slide__paragraph {
               font-family: 'Noto Sans KR', sans-serif;
@@ -251,17 +245,29 @@
             }
           }
         }
-        @media all and (max-width: 991px) {
+        @media all and (max-width: 768px) {
           .banner {
             padding: 150px 50px 0 50px;
             .content {
+              top: 80px;
+              height: calc(100% - 80px);
+              width: 100%;
+              align-items: center;
+              padding: 0;
+              text-align: center;
               .slide__title {
-                font-size: 2rem;
+                width: 90%;
+                font-size: 3rem;
                 letter-spacing: 0.05rem;
               }
-              p {
+              .slide__subtitle {
+                font-size: 1.5rem;
+                width: 90%;
+              }
+              .slide__paragraph {
                 font-size: 1rem;
-                max-width: 55vw;
+                width: 90%;
+                margin-top: 10px;
               }
             }
           }

@@ -139,60 +139,7 @@ export default function () {
       duration: '40%',
     })
       .setTween(changeSize)
-      .addTo(controller);   
-    
-    /* mobile */
-    const aboutTitleRotate = [
-      'rotate3d(1, 0, 0, 90deg)',
-      'rotate3d(0, 1, 0, 90deg)',
-      'rotate3d(-1, 0, 0, 90deg)',
-      'rotate3d(0, -1, 0, 90deg)',
-      'rotate3d(1, 0, 0, 90deg)'
-    ]
-
-    aboutTitleWords.forEach((word, i)=>{
-      word.style.transform = aboutTitleRotate[i]
-    })
-    const setAboutTitleWordPos = new TimelineMax()
-    .to(aboutTitleWords[0], {
-      rotationX: 0, rotationY: 0, rotationZ: 0
-    })
-    .to(aboutTitleWords[1], {
-      rotationX: 0, rotationY: 0, rotationZ: 0
-    })
-    .to(aboutTitleWords[2], {
-      rotationX: 0, rotationY: 0, rotationZ: 0
-    })
-    .to(aboutTitleWords[3], {
-      rotationX: 0, rotationY: 0, rotationZ: 0
-    })
-    .to(aboutTitleWords[4], {
-      rotationX: 0, rotationY: 0, rotationZ: 0
-    });
-    const mobileTitleScene = new ScrollMagic.Scene({
-      triggerElement: aboutTitle,
-      triggerHook: 0.9,
-      duration: '60%',
-    })
-      .setTween(setAboutTitleWordPos)
-      .addTo(controller);    
-
-    if(window.innerWidth > 415) {
-      titleScene.enabled(true);
-      mobileTitleScene.enabled(false); 
-    } else {
-      titleScene.enabled(false);
-      mobileTitleScene.enabled(true); 
-    }
-    window.addEventListener('resize', ()=>{
-      if(window.innerWidth > 415) {
-        titleScene.enabled(true);
-        mobileTitleScene.enabled(false); 
-      } else {
-        titleScene.enabled(false);
-        mobileTitleScene.enabled(true); 
-      }
-    })    
+      .addTo(controller);      
   }
   aboutTitleAnimate();
 
