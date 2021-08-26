@@ -913,6 +913,7 @@
     #executives__mobile {
       margin: 10rem 0;
       position: relative;
+      overflow: hidden;
       // padding: 0 0 10rem;
       .executives__title-wrap {
         padding: 3rem 0;
