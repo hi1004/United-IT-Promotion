@@ -93,7 +93,7 @@
         id="first_space"
         class="slide__space content_space">
         <div class="mobile-slide__image back-to-position to-top">
-          <img src="http://placehold.it/300x300" />
+          <img src="~/assets/activity/mo_activity_study.jpg" />
         </div>
         <h1 class="mobile-slide__title title01 back-to-position to-top delay-1">
           PROGRAMMING STUDY
@@ -113,7 +113,7 @@
         id="second_space"
         class="slide__space content_space">
         <div class="mobile-slide__image back-to-position to-top">
-          <img src="http://placehold.it/300x300" />
+          <img src="~/assets/activity/mo_activity_tandem.jpg" />
         </div>
         <h1 class="mobile-slide__title title02 back-to-position to-top delay-1">
           KR↔JP EXCHANGE
@@ -199,7 +199,7 @@
             }
           }
           &.second__banner {
-            background: url('~/assets/activity/activity_study.jpg');
+            background: url('~/assets/activity/activity_tandem.jpg');
             background-position: center;
             background-size: cover;
             .slide__title {
