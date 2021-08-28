@@ -13,6 +13,23 @@
           <span class="about__title_word">T</span>
         </h1>
       </div>
+      <div class="m_about__title">
+        <div class="m_about__title_word">
+          <span>A</span>
+        </div>
+        <div class="m_about__title_word">
+          <span>A<br />B</span>
+        </div>
+        <div class="m_about__title_word">
+          <span>A<br />B<br />C<br />D<br />E<br />F<br />G<br />H<br />I<br />J<br />K<br />L<br />M<br />N<br />O</span>
+        </div>
+        <div class="m_about__title_word">
+          <span>A<br />B<br />C<br />D<br />E<br />F<br />G<br />H<br />I<br />J<br />K<br />L<br />M<br />N<br />O<br />P<br />Q<br />R<br />S<br />T<br />U</span>
+        </div>
+        <div class="m_about__title_word">
+          <span>A<br />B<br />C<br />D<br />E<br />F<br />G<br />H<br />I<br />J<br />K<br />L<br />M<br />N<br />O<br />P<br />Q<br />R<br />S<br />T</span>
+        </div>
+      </div>
       <!-- VIDEO-BG -->
       <div class="video__bg">
         <video
@@ -88,6 +105,13 @@
       color: #fff;
       .container {
         .about__title {
+          @media screen and (min-width: 416px) {
+            height: auto;
+          }    
+          @media screen and (max-width: 415px) {
+            height: 0;
+            overflow: hidden;
+          }
           h1 {            
             text-align: center;
             .about__title_word {
@@ -99,6 +123,30 @@
                 font-size: 65px;    
               } 
             }               
+          }
+        }
+        .m_about__title {
+          margin: 0 auto;
+          width: 300px;
+          height: 1320px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          overflow: hidden;
+          @media screen and (min-width: 416px) {
+            height: 0;
+          }    
+          @media screen and (max-width: 415px) {
+            height: 50px;  
+          } 
+          .m_about__title_word {
+            width: 55px;
+            height: 1260px;
+            text-align: center;
+            font-size: 60px;
+            line-height: 60px;
+            vertical-align: center;
+            background-color:rgba(126, 126, 126, 0.5);
           }
         }
         .video__bg {

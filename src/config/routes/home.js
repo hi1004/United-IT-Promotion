@@ -29,11 +29,12 @@ export default function () {
 
   // ---------------------------------------ABOUT----------------------------------------------
 
-  const aboutSection = document.querySelector('#about');
-  const aboutTitle = document.querySelector('#about .about__title');
+  const aboutSection = document.querySelector('#about');  
   const aboutTitleText = document.querySelector('#about .about__title h1');
-  const aboutTitleWords = document.querySelectorAll('.about__title_word')
   const videoContent = document.querySelector('.video__content');
+  const aboutTitle = document.querySelector('#about .about__title');
+  const mobileAboutTitle = document.querySelector('.m_about__title')
+  const mobileAboutTitleWords = document.querySelectorAll('.m_about__title_word')
 
   // /* SCROLL MAGIC - CHANGE TO ABOUT */
   // function changeToAbout() {
@@ -60,7 +61,7 @@ export default function () {
   function aboutDescriptionEffect() {
     const aboutWords = document.querySelectorAll('.about__word');
     const aboutWords02 = document.querySelectorAll('.about__word02');
-    const aboutScreamer = document.querySelector('.about__screamer');
+    const aboutScreamer = document.querySelector('.about__screamer');    
 
     function enterDesc() {
       aboutWords.forEach((word, i) => {
@@ -139,7 +140,83 @@ export default function () {
       duration: '40%',
     })
       .setTween(changeSize)
-      .addTo(controller);      
+      .addTo(controller);
+    
+    /* mobile */    
+    const setTitleWordPos1 = new TimelineMax()
+    .to(mobileAboutTitleWords[1], {
+      y: -60
+    })
+    const setTitleWordPos2 = new TimelineMax()
+    .to(mobileAboutTitleWords[2], {
+      y: -840
+    })
+    const setTitleWordPos3 = new TimelineMax()
+    .to(mobileAboutTitleWords[3], {
+      y: -1200
+    })
+    const setTitleWordPos4 = new TimelineMax()
+    .to(mobileAboutTitleWords[4], {
+      y: -1140
+    })
+    
+    const mobileTitleScene1 = new ScrollMagic.Scene({
+      triggerElement: mobileAboutTitle,
+      triggerHook: 0.9,
+      duration: '60%',
+    })      
+      .setTween(setTitleWordPos1)
+      .addTo(controller);    
+    const mobileTitleScene2 = new ScrollMagic.Scene({
+      triggerElement: mobileAboutTitle,
+      triggerHook: 0.9,
+      duration: '60%',
+    })      
+      .setTween(setTitleWordPos2)
+      .addTo(controller); 
+    const mobileTitleScene3 = new ScrollMagic.Scene({
+      triggerElement: mobileAboutTitle,
+      triggerHook: 0.9,
+      duration: '60%',
+    })      
+      .setTween(setTitleWordPos3)
+      .addTo(controller); 
+    const mobileTitleScene4 = new ScrollMagic.Scene({
+      triggerElement: mobileAboutTitle,
+      triggerHook: 0.9,
+      duration: '60%',
+    })      
+      .setTween(setTitleWordPos4)
+      .addTo(controller); 
+
+    if(window.innerWidth > 415) {
+      titleScene.enabled(true);
+      mobileTitleScene1.enabled(false);
+      mobileTitleScene2.enabled(false);
+      mobileTitleScene3.enabled(false);
+      mobileTitleScene4.enabled(false); 
+    } else {
+      titleScene.enabled(false);
+      mobileTitleScene1.enabled(true); 
+      mobileTitleScene2.enabled(true); 
+      mobileTitleScene3.enabled(true); 
+      mobileTitleScene4.enabled(true); 
+    }
+    window.addEventListener('resize', ()=>{
+      if(window.innerWidth > 415) {
+        titleScene.enabled(true);
+        mobileTitleScene1.enabled(false); 
+        mobileTitleScene2.enabled(false); 
+        mobileTitleScene3.enabled(false); 
+        mobileTitleScene4.enabled(false); 
+      } else {
+        titleScene.enabled(false);
+        mobileTitleScene1.enabled(true); 
+        mobileTitleScene2.enabled(true); 
+        mobileTitleScene3.enabled(true); 
+        mobileTitleScene4.enabled(true); 
+      }
+    })    
   }
   aboutTitleAnimate();
 
