@@ -80,9 +80,11 @@
             id="executive_1"
             class="profile">
             <div class="photo">
-              <img
-                src="~/assets/executives/executives1.png"
-                alt="장현아" />
+              <div class="imgBx">
+                <img
+                  src="~/assets/executives/executives1.gif"
+                  alt="장현아" />
+              </div>
             </div>
             <div class="name">
               장현아
@@ -104,9 +106,11 @@
             id="executive_2"
             class="profile">
             <div class="photo">
-              <img
-                src="~/assets/executives/executives5.png"
-                alt="오병헌" />
+              <div class="imgBx">
+                <img
+                  src="~/assets/executives/executives5.gif"
+                  alt="오병헌" />
+              </div>
             </div>
             <div class="name">
               오병헌
@@ -128,9 +132,11 @@
             id="executive_3"
             class="profile">
             <div class="photo">
-              <img
-                src="~/assets/executives/executives_affairs.png"
-                alt="손혜진" />
+              <div class="imgBx">
+                <img
+                  src="~/assets/executives/executives_affairs.gif"
+                  alt="손혜진" />
+              </div>
             </div>
             <div class="name">
               손혜진
@@ -152,9 +158,11 @@
             id="executive_4"
             class="profile">
             <div class="photo">
-              <img
-                src="~/assets/executives/executives_promotion.png"
-                alt="표예원" />
+              <div class="imgBx">
+                <img
+                  src="~/assets/executives/executives_promotion.gif"
+                  alt="표예원" />
+              </div>
             </div>
             <div class="name">
               표예원
@@ -176,9 +184,11 @@
             id="executive_5"
             class="profile">
             <div class="photo">
-              <img
-                src="~/assets/executives/executives1.png"
-                alt="장현아" />
+              <div class="imgBx">
+                <img
+                  src="~/assets/executives/executives1.gif"
+                  alt="장현아" />
+              </div>
             </div>
             <div class="name">
               장현아
@@ -200,9 +210,11 @@
             id="executive_6"
             class="profile">
             <div class="photo">
-              <img
-                src="~/assets/executives/executives2.png"
-                alt="최현진" />
+              <div class="imgBx">
+                <img
+                  src="~/assets/executives/executives2.gif"
+                  alt="최현진" />
+              </div>
             </div>
             <div class="name">
               최현진
@@ -229,13 +241,16 @@
             id="executive_7"
             class="profile">
             <div class="photo">
-              <img
-                src="~/assets/executives/executives3.png"
-                alt="김재영" />
+              <div class="imgBx">
+                <img
+                  src="~/assets/executives/executives3.gif"
+                  alt="김재영" />
+              </div>
             </div>
             <div class="name">
               김재영
             </div>
+           
             <div class="position">
               3조 조장
             </div>
@@ -258,9 +273,11 @@
             id="executive_8"
             class="profile">
             <div class="photo">
-              <img
-                src="~/assets/executives/executives4.png"
-                alt="허민" />
+              <div class="imgBx">
+                <img
+                  src="~/assets/executives/executives4.gif"
+                  alt="허민" />
+              </div>
             </div>
             <div class="name">
               허민
@@ -286,9 +303,11 @@
             id="executive_9"
             class="profile">
             <div class="photo">
-              <img
-                src="~/assets/executives/executives5.png"
-                alt="오병헌" />
+              <div class="imgBx">
+                <img
+                  src="~/assets/executives/executives5.gif"
+                  alt="오병헌" />
+              </div>
             </div>
             <div class="name">
               오병헌
@@ -314,9 +333,11 @@
             id="executive_10"
             class="profile">
             <div class="photo">
-              <img
-                src="~/assets/executives/executives6.png"
-                alt="김동훈" />
+              <div class="imgBx">
+                <img
+                  src="~/assets/executives/executives6.gif"
+                  alt="김동훈" />
+              </div>
             </div>
             <div class="name">
               김동훈
@@ -361,7 +382,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives1.png"
+                      src="~/assets/executives/executives1.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -387,7 +408,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives5.png"
+                      src="~/assets/executives/executives5.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -413,7 +434,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives_affairs.png"
+                      src="~/assets/executives/executives_affairs.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -439,7 +460,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives_promotion.png"
+                      src="~/assets/executives/executives_promotion.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -465,7 +486,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives1.png"
+                      src="~/assets/executives/executives1.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -491,7 +512,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives2.png"
+                      src="~/assets/executives/executives2.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -522,7 +543,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives3.png"
+                      src="~/assets/executives/executives3.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -553,7 +574,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives4.png"
+                      src="~/assets/executives/executives4.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -583,7 +604,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives5.png"
+                      src="~/assets/executives/executives5.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -613,7 +634,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      src="~/assets/executives/executives6.png"
+                      src="~/assets/executives/executives6.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -864,9 +885,15 @@
           }
           .photo {
             max-width: 350px;
-            img {
+            .imgBx {
+              border: 4px solid #fff;
+              border-radius: 50%;
+              box-sizing: border-box;
+              img {
               width: 100%;
             }
+            }
+            
           }
           .name {
             font-size: 3rem;

@@ -70,7 +70,7 @@
       <!-- VIDEO INTRO -->
       <div class="video-poster back-to-position delay-0 to-top">
         <img
-          src="~/assets/video/poster.png"
+          src="~/assets/video/poster.gif"
           alt="poster" />
         <span class="material-icons play-btn cursor__hover_el"> play_circle_filled </span>
       </div>
