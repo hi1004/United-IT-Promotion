@@ -21,12 +21,12 @@
             <div class="img-wrap">
               <div class="img-box">
                 <img
-                  class="img lazy"
-                  data-src="~/assets/executives_symbol/ex_kaichou.png"
+                  class="img"
+                  src="~/assets/executives_symbol/ex_kaichou.png"
                   alt="office" />
                 <img
-                  class="img lazy"
-                  data-src="~/assets/executives_symbol/ex_fukukaichou.png"
+                  class="img"
+                  src="~/assets/executives_symbol/ex_fukukaichou.png"
                   alt="office" />
                 <img
                   class="img"
@@ -82,7 +82,8 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  src="~/assets/executives/executives1.gif"
+                  class="lozad"
+                  data-src="~/assets/executives/executives1.gif"
                   alt="장현아" />
               </div>
             </div>
