@@ -82,8 +82,7 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  class="lozad"
-                  data-src="~/assets/executives/executives1.gif"
+                  src="~/assets/executives/executives1.gif"
                   alt="장현아" />
               </div>
             </div>

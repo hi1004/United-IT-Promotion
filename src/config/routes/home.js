@@ -2,9 +2,6 @@
 // import { _numWithUnitExp } from 'gsap/gsap-core';
 import scrollTo from 'gsap/ScrollToPlugin';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import lozad from 'lozad';
-
-  //  let lozad = require('lozad');
 
 const ScrollMagic = window.ScrollMagic;
 const gsap = window.gsap;
@@ -284,8 +281,6 @@ export default function () {
   const aboutSpacer = document.querySelector('#about .spacer');
   const executivesProfiles = document.querySelectorAll('.profile');
   const executivesImages = document.querySelectorAll('.img');
-  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-  observer.observe();
 
   // const abouVideoPoster = document.querySelector('.video-poster');
 
