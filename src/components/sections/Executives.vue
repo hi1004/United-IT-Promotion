@@ -21,12 +21,12 @@
             <div class="img-wrap">
               <div class="img-box">
                 <img
-                  class="img"
-                  src="~/assets/executives_symbol/ex_kaichou.png"
+                  class="img lazy"
+                  data-src="~/assets/executives_symbol/ex_kaichou.png"
                   alt="office" />
                 <img
-                  class="img"
-                  src="~/assets/executives_symbol/ex_fukukaichou.png"
+                  class="img lazy"
+                  data-src="~/assets/executives_symbol/ex_fukukaichou.png"
                   alt="office" />
                 <img
                   class="img"
