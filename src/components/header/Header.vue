@@ -10,7 +10,7 @@
           <RouterLink
             :to="nav.href"
             active-class="active"
-            class="nav-link">
+            class="nav-link mobile-router">
             {{ nav.name }}
           </RouterLink>
         </div>

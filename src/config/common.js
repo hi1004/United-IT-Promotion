@@ -141,16 +141,16 @@ export default function () {
     });
   });
 
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.mobile-router');
 
  
-  if (window.innerWidth >= 415) {
+
     navLinks.forEach((navLink) => {
       navLink.addEventListener('click', () => {
         window.location.reload();
       });
     });
-  } 
+  
   
   
   

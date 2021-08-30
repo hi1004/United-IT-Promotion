@@ -1,7 +1,7 @@
 <template>
   <RouterLink
     to="/"
-    class="logo">
+    class="logo mobile-router">
     <img
       src="~/assets/logo/logo.png"
       alt="logo" />
