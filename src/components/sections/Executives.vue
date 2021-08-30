@@ -667,7 +667,6 @@
     mounted() {
         const executivesSection = document.querySelector('#executives');
         const executivesTitle = document.querySelector('#executives__mobile .executives__title');
-        let i = 0;
         const executivesTitleColors = [
           '#5b45ff',
           '#e9f036',
@@ -705,12 +704,8 @@
           type: 'fraction',
         },
         on: {
-          slideChange: function() {
-             executivesTitle.style.color = executivesTitleColors[i];
-             i++;
-             if(i === executivesTitleColors.length) {
-               i = 0;
-             }
+          activeIndexChange: function() {
+             executivesTitle.style.color = executivesTitleColors[this.realIndex];
           }
         }
       });
