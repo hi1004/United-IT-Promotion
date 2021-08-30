@@ -15,10 +15,10 @@
       </div>
       <div class="m_about__title">
         <div class="m_about__title_word">
-          <span>A</span>
+          <span>A<br />B<br />C<br />D<br />E<br />F<br />G<br />H<br />I<br />J<br />K<br />L<br />M<br />N<br />O<br />P<br />Q<br />R<br />S<br />T<br />U<br />V<br />W<br />X<br />Y<br />Z<br />A</span>
         </div>
         <div class="m_about__title_word">
-          <span>A<br />B</span>
+          <span>A<br />B<br />C<br />D<br />E<br />F<br />G<br />H<br />I<br />J<br />K<br />L<br />M<br />N<br />O<br />P<br />Q<br />R<br />S<br />T<br />U<br />V<br />W<br />X<br />Y<br />Z<br />A<br />B</span>
         </div>
         <div class="m_about__title_word">
           <span>A<br />B<br />C<br />D<br />E<br />F<br />G<br />H<br />I<br />J<br />K<br />L<br />M<br />N<br />O</span>
@@ -128,7 +128,6 @@
         .m_about__title {
           margin: 0 auto;
           width: 300px;
-          height: 1320px;
           display: flex;
           flex-direction: row;
           justify-content: space-around;
@@ -141,7 +140,7 @@
           } 
           .m_about__title_word {
             width: 55px;
-            height: 1260px;
+            height: 1680px;
             text-align: center;
             font-size: 60px;
             line-height: 60px;

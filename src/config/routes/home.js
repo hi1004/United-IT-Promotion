@@ -143,9 +143,13 @@ export default function () {
       .addTo(controller);
     
     /* mobile */    
+    const setTitleWordPos0 = new TimelineMax()
+    .to(mobileAboutTitleWords[0], {
+      y: -1560
+    })
     const setTitleWordPos1 = new TimelineMax()
     .to(mobileAboutTitleWords[1], {
-      y: -60
+      y: -1620
     })
     const setTitleWordPos2 = new TimelineMax()
     .to(mobileAboutTitleWords[2], {
@@ -160,6 +164,13 @@ export default function () {
       y: -1140
     })
     
+    const mobileTitleScene0 = new ScrollMagic.Scene({
+      triggerElement: mobileAboutTitle,
+      triggerHook: 0.9,
+      duration: '60%',
+    })      
+      .setTween(setTitleWordPos0)
+      .addTo(controller);  
     const mobileTitleScene1 = new ScrollMagic.Scene({
       triggerElement: mobileAboutTitle,
       triggerHook: 0.9,
@@ -190,13 +201,15 @@ export default function () {
       .addTo(controller); 
 
     if(window.innerWidth > 415) {
-      titleScene.enabled(true);
+      titleScene.enabled(true);      
+      mobileTitleScene0.enabled(false);
       mobileTitleScene1.enabled(false);
       mobileTitleScene2.enabled(false);
       mobileTitleScene3.enabled(false);
       mobileTitleScene4.enabled(false); 
     } else {
       titleScene.enabled(false);
+      mobileTitleScene0.enabled(true);
       mobileTitleScene1.enabled(true); 
       mobileTitleScene2.enabled(true); 
       mobileTitleScene3.enabled(true); 
@@ -205,12 +218,14 @@ export default function () {
     window.addEventListener('resize', ()=>{
       if(window.innerWidth > 415) {
         titleScene.enabled(true);
+        mobileTitleScene0.enabled(false);
         mobileTitleScene1.enabled(false); 
         mobileTitleScene2.enabled(false); 
         mobileTitleScene3.enabled(false); 
         mobileTitleScene4.enabled(false); 
       } else {
         titleScene.enabled(false);
+        mobileTitleScene0.enabled(true);
         mobileTitleScene1.enabled(true); 
         mobileTitleScene2.enabled(true); 
         mobileTitleScene3.enabled(true); 
@@ -541,7 +556,7 @@ export default function () {
     activitiesTitleWords.forEach((word, i)=>{
       word.style.transform = `translateY(${yPosArray[i]}px)`
       word.style.color = colorArray[i]
-      word.style.opacity = 0.5;
+      word.style.opacity = 0;
       word.style.textShadow = '0 0 10px ' + colorArray[i]
       const setWordYpos = new TimelineMax()
         .to(word, {
