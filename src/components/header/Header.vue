@@ -95,7 +95,7 @@
     }
     .main-tool-bar {
       transition: ease 0.4s;
-      opacity: 0;
+      // opacity: 0;
       &--scrolled {
         height: 40px;
       }

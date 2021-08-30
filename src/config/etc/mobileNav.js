@@ -10,6 +10,7 @@ export default function () {
   })
   const mnLinks = document.querySelectorAll('.mobile-nav__link');
   const mnMenu = document.querySelector('.mobile-nav__menu');
+  const navLinks = mnMenu.querySelectorAll('.nav-link');
   const mnMenuBtn = document.querySelector('input[type="checkbox"]');
   const mnMenuBtnLabel = document.querySelector('.menu-btn');
   const mnNav = document.querySelector('.mobile-nav');
@@ -22,7 +23,6 @@ export default function () {
       mnMenuBtn.checked = false;
     }
   }
-
   function menuBtnClickBodyEvent() {
     mnMenuBtnLabel.addEventListener('click', () => {
       
@@ -36,7 +36,6 @@ export default function () {
     });
   }
   menuBtnClickBodyEvent();
-
   /* window reize => bodyOverFlow & unchecked MenuBtn  */
   function bodyOverflowResize(){
     window.addEventListener('resize', ()=> {
@@ -56,11 +55,7 @@ export default function () {
     });
     this.classList.add('link_actived');
   }
-  mnLinks.forEach((mnLink) => {
-    mnLink.addEventListener('click', linkActiveOnClick);
-    mnLink.addEventListener('click', menuBtnOnClick);
-  });
-
+  
   /* active mobile link on scroll */
   function linkActiveOnScroll() {
     mnLinks.forEach((mnLink, i) => {
@@ -104,10 +99,25 @@ export default function () {
       }
     }, 1000);
   }
+
+  mnLinks.forEach((mnLink) => {
+    mnLink.addEventListener('click', linkActiveOnClick);
+    mnLink.addEventListener('click', menuBtnOnClick);
+  });
+
   mnLinks.forEach((mnLink, i) => {
     mnLink.addEventListener('click', () => {
       scrollToSection(i);
       mnNav.classList.remove('nav-active');
     });
   });
+
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener('click', menuBtnOnClick);
+    navLink.addEventListener('click',()=>{
+      mnNav.classList.remove('nav-active');
+    })
+  })
+
+
 }
