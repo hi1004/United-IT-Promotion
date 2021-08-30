@@ -2,7 +2,7 @@
   <header class="header">
     <nav class="mobile-nav">
       <a
-        hefr="#"
+        href="#"
         class="logo">
         <img
           src="~/assets/logo/logo.png"
@@ -192,6 +192,10 @@
       nav ul li a:hover {
         color: #111;
         background: #fff;
+        @media screen and (max-width: 415px){
+                  color: #fff;
+                  background: transparent;
+          }
       }
 
       input[type='checkbox'] {
@@ -254,13 +258,14 @@
         width: 100%;
         margin: 0 auto;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
+        align-items: center;
       }
-      nav ul li a.active,
-      nav ul li a:hover {
-        background: none;
-        color: cyan;
-      }
+      // nav ul li a.active,
+      // nav ul li a:hover {
+      //   background: none;
+      //   color: cyan;
+      // }
     }
   }
 </style>

@@ -92,8 +92,8 @@
       <div
         id="first_space"
         class="slide__space content_space">
-        <div class="mobile-slide__image back-to-position to-top lazy">
-          <img data-src="https://jbit-united-it.netlify.app/8ff9002813e915771287992e03585b5d.jpg" />
+        <div class="mobile-slide__image back-to-position to-top">
+          <img src="~/assets/activity/mo_activity_study.jpg" />
         </div>
         <h1 class="mobile-slide__title title01 back-to-position to-top delay-1">
           PROGRAMMING STUDY
@@ -112,8 +112,8 @@
       <div
         id="second_space"
         class="slide__space content_space">
-        <div data-class="mobile-slide__image back-to-position to-top lazy">
-          <img src="https://jbit-united-it.netlify.app/89c8fc13fb89caa100ac34dd3af37a98.jpg" />
+        <div class="mobile-slide__image back-to-position to-top">
+          <img src="~/assets/activity/mo_activity_tandem.jpg" />
         </div>
         <h1 class="mobile-slide__title title02 back-to-position to-top delay-1">
           KR↔JP EXCHANGE
@@ -134,8 +134,8 @@
       <div
         id="third_space"
         class="slide__space content_space">
-        <div class="mobile-slide__image back-to-position to-top lazy">
-          <img data-src="https://jbit-united-it.netlify.app/98bab3eda1291d5e9cf0aa213be6d48b.jpg" />
+        <div class="mobile-slide__image back-to-position to-top">
+          <img src="~/assets/activity/mo_activity_job.jpg" />
         </div>
         <h1 class="mobile-slide__title title03 back-to-position to-top delay-1">
           JOB STUDY
@@ -155,7 +155,6 @@
     </div>
   </section>
 </template>
-
 <script>
   export default {
     mounted() {},

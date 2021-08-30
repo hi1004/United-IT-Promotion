@@ -66,6 +66,7 @@ export default function () {
     mnLinks.forEach((mnLink, i) => {
       function enterSection() {
         mnLink.classList.add('link_actived');
+        
       }
       function leaveSection() {
         mnLink.classList.remove('link_actived');
@@ -106,6 +107,7 @@ export default function () {
   mnLinks.forEach((mnLink, i) => {
     mnLink.addEventListener('click', () => {
       scrollToSection(i);
+      mnNav.classList.remove('nav-active');
     });
   });
 }
