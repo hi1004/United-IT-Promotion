@@ -685,6 +685,7 @@
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
+        speed: 1000,
         coverflowEffect: {
           rotate: 50,
           stretch: 0,
