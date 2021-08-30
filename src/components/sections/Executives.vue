@@ -1,5 +1,6 @@
 <template>
   <!-- executives -->
+  
   <section
     class="executives__section"
     id="executives">
@@ -21,60 +22,59 @@
             <div class="img-wrap">
               <div class="img-box">
                 <img
-                  class="img lazy"
-                  data-src="https://jbit-united-it.netlify.app/e45737e3b73d6b74f4e9e282a4e39f26.png"
+                  class="img"
+                  src="~/assets/executives_symbol/ex_kaichou.png"
                   alt="office" />
                 <img
-                  class="img lazy"
-                  data-src="https://jbit-united-it.netlify.app/3b294c67e3d5949e626e6f553c93c1d6.png"
+                  class="img"
+                  src="~/assets/executives_symbol/ex_fukukaichou.png"
                   alt="office" />
                 <img
-                  class="img lazy"
-                  data-src="https://jbit-united-it.netlify.app/a044d6301f05a286fe2ee8f7bd5f6868.png"
+                  class="img"
+                  src="~/assets/executives_symbol/ex_soumu.png"
                   alt="office" />
                 <img
-                  class="img lazy"
-                  data-src="https://jbit-united-it.netlify.app/bebc1d552a03615d6f166e7306941a2b.png"
+                  class="img"
+                  src="~/assets/executives_symbol/ex_kouhou.png"
                   alt="office" />
                 <img
-                  class="img lazy"
-                  data-src="https://jbit-united-it.netlify.app/d42b5350ec8e3a2528d6f28bb78fd829.png"
+                  class="img"
+                  src="~/assets/executives_symbol/group1.png"
                   alt="group-logo" />
               </div>
               <div class="img-box">
                 <img
-                  class="img lazy"
-                  data-src="https://jbit-united-it.netlify.app/780ffeae64f3c965d50087344106f8ce.png"
+                  class="img"
+                  src="~/assets/executives_symbol/group2.png"
                   alt="group-logo" />
               </div>
               <div class="img-box">
                 <img
-                  class="img lazy"
-                  data-src="https://jbit-united-it.netlify.app/000f3baa9f252d0d2997d8aed47af06c.png"
+                  class="img"
+                  src="~/assets/executives_symbol/group3.png"
                   alt="group-logo" />
               </div>
               <div class="img-box">
                 <img
-                  class="img lazy"
-                  data-src="https://jbit-united-it.netlify.app/676eaf1d1fded6b7bc92513c9f4d6e60.png"
+                  class="img"
+                  src="~/assets/executives_symbol/group4.png"
                   alt="group-logo" />
               </div>
               <div class="img-box">
                 <img
-                  class="img lazy"
-                  data-src="https://jbit-united-it.netlify.app/9e3e4a20c70fabe8913919c6213010e8.png"
+                  class="img"
+                  src="~/assets/executives_symbol/group5.png"
                   alt="group-logo" />
               </div>
               <div class="img-box">
                 <img
-                  class="img lazy"
-                  data-src="https://jbit-united-it.netlify.app/9a08b7e956c473fe136891e8bf847d44.png"
+                  class="img"
+                  src="~/assets/executives_symbol/group6.png"
                   alt="group-logo" />
               </div>
             </div>
           </div>
         </div>
-
         <div class="right-box">
           <!-- 회장 -->
           <div
@@ -83,8 +83,7 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  class="lazy"
-                  data-src="https://jbit-united-it.netlify.app/4fc3ff201561c1a270afac0489133620.gif"
+                  src="~/assets/executives/executives1.gif"
                   alt="장현아" />
               </div>
             </div>
@@ -110,8 +109,7 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  class="lazy"
-                  data-src="https://jbit-united-it.netlify.app/8bbf935409229b9cbb78670b11e265fc.gif"
+                  src="~/assets/executives/executives5.gif"
                   alt="오병헌" />
               </div>
             </div>
@@ -137,8 +135,7 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  class="lazy"
-                  data-src="https://jbit-united-it.netlify.app/0bf760a545aa0103345c9cb03eafb4c2.gif"
+                  src="~/assets/executives/executives_affairs.gif"
                   alt="손혜진" />
               </div>
             </div>
@@ -164,8 +161,7 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  class="lazy"
-                  data-src="https://jbit-united-it.netlify.app/8d4f9f8624b68946a6d2dfe60ed0fc7a.gif"
+                  src="~/assets/executives/executives_promotion.gif"
                   alt="표예원" />
               </div>
             </div>
@@ -191,8 +187,7 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  class="lazy"
-                  data-src="https://jbit-united-it.netlify.app/4fc3ff201561c1a270afac0489133620.gif"
+                  src="~/assets/executives/executives1.gif"
                   alt="장현아" />
               </div>
             </div>
@@ -218,8 +213,7 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  class="lazy"
-                  data-src="https://jbit-united-it.netlify.app/943bbd2c986db2b92cb15b32295946f2.gif"
+                  src="~/assets/executives/executives2.gif"
                   alt="최현진" />
               </div>
             </div>
@@ -250,15 +244,13 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  class="lazy"
-                  data-src="https://jbit-united-it.netlify.app/9fee9fd7be330cf01e203be04925760f.gif"
+                  src="~/assets/executives/executives3.gif"
                   alt="김재영" />
               </div>
             </div>
             <div class="name">
               김재영
             </div>
-           
             <div class="position">
               3조 조장
             </div>
@@ -283,8 +275,7 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  class="lazy"
-                  data-src="https://jbit-united-it.netlify.app/ec12bcde1202b4e27fb68d7ef37b178a.gif"
+                  src="~/assets/executives/executives4.gif"
                   alt="허민" />
               </div>
             </div>
@@ -314,8 +305,7 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  class="lazy"
-                  data-src="https://jbit-united-it.netlify.app/8bbf935409229b9cbb78670b11e265fc.gif"
+                  src="~/assets/executives/executives5.gif"
                   alt="오병헌" />
               </div>
             </div>
@@ -345,8 +335,7 @@
             <div class="photo">
               <div class="imgBx">
                 <img
-                  class="lazy"
-                  data-src="https://jbit-united-it.netlify.app/6eb6608eb003d6d5d33e5398227317cf.gif"
+                  src="~/assets/executives/executives6.gif"
                   alt="김동훈" />
               </div>
             </div>
@@ -393,11 +382,9 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      class="lazy"
-                      data-src="https://jbit-united-it.netlify.app/4fc3ff201561c1a270afac0489133620.gif"
-                      alt="장현아" />
+                      src="~/assets/executives/executives1.gif"
+                      alt="" />
                   </div>
-                
                   <div class="details">
                     <h2>장현아<br /><span>회장</span></h2>
                   </div>
@@ -414,15 +401,14 @@
                 </div>
               </div>
             </div>
-         
+
             <div class="swiper-slide">
               <div class="swiper-card">
                 <div class="swiper-layer"></div>
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      class="lazy"
-                      data-src="https://jbit-united-it.netlify.app/8bbf935409229b9cbb78670b11e265fc.gif"
+                      src="~/assets/executives/executives5.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -448,8 +434,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      class="lazy"
-                      data-src="https://jbit-united-it.netlify.app/0bf760a545aa0103345c9cb03eafb4c2.gif"
+                      src="~/assets/executives/executives_affairs.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -475,8 +460,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      class="lazy"
-                      data-src="https://jbit-united-it.netlify.app/8d4f9f8624b68946a6d2dfe60ed0fc7a.gif"
+                      src="~/assets/executives/executives_promotion.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -502,9 +486,8 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      class="lazy"
-                      data-src="https://jbit-united-it.netlify.app/4fc3ff201561c1a270afac0489133620.gif"
-                      alt="장현아" />
+                      src="~/assets/executives/executives1.gif"
+                      alt="" />
                   </div>
                   <div class="details">
                     <h2>장현아<br /><span>1조 조장</span></h2>
@@ -529,9 +512,8 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      class="lazy"
-                      data-src="https://jbit-united-it.netlify.app/943bbd2c986db2b92cb15b32295946f2.gif"
-                      alt="최현진" />
+                      src="~/assets/executives/executives2.gif"
+                      alt="" />
                   </div>
                   <div class="details">
                     <h2>최현진<br /><span>2조 조장</span></h2>
@@ -561,9 +543,8 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      class="lazy"
-                      data-src="https://jbit-united-it.netlify.app/9fee9fd7be330cf01e203be04925760f.gif"
-                      alt="김재영" />
+                      src="~/assets/executives/executives3.gif"
+                      alt="" />
                   </div>
                   <div class="details">
                     <h2>김재영<br /><span>3조 조장</span></h2>
@@ -593,9 +574,8 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      class="lazy"
-                      data-src="https://jbit-united-it.netlify.app/ec12bcde1202b4e27fb68d7ef37b178a.gif"
-                      alt="허민" />
+                      src="~/assets/executives/executives4.gif"
+                      alt="" />
                   </div>
                   <div class="details">
                     <h2>허민<br /><span>4조 조장</span></h2>
@@ -624,8 +604,7 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      class="lazy"
-                      data-src="https://jbit-united-it.netlify.app/8bbf935409229b9cbb78670b11e265fc.gif"
+                      src="~/assets/executives/executives5.gif"
                       alt="" />
                   </div>
                   <div class="details">
@@ -655,9 +634,8 @@
                 <div class="swiper-content">
                   <div class="imgBx">
                     <img
-                      class="lazy"
-                      data-src="https://jbit-united-it.netlify.app/6eb6608eb003d6d5d33e5398227317cf.gif"
-                      alt="김동훈" />
+                      src="~/assets/executives/executives6.gif"
+                      alt="" />
                   </div>
                   <div class="details">
                     <h2>김동훈<br /><span>6조 조장</span></h2>
