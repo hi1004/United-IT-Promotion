@@ -348,9 +348,9 @@
     #activities__container .slide__space {      
       visibility: visible; 
       display: flex;
-      justify-content: space-between;  
+      justify-content: space-evenly;  
       flex-direction: column;
-      height: 800px;
+      height: 900px;
       padding: 50px 20px;
       margin-bottom: 2rem;
       font-family: 'Noto Sans KR', sans-serif;
@@ -368,8 +368,7 @@
         font-weight: 400;
         font-size: 35px;
         letter-spacing: 0.1rem;
-        font-family: 'Black Han Sans';
-        padding: 1rem 0 0.5rem;
+        font-family: 'Black Han Sans';        
         text-align: center;
         &.title01 {
           color: lightgoldenrodyellow;
@@ -385,15 +384,15 @@
         font-size: 20px;
         text-align: center;
         font-weight: 900;
-        letter-spacing: -1.5px;
-        
+        letter-spacing: -1.5px;        
         p {
           font-weight: 300;
           letter-spacing: 0.02rem;
         }
       }
       .mobile-slide__paragraph {
-        font-size: 16px;
+        height: 350px;
+        font-size: 20px;
         letter-spacing: -1px;
         font-family: 'Do Hyeon', sans-serif;
         span {

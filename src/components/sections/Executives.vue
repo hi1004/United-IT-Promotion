@@ -120,7 +120,9 @@
               부회장
             </div>
             <p class="description">
-              전반적으로 동아리를 총괄하며, Web관련 스터디를 진행하고 있습니다.
+              전반적으로 동아리를 총괄하며,<br />
+              Web관련 스터디를<br />
+              진행하고 있습니다.
             </p>
             <div class="hashtag-wrap">
               <span class="hashtag tag_second">#부족장</span>
@@ -172,7 +174,7 @@
               홍보 부장
             </div>
             <p class="description">
-              동아리를 위해 열심히 홍보하고 퀄리티 있도록 노력하겠습니다
+              동아리를 위해 열심히 홍보하고<br />퀄리티 있도록 노력하겠습니다
             </p>
             <div class="hashtag-wrap">
               <span class="hashtag tag_fifth">#Effects</span>
@@ -224,12 +226,14 @@
               2조 조장
             </div>
             <p class="description">
-              1학기에 이어서 2조 조장을 맡게 된<br />
-              최현진입니다. 저도 실력이 부족하기<br />
-              때문에 많이 알려드리지 못할까 걱정<br />
-              입니다. 대신 함께하는 분위기의 조가<br />
-              되도록 노력하겠습니다. 어떤 주제든<br />
-              질문은 환영입니다. 잘 부탁드립니다.
+              1학기에 이어서 2학기도<br />
+              2조 조장을 맡게 된 최현진입니다.<br />
+              저도 실력이 부족하기 때문에<br />
+              많이 알려드리지 못할까 걱정입니다.<br />
+              대신 함께하는 분위기의 조가<br />
+              될 수 있도록 노력하겠습니다.<br />
+              어떤 주제든 질문은 환영입니다.<br />
+              잘 부탁드립니다.
             </p>
             <div class="hashtag-wrap">
               <span class="hashtag tag_java">#Java</span>
@@ -256,11 +260,12 @@
             </div>
             <p class="description">
               손으로 몇 초면 할 수 있는 일을<br />
-              몇 시간의 코딩을 통해 자동으로<br />
-              수행시킬 때의 성취감을 느낄 수<br />
-              있는 사람이 비로서 프로그래머가<br />
-              될 수 있습니다. 동아리에서 다<br />
-              같이 우리의 미래를 코딩해봅시다.
+              몇 시간의 코딩을 통해<br />
+              자동으로 수행시킬 때의 성취감을<br />
+              느낄 수 있는 사람이 비로소<br />
+              프로그래머가 될 수 있습니다.<br />
+              동아리에서 다같이<br />
+              우리의 미래를 코딩해봅시다.
             </p>
             <div class="hashtag-wrap">
               <span class="hashtag tag_java">#Java</span>
@@ -288,10 +293,11 @@
             <p class="description">
               4조 조장을 맡게 된 허민입니다.<br />
               1학기 4조 조장님이 취업을 해서<br />
-              조장직을 맡게 됐습니다.<br />
+              조장을 맡게 됐습니다.<br />
               경력이 짧아 미숙하지만,<br />
-              즐거운 분위기의 조가 될수 있도록<br />
-              노력하겠습니다. 잘 부탁드립니다.
+              즐거운 분위기의 조가<br />
+              될 수 있도록 노력하겠습니다.<br />
+              잘 부탁드립니다.
             </p>
             <div class="hashtag-wrap">
               <span class="hashtag tag_java">#Java</span>
@@ -316,8 +322,9 @@
               5조 조장
             </div>
             <p class="description">
-              부회장겸 5조 조장을 맡고 있는<br />
-              오병헌입니다. 주로 WEB관련 스터디와<br />
+              부회장겸 5조 조장을<br />
+              맡고 있는 오병헌입니다.<br />
+              주로 WEB관련 스터디와<br />
               프로젝트를 진행 할 예정입니다.
             </p>
             <div class="hashtag-wrap">
@@ -346,9 +353,12 @@
               6조 조장
             </div>
             <p class="description">
-              안녕하세요. 6조 조장을 맡고<br />
-              있는 김동훈입니다. 목표는<br />
-              초봉 4천 이상, 함께 하실 분 구합니다.
+              안녕하세요. 6조 조장 김동훈입니다.<br />
+              제가 가진 알량한 지식을 공유하는 것도,<br />
+              남에게 배우는 것도 좋아합니다.<br />
+              서로서로 도와가며<br />
+              동반 성장하는 것을 지향합니다.<br />
+              잘 부탁드립니다.
             </p>
             <div class="hashtag-wrap">
               <span class="hashtag tag_web">#Web</span>
@@ -416,7 +426,9 @@
                   </div>
                   <div class="description-wrap">
                     <p class="description">
-                      전반적으로 동아리를 총괄하며, Web관련 스터디를 진행하고 있습니다.
+                      전반적으로 동아리를 총괄하며,<br />
+                      Web관련 스터디를<br />
+                      진행하고 있습니다.
                     </p>
                   </div>
                   <div class="hashtag-wrap">
@@ -520,12 +532,14 @@
                   </div>
                   <div class="description-wrap">
                     <p class="description">
-                      1학기에 이어서 2조 조장을 맡게 된<br />
-                      최현진입니다. 저도 실력이 부족하기<br />
-                      때문에 많이 알려드리지 못할까 걱정<br />
-                      입니다. 대신 함께하는 분위기의 조가<br />
-                      되도록 노력하겠습니다. 어떤 주제든<br />
-                      질문은 환영입니다. 잘 부탁드립니다.
+                      1학기에 이어서 2학기도<br />
+                      2조 조장을 맡게 된 최현진입니다.<br />
+                      저도 실력이 부족하기 때문에<br />
+                      많이 알려드리지 못할까 걱정입니다.<br />
+                      대신 함께하는 분위기의 조가<br />
+                      될 수 있도록 노력하겠습니다.<br />
+                      어떤 주제든 질문은 환영입니다.<br />
+                      잘 부탁드립니다.
                     </p>
                   </div>
                   <div class="hashtag-wrap">
@@ -552,11 +566,12 @@
                   <div class="description-wrap">
                     <p class="description">
                       손으로 몇 초면 할 수 있는 일을<br />
-                      몇 시간의 코딩을 통해 자동으로<br />
-                      수행시킬 때의 성취감을 느낄 수<br />
-                      있는 사람이 비로서 프로그래머가<br />
-                      될 수 있습니다. 동아리에서 다<br />
-                      같이 우리의 미래를 코딩해봅시다.
+                      몇 시간의 코딩을 통해<br />
+                      자동으로 수행시킬 때의 성취감을<br />
+                      느낄 수 있는 사람이 비로소<br />
+                      프로그래머가 될 수 있습니다.<br />
+                      동아리에서 다같이<br />
+                      우리의 미래를 코딩해봅시다.
                     </p>
                   </div>
                   <div class="hashtag-wrap">
@@ -584,10 +599,11 @@
                     <p class="description">
                       4조 조장을 맡게 된 허민입니다.<br />
                       1학기 4조 조장님이 취업을 해서<br />
-                      조장직을 맡게 됐습니다.<br />
+                      조장을 맡게 됐습니다.<br />
                       경력이 짧아 미숙하지만,<br />
-                      즐거운 분위기의 조가 될수 있도록<br />
-                      노력하겠습니다. 잘 부탁드립니다.
+                      즐거운 분위기의 조가<br />
+                      될 수 있도록 노력하겠습니다.<br />
+                      잘 부탁드립니다.
                     </p>
                   </div>
                   <div class="hashtag-wrap">
@@ -612,8 +628,9 @@
                   </div>
                   <div class="description-wrap">
                     <p class="description">
-                      부회장겸 5조 조장을 맡고 있는<br />
-                      오병헌입니다. 주로 WEB관련 스터디와<br />
+                      부회장겸 5조 조장을<br />
+                      맡고 있는 오병헌입니다.<br />
+                      주로 WEB관련 스터디와<br />
                       프로젝트를 진행 할 예정입니다.
                     </p>
                   </div>
@@ -642,9 +659,12 @@
                   </div>
                   <div class="description-wrap">
                     <p class="description">
-                      안녕하세요. 6조 조장을 맡고<br />
-                      있는 김동훈입니다. 목표는<br />
-                      초봉 4천 이상, 함께 하실 분 구합니다.
+                      안녕하세요. 6조 조장 김동훈입니다.<br />
+                      제가 가진 알량한 지식을 공유하는 것도,<br />
+                      남에게 배우는 것도 좋아합니다.<br />
+                      서로서로 도와가며<br />
+                      동반 성장하는 것을 지향합니다.<br />
+                      잘 부탁드립니다.
                     </p>
                   </div>
                   <div class="hashtag-wrap">
@@ -932,9 +952,9 @@
             }
           }
           .description {
-            max-width: 350px;
+            width: 300px;
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-top: 10px;
           }
           &:last-child {
@@ -970,6 +990,7 @@
           font-family: 'Black Han Sans', sans-serif;
           font-size: 2.6rem;
           text-align: center;
+          transition: 1s;
         }
       }
       .testimonials {
@@ -1122,7 +1143,7 @@
         .swiper-card {
           position: relative;
           width: 290px;
-          height: 500px;
+          height: 520px;
           margin: 0 auto;
           background: #333333;
           text-align: center;
@@ -1140,7 +1161,7 @@
           .swiper-content {
             position: relative;
             z-index: 2;
-            height: 500px;
+            height: 520px;
             .imgBx {
               display: block;
               width: 150px;
@@ -1167,13 +1188,13 @@
               }
             }
             .description-wrap {
-              height: 160px;
+              height: 180px;
               width: 90%;
               margin: 10px auto;
               overflow: hidden;
               .description {
-                font-size: 16px;
-                line-height: 20px;
+                font-size: 15px;
+                line-height: 18px;
                 color: #fff;
               }
             }
@@ -1260,10 +1281,10 @@
       width: 500px;
     }
     .executives__section #executives__pc .right-box .profile .photo {
-      max-width: 270px;
+      max-width: 300px;
     }
     .executives__section #executives__pc .right-box .profile .description {
-      max-width: 270px;
+      max-width: 300px;
     }
     .executives__section
       #executives__mobile

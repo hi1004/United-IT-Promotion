@@ -167,35 +167,35 @@ export default function () {
     const mobileTitleScene0 = new ScrollMagic.Scene({
       triggerElement: mobileAboutTitle,
       triggerHook: 0.9,
-      duration: '60%',
+      duration: '50%',
     })      
       .setTween(setTitleWordPos0)
       .addTo(controller);  
     const mobileTitleScene1 = new ScrollMagic.Scene({
       triggerElement: mobileAboutTitle,
       triggerHook: 0.9,
-      duration: '60%',
+      duration: '50%',
     })      
       .setTween(setTitleWordPos1)
       .addTo(controller);    
     const mobileTitleScene2 = new ScrollMagic.Scene({
       triggerElement: mobileAboutTitle,
       triggerHook: 0.9,
-      duration: '60%',
+      duration: '50%',
     })      
       .setTween(setTitleWordPos2)
       .addTo(controller); 
     const mobileTitleScene3 = new ScrollMagic.Scene({
       triggerElement: mobileAboutTitle,
       triggerHook: 0.9,
-      duration: '60%',
+      duration: '50%',
     })      
       .setTween(setTitleWordPos3)
       .addTo(controller); 
     const mobileTitleScene4 = new ScrollMagic.Scene({
       triggerElement: mobileAboutTitle,
       triggerHook: 0.9,
-      duration: '60%',
+      duration: '50%',
     })      
       .setTween(setTitleWordPos4)
       .addTo(controller); 
