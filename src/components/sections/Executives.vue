@@ -1,6 +1,6 @@
 <template>
   <!-- executives -->
-  
+
   <section
     class="executives__section"
     id="executives">
@@ -665,6 +665,21 @@
 <script>
   export default {
     mounted() {
+        const executivesSection = document.querySelector('#executives');
+        const executivesTitle = document.querySelector('#executives__mobile .executives__title');
+        let i = 0;
+        const executivesTitleColors = [
+          '#5b45ff',
+          '#e9f036',
+          '#FCA742',
+          '#F82DDE',
+          '#5b45ff',
+          '#463E43',
+          '#B0E7E4',
+          '#3C80FC',
+          '#e9f036',
+          '#4EF480',
+        ];
       const Swiper = window.Swiper;
       const mySwiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
@@ -682,17 +697,25 @@
         autoplay: {
           disableOnInteraction: false,
           delay: 3000,
-          stop: true
+          stop: true,
         },
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
           type: 'fraction',
         },
+        on: {
+          slideChange: function() {
+             executivesTitle.style.color = executivesTitleColors[i];
+             i++;
+             if(i === executivesTitleColors.length) {
+               i = 0;
+             }
+          }
+        }
       });
-      const executivesSection = document.querySelector('#executives');
-       mySwiper.autoplay.stop();
-       
+ 
+      mySwiper.autoplay.stop();
       window.addEventListener('scroll', () => {
         const scrollValue = window.scrollY;
         const executivesSectionOffsetTop = executivesSection.offsetTop;
@@ -890,10 +913,9 @@
               border-radius: 50%;
               box-sizing: border-box;
               img {
-              width: 100%;
+                width: 100%;
+              }
             }
-            }
-            
           }
           .name {
             font-size: 3rem;
