@@ -162,6 +162,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
   .activities__section {
     position: relative;
     overflow: hidden;
@@ -237,7 +238,9 @@
               font-family: 'Black Han Sans', sans-serif;   
             }
             .slide__paragraph {
-              font-family: 'Noto Sans KR', sans-serif;
+              // font-family: 'Noto Sans KR', sans-serif;
+              font-size: 1.15rem;
+              font-family: 'Do Hyeon', sans-serif;
                span {
                 color: #fdc000;
               }
@@ -392,6 +395,7 @@
       .mobile-slide__paragraph {
         font-size: 16px;
         letter-spacing: -1px;
+        font-family: 'Do Hyeon', sans-serif;
         span {
           color: #fdc000;
         }
