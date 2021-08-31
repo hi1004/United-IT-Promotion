@@ -90,7 +90,7 @@
               장현아
             </div>
             <div class="position">
-              회장
+              会長
             </div>
             <p class="description">
               삼성회장이 꿈입니다.
@@ -854,7 +854,7 @@
         width: 50%;
         position: relative;
         height: 100%;
-        font-family: 'Noto Sans KR', sans-serif;
+        font-family: 'Noto Sans JP', sans-serif;
         .profile {
           width: 100%;
           height: 100vh;

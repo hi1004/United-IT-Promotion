@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="padding"> -->
   <MobileNav />
   <Particles />
   <Intro />
@@ -8,7 +7,6 @@
   <Executives />
   <Activities />
   <Contact />
-  <!-- </div> -->
 </template>
 
 <script>
