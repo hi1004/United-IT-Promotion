@@ -102,6 +102,7 @@
     .about__section {
       position: relative;
       font-family: 'Black Han Sans', sans-serif;
+      font-weight: 900;
       color: #fff;
       .container {
         .about__title {
@@ -336,6 +337,7 @@
      .about__section {
       position: relative;
       font-family: 'Black Han Sans', sans-serif;
+      font-weight: 900;
       color: #fff;
       .container {
         .about__title {
