@@ -105,6 +105,7 @@
       color: #fff;
       .container {
         .about__title {
+           font-family: 'Rampart One', cursive;
           @media screen and (min-width: 416px) {
             height: auto;
           }    

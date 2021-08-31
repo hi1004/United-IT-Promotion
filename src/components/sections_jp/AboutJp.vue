@@ -98,14 +98,15 @@
 </script>
 
 <style lang="scss" scoped>
-
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
     .about__section {
       position: relative;
-      font-family: 'Black Han Sans', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-weight: 900;
       color: #fff;
       .container {
         .about__title {
+           font-family: 'Rampart One', cursive;
           @media screen and (min-width: 416px) {
             height: auto;
           }    
@@ -168,7 +169,7 @@
             font-size: 8vw;
             font-stretch: 50%;
             letter-spacing: -2px;
-            line-height: 0.9;
+            line-height: 1.1;
             margin: 10rem 0;
           }
         }
@@ -315,7 +316,7 @@
           font-size: 4rem;
           font-stretch: 50%;
           letter-spacing: -2px;
-          line-height: 0.9;
+          line-height: 1.1;
           margin: 20rem 0;
           text-align: center;
         }
@@ -329,14 +330,14 @@
       font-size: 3rem;
       text-align: center;
       margin: 15rem 0;
-      line-height: 0.9;
+      line-height:1.1;
     }
   }
 
    @media all and (max-width: 768px) {
      .about__section {
       position: relative;
-      font-family: 'Black Han Sans', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-weight: 900;
       color: #fff;
       .container {
