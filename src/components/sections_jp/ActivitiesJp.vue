@@ -79,12 +79,6 @@
           <span class="slide__index_title_word">S</span>
           <span class="slide__index_title_word"> </span>
         </div>
-        <!-- <div class="slide__index_text">
-          HOW ARE MAKERS<br />
-          EXPERIENCING THE<br />
-          EFFECTS OF THE<br />
-          GLOBAL PANDEMIC?<br />
-        </div> -->
         <div class="slide__index_icon">
           <i class="fas fa-fighter-jet"></i>
         </div>
@@ -163,243 +157,242 @@
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
-  .activities__section {
-    position: relative;
-    overflow: hidden;
-    padding-top : 50vh;    
-  }
-  #activities__container {
-    position: relative;    
-    .slide__wrap {
-      width: 100vw;
-      height: 100vh;
+.activities__section {
+  position: relative;
+  overflow: hidden;     
+}
+#activities__container {
+  position: relative;    
+  .slide__wrap {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 100;
+    .slide__content {
       position: absolute;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
       z-index: 100;
-      .slide__content {
-        position: absolute;
-        top: 0;
-        left: 100%;
+      .banner {
+        position: relative;
         width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        z-index: 100;
-        .banner {
-          position: relative;
-          width: 100%;
-          height: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &.first__banner {
+          background: url('~/assets/activity/study.jpg');
+          background-position: center;
+          background-size: cover;
+          .slide__title {
+            color: lightgoldenrodyellow;
+          }
+        }
+        &.second__banner {
+          background: url('~/assets/activity/tandem.jpg');
+          background-position: center;
+          background-size: cover;
+          .slide__title {
+            color: pink;
+          }
+        }
+        &.third__banner {
+          background: url('~/assets/activity/job.jpg');
+          background-position: center;
+          background-size: cover;
+          .slide__title {
+            color: aqua;
+          }
+        }
+        .content {            
+          padding: 0 3vw;
+          width: 650px;
+          height: 100vh;
+          color: #fff;
+          position: absolute;
+          top: 0;
+          left: 0;
           display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          &.first__banner {
-            background: url('~/assets/activity/study.jpg');
-            background-position: center;
-            background-size: cover;
-            .slide__title {
-              color: lightgoldenrodyellow;
+          flex-direction: column;
+          background-color: #000000a8;
+          justify-content: center;
+          .slide__title {              
+            font-weight: 400;
+            font-size: 4rem;
+            width: 500px;
+            letter-spacing: 0.1rem;
+            font-family: 'Black Han Sans', sans-serif;
+          }
+          .slide__subtitle {
+            font-size: 2.2rem;
+            font-family: 'Black Han Sans', sans-serif;   
+          }
+          .slide__paragraph {
+            // font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.15rem;
+            font-family: 'Do Hyeon', sans-serif;
+              span {
+              color: #fdc000;
             }
           }
-          &.second__banner {
-            background: url('~/assets/activity/tandem.jpg');
-            background-position: center;
-            background-size: cover;
+        }
+      }
+      @media all and (max-width: 768px) {
+        .banner {
+          padding: 150px 50px 0 50px;
+          .content {
+            top: 80px;
+            height: calc(100% - 80px);
+            width: 100%;
+            align-items: center;
+            padding: 0;
+            text-align: center;
             .slide__title {
-              color: pink;
-            }
-          }
-          &.third__banner {
-            background: url('~/assets/activity/job.jpg');
-            background-position: center;
-            background-size: cover;
-            .slide__title {
-              color: aqua;
-            }
-          }
-          .content {            
-            padding: 0 3vw;
-            width: 650px;
-            height: 100vh;
-            color: #fff;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            background-color: #000000a8;
-            justify-content: center;
-            .slide__title {              
-              font-weight: 400;
-              font-size: 4rem;
-              width: 500px;
-              letter-spacing: 0.1rem;
-              font-family: 'Black Han Sans', sans-serif;
+              width: 90%;
+              font-size: 3rem;
+              letter-spacing: 0.05rem;
             }
             .slide__subtitle {
-              font-size: 2.2rem;
-              font-family: 'Black Han Sans', sans-serif;   
+              font-size: 1.5rem;
+              width: 90%;
             }
             .slide__paragraph {
-              // font-family: 'Noto Sans KR', sans-serif;
-              font-size: 1.15rem;
-              font-family: 'Do Hyeon', sans-serif;
-               span {
-                color: #fdc000;
-              }
+              font-size: 1rem;
+              width: 90%;
+              margin-top: 10px;
             }
           }
         }
-        @media all and (max-width: 768px) {
-          .banner {
-            padding: 150px 50px 0 50px;
-            .content {
-              top: 80px;
-              height: calc(100% - 80px);
-              width: 100%;
-              align-items: center;
-              padding: 0;
-              text-align: center;
-              .slide__title {
-                width: 90%;
-                font-size: 3rem;
-                letter-spacing: 0.05rem;
-              }
-              .slide__subtitle {
-                font-size: 1.5rem;
-                width: 90%;
-              }
-              .slide__paragraph {
-                font-size: 1rem;
-                width: 90%;
-                margin-top: 10px;
-              }
-            }
-          }
-        } 
-      }  
-    }
-    .slide__space {
-      position: relative;
-      width: 100%;
-      height: 100vh;      
-      #slide__index_title {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        width: auto;
-        left: 50%;
-        top: 0%;
-        transform: translate(-50%, -50%);
-        font-family: 'Black Han Sans', sans-serif;
-        font-size: 12vw;
-        color: #fff;    
-        .slide__index_title_word{
-          display: inline-block;
-        }        
-      }
-      .slide__index_text {
-        position: absolute;
-        font-size: 3vw;
-        color: #fff;
-        font-family: 'Black Han Sans', sans-serif;
-        right: 0;
-        top: 50vh;
-        width: 500px;
-      }
-      .slide__index_icon {
-        i {
-          position: absolute;
-          font-size: 40px;
-          bottom: 0;
-          left: 0;
-          transform: rotate(-90deg);
-        }
-      }
-      .slide__index_description {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 15vw;
-        color: #000;
-      }
-      &.content_space {
-        overflow: hidden;
-        font-size: 20vw;
-        @media all and (min-width: 416px) {
-          visibility: hidden;
-        }
-        
-      }
-    }
+      } 
+    }  
   }
-
-  @media (max-width: 415px) {
-    * {
-      margin: 0;
-      padding: 0;
+  .slide__space {
+    position: relative;
+    width: 100%;
+    height: 100vh;      
+    #slide__index_title {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      width: auto;
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, -50%);
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 12vw;
+      color: #fff;    
+      .slide__index_title_word{
+        display: inline-block;
+      }        
     }
-    .slide__space.slideTitle__space{
-      height: 100vh !important;
+    .slide__index_text {
+      position: absolute;
+      font-size: 3vw;
+      color: #fff;
+      font-family: 'Black Han Sans', sans-serif;
+      right: 0;
+      top: 50vh;
+      width: 500px;
     }
     .slide__index_icon {
-      display: none;
-    }
-    .slide__wrap {
-      visibility: hidden;
-    }
-    #activities__container .slide__space {      
-      visibility: visible; 
-      display: flex;
-      justify-content: space-evenly;  
-      flex-direction: column;
-      height: 900px;
-      padding: 50px 20px;
-      margin-bottom: 2rem;
-      font-family: 'Noto Sans JP', sans-serif;
-       &:last-child {
-        margin-bottom: 0;
+      i {
+        position: absolute;
+        font-size: 40px;
+        bottom: 0;
+        left: 0;
+        transform: rotate(-90deg);
       }
-      .mobile-slide__image {
+    }
+    .slide__index_description {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 15vw;
+      color: #000;
+    }
+    &.content_space {
+      overflow: hidden;
+      font-size: 20vw;
+      @media all and (min-width: 416px) {
+        visibility: hidden;
+      }
+      
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .slide__space.slideTitle__space{
+    height: 100vh !important;
+  }
+  .slide__index_icon {
+    display: none;
+  }
+  .slide__wrap {
+    visibility: hidden;
+  }
+  #activities__container .slide__space {      
+    visibility: visible; 
+    display: flex;
+    justify-content: space-evenly;  
+    flex-direction: column;
+    height: 900px;
+    padding: 50px 20px;
+    margin-bottom: 2rem;
+    font-family: 'Noto Sans JP', sans-serif;
+      &:last-child {
+      margin-bottom: 0;
+    }
+    .mobile-slide__image {
+      width: 100%;
+      margin: 0 auto;
+      img {
         width: 100%;
-        margin: 0 auto;
-        img {
-          width: 100%;
-        }
       }
-      .mobile-slide__title {
-        font-weight: 400;
-        font-size: 35px;
-        letter-spacing: 0.1rem;
-        font-family: 'Black Han Sans';        
-        text-align: center;
-        &.title01 {
-          color: lightgoldenrodyellow;
-        }
-        &.title02 {
-          color: pink;
-        }
-        &.title03 {
-          color: aqua;
-        }
+    }
+    .mobile-slide__title {
+      font-weight: 400;
+      font-size: 35px;
+      letter-spacing: 0.1rem;
+      font-family: 'Black Han Sans';        
+      text-align: center;
+      &.title01 {
+        color: lightgoldenrodyellow;
       }
-      .mobile-slide__subtitle {
-        font-size: 20px;
-        text-align: center;
-        font-weight: 900;
-        letter-spacing: -1.5px;        
-        p {
-          font-weight: 300;
-          letter-spacing: 0.02rem;
-        }
+      &.title02 {
+        color: pink;
       }
-      .mobile-slide__paragraph {
-        height: 350px;
-        font-size: 20px;
-        letter-spacing: -1px;
-        font-family: 'Do Hyeon', sans-serif;
-        span {
-          color: #fdc000;
-        }
+      &.title03 {
+        color: aqua;
+      }
+    }
+    .mobile-slide__subtitle {
+      font-size: 20px;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: -1.5px;        
+      p {
+        font-weight: 300;
+        letter-spacing: 0.02rem;
+      }
+    }
+    .mobile-slide__paragraph {
+      height: 350px;
+      font-size: 20px;
+      letter-spacing: -1px;
+      font-family: 'Do Hyeon', sans-serif;
+      span {
+        color: #fdc000;
       }
     }
   }
+}
 
 </style>
