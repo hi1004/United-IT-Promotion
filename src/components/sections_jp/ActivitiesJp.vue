@@ -353,7 +353,7 @@
       height: 900px;
       padding: 50px 20px;
       margin-bottom: 2rem;
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
        &:last-child {
         margin-bottom: 0;
       }

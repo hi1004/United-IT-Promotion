@@ -45,25 +45,25 @@
 
       <!-- ABOUT-DESCRIPTION01 -->
       <div class="about__description description01">
-        <span class="about__word">IT에&nbsp;</span>
-        <span class="about__word">관심이&nbsp;</span>
-        <span class="about__word">있거나</span>
+        <span class="about__word">ITに&nbsp;</span>
+        <span class="about__word">興味が&nbsp;</span>
+        <span class="about__word">ある方</span>
         <br />
-        <span class="about__word">일본&nbsp;</span>
-        <span class="about__word">취업을&nbsp;</span>
-        <span class="about__word">희망하는</span>
+        <span class="about__word">日本&nbsp;</span>
+        <span class="about__word">就職を&nbsp;</span>
+        <span class="about__word">希望する</span>
         <br />
-        <span class="about__word">사람들의&nbsp;</span>
-        <span class="about__word">모임</span>
+        <span class="about__word">人々の&nbsp;</span>
+        <span class="about__word">集まり</span>
       </div>
 
       <!-- ABOUT-DESCRIPTION02 -->
       <div class="about__description description02">
-        <span class="about__word02">저희</span>
+        <span class="about__word02">私たちの</span>
         <br />
-        <span class="about__word02">동아리를</span>
+        <span class="about__word02">サークルを</span>
         <br />
-        <span class="about__word02"><span class="word_em">소개</span>합니다</span>
+        <span class="about__word02"><span class="word_em">紹介</span>します</span>
         <span class="about__screamer">!</span>
       </div>
 
@@ -102,6 +102,7 @@
     .about__section {
       position: relative;
       font-family: 'Black Han Sans', sans-serif;
+      font-weight: 900;
       color: #fff;
       .container {
         .about__title {
@@ -336,6 +337,7 @@
      .about__section {
       position: relative;
       font-family: 'Black Han Sans', sans-serif;
+      font-weight: 900;
       color: #fff;
       .container {
         .about__title {
