@@ -3,8 +3,7 @@
     class="side-navbar"
     id="navbar">
     <div class="side-nav">
-      <a
-        href="#"
+      <a        
         class="side-nav__logo">
         <img
           src="~/assets/logo/sn_logo_icon.png"
@@ -16,15 +15,13 @@
           class="logo-title" />
       </a>
       <div class="side-nav__list">
-        <a
-          href="#"
+        <a          
           class="side-nav__link">
           <span class="material-icons"> home </span>
           <span class="side-nav__name">Home</span>
           <span class="side-nav__tooltip">Home</span>
         </a>
-        <a
-          href="#"
+        <a          
           class="side-nav__link">
           <span class="material-icons">info</span>
           <span class="side-nav__name">About</span>
@@ -37,20 +34,15 @@
           <span class="side-nav__tooltip">Executives</span>
           <span class="material-icons collapse__link"> expand_more </span>
           <ul class="collapse__menu menu__executives">
-            <a
-              href="#"
+            <a              
               class="collapse__sublink">회장</a>
-            <a
-              href="#"
+            <a              
               class="collapse__sublink">부회장</a>
-            <a
-              href="#"
+            <a              
               class="collapse__sublink">총무</a>
-            <a
-              href="#"
+            <a              
               class="collapse__sublink">홍보 부장</a>
-            <a
-              href="#"
+            <a              
               class="collapse__sublink"
               v-for="n in 6"
               :key="n"> {{ n }}조 조장 </a>
@@ -63,19 +55,16 @@
           <span class="side-nav__tooltip">Activities</span>
           <span class="material-icons collapse__link"> expand_more </span>
           <ul class="collapse__menu menu__activities">
-            <a
-              href="#"
+            <a              
               class="collapse__sublink">PROGRAMMING</a>
-            <a
-              href="#"
+            <a              
               class="collapse__sublink">KR↔JP</a>
-            <a
-              href="#"
+            <a              
               class="collapse__sublink">JOB STUDY</a>
           </ul>
         </div>
         <a
-          href="#"
+          
           class="side-nav__link">
           <span class="material-icons"> contact_support </span>
           <span class="side-nav__name">Contact</span>

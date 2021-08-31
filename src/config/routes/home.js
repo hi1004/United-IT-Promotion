@@ -646,35 +646,63 @@ export default function () {
   const contactEl = document.querySelector('#contact');
   const contactTitle = contactEl.querySelector('#contact__title');
   const contactBtn = contactEl.querySelector('a');
+
+  
   function contactScrollTrigger() {
-    const typingSpeed = 50;
-    let text = [
-      '',
-      'ㄱ',
-      '가',
-      '강',
-      '가이',
-      '가입',
-      '가입ㅅ',
-      '가입시',
-      '가입신',
-      '가입신ㅊ',
-      '가입신처',
-      '가입신청',
-      '가입신청 ',
-      '가입신청 ㅁ',
-      '가입신청 미',
-      '가입신청 및',
-      '가입신청 및 ',
-      '가입신청 및 ㅁ',
-      '가입신청 및 무',
-      '가입신청 및 문',
-      '가입신청 및 문ㅇ',
-      '가입신청 및 문으',
-    ];
-    for (let i = 0; i < 40; i++) {
-      text.push('가입신청 및 문의');
-    }
+    let typingSpeed;
+    let text;
+    if (window.location.href.includes('jp')) {
+      typingSpeed = 100;
+      text = [
+        '',
+        '加',
+        '加入',
+        '加入申',
+        '加入申し',
+        '加入申し込',
+        '加入申し込み',
+        '加入申し込み ',
+        '加入申し込み &',
+        '加入申し込み & ',
+        '加入申し込み & 問',
+        '加入申し込み & 問い',
+        '加入申し込み & 問い合',
+        '加入申し込み & 問い合わ',
+        '加入申し込み & 問い合わせ'        
+      ];
+      for (let i = 0; i < 40; i++) {
+        text.push('加入申し込み & 問い合わせ');
+      }
+    } else {
+      typingSpeed = 50;
+      text = [
+        '',
+        'ㄱ',
+        '가',
+        '강',
+        '가이',
+        '가입',
+        '가입ㅅ',
+        '가입시',
+        '가입신',
+        '가입신ㅊ',
+        '가입신처',
+        '가입신청',
+        '가입신청 ',
+        '가입신청 ㅁ',
+        '가입신청 미',
+        '가입신청 및',
+        '가입신청 및 ',
+        '가입신청 및 ㅁ',
+        '가입신청 및 무',
+        '가입신청 및 문',
+        '가입신청 및 문ㅇ',
+        '가입신청 및 문으',
+      ];
+      for (let i = 0; i < 40; i++) {
+        text.push('가입신청 및 문의');
+      }
+    }   
     let doTyping = false;
     let i = 0;
     function contactTitleTyping() {
