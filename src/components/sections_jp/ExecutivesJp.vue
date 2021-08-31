@@ -484,7 +484,8 @@
                   </div>
                   <div class="description-wrap">
                     <p class="description">
-                      동아리를 위해 열심히 홍보하고 퀄리티 있도록 노력하겠습니다.
+                      サークルのために頑張って広報し、<br />
+                      クオリティがあるように努力します。
                     </p>
                   </div>
                   <div class="hashtag-wrap">
