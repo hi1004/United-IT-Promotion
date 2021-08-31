@@ -1,5 +1,6 @@
 <template>
-  <!-- executives-->
+  <!-- executives -->
+
   <section
     class="executives__section"
     id="executives">
@@ -90,7 +91,7 @@
               장현아
             </div>
             <div class="position">
-              会長
+              회장
             </div>
             <p class="description">
               삼성회장이 꿈입니다.
@@ -704,7 +705,7 @@
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
-        speed: 500,
+        speed: 1000,
         coverflowEffect: {
           rotate: 50,
           stretch: 0,
@@ -854,7 +855,7 @@
         width: 50%;
         position: relative;
         height: 100%;
-        font-family: 'Noto Sans JP', sans-serif;
+        font-family: 'Noto Sans KR', sans-serif;
         .profile {
           width: 100%;
           height: 100vh;

@@ -1,22 +1,24 @@
 <template>
+  <!-- <div class="padding"> -->
   <MobileNav />
   <Particles />
-  <Intro />
+  <IntroJp />
   <SidebarMenu />
-  <About />
+  <AboutJp />
   <ExecutivesJp />
-  <Activities />
-  <Contact />
+  <ActivitiesJp />
+  <ContactJp />
+  <!-- </div> -->
 </template>
 
 <script>
   import Particles from '~/components/background/Particles';
-  import Intro from '~/components/sections/Intro';
+  import IntroJp from '~/components/sections_jp/IntroJp';
   import SidebarMenu from '~/components/etc/SidebarMenu';
-  import About from '~/components/sections/About';
-  import ExecutivesJp from '~/components/sections/ExecutivesJp';
-  import Activities from '../components/sections/Activities.vue';
-  import Contact from '../components/sections/Contact';
+  import AboutJp from '~/components/sections_jp/AboutJp';
+  import ExecutivesJp from '~/components/sections_jp/ExecutivesJp';
+  import ActivitiesJp from '../components/sections_jp/ActivitiesJp';
+  import ContactJp from '../components/sections_jp/ContactJp';
   import MobileNav from '../components/mobile/MobileNav.vue';
   import common from '~/config/common';
   import home from '~/config/routes/home';
@@ -27,13 +29,13 @@
       home();
     },
     components: {
-      Intro,
+      IntroJp,
       Particles,
-      About,
+      AboutJp,
       SidebarMenu,
       ExecutivesJp,
-      Activities,
-      Contact,
+      ActivitiesJp,
+      ContactJp,
       MobileNav,
     },
   };
@@ -54,6 +56,5 @@
         padding: 0;
       }
     }
-  }
-  
+  }  
 </style>
