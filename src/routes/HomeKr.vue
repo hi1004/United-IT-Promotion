@@ -17,7 +17,7 @@
   import SidebarMenu from '~/components/etc/SidebarMenu';
   import About from '~/components/sections/About';
   import Executives from '~/components/sections/Executives';
-  import Activities from '../components/sections/Activities.vue';
+  import Activities from '../components/sections/Activities';
   import Contact from '../components/sections/Contact';
   import MobileNav from '../components/mobile/MobileNav.vue';
   import common from '~/config/common';
@@ -56,6 +56,5 @@
         padding: 0;
       }
     }
-  }
-  
+  }  
 </style>
