@@ -913,7 +913,7 @@
                 background-color: #0c9ccc;
               }
               &.tag_third {
-                background-color: #fccc9c;
+                background-color: #e6913c;
               }
               &.tag_fourth {
                 background-color: #654444;
@@ -1248,7 +1248,7 @@
                   background-color: #0c9ccc;
                 }
                 &.tag_third {
-                  background-color: #fccc9c;
+                  background-color: #e6913c;
                 }
                 &.tag_fourth {
                   background-color: #654444;
