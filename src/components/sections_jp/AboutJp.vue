@@ -134,6 +134,7 @@
           flex-direction: row;
           justify-content: space-around;
           overflow: hidden;
+          font-family: 'Black Han Sans', sans-serif;
           @media screen and (min-width: 416px) {
             height: 0;
           }    
