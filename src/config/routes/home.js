@@ -652,26 +652,39 @@ export default function () {
     let typingSpeed;
     let text;
     if (window.location.href.includes('jp')) {
+      contactTitle.style.fontFamily = 'Noto Sans JP,sans-serif'
+      contactTitle.style.fontWeight = 900      
+      if (matchMedia('all and (max-width: 615px)').matches){
+        contactTitle.style.fontSize = '2rem'
+      } else {
+        contactTitle.style.fontSize = '4rem'
+      }
+      window.addEventListener('resize', ()=>{
+        if (matchMedia('all and (max-width: 615px)').matches){
+          contactTitle.style.fontSize = '2rem'
+        } else {
+          contactTitle.style.fontSize = '4rem'
+        }
+      })      
       typingSpeed = 100;
       text = [
         '',
-        '加',
-        '加入',
-        '加入申',
-        '加入申し',
-        '加入申し込',
-        '加入申し込み',
-        '加入申し込み ',
-        '加入申し込み &',
-        '加入申し込み & ',
-        '加入申し込み & 問',
-        '加入申し込み & 問い',
-        '加入申し込み & 問い合',
-        '加入申し込み & 問い合わ',
-        '加入申し込み & 問い合わせ'        
+        '申', 
+        '申し', 
+        '申し込', 
+        '申し込み', 
+        '申し込み ', 
+        '申し込み &', 
+        '申し込み & ', 
+        '申し込み & 問', 
+        '申し込み & 問い', 
+        '申し込み & 問い', 
+        '申し込み & 問い合', 
+        '申し込み & 問い合わ', 
+        '申し込み & 問い合わせ', 
       ];
       for (let i = 0; i < 40; i++) {
-        text.push('加入申し込み & 問い合わせ');
+        text.push('申し込み & 問い合わせ');
       }
     } else {
       typingSpeed = 50;

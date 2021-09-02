@@ -2,7 +2,6 @@
   <header class="header">
     <nav class="mobile-nav">
       <a
-        href="#"
         class="logo">
         <img
           src="~/assets/logo/logo.png"
@@ -20,36 +19,31 @@
       <ul class="mobile-nav__menu">
         <li>
           <a
-            class="mobile-nav__link"
-            href="#">
+            class="mobile-nav__link">
             <span class="link_icon material-icons"> home </span>
             <span class="link_title">Home</span></a>
         </li>
         <li>
           <a
-            class="mobile-nav__link"
-            href="#">
+            class="mobile-nav__link">
             <span class="link_icon material-icons">info</span>
             <span class="link_title">About</span></a>
         </li>
         <li>
           <a
-            class="mobile-nav__link"
-            href="#">
+            class="mobile-nav__link">
             <span class="link_icon material-icons"> groups </span>
             <span class="link_title">Executives</span></a>
         </li>
         <li>
           <a
-            class="mobile-nav__link"
-            href="#">
+            class="mobile-nav__link">
             <span class="link_icon material-icons"> local_activity </span>
             <span class="link_title">Activities</span></a>
         </li>
         <li>
           <a
-            class="mobile-nav__link"
-            href="#">
+            class="mobile-nav__link">
             <span class="link_icon material-icons">contact_support</span>
             <span class="link_title">Contact</span></a>
         </li>
