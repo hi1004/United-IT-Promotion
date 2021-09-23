@@ -1,5 +1,61 @@
 # <img src="https://united-it.vercel.app/caf7accdf11aa3b4df0c09b9b342e120.png" style="width:25px" /> J-bit United IT
 
-[DEMO](https://united-it.vercel.app/#/)
+<a href="https://united-it.vercel.app/#/" target="_blank">DEMO</a>
 
-![screenshot](./src/assets/screenshot.png)
+![screenshot](./src/assets/readme/screenshot.png)
+
+## 目標
+
+サークルの広報およびサークル専用ホームページの必要性
+
+## 使った言語
+
+- HTML5
+- CSS3
+    - scss
+- JAVASCRIPT
+    - `vue.js`
+    - `node.js` 
+    - swiper.js
+    - lodash.js
+    - kakao.js 
+    - gsap.js
+    - scrollMagic.js
+    - webpack
+
+```javascript
+
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './routes'
+
+
+createApp(App)
+.use(router)
+.mount('#app')
+
+```
+主にnode環境でwebpackを使い、vue.jsを用いてサイトを作りました。
+
+## 協業
+
+![Slack](./src/assets/readme/Slack.png)
+
+コミュニケーションツールは`Slack`や`kakaoTalk`を使い、効率的に働く環境でプロジェクトをすんなりと進めることができました。
+
+![Slack](./src/assets/readme/Sourcetree.png)
+
+そして、`git`を活用し協業することでお互いにコミュニケーションの重要性を悟りました。  
+
+名前 | 役割 | サークル職位
+--|:--:|--:
+`오병헌(オ・ビョンホン)` | `総括・責任者` | `副会長`
+김동훈(キム・ドンフン) | 責任者と全般的な総括 | 6組リーダ
+표예원(ピョ・イェウォン) | デザイン・映像 | 広報部長
+
+
+### 所要期間
+
+およそ1か月
+
+
