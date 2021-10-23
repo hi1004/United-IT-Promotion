@@ -219,7 +219,7 @@
               </div>
             </div>
             <div class="name">
-              최현진
+              최주현
             </div>
             <div class="position">
               2조 조장
