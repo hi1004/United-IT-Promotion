@@ -2,7 +2,8 @@
   <header class="header">
     <nav class="mobile-nav">
       <a
-        class="logo">
+        class="logo"
+        href="/">
         <img
           src="~/assets/logo/logo.png"
           alt="mo-logo" />

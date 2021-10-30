@@ -4,7 +4,8 @@
     id="navbar">
     <div class="side-nav">
       <a        
-        class="side-nav__logo">
+        class="side-nav__logo"
+        href="/">
         <img
           src="~/assets/logo/sn_logo_icon.png"
           alt="sn_logo_icon"
