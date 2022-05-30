@@ -1,6 +1,6 @@
 # <img src="https://united-it.vercel.app/caf7accdf11aa3b4df0c09b9b342e120.png" style="width:25px" /> J-bit United IT
 
-<a href="https://united-it.vercel.app/#/" target="_blank">DEMO</a>
+<a href="https://united-it.vercel.app/#/" target="_blank" style="fontSize:50px">DEMO</a>
 
 ![screenshot](./src/assets/readme/screenshot.png)
 
