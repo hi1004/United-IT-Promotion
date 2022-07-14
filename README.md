@@ -89,7 +89,7 @@ IT サークルの部員募集を効率的にするため、３人で作った�
 
 ### 4.2. Kakao.js
 
-![](https://github.com/hi1004/United-IT-Promotion/tree/master/src/assets/markdown/kakao.jpg)
+![](https://raw.githubusercontent.com/hi1004/United-IT-Promotion/master/src/assets/markdown/kakao.jpg)
 
 - **SDK を初期化** :pushpin: [コード確認](https://github.com/hi1004/United-IT-Promotion/blob/master/index.html#L125-L133)
 - 受付の効率を上げることができました。
