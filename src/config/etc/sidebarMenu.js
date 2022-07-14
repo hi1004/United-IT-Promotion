@@ -1,152 +1,148 @@
 const ScrollTrigger = window.ScrollTrigger;
 const gsap = window.gsap;
 
-export default function(){  
-
+export default function () {
   // const homePadding = document.querySelector('.padding');
 
   /* SHOW MENU */
-  const snCollapseLinks = document.querySelectorAll('.collapse__link'); 
-  const snCollapseMenus = document.querySelectorAll('.collapse__menu'); 
+  const snCollapseLinks = document.querySelectorAll('.collapse__link');
+  const snCollapseMenus = document.querySelectorAll('.collapse__menu');
   const snToolTips = document.querySelectorAll('.side-nav__tooltip');
 
   /* body padding control*/
   const snBodyPadding = document.getElementById('body-pd');
+
   function resetBodyPd() {
-    snBodyPadding.classList.remove('body-pd-reset')
-    snBodyPadding.classList.remove('body-pd-default')
-    snBodyPadding.classList.remove('body-pd-expander')
+    snBodyPadding.classList.remove('body-pd-reset');
+    snBodyPadding.classList.remove('body-pd-default');
+    snBodyPadding.classList.remove('body-pd-expander');
   }
 
   if (window.innerWidth > 768) {
-    snBodyPadding.classList.add('body-pd-default')
+    snBodyPadding.classList.add('body-pd-default');
   }
-  
 
-  window.addEventListener('resize', ()=>{
+  window.addEventListener('resize', () => {
     if (window.innerWidth < 769) {
-      resetBodyPd()
-      snBodyPadding.classList.add('body-pd-reset')
+      resetBodyPd();
+      snBodyPadding.classList.add('body-pd-reset');
     } else {
       if (document.getElementById('navbar').classList.contains('expander')) {
-        resetBodyPd()
-        snBodyPadding.classList.add('body-pd-expander')
+        resetBodyPd();
+        snBodyPadding.classList.add('body-pd-expander');
       } else {
-        resetBodyPd()
-        snBodyPadding.classList.add('body-pd-default')
-      }      
-    }   
-  })
+        resetBodyPd();
+        snBodyPadding.classList.add('body-pd-default');
+      }
+    }
+  });
 
   const showMenu = (toggleId, navbarId) => {
     const snToggle = document.getElementById(toggleId),
-      snNavBar = document.getElementById(navbarId);      
-      snToggle.addEventListener('click', () => {
-        snNavBar.classList.toggle('expander');
-        snToggle.classList.toggle('toggle-active');
-        // homePadding.classList.toggle('body-padding')
+      snNavBar = document.getElementById(navbarId);
+    snToggle.addEventListener('click', () => {
+      snNavBar.classList.toggle('expander');
+      snToggle.classList.toggle('toggle-active');
+      // homePadding.classList.toggle('body-padding')
 
-        snToolTips.forEach((snToolTip) => {
-          snToolTip.classList.toggle('snToolTip-active');
-        })
-       
-        snCollapseLinks.forEach((snCollapseLink) => {
-          snCollapseLink.classList.remove('rotate');          
-        });
-        snCollapseMenus.forEach((snCollapseMenu)=>{
-          snCollapseMenu.classList.remove('showCollapse')
-        })       
-        
-        resetBodyPd()
-        if(snNavBar.classList.contains('expander')){          
-          snBodyPadding.classList.add('body-pd-expander')
-          snLinks.forEach((snLink) => {
-            if(snLink.classList.contains('color-active')&& snLink.classList.contains('collapse')){
-              snLink.querySelector('.collapse__link').classList.add('rotate')
-              snLink.querySelector('.collapse__menu').classList.add('showCollapse')
-            }
-          })
-        }
-        else{
-          snBodyPadding.classList.add('body-pd-default')
-        }
+      snToolTips.forEach(snToolTip => {
+        snToolTip.classList.toggle('snToolTip-active');
       });
+
+      snCollapseLinks.forEach(snCollapseLink => {
+        snCollapseLink.classList.remove('rotate');
+      });
+      snCollapseMenus.forEach(snCollapseMenu => {
+        snCollapseMenu.classList.remove('showCollapse');
+      });
+
+      resetBodyPd();
+      if (snNavBar.classList.contains('expander')) {
+        snBodyPadding.classList.add('body-pd-expander');
+        snLinks.forEach(snLink => {
+          if (snLink.classList.contains('color-active') && snLink.classList.contains('collapse')) {
+            snLink.querySelector('.collapse__link').classList.add('rotate');
+            snLink.querySelector('.collapse__menu').classList.add('showCollapse');
+          }
+        });
+      } else {
+        snBodyPadding.classList.add('body-pd-default');
+      }
+    });
   };
- 
+
   showMenu('nav-toggle', 'navbar');
-
-
 
   /* LINK CLICK EVENT */
   const snLinks = document.querySelectorAll('.side-nav__link');
-  const snNavBar = document.getElementById('navbar');  
+  const snNavBar = document.getElementById('navbar');
 
-  const sectionSelectors = ['#intro', '#about', '#executives', '#activities', '#contact']
-  const scrollToYpos = [0, 0, 0, -window.innerHeight*0.5, 0]
-  window.addEventListener('resize', ()=>{
-    scrollToYpos[3] = -window.innerHeight*0.5;
-  })
+  const sectionSelectors = ['#intro', '#about', '#executives', '#activities', '#contact'];
+  const scrollToYpos = [0, 0, 0, -window.innerHeight * 0.5, 0];
+  window.addEventListener('resize', () => {
+    scrollToYpos[3] = -window.innerHeight * 0.5;
+  });
   /* active link on click */
-  function linkActiveOnClick() {    
-    snLinks.forEach((snLink) => {
-      snLink.classList.remove('color-active')
-      if (snLink.classList.contains('collapse')){ 
+  function linkActiveOnClick() {
+    snLinks.forEach(snLink => {
+      snLink.classList.remove('color-active');
+      if (snLink.classList.contains('collapse')) {
         const snCollapseLink = snLink.querySelector('.collapse__link');
-        const snCollapseMenu = snLink.querySelector('.collapse__menu');        
+        const snCollapseMenu = snLink.querySelector('.collapse__menu');
         snCollapseLink.classList.remove('rotate');
         snCollapseMenu.classList.remove('showCollapse');
       }
-    });    
+    });
     this.classList.add('color-active');
-    if (this.classList.contains('collapse')&&snNavBar.classList.contains('expander')){        
+    if (this.classList.contains('collapse') && snNavBar.classList.contains('expander')) {
       const snCollapseLink = this.querySelector('.collapse__link');
-      const snCollapseMenu = this.querySelector('.collapse__menu'); 
+      const snCollapseMenu = this.querySelector('.collapse__menu');
       snCollapseLink.classList.add('rotate');
       snCollapseMenu.classList.add('showCollapse');
-    }        
+    }
   }
-  snLinks.forEach((snLink) => {
+  snLinks.forEach(snLink => {
     snLink.addEventListener('click', linkActiveOnClick);
-  })
+  });
 
   /* active link on scroll */
-  function linkActiveOnScroll() {    
-    snLinks.forEach((snLink, i) =>{
+  function linkActiveOnScroll() {
+    snLinks.forEach((snLink, i) => {
       function enterSection() {
-        snLink.classList.add('color-active')
-        if (snLink.classList.contains('collapse')&&snNavBar.classList.contains('expander')){ 
+        snLink.classList.add('color-active');
+        if (snLink.classList.contains('collapse') && snNavBar.classList.contains('expander')) {
           const snCollapseLink = snLink.querySelector('.collapse__link');
-          const snCollapseMenu = snLink.querySelector('.collapse__menu');        
+          const snCollapseMenu = snLink.querySelector('.collapse__menu');
           snCollapseLink.classList.add('rotate');
           snCollapseMenu.classList.add('showCollapse');
         }
       }
       function leaveSection() {
-        snLink.classList.remove('color-active')
-        if (snLink.classList.contains('collapse')){ 
+        snLink.classList.remove('color-active');
+        if (snLink.classList.contains('collapse')) {
           const snCollapseLink = snLink.querySelector('.collapse__link');
-          const snCollapseMenu = snLink.querySelector('.collapse__menu');        
+          const snCollapseMenu = snLink.querySelector('.collapse__menu');
           snCollapseLink.classList.remove('rotate');
           snCollapseMenu.classList.remove('showCollapse');
         }
       }
       ScrollTrigger.create({
-        id: `active link scroll${i}`, 
+        id: `active link scroll${i}`,
         trigger: sectionSelectors[i],
         start: 'top 80%',
         end: 'bottom 80%',
         onEnter: enterSection,
         onLeave: leaveSection,
         onEnterBack: enterSection,
-        onLeaveBack: leaveSection    
-      })
-    })
+        onLeaveBack: leaveSection,
+      });
+    });
   }
-  linkActiveOnScroll()  
+  linkActiveOnScroll();
 
-  /* scroll to section on click */  
-  function scrollToSection(i, xPos){      
-    for(let j=0; j<snLinks.length; j++){
+  /* scroll to section on click */
+  function scrollToSection(i, xPos) {
+    for (let j = 0; j < snLinks.length; j++) {
       snLinks[j].style.pointerEvents = 'none';
       ScrollTrigger.getById(`active link scroll${j}`).disable();
     }
@@ -154,52 +150,55 @@ export default function(){
       scrollTo: {
         y: sectionSelectors[i],
         offsetX: xPos,
-        offsetY: scrollToYpos[i]}        
-    })
-    setTimeout(()=>{
-      for(let j=0; j<snLinks.length; j++){
+        offsetY: scrollToYpos[i],
+      },
+    });
+    setTimeout(() => {
+      for (let j = 0; j < snLinks.length; j++) {
         snLinks[j].style.pointerEvents = 'auto';
         ScrollTrigger.getById(`active link scroll${j}`).enable();
       }
-    }, 1000)    
+    }, 1000);
   }
   snLinks.forEach((snLink, i) => {
-    snLink.addEventListener('click', ()=>{
+    snLink.addEventListener('click', () => {
       if (snBodyPadding.classList.contains('body-pd-default')) {
-        scrollToSection(i, 92)
+        scrollToSection(i, 92);
+      } else if (snBodyPadding.classList.contains('body-pd-expander')) {
+        scrollToSection(i, '2rem');
       }
-      else if (snBodyPadding.classList.contains('body-pd-expander')) {
-        scrollToSection(i, '2rem')
-      }
-    })
-  })
+    });
+  });
 
   /* scroll to sub link */
-  const activitiesSubLinks = document.querySelectorAll('.menu__activities > .collapse__sublink')
-  const activitiesSlideSelectors = ['#first_space', '#second_space', '#third_space']
+  const activitiesSubLinks = document.querySelectorAll('.menu__activities > .collapse__sublink');
+  const activitiesSlideSelectors = ['#first_space', '#second_space', '#third_space'];
 
-  function scrollToActivitiesSubLink(i, xPos){    
+  function scrollToActivitiesSubLink(i, xPos) {
     gsap.to(window, {
-      scrollTo: {offsetX: xPos, y: activitiesSlideSelectors[i]}
-    })         
+      scrollTo: { offsetX: xPos, y: activitiesSlideSelectors[i] },
+    });
   }
 
   /* scrollTo sublink on click */
   activitiesSubLinks.forEach((subLink, i) => {
-    subLink.addEventListener('click', ()=>{
-      event.stopPropagation()
-      if (snBodyPadding.classList.contains('body-pd-default')) {
-        scrollToActivitiesSubLink(i, 92)
-      }
-      else if (snBodyPadding.classList.contains('body-pd-expander')) {
-        scrollToActivitiesSubLink(i, '2rem')
-      }
-    }, {capture: true})
+    subLink.addEventListener(
+      'click',
+      () => {
+        event.stopPropagation();
+        if (snBodyPadding.classList.contains('body-pd-default')) {
+          scrollToActivitiesSubLink(i, 92);
+        } else if (snBodyPadding.classList.contains('body-pd-expander')) {
+          scrollToActivitiesSubLink(i, '2rem');
+        }
+      },
+      { capture: true }
+    );
     function enterSection() {
-      subLink.classList.add('sublink-active')
+      subLink.classList.add('sublink-active');
     }
     function leaveSection() {
-      subLink.classList.remove('sublink-active')
+      subLink.classList.remove('sublink-active');
     }
     ScrollTrigger.create({
       trigger: activitiesSlideSelectors[i],
@@ -207,36 +206,42 @@ export default function(){
       onEnter: enterSection,
       onLeave: leaveSection,
       onEnterBack: enterSection,
-      onLeaveBack: leaveSection    
-    })
-  })
+      onLeaveBack: leaveSection,
+    });
+  });
 
-  const executivesSubLinks = document.querySelectorAll('.menu__executives > .collapse__sublink')
-  const executiveSelectors = []
-  for (let i=1 ; i<11; i++){
-    executiveSelectors.push(`#executive_${i}`)
+  const executivesSubLinks = document.querySelectorAll('.menu__executives > .collapse__sublink');
+  const executiveSelectors = [];
+  for (let i = 1; i < 11; i++) {
+    executiveSelectors.push(`#executive_${i}`);
   }
-  function scrollToExecutivesSubLink(i, xPos){
+  function scrollToExecutivesSubLink(i, xPos) {
     gsap.to(window, {
-      scrollTo: {offsetX: xPos, y: executiveSelectors[i]}
-    })
+      scrollTo: { offsetX: xPos, y: executiveSelectors[i] },
+    });
   }
   executivesSubLinks.forEach((subLink, i) => {
-    subLink.addEventListener('click', ()=>{
-      event.stopPropagation()
-      if (snBodyPadding.classList.contains('body-pd-default')) {
-        scrollToExecutivesSubLink(i, 92)
-      }
-      else if (snBodyPadding.classList.contains('body-pd-expander')) {
-        scrollToExecutivesSubLink(i, '2rem')
-      }
-    }, {capture: true})
+    subLink.addEventListener(
+      'click',
+      () => {
+        event.stopPropagation();
+        if (snBodyPadding.classList.contains('body-pd-default')) {
+          scrollToExecutivesSubLink(i, 92);
+        } else if (snBodyPadding.classList.contains('body-pd-expander')) {
+          scrollToExecutivesSubLink(i, '2rem');
+        }
+      },
+      { capture: true }
+    );
+
     function enterSection() {
-      subLink.classList.add('sublink-active')
+      subLink.classList.add('sublink-active');
     }
+
     function leaveSection() {
-      subLink.classList.remove('sublink-active')
+      subLink.classList.remove('sublink-active');
     }
+
     ScrollTrigger.create({
       trigger: executiveSelectors[i],
       start: 'top center',
@@ -244,11 +249,7 @@ export default function(){
       onEnter: enterSection,
       onLeave: leaveSection,
       onEnterBack: enterSection,
-      onLeaveBack: leaveSection    
-    })
-  })
-
-  
- 
+      onLeaveBack: leaveSection,
+    });
+  });
 }
-
