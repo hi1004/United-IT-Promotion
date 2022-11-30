@@ -96,13 +96,12 @@ IT サークルの部員募集を効率的にするため、３人で作った�
 - 受付の効率を上げることができました。
 - <a href="https://developers.kakao.com/docs/latest/ko/getting-started/sdk-js" target="_blank">参考サイト</a>
 
-<<<<<<< HEAD
+
 ### 4.3. 言語設定機能
-=======
+
 ## 成果
 - 15人の新入部員の募集に成功した。
 - 目標を達成し、私を含めチーム全体が成長した。
->>>>>>> a69e802 (Update README.md)
 
 - **RouterLink** :pushpin: [コード確認](https://github.com/hi1004/United-IT-Promotion/blob/master/src/components/etc/SidebarMenu.vue#L87-L108)
 
